@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Anstel | Autonautics &mdash; Connected Fleet Management &amp; IoT Platform</title>
+  <meta name="description"
+    content="Anstel's Autonautics platform delivers connected fleet management, GPS tracking, IoT telematics, driver analytics, and operational intelligence.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      padding-top: 56px;
+      padding-bottom: 56px
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="position-fixed top-0 start-0 end-0 bg-white" id="site-nav" style="z-index:1050">
+    <div class="d-flex align-items-center px-4 px-md-5" style="height:56px;max-width:1536px;margin:auto">
+      <a href="index.html" class="flex-shrink-0"><img src="images/anstel.svg" height="40" alt="Anstel"></a>
+      <nav class="d-none d-lg-flex align-items-center gap-1 mx-auto">
+        <button class="nav-btn" data-mega="autonautics">Autonautics</button>
+        <button class="nav-btn" data-mega="solutions">Solutions</button>
+        <button class="nav-btn">Charging</button>
+        <button class="nav-btn" data-mega="discover">Discover</button>
+        <button class="nav-btn">Shop</button>
+      </nav>
+      <div class="d-none d-lg-flex align-items-center gap-1">
+        <button class="icon-btn" title="Help"><svg width="20" height="20" fill="none" stroke="currentColor"
+            stroke-width="1.8" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01" />
+          </svg></button>
+        <button class="icon-btn" title="Region"><svg width="20" height="20" fill="none" stroke="currentColor"
+            stroke-width="1.8" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+          </svg></button>
+        <button class="icon-btn" title="Account"><svg width="20" height="20" fill="none" stroke="currentColor"
+            stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" />
+          </svg></button>
+      </div>
+      <button class="icon-btn d-lg-none ms-auto" id="mobile-toggle" aria-label="Menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mega: Autonautics -->
+    <div id="mega-autonautics" class="mega-menu">
+      <div class="d-flex gap-4 px-4 py-4" style="max-width:1280px;margin:auto">
+        <div class="flex-grow-1">
+          <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-3"><a href="connected-fleet.html" class="mega-product-card d-block"><img
+                  src="images/connected fleet.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">Connected Fleet</p>
+                <p class="text-muted" style="font-size:.7rem">Fleet tracking &amp; operations</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+            <div class="col-6 col-md-4 col-lg-3"><a href="last-mile.html" class="mega-product-card d-block"><img
+                  src="images/Lastmile.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">Last Mile</p>
+                <p class="text-muted" style="font-size:.7rem">Delivery execution platform</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+            <div class="col-6 col-md-4 col-lg-3"><a href="security-monitor.html" class="mega-product-card d-block"><img
+                  src="images/Security.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">Security Monitor</p>
+                <p class="text-muted" style="font-size:.7rem">Vehicle &amp; driver security</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+            <div class="col-6 col-md-4 col-lg-3"><a href="merchant.html" class="mega-product-card d-block"><img
+                  src="images/Merchant.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">Merchant</p>
+                <p class="text-muted" style="font-size:.7rem">Fleet services marketplace</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+            <div class="col-6 col-md-4 col-lg-3"><a href="iot.html" class="mega-product-card d-block"><img
+                  src="images/IoTLogo.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">IoT</p>
+                <p class="text-muted" style="font-size:.7rem">Connected devices &amp; sensors</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+          </div>
+        </div>
+        <div class="border-start ps-4 flex-shrink-0" style="width:176px">
+          <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Features
+          </p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Reports &amp; Analytics</a>
+            </li>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Fleet Intelligence</a></li>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Predictive Maintenance</a>
+            </li>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Compliance &amp; AIS-140</a>
+            </li>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Emergency Response</a></li>
+            <li><a href="#" class="small text-secondary text-decoration-none">Route Optimization</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega: Solutions -->
+    <div id="mega-solutions" class="mega-menu">
+      <div class="d-flex gap-4 px-4 py-4" style="max-width:1280px;margin:auto">
+        <div class="flex-grow-1">
+          <div class="row g-4">
+            <div class="col-6 col-md-3"><a href="connected-fleet.html" class="mega-product-card d-block"><img
+                  src="images/connectedECO.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">Fleet Management</p>
+                <p class="text-muted" style="font-size:.7rem">Full fleet operations platform</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+            <div class="col-6 col-md-3"><a href="connected-fleet.html" class="mega-product-card d-block"><img
+                  src="images/connected fleet.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">Fleet Tracking</p>
+                <p class="text-muted" style="font-size:.7rem">Live GPS vehicle tracking</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+            <div class="col-6 col-md-3"><a href="connected-fleet.html" class="mega-product-card d-block"><img
+                  src="images/connectedECO.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">Driver Management</p>
+                <p class="text-muted" style="font-size:.7rem">Driver behaviour &amp; scorecards</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+            <div class="col-6 col-md-3"><a href="connected-fleet.html" class="mega-product-card d-block"><img
+                  src="images/connected fleet.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">Asset Tracking</p>
+                <p class="text-muted" style="font-size:.7rem">Track any connected asset</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+            <div class="col-6 col-md-3"><a href="last-mile.html" class="mega-product-card d-block"><img
+                  src="images/LastmileECO.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">Last Mile Delivery</p>
+                <p class="text-muted" style="font-size:.7rem">Dispatch &amp; delivery execution</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+            <div class="col-6 col-md-3"><a href="security-monitor.html" class="mega-product-card d-block"><img
+                  src="images/SecurityECO.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">Fleet Security</p>
+                <p class="text-muted" style="font-size:.7rem">Vehicle &amp; depot security</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+            <div class="col-6 col-md-3"><a href="iot.html" class="mega-product-card d-block"><img
+                  src="images/IoTLogo.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">IoT Monitoring</p>
+                <p class="text-muted" style="font-size:.7rem">Connected devices &amp; sensors</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+            <div class="col-6 col-md-3"><a href="connected-fleet.html" class="mega-product-card d-block"><img
+                  src="images/connectedECO.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">Fuel Management</p>
+                <p class="text-muted" style="font-size:.7rem">Monitor &amp; reduce fuel costs</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+          </div>
+        </div>
+        <div class="border-start ps-4 flex-shrink-0" style="width:192px">
+          <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Specialized
+            Solutions</p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Dispatch Management</a></li>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Video Telematics</a></li>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Cold Chain Monitoring</a>
+            </li>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Industrial Asset
+                Monitoring</a></li>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Generator Monitoring</a></li>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Reports &amp; Analytics</a>
+            </li>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Fleet Intelligence</a></li>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Predictive Maintenance</a>
+            </li>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Route Optimization</a></li>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Compliance &amp; AIS-140</a>
+            </li>
+            <li><a href="#" class="small text-secondary text-decoration-none">Emergency Response</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega: Discover -->
+    <div id="mega-discover" class="mega-menu">
+      <div class="px-4 py-4" style="max-width:1280px;margin:auto">
+        <div class="row g-4">
+          <div class="col-6 col-md-3">
+            <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Resources
+            </p>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Demo Drive</a></li>
+              <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Insurance</a></li>
+              <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Current Offers</a></li>
+              <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Customer Stories</a></li>
+              <li><a href="#" class="small text-secondary text-decoration-none">Safety</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Location
+              Services</p>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Find Us</a></li>
+              <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Find a Collision Center</a>
+              </li>
+              <li><a href="#" class="small text-secondary text-decoration-none">Find a Certified Installer</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Company
+            </p>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">About</a></li>
+              <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Careers</a></li>
+              <li><a href="#" class="small text-secondary text-decoration-none">Investor Relations</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="bg-white border-top d-lg-none"
+      style="display:none!important;max-height:80vh;overflow-y:auto">
+      <ul class="list-unstyled mb-0 border-bottom">
+        <li class="border-bottom">
+          <button
+            class="mob-acc-btn w-100 d-flex justify-content-between align-items-center px-4 py-3 small fw-medium text-dark bg-white border-0">Autonautics
+            <span class="acc-arrow">&#9662;</span></button>
+          <div class="mob-acc-body px-4 pb-3 bg-light" style="display:none">
+            <div class="row g-2">
+              <div class="col-6"><a href="connected-fleet.html"
+                  class="small text-dark text-decoration-none fw-semibold">Connected Fleet</a></div>
+              <div class="col-6"><a href="last-mile.html" class="small text-dark text-decoration-none fw-semibold">Last
+                  Mile</a></div>
+              <div class="col-6"><a href="security-monitor.html"
+                  class="small text-dark text-decoration-none fw-semibold">Security Monitor</a></div>
+              <div class="col-6"><a href="merchant.html"
+                  class="small text-dark text-decoration-none fw-semibold">Merchant</a></div>
+              <div class="col-6"><a href="iot.html" class="small text-dark text-decoration-none fw-semibold">IoT</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="border-bottom">
+          <button
+            class="mob-acc-btn w-100 d-flex justify-content-between align-items-center px-4 py-3 small fw-medium text-dark bg-white border-0">Solutions
+            <span class="acc-arrow">&#9662;</span></button>
+          <div class="mob-acc-body px-4 pb-3 bg-light" style="display:none">
+            <div class="row g-2">
+              <div class="col-6"><a href="connected-fleet.html" class="small text-dark text-decoration-none">Fleet
+                  Management</a></div>
+              <div class="col-6"><a href="connected-fleet.html" class="small text-dark text-decoration-none">Fleet
+                  Tracking</a></div>
+              <div class="col-6"><a href="connected-fleet.html" class="small text-dark text-decoration-none">Driver
+                  Management</a></div>
+              <div class="col-6"><a href="last-mile.html" class="small text-dark text-decoration-none">Last Mile
+                  Delivery</a></div>
+              <div class="col-6"><a href="security-monitor.html" class="small text-dark text-decoration-none">Fleet
+                  Security</a></div>
+              <div class="col-6"><a href="iot.html" class="small text-dark text-decoration-none">IoT Monitoring</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="border-bottom"><a href="#"
+            class="d-block px-4 py-3 small fw-medium text-dark text-decoration-none">Charging</a></li>
+        <li class="border-bottom"><a href="#"
+            class="d-block px-4 py-3 small fw-medium text-dark text-decoration-none">Discover</a></li>
+        <li><a href="#" class="d-block px-4 py-3 small fw-medium text-dark text-decoration-none">Shop</a></li>
+      </ul>
+      <div class="d-flex gap-4 px-4 py-3 border-top bg-light">
+        <button class="small text-secondary bg-white border-0 p-0">Help</button>
+        <button class="small text-secondary bg-white border-0 p-0">Region</button>
+        <button class="small text-secondary bg-white border-0 p-0">Account</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE BLUR OVERLAY (shows when mega menu is open) -->
+  <div id="mega-overlay"></div>
+
+  <!-- LOCATION MODAL -->
+  <div id="loc-modal" class="position-fixed bg-white rounded-3 shadow border"
+    style="top:72px;right:16px;z-index:1060;width:320px">
+    <div class="d-flex justify-content-between align-items-start px-4 pt-3 pb-2">
+      <div>
+        <p class="fw-semibold small mb-1">Confirm Your Location</p>
+        <p class="text-muted" style="font-size:.75rem">Select region to see location-specific content</p>
+      </div>
+      <button class="loc-dismiss icon-btn ms-2 p-0 flex-shrink-0 border-0 bg-white text-secondary"
+        style="margin-top:2px">&times;</button>
+    </div>
+    <div class="d-flex gap-2 px-4 pb-4">
+      <button class="loc-btn flex-fill btn btn-dark btn-sm py-2">United States</button>
+      <button class="loc-btn flex-fill btn btn-outline-secondary btn-sm py-2">India</button>
+    </div>
+  </div>
+
+  <!-- HERO CAROUSEL -->
+  <section class="position-relative overflow-hidden" style="height:90vh">
+    <div class="hero-slide active" style="background:linear-gradient(to bottom,#c8d4dc,#b8c8d4,#a8bcc8)">
+      <img src="images/AutonauticsECO.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+        alt="Autonautics">
+    </div>
+    <div class="hero-slide" style="background:linear-gradient(to bottom,#b8a48a,#c4b09a,#a89070,#8b7560)">
+      <img src="images/connectedECO.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+        alt="Fleet Management">
+    </div>
+    <div class="hero-slide" style="background:linear-gradient(to bottom,#b8a48a,#c4b09a,#a89070,#8b7560)">
+      <img src="images/LastmileECO.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+        alt="Fleet Tracking">
+    </div>
+    <div class="hero-slide" style="background:linear-gradient(to bottom,#b8a48a,#c4b09a,#a89070,#8b7560)">
+      <img src="images/LastmileECO.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+        alt="Last Mile Delivery">
+    </div>
+    <div class="hero-slide" style="background:linear-gradient(to bottom,#a8b4c0,#8494a6,#596d80)">
+      <img src="images/SecurityECO.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+        alt="Fleet Security">
+    </div>
+    <div class="hero-slide" style="background:linear-gradient(to bottom,#b8a48a,#c4b09a,#a89070,#8b7560)">
+      <img src="images/IoT.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+        alt="IoT Monitoring">
+    </div>
+    <div class="hero-slide" style="background:linear-gradient(to bottom,#c8d4dc,#b8c8d4,#a8bcc8)">
+      <img src="images/MerchantECO.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+        alt="Smarter Business Decisions">
+    </div>
+    <div class="position-relative d-flex flex-column align-items-center text-center px-4 fade-up" id="hero-content"
+      style="padding-top:7vh;z-index:10">
+      <h1 class="fs-2 fs-md-1 fw-medium text-white mb-1" id="hero-title">One Platform. Every Operation.</h1>
+      <p class="text-white mt-1 mb-0" id="hero-subtitle">Connect fleets, assets and operations intelligently.</p>
+      <div class="hero-actions mt-3">
+        <a href="connected-fleet.html" id="hero-btn" class="btn hero-learn-btn">Learn More</a>
+      </div>
+    </div>
+    <button class="hero-prev car-btn position-absolute top-50 start-0 translate-middle-y ms-3" style="z-index:20"><svg
+        width="18" height="18" fill="none" stroke="#1f2937" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg></button>
+    <button class="hero-next car-btn position-absolute top-50 end-0 translate-middle-y me-3" style="z-index:20"><svg
+        width="18" height="18" fill="none" stroke="#1f2937" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg></button>
+    <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 d-flex gap-2" style="z-index:20">
+      <button class="dot-btn active hero-dot"></button>
+      <button class="dot-btn hero-dot"></button>
+      <button class="dot-btn hero-dot"></button>
+      <button class="dot-btn hero-dot"></button>
+      <button class="dot-btn hero-dot"></button>
+      <button class="dot-btn hero-dot"></button>
+      <button class="dot-btn hero-dot"></button>
+    </div>
+  </section>
+
+  <!-- ABOUT ANSTEL -->
+  <section class="bg-white section-pad about-anstel">
+    <div class="container-xl px-4 px-md-5">
+      <div class="about-anstel-copy" style="max-width:1120px">
+        <p class="text-primary fw-semibold text-uppercase small mb-3" style="letter-spacing:.12em;font-size:.72rem">
+          About Anstel</p>
+        <h2 class="fw-bold mb-2" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.04em">Powering Connected
+          Fleet, Asset &amp; IoT Operations</h2>
+        <p class="text-secondary lh-base mb-4" style="font-size:clamp(1rem,1.4vw,1.125rem)">Anstel develops intelligent
+          software that helps organizations manage fleet operations, connected assets, IoT devices, driver activities,
+          last mile deliveries, fleet security, and business services through one connected platform. By transforming
+          real-time operational data into visibility, automation, and actionable intelligence, Anstel enables businesses
+          to improve productivity, strengthen safety, optimize operations, and make faster, data-driven decisions.</p>
+        <a href="#solutions" class="btn btn-dark about-anstel-cta px-4 py-2">Discover Anstel <span
+            aria-hidden="true">&rarr;</span></a>
+      </div>
+
+      <div class="row g-4 g-md-0 mt-5 pt-md-3" style="max-width:1120px">
+        <div class="col-12 col-md-4 about-pillar">
+          <div class="h-100 pe-md-4">
+            <h3 class="h5 fw-semibold mb-3">Connected Operations</h3>
+            <p class="text-secondary lh-lg mb-0">Bring fleets, assets, drivers, IoT devices, and business operations
+              together through intelligent software.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 about-pillar">
+          <div class="h-100 px-md-4">
+            <h3 class="h5 fw-semibold mb-3">Real-Time Intelligence</h3>
+            <p class="text-secondary lh-lg mb-0">Transform live operational data into visibility, automation, and
+              actionable insights.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 about-pillar">
+          <div class="h-100 ps-md-4">
+            <h3 class="h5 fw-semibold mb-3">Built for Growth</h3>
+            <p class="text-secondary lh-lg mb-0">Designed to support organizations of every size with scalable, secure,
+              and connected solutions.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOLUTIONS CAROUSEL -->
+  <section id="solutions" class="bg-white overflow-hidden pb-4">
+    <div class="px-4 px-md-5 mb-4" style="max-width:1100px">
+      <p class="text-primary fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em">Our
+        Solutions</p>
+      <h2 class="fw-bold mb-3" style="font-size:clamp(1.75rem,3.5vw,2.75rem);letter-spacing:-.03em">Solutions for Every
+        Operational Challenge</h2>
+      <p class="text-secondary lh-lg mb-0" style="max-width:960px">Every business faces unique operational challenges,
+        from managing fleets and tracking vehicles to monitoring connected assets, securing operations, and optimizing
+        deliveries. Anstel delivers intelligent software solutions that improve operational visibility, automate
+        workflows, strengthen security, optimize efficiency, and transform real-time data into smarter business
+        decisions across connected fleet, asset, and IoT operations.</p>
+    </div>
+    <div class="scroll-carousel position-relative" style="height:52vh;min-height:280px">
+      <div class="scroll-track d-flex gap-3 h-100 overflow-x-auto">
+        <div data-card class="flex-shrink-0 h-100 ms-4 ms-md-5" style="width:78vw;max-width:calc(25vw - 20px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0d1b2a;cursor:pointer"
+            onclick="location='connected-fleet.html'"><img src="images/connectedECO.png"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+              style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
+              <p class="fw-semibold text-white mb-1">Fleet Management</p>
+              <p class="text-white small mb-2">Manage fleet operations.</p><button
+                class="btn btn-sm border border-white border-opacity-50 text-white px-3"
+                style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#102030;cursor:pointer"
+            onclick="location='connected-fleet.html'"><img src="images/connected fleet.png"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+              style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
+              <p class="fw-semibold text-white mb-1">Fleet Tracking</p>
+              <p class="text-white small mb-2">Real-time vehicle visibility.</p><button
+                class="btn btn-sm border border-white border-opacity-50 text-white px-3"
+                style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0f1e2e;cursor:pointer"
+            onclick="location='connected-fleet.html'"><img src="images/connectedECO.png"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+              style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
+              <p class="fw-semibold text-white mb-1">Driver Management</p>
+              <p class="text-white small mb-2">Improve driver safety.</p><button
+                class="btn btn-sm border border-white border-opacity-50 text-white px-3"
+                style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#111c28;cursor:pointer"
+            onclick="location='connected-fleet.html'"><img src="images/connected fleet.png"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+              style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
+              <p class="fw-semibold text-white mb-1">Asset Tracking</p>
+              <p class="text-white small mb-2">Track every critical asset.</p><button
+                class="btn btn-sm border border-white border-opacity-50 text-white px-3"
+                style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0e1a26;cursor:pointer"
+            onclick="location='connected-fleet.html'"><img src="images/connectedECO.png"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+              style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
+              <p class="fw-semibold text-white mb-1">Fuel Management</p>
+              <p class="text-white small mb-2">Monitor fuel efficiency.</p><button
+                class="btn btn-sm border border-white border-opacity-50 text-white px-3"
+                style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0d1f30;cursor:pointer"
+            onclick="location='last-mile.html'"><img src="images/LastmileECO.png"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+              style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
+              <p class="fw-semibold text-white mb-1">Last Mile Delivery</p>
+              <p class="text-white small mb-2">Smarter last mile operations.</p><button
+                class="btn btn-sm border border-white border-opacity-50 text-white px-3"
+                style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#14121e;cursor:pointer"
+            onclick="location='security-monitor.html'"><img src="images/SecurityECO.png"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+              style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
+              <p class="fw-semibold text-white mb-1">Fleet Security</p>
+              <p class="text-white small mb-2">Protect fleet operations.</p><button
+                class="btn btn-sm border border-white border-opacity-50 text-white px-3"
+                style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#101828;cursor:pointer"
+            onclick="location='last-mile.html'"><img src="images/Lastmile.png"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+              style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
+              <p class="fw-semibold text-white mb-1">Dispatch Management</p>
+              <p class="text-white small mb-2">Simplify dispatch operations.</p><button
+                class="btn btn-sm border border-white border-opacity-50 text-white px-3"
+                style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0a1e2c;cursor:pointer"
+            onclick="location='iot.html'"><img src="images/IoTLogo.png"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+              style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
+              <p class="fw-semibold text-white mb-1">IoT Monitoring</p>
+              <p class="text-white small mb-2">Monitor connected devices.</p><button
+                class="btn btn-sm border border-white border-opacity-50 text-white px-3"
+                style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#12111e;cursor:pointer"
+            onclick="location='security-monitor.html'"><img src="images/Security.png"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+              style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
+              <p class="fw-semibold text-white mb-1">Video Telematics</p>
+              <p class="text-white small mb-2">Intelligent video insights.</p><button
+                class="btn btn-sm border border-white border-opacity-50 text-white px-3"
+                style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0c1c2a;cursor:pointer"
+            onclick="location='iot.html'"><img src="images/IoT.png"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+              style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
+              <p class="fw-semibold text-white mb-1">Cold Chain Monitoring</p>
+              <p class="text-white small mb-2">Monitor temperature in transit.</p><button
+                class="btn btn-sm border border-white border-opacity-50 text-white px-3"
+                style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0f1c28;cursor:pointer"
+            onclick="location='iot.html'"><img src="images/IoTLogo.png"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+              style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
+              <p class="fw-semibold text-white mb-1">Generator Monitoring</p>
+              <p class="text-white small mb-2">Monitor generators remotely.</p><button
+                class="btn btn-sm border border-white border-opacity-50 text-white px-3"
+                style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#111820;cursor:pointer"
+            onclick="location='iot.html'"><img src="images/IoT.png"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+              style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
+              <p class="fw-semibold text-white mb-1">Industrial Asset Monitoring</p>
+              <p class="text-white small mb-2">Monitor industrial assets.</p><button
+                class="btn btn-sm border border-white border-opacity-50 text-white px-3"
+                style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
+            </div>
+          </div>
+        </div>
+        <div class="flex-shrink-0 pe-4 pe-md-5" aria-hidden="true"></div>
+      </div>
+      <button class="sc-prev car-btn position-absolute top-50 start-0 translate-middle-y ms-3 d-none"
+        style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg></button>
+      <button class="sc-next car-btn position-absolute top-50 end-0 translate-middle-y me-3" style="z-index:20"><svg
+          width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg></button>
+      <div class="position-absolute bottom-0 start-50 translate-middle-x mb-3 d-flex gap-2" style="z-index:20">
+        <button class="dot-btn active"></button><button class="dot-btn"></button><button
+          class="dot-btn"></button><button class="dot-btn"></button><button class="dot-btn"></button><button
+          class="dot-btn"></button><button class="dot-btn"></button><button class="dot-btn"></button><button
+          class="dot-btn"></button><button class="dot-btn"></button><button class="dot-btn"></button><button
+          class="dot-btn"></button><button class="dot-btn"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORM INTELLIGENCE SECTION -->
+  <section class="bg-white px-4 px-md-5 section-pad">
+    <div class="d-flex flex-column flex-md-row rounded-4 overflow-hidden"
+      style="min-height:62vh;background:rgba(0,0,0,.05)">
+      <div class="d-flex flex-column justify-content-center px-4 px-md-5 py-5" style="flex:1">
+        <h2 class="fw-bold lh-sm mb-3" style="font-size:clamp(1.5rem,3.5vw,3rem)">Intelligence Behind Every
+          Operation<br><span class="text-danger fst-italic">(Connected Mobility Ecosystem)</span></h2>
+        <p class="text-secondary small">Autonautics is a Connected Fleet Intelligence Platform developed by Anstel. It
+          combines fleet management, asset tracking, driver management, maintenance management, security monitoring, and
+          last mile delivery capabilities into a single operational ecosystem.</p>
+        <div class="d-flex gap-5 mt-4">
+          <div>
+            <p class="fw-bold mb-0" style="font-size:1.75rem">Real-Time</p>
+            <p class="text-secondary small">Visibility &amp; Control</p>
+          </div>
+          <div>
+            <p class="fw-bold mb-0" style="font-size:1.5rem">24x7</p>
+            <p class="text-secondary small">Support &amp; Response</p>
+          </div>
+        </div>
+        <div class="d-flex gap-2 mt-4">
+          <a href="#" class="btn btn-dark px-4 py-2 small">Schedule Demo</a>
+          <a href="#" class="btn btn-outline-secondary px-4 py-2 small">Learn More</a>
+        </div>
+      </div>
+      <div class="position-relative" style="flex:1;min-height:380px">
+        <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-FSD-Desktop.jpg"
+          class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Platform">
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORM PRODUCTS CAROUSEL -->
+  <section class="bg-white overflow-hidden">
+    <div class="scroll-carousel position-relative" style="height:70vh;min-height:380px">
+      <div class="scroll-track d-flex gap-3 h-100 overflow-x-auto">
+        <div data-card class="flex-shrink-0 h-100 ms-4 ms-md-5" style="width:82vw;max-width:calc(50vw - 24px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#c0b8a8"><img
+              src="images/MerchantECO.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+              alt="Merchant">
+            <div class="position-absolute inset-0 top-0 start-0 end-0 bottom-0"
+              style="background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,.15) 40%,transparent 70%)"></div><span
+              class="position-absolute top-0 start-0 mt-3 ms-3 text-white small">Platform</span>
+            <div class="position-absolute bottom-0 start-0 mb-3 ms-3">
+              <h3 class="text-white fw-bold fs-4">Merchant</h3>
+              <p class="text-white small">Lease From $329/mo</p>
+              <div class="d-flex gap-2 mt-2"><a href="merchant.html" class="btn btn-sm text-white px-3 py-1"
+                  style="background:#3457D5;font-size:.8rem">Order Now</a><a href="merchant.html"
+                  class="btn btn-sm text-dark px-3 py-1" style="background:rgba(255,255,255,.8);font-size:.8rem">Learn
+                  More</a></div>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:82vw;max-width:calc(50vw - 24px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#a8b4c0"><img
+              src="images/SecurityECO.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+              alt="Security">
+            <div class="position-absolute top-0 start-0 end-0 bottom-0"
+              style="background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,.15) 40%,transparent 70%)"></div><span
+              class="position-absolute top-0 start-0 mt-3 ms-3 text-white small">Platform</span>
+            <div class="position-absolute bottom-0 start-0 mb-3 ms-3">
+              <h3 class="text-white fw-bold fs-4">Fleet Security</h3>
+              <p class="text-white small">Lease From $459/mo</p>
+              <div class="d-flex gap-2 mt-2"><a href="security-monitor.html" class="btn btn-sm text-white px-3 py-1"
+                  style="background:#3457D5;font-size:.8rem">Order Now</a><a href="security-monitor.html"
+                  class="btn btn-sm text-dark px-3 py-1" style="background:rgba(255,255,255,.8);font-size:.8rem">Learn
+                  More</a></div>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:82vw;max-width:calc(50vw - 24px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#a8b4c0"><img
+              src="images/IoT.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="IoT">
+            <div class="position-absolute top-0 start-0 end-0 bottom-0"
+              style="background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,.15) 40%,transparent 70%)"></div><span
+              class="position-absolute top-0 start-0 mt-3 ms-3 text-white small">Platform</span>
+            <div class="position-absolute bottom-0 start-0 mb-3 ms-3">
+              <h3 class="text-white fw-bold fs-4">IoT Telematics</h3>
+              <p class="text-white small">Lease From $459/mo</p>
+              <div class="d-flex gap-2 mt-2"><a href="iot.html" class="btn btn-sm text-white px-3 py-1"
+                  style="background:#3457D5;font-size:.8rem">Order Now</a><a href="iot.html"
+                  class="btn btn-sm text-dark px-3 py-1" style="background:rgba(255,255,255,.8);font-size:.8rem">Learn
+                  More</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-shrink-0 pe-4 pe-md-5" aria-hidden="true"></div>
+      </div>
+      <button class="sc-prev car-btn position-absolute top-50 start-0 translate-middle-y ms-3 d-none"
+        style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg></button>
+      <button class="sc-next car-btn position-absolute top-50 end-0 translate-middle-y me-3" style="z-index:20"><svg
+          width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg></button>
+      <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 d-flex gap-2" style="z-index:20">
+        <button class="dot-btn active"></button><button class="dot-btn"></button><button class="dot-btn"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCCESS STORIES + INSIGHTS (bleed carousel) -->
+  <section class="bg-white section-pad">
+    <div class="px-4 px-md-5 mb-4">
+      <p class="text-primary fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em">Resources
+      </p>
+      <h2 class="fw-bold" style="font-size:clamp(1.25rem,2.5vw,1.75rem)">Insights &amp; Success Stories</h2>
+    </div>
+    <div class="scroll-carousel position-relative overflow-hidden">
+      <div class="scroll-track d-flex gap-3 overflow-x-auto pb-2">
+        <div data-card
+          class="flex-shrink-0 rounded-4 overflow-hidden d-flex align-items-center justify-content-between px-4 py-4 gap-3 ms-4 ms-md-5"
+          style="width:88vw;max-width:520px;background:rgba(0,0,0,.05)">
+          <div class="flex-fill">
+            <h5 class="fw-bold">Success in Action</h5>
+            <p class="text-secondary small mb-3">See how organizations improve fleet visibility, operational efficiency,
+              driver safety, and business performance with Autonautics.</p>
+            <a href="#" class="btn btn-outline-dark btn-sm px-4">Read Stories</a>
+          </div>
+          <div class="flex-shrink-0" style="width:120px"><img
+              src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Offers-Desktop.jpg"
+              class="w-100 rounded" style="height:80px;object-fit:cover" alt=""></div>
+        </div>
+        <div data-card
+          class="flex-shrink-0 rounded-4 overflow-hidden d-flex align-items-center justify-content-between px-4 py-4 gap-3"
+          style="width:88vw;max-width:520px;background:rgba(0,0,0,.05)">
+          <div class="flex-fill">
+            <h5 class="fw-bold">Latest Insights</h5>
+            <p class="text-secondary small mb-3">Industry trends, fleet management strategies, connected mobility
+              updates, and product innovations.</p>
+            <a href="#" class="btn btn-outline-dark btn-sm px-4">Visit Knowledge Center</a>
+          </div>
+          <div class="flex-shrink-0" style="width:120px"><img
+              src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Inventory-Desktop.jpg"
+              class="w-100 rounded" style="height:80px;object-fit:cover" alt=""></div>
+        </div>
+        <div class="flex-shrink-0 pe-4 pe-md-5" aria-hidden="true"></div>
+      </div>
+      <button class="sc-prev car-btn position-absolute top-50 start-0 translate-middle-y ms-3 d-none"
+        style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg></button>
+      <button class="sc-next car-btn position-absolute top-50 end-0 translate-middle-y me-3" style="z-index:20"><svg
+          width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg></button>
+    </div>
+    <div class="mt-4" style="height:420px"><iframe title="Locations Map"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-128.5%2C22.5%2C-63.5%2C51.5&layer=mapnik"
+        class="w-100 h-100 border-0 rounded-4" loading="lazy"></iframe></div>
+  </section>
+
+  <!-- CHARGE SECTION -->
+  <section class="bg-white section-pad px-4 px-md-5 border-top border-light">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-4"
+      style="max-width:1280px;margin:auto">
+      <div>
+        <h2 class="fw-bold mb-2">Find Your Charge</h2>
+        <p class="text-secondary small mb-4" style="max-width:320px">View the network of Tesla Superchargers and
+          Destination Chargers available near you.</p>
+        <div class="d-flex gap-2">
+          <a href="#" class="btn btn-dark px-4 py-2 small">View Network</a>
+          <a href="#" class="btn btn-outline-secondary px-4 py-2 small">Learn More</a>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-sm-row gap-4">
+        <div class="d-flex align-items-center gap-2">
+          <div>
+            <p class="fw-bold mb-0" style="font-size:2rem">37,747</p>
+            <p class="text-secondary small">Superchargers</p>
+          </div>
+          <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-danger text-white ms-2"
+            style="width:28px;height:28px;font-size:.75rem">&#9889;</span>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <div>
+            <p class="fw-bold mb-0" style="font-size:2rem">6,424</p>
+            <p class="text-secondary small">Destination Chargers</p>
+          </div>
+          <span
+            class="d-inline-flex align-items-center justify-content-center rounded-circle bg-secondary text-white ms-2"
+            style="width:28px;height:28px;font-size:.75rem">&#128268;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENERGY CAROUSEL -->
+  <section class="bg-white overflow-hidden">
+    <div class="scroll-carousel position-relative" style="height:70vh;min-height:380px">
+      <div class="scroll-track d-flex gap-3 h-100 overflow-x-auto">
+        <div data-card class="flex-shrink-0 h-100 ms-4 ms-md-5" style="width:82vw;max-width:calc(50vw - 24px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#3a5a78"><img
+              src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-SolarPanels-01-Desktop.jpg"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Solar Panels">
+            <div class="position-absolute top-0 start-0 end-0 bottom-0"
+              style="background:linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,.15) 45%,transparent 70%)"></div>
+            <div class="position-absolute bottom-0 start-0 mb-3 ms-3">
+              <h3 class="text-white fw-bold fs-4">Solar Panels</h3>
+              <p class="text-white small opacity-75">Power Your Home and Reduce Your Electricity Bill</p>
+              <div class="d-flex gap-2 mt-3"><a href="#" class="btn btn-sm text-white px-3 py-1"
+                  style="background:#3457D5;font-size:.8rem">Order Now</a><a href="#"
+                  class="btn btn-sm text-dark px-3 py-1" style="background:rgba(255,255,255,.8);font-size:.8rem">Learn
+                  More</a></div>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:82vw;max-width:calc(50vw - 24px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#d0d4d8"><img
+              src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Powerwall-Desktop.jpg"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Powerwall">
+            <div class="position-absolute top-0 start-0 end-0 bottom-0"
+              style="background:linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,.15) 45%,transparent 70%)"></div>
+            <div class="position-absolute bottom-0 start-0 mb-3 ms-3">
+              <h3 class="text-white fw-bold fs-4">Powerwall</h3>
+              <p class="text-white small opacity-75">Keep Your Lights On During Outages</p>
+              <div class="d-flex gap-2 mt-3"><a href="#" class="btn btn-sm text-white px-3 py-1"
+                  style="background:#3457D5;font-size:.8rem">Order Now</a><a href="#"
+                  class="btn btn-sm text-dark px-3 py-1" style="background:rgba(255,255,255,.8);font-size:.8rem">Learn
+                  More</a></div>
+            </div>
+          </div>
+        </div>
+        <div data-card class="flex-shrink-0 h-100" style="width:82vw;max-width:calc(50vw - 24px)">
+          <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#8a7a6a"><img
+              src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-SolarRoof-Desktop.jpg"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Solar Roof">
+            <div class="position-absolute top-0 start-0 end-0 bottom-0"
+              style="background:linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,.15) 45%,transparent 70%)"></div>
+            <div class="position-absolute bottom-0 start-0 mb-3 ms-3">
+              <h3 class="text-white fw-bold fs-4">Solar Roof</h3>
+              <p class="text-white small opacity-75">Produce Clean Energy From Your Roof</p>
+              <div class="d-flex gap-2 mt-3"><a href="#" class="btn btn-sm text-white px-3 py-1"
+                  style="background:#3457D5;font-size:.8rem">Order Now</a><a href="#"
+                  class="btn btn-sm text-dark px-3 py-1" style="background:rgba(255,255,255,.8);font-size:.8rem">Learn
+                  More</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-shrink-0 pe-4 pe-md-5" aria-hidden="true"></div>
+      </div>
+      <button class="sc-prev car-btn position-absolute top-50 start-0 translate-middle-y ms-3 d-none"
+        style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg></button>
+      <button class="sc-next car-btn position-absolute top-50 end-0 translate-middle-y me-3" style="z-index:20"><svg
+          width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg></button>
+      <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 d-flex gap-2" style="z-index:20">
+        <button class="dot-btn dot-btn-light active"></button><button class="dot-btn dot-btn-light"></button><button
+          class="dot-btn dot-btn-light"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTNOTE -->
+  <div class="bg-white px-4 px-md-5 py-3 border-top border-light">
+    <p class="text-muted mx-auto mb-0" style="font-size:.72rem;max-width:1280px"><sup>1</sup> Price reflects monthly
+      subscription, subject to terms and conditions. Price and feature availability subject to change.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-top py-3 px-4 px-md-5">
+    <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mx-auto" style="max-width:1280px">
+      <span class="text-muted" style="font-size:.75rem">Anstel &copy; 2026</span>
+      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Privacy &amp; Legal</a>
+      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Contact</a>
+      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">News</a>
+      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Get Updates</a>
+      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Locations</a>
+      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Learn</a>
+    </div>
+  </footer>
+
+  <!-- SCHEDULE BAR -->
+  <div class="schedule-bar">
+    <div class="flex-fill d-flex align-items-center gap-3 px-4 px-md-5 border-end">
+      <svg width="20" height="20" fill="none" stroke="#6b7280" stroke-width="1.8" viewBox="0 0 24 24"
+        class="flex-shrink-0">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+      </svg>
+      <span class="small fw-medium text-secondary d-none d-sm-inline">Ask a Question</span>
+      <div class="flex-fill d-flex align-items-center rounded-pill px-3 py-1" style="background:#f3f4f6">
+        <input type="text" placeholder="&ldquo;What&rsquo;s Pet Mode?&rdquo;"
+          class="flex-fill border-0 bg-transparent small text-secondary" style="outline:none">
+      </div>
+    </div>
+    <button class="d-flex align-items-center gap-2 px-4 border-0 bg-white" style="cursor:pointer">
+      <svg width="20" height="20" fill="none" stroke="#4b5563" stroke-width="1.8" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 9V2M5.27 16.5l6.07-4.08M18.73 16.5l-6.07-4.08" />
+      </svg>
+      <span class="small fw-medium text-dark">Schedule a Drive Today</span>
+    </button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function ($) {
+      var slides = [
+        { title: 'One Platform. Every Operation.', sub: 'Connect fleets, assets and operations intelligently.', btn: 'Learn More', href: 'connected-fleet.html' },
+        { title: 'Fleet Management', sub: 'Manage modern fleet operations with confidence.', btn: 'Learn More', href: 'connected-fleet.html' },
+        { title: 'Fleet Tracking', sub: 'Real-time visibility for every vehicle.', btn: 'Learn More', href: 'connected-fleet.html' },
+        { title: 'Last Mile Delivery', sub: 'Deliver faster with complete visibility.', btn: 'Learn More', href: 'last-mile.html' },
+        { title: 'Fleet Security', sub: 'Protect vehicles, drivers and operations.', btn: 'Learn More', href: 'security-monitor.html' },
+        { title: 'IoT Monitoring', sub: 'Monitor connected assets in real time.', btn: 'Learn More', href: 'iot.html' },
+        { title: 'Smarter Business Decisions', sub: 'Transform operational data into action.', btn: 'Learn More', href: 'merchant.html' }
+      ];
+      var cur = 0, timer;
+      function go(i) {
+        cur = (i + slides.length) % slides.length;
+        $('.hero-slide').removeClass('active').eq(cur).addClass('active');
+        var s = slides[cur];
+        $('#hero-title').text(s.title);
+        $('#hero-subtitle').text(s.sub);
+        $('#hero-btn').text(s.btn).attr('href', s.href);
+        var $c = $('#hero-content');
+        $c.removeClass('fade-up');
+        void $c[0].offsetWidth;
+        $c.addClass('fade-up');
+        $('.hero-dot').removeClass('active').eq(cur).addClass('active');
+      }
+      timer = setInterval(function () { go(cur + 1); }, 7000);
+      $('.hero-prev').on('click', function () { clearInterval(timer); go(cur - 1); timer = setInterval(function () { go(cur + 1); }, 7000); });
+      $('.hero-next').on('click', function () { clearInterval(timer); go(cur + 1); timer = setInterval(function () { go(cur + 1); }, 7000); });
+      $('.hero-dot').on('click', function () { clearInterval(timer); go($(this).index()); timer = setInterval(function () { go(cur + 1); }, 7000); });
+    }(jQuery));
+  </script>
+</body>
+
+</html>

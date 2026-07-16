@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Connected Fleet | GPS Tracking &amp; Fleet Intelligence &rdquo;” Autonautics by Anstel</title>
+  <meta name="description"
+    content="Cloud-based fleet management with GPS tracking, telematics, driver behaviour, predictive maintenance, and operational intelligence.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      padding-top: 56px;
+      padding-bottom: 56px
+    }
+
+    .acc-arrow {
+      display: inline-block;
+      transition: transform .2s
+    }
+
+    .acc-arrow.rotated {
+      transform: rotate(180deg)
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+  <!-- â”€â”€ Hero â”€â”€ -->
+  <section class="position-relative overflow-hidden" style="height:100vh;min-height:640px">
+    <img src="images/connectedFleetMain.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+      alt="Connected Fleet">
+    <div class="position-absolute top-0 start-0 end-0 bottom-0"
+      style="background:linear-gradient(to bottom,rgba(0,0,0,.08),transparent 40%,rgba(0,0,0,.55))"></div>
+    <div class="position-absolute start-0 end-0 d-flex justify-content-center" style="top:28vh;z-index:5">
+      <h1 class="text-white fw-semibold text-center" style="font-size:clamp(1.5rem,4vw,2.25rem);letter-spacing:-.01em">
+        Connected Fleet</h1>
+    </div>
+  </section>
+
+  <!-- â”€â”€ Stats Bar (Tesla Style) â”€â”€ -->
+  <section class="bg-white border-bottom border-light py-4 py-md-5">
+    <div class="d-flex align-items-center justify-content-center flex-wrap gap-3 gap-md-0"
+      style="max-width:1000px;margin:auto">
+      <div class="d-flex flex-column align-items-center px-4 px-md-5 flex-fill">
+        <div class="d-flex align-items-baseline gap-1">
+          <span class="fw-bold text-dark lh-1"
+            style="font-size:clamp(1.75rem,4vw,2.5rem);letter-spacing:-0.5px">Live</span>
+        </div>
+        <span class="text-secondary mt-2 text-nowrap" style="font-size:.75rem">Fleet Tracking</span>
+      </div>
+      <div class="border-end border-secondary border-opacity-25 d-none d-md-block" style="height:48px"></div>
+      <div class="d-flex flex-column align-items-center px-4 px-md-5 flex-fill">
+        <div class="d-flex align-items-baseline gap-1">
+          <span class="fw-bold text-dark lh-1"
+            style="font-size:clamp(1.75rem,4vw,2.5rem);letter-spacing:-0.5px">500</span><span class="fw-bold text-dark"
+            style="font-size:1.1rem">+</span>
+        </div>
+        <span class="text-secondary mt-2 text-nowrap" style="font-size:.75rem">Vehicles Supported</span>
+      </div>
+      <div class="border-end border-secondary border-opacity-25 d-none d-md-block" style="height:48px"></div>
+      <div class="d-flex flex-column align-items-center px-4 px-md-5 flex-fill">
+        <div class="d-flex align-items-baseline gap-1">
+          <span class="fw-bold text-dark lh-1"
+            style="font-size:clamp(1.75rem,4vw,2.5rem);letter-spacing:-0.5px">&lt;1</span><span
+            class="fw-bold text-dark" style="font-size:1.1rem">s</span>
+        </div>
+        <span class="text-secondary mt-2 text-nowrap" style="font-size:.75rem">Data Refresh Rate</span>
+      </div>
+      <div class="border-end border-secondary border-opacity-25 d-none d-md-block" style="height:48px"></div>
+      <div class="d-flex flex-column align-items-center px-4 px-md-5 flex-fill">
+        <div class="d-flex align-items-baseline gap-1">
+          <span class="fw-bold text-dark lh-1"
+            style="font-size:clamp(1.75rem,4vw,2.5rem);letter-spacing:-0.5px">24/7</span>
+        </div>
+        <span class="text-secondary mt-2 text-nowrap" style="font-size:.75rem">Support &amp; Response</span>
+      </div>
+    </div>
+    <div class="text-center mt-4 mt-md-5">
+      <button class="btn btn-outline-dark rounded-pill px-5 py-2 fw-medium"
+        style="font-size:.85rem;border-color:#d1d5db;transition:all .2s">Request a Demo</button>
+    </div>
+  </section>
+
+  <!-- â”€â”€ Intelligence â”€â”€ -->
+  <section class="py-5 text-center px-3" style="padding-top:5rem!important;padding-bottom:5rem!important">
+    <div class="mx-auto" style="max-width:720px">
+      <p class="text-primary fw-semibold text-uppercase mb-3" style="font-size:.72rem;letter-spacing:.12em">Connected
+        Fleet Platform</p>
+      <h2 class="fw-bold mb-3" style="font-size:clamp(1.75rem,4vw,3rem)">Intelligence Behind Every Fleet</h2>
+      <p class="text-secondary mb-3">Real-Time Visibility, Operational Intelligence &amp; Smarter Fleet Management</p>
+      <p class="text-muted small lh-lg mb-4">Turn every connected vehicle into a source of real-time operational
+        intelligence. Monitor fleets, drivers, assets, and vehicle health through one cloud-based connected mobility
+        platform powered by GPS tracking, IoT telematics, fleet analytics, and intelligent automation.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <button class="btn btn-dark px-4 py-2">Schedule Demo</button>
+        <button class="btn btn-outline-secondary px-4 py-2">Explore Platform</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- â”€â”€ Beyond GPS â”€â”€ -->
+  <section class="py-5 px-3 px-md-4" style="background:#f9fafb">
+    <div class="row g-5 align-items-start" style="max-width:1280px;margin:auto">
+      <div class="col-md-6">
+        <p class="text-primary fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em">Beyond GPS
+        </p>
+        <h2 class="fw-bold mb-3" style="font-size:clamp(1.5rem,3vw,2.25rem)">Move Beyond GPS Tracking</h2>
+        <p class="fw-semibold text-dark mb-1">See More Than Location.</p>
+        <p class="text-secondary small lh-lg">Traditional GPS tracking software answers one question &rdquo;” <em>Where
+            is my vehicle?</em><br><br>Connected Fleet helps you understand how they perform.</p>
+      </div>
+      <div class="col-md-6">
+        <div class="border-top border-bottom border-light">
+          <div class="d-flex align-items-center gap-3 py-3 border-bottom"><span class="text-primary fw-semibold small"
+              style="width:24px;text-align:right;flex-shrink:0">01</span><span class="text-dark small fw-medium">What
+              happened?</span></div>
+          <div class="d-flex align-items-center gap-3 py-3 border-bottom"><span class="text-primary fw-semibold small"
+              style="width:24px;text-align:right;flex-shrink:0">02</span><span class="text-dark small fw-medium">Why did
+              it happen?</span></div>
+          <div class="d-flex align-items-center gap-3 py-3 border-bottom"><span class="text-primary fw-semibold small"
+              style="width:24px;text-align:right;flex-shrink:0">03</span><span class="text-dark small fw-medium">Which
+              driver was involved?</span></div>
+          <div class="d-flex align-items-center gap-3 py-3 border-bottom"><span class="text-primary fw-semibold small"
+              style="width:24px;text-align:right;flex-shrink:0">04</span><span class="text-dark small fw-medium">Is the
+              vehicle operating efficiently?</span></div>
+          <div class="d-flex align-items-center gap-3 py-3 border-bottom"><span class="text-primary fw-semibold small"
+              style="width:24px;text-align:right;flex-shrink:0">05</span><span class="text-dark small fw-medium">Will
+              maintenance be required soon?</span></div>
+          <div class="d-flex align-items-center gap-3 py-3 border-bottom"><span class="text-primary fw-semibold small"
+              style="width:24px;text-align:right;flex-shrink:0">06</span><span class="text-dark small fw-medium">Is fuel
+              being wasted?</span></div>
+          <div class="d-flex align-items-center gap-3 py-3 border-bottom"><span class="text-primary fw-semibold small"
+              style="width:24px;text-align:right;flex-shrink:0">07</span><span class="text-dark small fw-medium">Which
+              assets require attention?</span></div>
+          <div class="d-flex align-items-center gap-3 py-3"><span class="text-primary fw-semibold small"
+              style="width:24px;text-align:right;flex-shrink:0">08</span><span class="text-dark small fw-medium">What
+              should I do next?</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â”€â”€ Why Connected Fleet â”€â”€ -->
+  <section class="bg-white">
+    <div class="text-center py-5 px-3 border-bottom border-light">
+      <p class="text-primary fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em">Why
+        Connected Fleet</p>
+      <h2 class="fw-bold mb-3" style="font-size:clamp(1.5rem,3vw,2.25rem)">Fleet Management Built for Modern Businesses
+      </h2>
+      <p class="text-muted small lh-lg mx-auto" style="max-width:640px">Manage vehicles, drivers, assets, and operations
+        from one connected platform. Monitor your fleet in real time, improve efficiency, reduce costs, and make better
+        decisions with connected fleet intelligence.</p>
+    </div>
+    <div class="d-flex flex-column gap-3 px-3 px-md-5 py-4 mx-auto" style="max-width:1280px">
+      <!-- Why card 1 -->
+      <div class="d-flex flex-column flex-md-row" style="min-height:440px">
+        <div class="why-card-img flex-shrink-0 overflow-hidden"
+          style="width:100%;flex:0 0 63%;max-height:260px;max-height:unset">
+          <img src="images/connectedFleetMain.png" class="w-100 h-100 object-fit-cover" alt="" style="height:260px">
+        </div>
+        <div class="d-flex align-items-center px-3 px-md-5 py-4 bg-white flex-fill">
+          <div>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
+              Real-Time Fleet Visibility</p>
+            <h3 class="fw-bold mb-3">Tracks Everything.</h3>
+            <p class="text-secondary small lh-lg" style="max-width:320px">Monitor every vehicle, driver, and asset in
+              real time. Live GPS dashboards give your operations team complete situational awareness &rdquo;” from
+              ignition events to route deviations &rdquo;” the moment they happen.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Why card 2 -->
+      <div class="d-flex flex-column flex-md-row" style="min-height:440px">
+        <div class="why-card-img flex-shrink-0 overflow-hidden" style="flex:0 0 63%">
+          <img src="images/connectedECO.png" class="w-100 h-100 object-fit-cover" alt="" style="height:260px">
+        </div>
+        <div class="d-flex align-items-center px-3 px-md-5 py-4 bg-white flex-fill">
+          <div>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
+              Operational Intelligence</p>
+            <h3 class="fw-bold mb-3">Understands More.</h3>
+            <p class="text-secondary small lh-lg" style="max-width:320px">Transform raw fleet data into clear
+              operational insights. Telematics analytics, driver scorecards, fuel reports, and predictive trends help
+              you make smarter decisions.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Why card 3 -->
+      <div class="d-flex flex-column flex-md-row" style="min-height:440px">
+        <div class="why-card-img flex-shrink-0 overflow-hidden" style="flex:0 0 63%">
+          <img src="images/connectedfleet-replay.png" class="w-100 h-100 object-fit-cover" alt="" style="height:260px">
+        </div>
+        <div class="d-flex align-items-center px-3 px-md-5 py-4 bg-white flex-fill">
+          <div>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">Smart
+              Alerting</p>
+            <h3 class="fw-bold mb-3">Responds Faster.</h3>
+            <p class="text-secondary small lh-lg" style="max-width:320px">Receive intelligent alerts the instant
+              something important happens &rdquo;” speeding, geofence breach, SOS, or vehicle offline. Every second of
+              response time saved protects your people and assets.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Why card 4 -->
+      <div class="d-flex flex-column flex-md-row" style="min-height:440px">
+        <div class="why-card-img flex-shrink-0 overflow-hidden" style="flex:0 0 63%">
+          <img src="images/connected fleet.png" class="w-100 h-100 object-fit-cover" alt="" style="height:260px">
+        </div>
+        <div class="d-flex align-items-center px-3 px-md-5 py-4 bg-white flex-fill">
+          <div>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">Fleet
+              Optimisation</p>
+            <h3 class="fw-bold mb-3">Runs Smarter.</h3>
+            <p class="text-secondary small lh-lg" style="max-width:320px">Improve vehicle utilisation, reduce idle time,
+              prevent unplanned downtime, and lower operating costs &rdquo;” all from one connected platform that learns
+              from your fleet as it grows.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â”€â”€ Feature Section (Real-Time Tracking) â”€â”€ -->
+  <section class="py-5 px-3 px-md-4 bg-white">
+    <div style="max-width:1280px;margin:auto">
+      <p class="text-primary fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em">Real-Time
+        Fleet Tracking</p>
+      <div class="row g-4 align-items-start">
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-3" style="font-size:clamp(1.5rem,3vw,2rem)">Know Where Every Vehicle Is. Every Second.
+          </h2>
+          <p class="text-secondary small lh-lg">Track vehicles, drivers, and assets in real time using live GPS
+            tracking, telematics, route monitoring, and operational status updates.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-2">
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">Live GPS Vehicle Tracking</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">Fleet Monitoring</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">Route Monitoring</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">Driver Identification</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">ETA Tracking</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">Trip Timeline</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">Vehicle Status</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">Asset Tracking</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â”€â”€ Historical Playback â”€â”€ -->
+  <section class="position-relative overflow-hidden bg-black" style="height:100vh;min-height:640px">
+    <img src="images/connectedfleet-replay.png"
+      class="position-absolute start-0 end-0 w-100 object-fit-cover object-top" alt="Route Replay"
+      style="top:8vh;height:62vh">
+    <div class="position-absolute start-0 end-0 bottom-0"
+      style="height:40%;background:linear-gradient(to bottom,transparent,rgba(0,0,0,.85) 55%,rgba(0,0,0,.98))"></div>
+    <div class="position-absolute start-0 end-0 bottom-0 px-3 px-md-5 py-4" style="z-index:5">
+      <div class="row g-4 align-items-start" style="max-width:1280px;margin:auto">
+        <div class="col-md-5">
+          <p class="text-primary fw-semibold text-uppercase mb-1" style="font-size:.72rem;letter-spacing:.12em">
+            Historical Playback</p>
+          <h2 class="text-white fw-bold lh-sm" style="font-size:clamp(1.25rem,2.5vw,1.75rem)">Replay Every Journey with
+            Complete Accuracy</h2>
+        </div>
+        <div class="col-md-7">
+          <p class="text-white text-opacity-50 small lh-lg mb-3">Access historical trip data to investigate incidents,
+            validate deliveries, resolve disputes, analyse driver behaviour, and improve fleet performance.</p>
+          <div class="row g-2">
+            <div class="col-6 col-sm-3 d-flex align-items-center gap-2"><span
+                class="rounded-circle bg-primary flex-shrink-0" style="width:4px;height:4px"></span><span
+                class="text-white text-opacity-50" style="font-size:.72rem">Historical Playback</span></div>
+            <div class="col-6 col-sm-3 d-flex align-items-center gap-2"><span
+                class="rounded-circle bg-primary flex-shrink-0" style="width:4px;height:4px"></span><span
+                class="text-white text-opacity-50" style="font-size:.72rem">Journey Timeline</span></div>
+            <div class="col-6 col-sm-3 d-flex align-items-center gap-2"><span
+                class="rounded-circle bg-primary flex-shrink-0" style="width:4px;height:4px"></span><span
+                class="text-white text-opacity-50" style="font-size:.72rem">Route Replay</span></div>
+            <div class="col-6 col-sm-3 d-flex align-items-center gap-2"><span
+                class="rounded-circle bg-primary flex-shrink-0" style="width:4px;height:4px"></span><span
+                class="text-white text-opacity-50" style="font-size:.72rem">Stop Analysis</span></div>
+            <div class="col-6 col-sm-3 d-flex align-items-center gap-2"><span
+                class="rounded-circle bg-primary flex-shrink-0" style="width:4px;height:4px"></span><span
+                class="text-white text-opacity-50" style="font-size:.72rem">Idle Time Analysis</span></div>
+            <div class="col-6 col-sm-3 d-flex align-items-center gap-2"><span
+                class="rounded-circle bg-primary flex-shrink-0" style="width:4px;height:4px"></span><span
+                class="text-white text-opacity-50" style="font-size:.72rem">Incident Investigation</span></div>
+            <div class="col-6 col-sm-3 d-flex align-items-center gap-2"><span
+                class="rounded-circle bg-primary flex-shrink-0" style="width:4px;height:4px"></span><span
+                class="text-white text-opacity-50" style="font-size:.72rem">Insurance Verification</span></div>
+            <div class="col-6 col-sm-3 d-flex align-items-center gap-2"><span
+                class="rounded-circle bg-primary flex-shrink-0" style="width:4px;height:4px"></span><span
+                class="text-white text-opacity-50" style="font-size:.72rem">Route Comparison</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â”€â”€ More Feature Sections â”€â”€ -->
+  <section class="py-5 px-3 px-md-4 bg-white">
+    <div style="max-width:1280px;margin:auto">
+      <p class="text-primary fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em">Driver
+        Management &amp; Behaviour Monitoring</p>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-3">Safer Drivers Create Stronger Fleets</h2>
+          <p class="text-secondary small lh-lg">Monitor driver behaviour using telematics to improve road safety, reduce
+            fuel consumption, minimize vehicle wear, and encourage responsible driving.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-2">
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">Driver Behaviour Monitoring</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">Overspeed Alerts</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">Harsh Braking</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">Driver Scorecards</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">Eco Driving</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+                class="small text-secondary">Driver Performance Reports</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 px-3 px-md-4" style="background:#111827">
+    <div style="max-width:1280px;margin:auto">
+      <p class="fw-semibold text-uppercase mb-2 text-primary" style="font-size:.72rem;letter-spacing:.12em">Predictive
+        Fleet Maintenance</p>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h2 class="text-white fw-bold mb-3">Prevent Breakdowns Before They Happen</h2>
+          <p class="text-secondary small lh-lg">Reduce vehicle downtime using predictive maintenance powered by mileage,
+            engine hours, service schedules, and vehicle diagnostics.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-2">
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot"
+                style="background:#60a5fa"></span><span class="small text-secondary">Maintenance Scheduling</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot"
+                style="background:#60a5fa"></span><span class="small text-secondary">Service Reminders</span></div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot"
+                style="background:#60a5fa"></span><span class="small text-secondary">Vehicle Health Monitoring</span>
+            </div>
+            <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot"
+                style="background:#60a5fa"></span><span class="small text-secondary">Inspection Records</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â”€â”€ Industries â”€â”€ -->
+  <section class="py-5 px-3 text-center bg-white">
+    <div style="max-width:1280px;margin:auto">
+      <p class="text-primary fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em">Industries
+      </p>
+      <h2 class="fw-bold mb-3">One Platform. Every Fleet.</h2>
+      <p class="text-muted small lh-lg mx-auto mb-5" style="max-width:560px">Whether you manage 10 vehicles or 10,000,
+        Connected Fleet scales with your business.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <span class="tag-pill">Logistics &amp; Transportation</span><span class="tag-pill">Trucking Fleets</span><span
+          class="tag-pill">Taxi &amp; Ride Hailing</span><span class="tag-pill">Field Services</span><span
+          class="tag-pill">Construction</span><span class="tag-pill">Mining</span><span
+          class="tag-pill">Utilities</span><span class="tag-pill">Government Fleets</span><span
+          class="tag-pill">Emergency Services</span><span class="tag-pill">Cold Chain Logistics</span><span
+          class="tag-pill">Distribution</span><span class="tag-pill">Rental &amp; Leasing</span><span
+          class="tag-pill">Corporate Fleets</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- â”€â”€ Business Outcomes â”€â”€ -->
+  <section class="py-5 px-3 px-md-4" style="background:#f9fafb">
+    <div style="max-width:1280px;margin:auto">
+      <p class="text-primary fw-semibold text-uppercase mb-2 text-center" style="font-size:.72rem;letter-spacing:.12em">
+        Business Outcomes</p>
+      <h2 class="fw-bold text-center mb-3" style="font-size:clamp(1.5rem,3vw,2.25rem)">Technology That Delivers
+        Measurable Results</h2>
+      <p class="text-muted small text-center mx-auto mb-5 lh-lg" style="max-width:560px">Connected Fleet helps
+        organizations improve operational performance through connected intelligence, automation, and real-time fleet
+        visibility.</p>
+      <div class="row g-3">
+        <div class="col-sm-6 col-lg-4">
+          <div class="bg-white p-4 rounded-4 border border-light h-100">
+            <h6 class="fw-semibold mb-2">Reduce Operating Costs</h6>
+            <p class="text-secondary small mb-0">Optimize fuel usage, maintenance planning, and operational efficiency.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="bg-white p-4 rounded-4 border border-light h-100">
+            <h6 class="fw-semibold mb-2">Improve Driver Safety</h6>
+            <p class="text-secondary small mb-0">Monitor driver behaviour and encourage safer driving practices.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="bg-white p-4 rounded-4 border border-light h-100">
+            <h6 class="fw-semibold mb-2">Increase Fleet Productivity</h6>
+            <p class="text-secondary small mb-0">Maximize vehicle utilization, optimize routes, and reduce idle time.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="bg-white p-4 rounded-4 border border-light h-100">
+            <h6 class="fw-semibold mb-2">Prevent Downtime</h6>
+            <p class="text-secondary small mb-0">Use predictive maintenance to avoid unexpected vehicle failures.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="bg-white p-4 rounded-4 border border-light h-100">
+            <h6 class="fw-semibold mb-2">Deliver Better Customer Experiences</h6>
+            <p class="text-secondary small mb-0">Provide accurate ETAs, reliable deliveries, and faster response times.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="bg-white p-4 rounded-4 border border-light h-100">
+            <h6 class="fw-semibold mb-2">Make Smarter Decisions</h6>
+            <p class="text-secondary small mb-0">Leverage real-time dashboards, reports, and operational intelligence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â”€â”€ CTA â”€â”€ -->
+  <section class="py-5 px-3 text-center"
+    style="background:#111827;padding-top:6rem!important;padding-bottom:6rem!important">
+    <div class="mx-auto" style="max-width:640px">
+      <p class="fw-semibold text-uppercase mb-3" style="font-size:.72rem;letter-spacing:.12em;color:#60a5fa">Get Started
+      </p>
+      <h2 class="text-white fw-bold mb-3" style="font-size:clamp(1.5rem,3vw,2.25rem)">Ready to Build a Smarter Fleet?
+      </h2>
+      <p class="text-secondary small lh-lg mb-5">Transform your vehicles into connected assets with Autonautics
+        Connected Fleet &rdquo;” GPS tracking, vehicle telematics, driver management, predictive maintenance, and fleet
+        analytics in one intelligent platform.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <button class="btn btn-primary px-5 py-2">Schedule a Demo</button>
+        <button class="btn btn-outline-secondary px-5 py-2 text-white">Contact Sales</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- â”€â”€ Footer â”€â”€ -->
+  <footer class="bg-white border-top py-3 px-3">
+    <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mx-auto" style="max-width:1280px">
+      <span class="text-muted" style="font-size:.75rem">Tesla Â© 2026</span>
+      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Privacy &amp; Legal</a>
+      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Contact</a>
+      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">News</a>
+      <a href="index.html" class="text-secondary text-decoration-none" style="font-size:.75rem">â† Home</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

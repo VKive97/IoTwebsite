@@ -1,0 +1,162 @@
+/* ── Scroll carousels ── */
+:root{
+  --site-gutter:clamp(1rem,4vw,5rem);
+  --section-space:clamp(3.5rem,7vw,7rem);
+  --section-space-tight:clamp(2.5rem,5vw,5rem);
+}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden}
+
+/* Shared page rhythm: generous space on large screens, compact and readable on phones. */
+body > section.py-5,
+body > section.section-pad{padding-top:var(--section-space)!important;padding-bottom:var(--section-space)!important}
+body > section.py-4{padding-top:var(--section-space-tight)!important;padding-bottom:var(--section-space-tight)!important}
+body > section[class*="px-"]{padding-left:var(--site-gutter)!important;padding-right:var(--site-gutter)!important}
+body > section > [class*="px-"]{padding-left:var(--site-gutter)!important;padding-right:var(--site-gutter)!important}
+body > section > .row{--bs-gutter-x:clamp(1.25rem,3vw,3.5rem);--bs-gutter-y:clamp(1.5rem,4vw,3rem)}
+.about-anstel-cta{border-radius:4px;font-size:.875rem;font-weight:600;min-width:180px}
+@media(min-width:768px){.about-pillar + .about-pillar{border-left:1px solid #d1d5db}}
+
+@media(max-width:575px){
+  :root{--site-gutter:1rem;--section-space:3.25rem;--section-space-tight:2.25rem}
+  body > section > .row{--bs-gutter-x:1rem;--bs-gutter-y:1.5rem}
+}
+
+.scroll-track{scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none}
+.scroll-track::-webkit-scrollbar{display:none}
+[data-card]{scroll-snap-align:start}
+
+/* Bleed carousels: keep a full, touch-friendly card in view on narrow screens. */
+.scroll-carousel .scroll-track{-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+@media(max-width:991px){
+  .scroll-carousel .scroll-track{gap:.75rem!important;scroll-padding-inline:1rem}
+  .scroll-carousel .scroll-track [data-card]{max-width:none!important}
+  .scroll-carousel .scroll-track [data-card][style*="width:78vw"]{width:78vw!important}
+  .scroll-carousel .scroll-track [data-card][style*="width:82vw"]{width:82vw!important}
+  .scroll-carousel .scroll-track [data-card][style*="width:88vw"]{width:88vw!important}
+  .scroll-carousel[style*="height:52vh"]{height:min(55svh,430px)!important;min-height:300px!important}
+  .scroll-carousel[style*="height:70vh"]{height:min(68svh,520px)!important;min-height:360px!important}
+  .scroll-carousel .sc-prev,.scroll-carousel .sc-next{width:36px;height:36px}
+}
+@media(max-width:575px){
+  .scroll-carousel .scroll-track{gap:.625rem!important;scroll-padding-inline:1rem}
+  .scroll-carousel .scroll-track [data-card][style*="width:78vw"]{width:84vw!important}
+  .scroll-carousel .scroll-track [data-card][style*="width:82vw"]{width:88vw!important}
+  .scroll-carousel .scroll-track [data-card][style*="width:88vw"]{width:90vw!important}
+  .scroll-carousel[style*="height:52vh"]{height:min(58svh,400px)!important;min-height:280px!important}
+  .scroll-carousel[style*="height:70vh"]{height:min(70svh,480px)!important;min-height:340px!important}
+  .scroll-carousel .sc-prev,.scroll-carousel .sc-next{display:none!important}
+  .scroll-carousel .scroll-track [data-card][style*="max-width:520px"]{padding:1rem!important}
+  .scroll-carousel .scroll-track [data-card][style*="max-width:520px"] [style*="width:120px"]{width:76px!important}
+}
+
+/* ── Hero crossfade ── */
+@keyframes heroSlideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-slide{position:absolute;top:-40px;left:0;right:0;bottom:0;opacity:0;transform:translateY(40px);transition:all .8s ease-in-out;visibility:hidden}
+.hero-slide.active{opacity:1;transform:translateY(0);visibility:visible;animation:heroSlideUp .8s ease-in-out forwards}
+
+/* Hero carousel presentation */
+#hero-content h1{font-size:2.5rem;font-weight:600;line-height:1.1;color:#fff!important;text-shadow:0 1px 3px rgba(0,0,0,.2)}
+#hero-subtitle{color:#fff!important;font-size:1.05rem;line-height:1.35;text-shadow:0 1px 3px rgba(0,0,0,.2)}
+.hero-actions{display:flex;width:min(100%,200px)}
+.hero-actions .btn{flex:1;border-radius:4px;padding:.66rem 1.25rem;font-size:.875rem;font-weight:600;line-height:1.25}
+.hero-actions .hero-learn-btn{
+  --bs-btn-color:#fff;
+  --bs-btn-bg:#4169dc;
+  --bs-btn-border-color:#4169dc;
+  --bs-btn-hover-color:#fff;
+  --bs-btn-hover-bg:#355bc8;
+  --bs-btn-hover-border-color:#355bc8;
+  --bs-btn-active-color:#fff;
+  --bs-btn-active-bg:#2d50b7;
+  --bs-btn-active-border-color:#2d50b7;
+  background:#4169dc!important;
+  border-color:#4169dc!important;
+  color:#fff!important;
+}
+.hero-prev.car-btn,.hero-next.car-btn{
+  width:40px;
+  height:40px;
+  border:0;
+  border-radius:4px;
+  background:rgba(255,255,255,.9);
+  box-shadow:0 1px 2px rgba(0,0,0,.08);
+  backdrop-filter:none;
+}
+.hero-prev.car-btn{left:48px!important;margin-left:0!important}
+.hero-next.car-btn{right:48px!important;margin-right:0!important}
+.hero-prev.car-btn:hover,.hero-next.car-btn:hover{background:#fff}
+.hero-dot.dot-btn{width:13px;min-width:13px;height:13px;border-radius:50%;background:rgba(255,255,255,.65)}
+.hero-dot.dot-btn.active{width:13px;background:#fff}
+@media(max-width:767px){
+  #hero-content{padding-top:12vh!important}
+  #hero-content h1{font-size:2rem}
+  #hero-subtitle{font-size:.95rem;max-width:330px}
+  .hero-actions{max-width:330px}
+  .hero-prev.car-btn{left:16px!important}
+  .hero-next.car-btn{right:16px!important}
+}
+
+/* ── Fade-up text ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .6s ease both}
+
+/* ── Carousel nav buttons ── */
+.car-btn{width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,.4);border:0;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);cursor:pointer;transition:background .2s}
+.car-btn:hover{background:rgba(255,255,255,.7)}
+
+/* ── Dot indicators ── */
+.dot-btn{height:8px;width:8px;min-width:8px;border-radius:4px;background:#9ca3af;border:0;cursor:pointer;transition:all .3s;padding:0}
+.dot-btn.active{width:16px;background:#111827}
+.dot-btn-light.active{background:#fff}
+.dot-btn-light{background:rgba(255,255,255,.5)}
+
+/* ── Mega menu ── */
+.mega-menu{position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid #f3f4f6;box-shadow:0 8px 24px rgba(0,0,0,.08);z-index:999;display:none}
+.mega-product-card{text-align:center;text-decoration:none;color:inherit;cursor:pointer}
+.mega-product-card:hover .card-name{text-decoration:underline}
+.mega-product-card img{height:80px;object-fit:contain;width:100%;transition:transform .2s}
+.mega-product-card:hover img{transform:scale(1.05)}
+
+/* ── Mega menu page overlay / blur ── */
+#mega-overlay{position:fixed;top:56px;left:0;right:0;bottom:0;background:rgba(0,0,0,.3);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);z-index:998;display:none;pointer-events:none}
+
+/* ── Frosted glass ── */
+.frosted{background:rgba(0,0,0,.35)!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+
+/* ── Section vertical rhythm ── */
+.section-pad{padding-top:5rem;padding-bottom:5rem}
+@media(max-width:767px){.section-pad{padding-top:3.5rem;padding-bottom:3.5rem}}
+
+/* ── Schedule bar ── */
+.schedule-bar{position:fixed;bottom:0;left:0;right:0;height:56px;background:#fff;border-top:1px solid #e5e7eb;z-index:1040;display:flex;align-items:stretch}
+
+/* ── Misc ── */
+.nav-btn{background:none;border:0;border-radius:6px;padding:6px 14px;font-size:.875rem;font-weight:500;cursor:pointer;transition:background .15s}
+.nav-btn:hover,.nav-btn.active{background:rgba(0,0,0,.05)}
+.icon-btn{background:none;border:0;border-radius:6px;padding:8px;cursor:pointer;transition:background .15s}
+.icon-btn:hover{background:rgba(0,0,0,.05)}
+.feature-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;display:inline-block}
+.why-card-img{border-radius:1rem;overflow:hidden;background:#f3f4f6}
+.tag-pill{display:inline-block;border:1px solid #e5e7eb;border-radius:999px;padding:6px 16px;font-size:.875rem;color:#4b5563;cursor:default;transition:all .2s}
+.tag-pill:hover{border-color:#93c5fd;color:#2563eb}
+.acc-arrow{display:inline-block;transition:transform .2s}
+.acc-arrow.rotated{transform:rotate(180deg)}
+
+/* ── Carousel bleed padding to align with bootstrap px- classes ── */
+.scroll-track.px-3 { scroll-padding-left: 1rem; scroll-padding-right: 1rem; }
+.scroll-track.px-4 { scroll-padding-left: 1.5rem; scroll-padding-right: 1.5rem; }
+.scroll-track.px-5 { scroll-padding-left: 3rem; scroll-padding-right: 3rem; }
+@media (min-width: 768px) {
+  .scroll-track.px-md-3 { scroll-padding-left: 1rem; scroll-padding-right: 1rem; }
+  .scroll-track.px-md-4 { scroll-padding-left: 1.5rem; scroll-padding-right: 1.5rem; }
+  .scroll-track.px-md-5 { scroll-padding-left: 3rem; scroll-padding-right: 3rem; }
+}
+@media (min-width: 992px) {
+  .scroll-track.px-lg-3 { scroll-padding-left: 1rem; scroll-padding-right: 1rem; }
+  .scroll-track.px-lg-4 { scroll-padding-left: 1.5rem; scroll-padding-right: 1.5rem; }
+  .scroll-track.px-lg-5 { scroll-padding-left: 3rem; scroll-padding-right: 3rem; }
+}

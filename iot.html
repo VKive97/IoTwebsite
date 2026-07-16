@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IoT Platform | Connected Devices &amp; Sensors &mdash; Autonautics by Anstel</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body{padding-top:56px;padding-bottom:56px}
+    .grid-overlay{background-image:linear-gradient(rgba(167,139,250,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(167,139,250,.5) 1px,transparent 1px);background-size:60px 60px}
+  </style>
+</head>
+<body class="bg-white">
+
+<!-- HERO -->
+<section class="position-relative overflow-hidden" style="height:90vh;min-height:560px">
+  <img src="images/IoT.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="IoT Platform">
+  <div class="position-absolute top-0 start-0 end-0 bottom-0" style="background:linear-gradient(135deg,rgba(49,10,90,.9),rgba(20,5,40,.75) 60%,rgba(0,0,0,.5))"></div>
+  <div class="position-absolute top-0 start-0 end-0 bottom-0 grid-overlay opacity-10"></div>
+  <div class="position-relative d-flex flex-column justify-content-end px-3 px-md-5 pb-5 h-100" style="z-index:5;max-width:1280px;margin:auto">
+    <p class="fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em;color:#60a5fa">Autonautics &middot; IoT Platform</p>
+    <h1 class="text-white fw-bold lh-sm mb-3" style="font-size:clamp(2rem,5vw,4rem)">Connect.<br>Monitor.<br><span style="color:#c084fc">Control Everything.</span></h1>
+    <p class="text-white text-opacity-50 lh-lg mb-4" style="max-width:480px">Enterprise-grade IoT infrastructure for fleets, facilities, and field operations &mdash; connecting any device, anywhere, at any scale.</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <button class="btn btn-primary px-4 py-2">Start Building</button>
+      <button class="btn px-4 py-2 text-white border border-white border-opacity-25" style="background:rgba(255,255,255,.1);backdrop-filter:blur(8px)">View Documentation</button>
+    </div>
+  </div>
+</section>
+
+<!-- THREE PILLARS (tabs) -->
+<section class="section-pad px-3 px-md-4" style="background:#030712">
+  <div style="max-width:1280px;margin:auto">
+    <p class="fw-semibold text-uppercase mb-2 text-center" style="font-size:.72rem;letter-spacing:.12em;color:#60a5fa">Platform Architecture</p>
+    <h2 class="text-white fw-bold text-center mb-4">One platform. Three layers of intelligence.</h2>
+    <div class="d-flex gap-2 justify-content-center flex-wrap mb-4">
+      <button class="btn btn-primary rounded-pill px-4 py-2 small pillar-btn active" data-pillar="0">&#128225; Connect</button>
+      <button class="btn rounded-pill px-4 py-2 small pillar-btn" style="background:#1f2937;color:#9ca3af" data-pillar="1">&#129504; Analyse</button>
+      <button class="btn rounded-pill px-4 py-2 small pillar-btn" style="background:#1f2937;color:#9ca3af" data-pillar="2">&#9889; Act</button>
+    </div>
+    <div class="row g-4 align-items-center">
+      <div class="col-md-6">
+        <h3 class="text-white fw-bold mb-3" id="pillar-title">Universal Device Connectivity</h3>
+        <p class="text-secondary lh-lg mb-4" id="pillar-desc">Onboard any device &mdash; fleet hardware, environmental sensors, smart locks, edge gateways &mdash; over cellular, Wi-Fi, LoRaWAN, or BLE. Zero-touch provisioning at scale.</p>
+        <div class="p-3 rounded-3" style="border:1px solid rgba(168,85,247,.2);background:rgba(88,28,135,.15)">
+          <pre class="mb-0" style="color:#d8b4fe;font-size:.75rem;font-family:monospace" id="pillar-code">&gt; Device provisioned in 00:00:04.2s
+&gt; MQTT handshake &#10003;
+&gt; Telemetry stream active</pre>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="rounded-4 overflow-hidden border d-flex align-items-center justify-content-center" style="height:280px;background:#111827;border-color:rgba(168,85,247,.2)!important">
+          <img src="images/IoTLogo.png" class="w-100 h-100 object-fit-cover p-5" style="filter:drop-shadow(0 0 32px rgba(167,139,250,.4))" alt="IoT">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORTED DEVICES (bleed carousel) -->
+<section class="bg-black py-0">
+  <div class="px-3 px-md-4 section-pad pb-3">
+    <p class="fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em;color:#60a5fa">Supported Devices</p>
+    <h2 class="text-white fw-bold mb-2">Works with any hardware</h2>
+    <p class="text-secondary small lh-lg" style="max-width:560px">From off-the-shelf sensors to custom enterprise hardware &mdash; if it can transmit data, our platform can connect it.</p>
+  </div>
+  <div class="scroll-carousel position-relative overflow-hidden pb-5">
+    <div class="scroll-track d-flex gap-3 overflow-x-auto">
+      <div data-card class="flex-shrink-0 p-4 rounded-4 border d-flex gap-3 ms-3 ms-md-4" style="width:80vw;max-width:320px;border-color:rgba(75,85,99,1)!important;background:#111827"><span style="font-size:1.75rem;flex-shrink:0">&#128667;</span><div><h6 class="text-white fw-bold mb-1">Fleet Telematics</h6><p class="mb-2" style="color:#c084fc;font-size:.72rem">500+ vehicle types</p><p class="text-secondary small mb-0">OBD-II, CAN bus, EV battery management</p></div></div>
+      <div data-card class="flex-shrink-0 p-4 rounded-4 border d-flex gap-3" style="width:80vw;max-width:320px;border-color:rgba(75,85,99,1)!important;background:#111827"><span style="font-size:1.75rem;flex-shrink:0">&#128247;</span><div><h6 class="text-white fw-bold mb-1">Smart Cameras</h6><p class="mb-2" style="color:#c084fc;font-size:.72rem">IP &amp; edge AI cameras</p><p class="text-secondary small mb-0">Video analytics, ANPR, object detection</p></div></div>
+      <div data-card class="flex-shrink-0 p-4 rounded-4 border d-flex gap-3" style="width:80vw;max-width:320px;border-color:rgba(75,85,99,1)!important;background:#111827"><span style="font-size:1.75rem;flex-shrink:0">&#127777;&#65039;</span><div><h6 class="text-white fw-bold mb-1">Environmental</h6><p class="mb-2" style="color:#c084fc;font-size:.72rem">Temp, humidity, CO&#8322;</p><p class="text-secondary small mb-0">Cold chain, warehouse, air quality</p></div></div>
+      <div data-card class="flex-shrink-0 p-4 rounded-4 border d-flex gap-3" style="width:80vw;max-width:320px;border-color:rgba(75,85,99,1)!important;background:#111827"><span style="font-size:1.75rem;flex-shrink:0">&#128272;</span><div><h6 class="text-white fw-bold mb-1">Access Control</h6><p class="mb-2" style="color:#c084fc;font-size:.72rem">Smart locks &amp; gates</p><p class="text-secondary small mb-0">RFID, biometric, NFC readers</p></div></div>
+      <div data-card class="flex-shrink-0 p-4 rounded-4 border d-flex gap-3" style="width:80vw;max-width:320px;border-color:rgba(75,85,99,1)!important;background:#111827"><span style="font-size:1.75rem;flex-shrink:0">&#9889;</span><div><h6 class="text-white fw-bold mb-1">Energy Meters</h6><p class="mb-2" style="color:#c084fc;font-size:.72rem">kWh &amp; power quality</p><p class="text-secondary small mb-0">Solar, EV charging, grid monitoring</p></div></div>
+      <div data-card class="flex-shrink-0 p-4 rounded-4 border d-flex gap-3" style="width:80vw;max-width:320px;border-color:rgba(75,85,99,1)!important;background:#111827"><span style="font-size:1.75rem;flex-shrink:0">&#128230;</span><div><h6 class="text-white fw-bold mb-1">Asset Trackers</h6><p class="mb-2" style="color:#c084fc;font-size:.72rem">BLE &amp; GPS tags</p><p class="text-secondary small mb-0">Pallets, containers, high-value assets</p></div></div>
+      <div class="flex-shrink-0" style="width:24px" aria-hidden="true"></div>
+    </div>
+    <button class="sc-prev car-btn position-absolute top-50 start-0 translate-middle-y ms-3 d-none" style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+    <button class="sc-next car-btn position-absolute top-50 end-0 translate-middle-y me-3" style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</section>
+
+<!-- DATA PIPELINE (bleed carousel) -->
+<section class="py-0" style="background:#030712">
+  <div class="px-3 px-md-4 section-pad pb-3">
+    <p class="fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em;color:#60a5fa">Data Pipeline</p>
+    <h2 class="text-white fw-bold">From edge to action &mdash; in milliseconds</h2>
+  </div>
+  <div class="scroll-carousel position-relative overflow-hidden pb-5">
+    <div class="scroll-track d-flex gap-3 overflow-x-auto">
+      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25 ms-3 ms-md-4" style="width:72vw;max-width:220px;background:#111827"><span style="font-size:1.5rem">&#128225;</span><p class="fw-semibold text-uppercase mt-2 mb-1" style="font-size:.65rem;letter-spacing:.1em;color:#60a5fa">Edge</p><p class="text-secondary" style="font-size:.72rem">Device collects &amp; pre-processes data locally</p></div>
+      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:72vw;max-width:220px;background:#111827"><span style="font-size:1.5rem">&#128260;</span><p class="fw-semibold text-uppercase mt-2 mb-1" style="font-size:.65rem;letter-spacing:.1em;color:#60a5fa">Ingest</p><p class="text-secondary" style="font-size:.72rem">Secure MQTT/HTTPS stream to cloud gateway</p></div>
+      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:72vw;max-width:220px;background:#111827"><span style="font-size:1.5rem">&#9881;&#65039;</span><p class="fw-semibold text-uppercase mt-2 mb-1" style="font-size:.65rem;letter-spacing:.1em;color:#60a5fa">Process</p><p class="text-secondary" style="font-size:.72rem">Rules engine &amp; ML models run in real time</p></div>
+      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:72vw;max-width:220px;background:#111827"><span style="font-size:1.5rem">&#128452;&#65039;</span><p class="fw-semibold text-uppercase mt-2 mb-1" style="font-size:.65rem;letter-spacing:.1em;color:#60a5fa">Store</p><p class="text-secondary" style="font-size:.72rem">Time-series DB with 5-year retention</p></div>
+      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:72vw;max-width:220px;background:#111827"><span style="font-size:1.5rem">&#9889;</span><p class="fw-semibold text-uppercase mt-2 mb-1" style="font-size:.65rem;letter-spacing:.1em;color:#60a5fa">Act</p><p class="text-secondary" style="font-size:.72rem">Alerts, commands, webhooks dispatched instantly</p></div>
+      <div class="flex-shrink-0" style="width:24px" aria-hidden="true"></div>
+    </div>
+    <button class="sc-prev car-btn position-absolute top-50 start-0 translate-middle-y ms-3 d-none" style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+    <button class="sc-next car-btn position-absolute top-50 end-0 translate-middle-y me-3" style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</section>
+
+<!-- CAPABILITIES (bleed carousel) -->
+<section class="py-0" style="background:#030712">
+  <div class="px-3 px-md-4 pt-2 pb-3">
+    <h2 class="text-white fw-bold text-center">Everything built in. Nothing bolted on.</h2>
+  </div>
+  <div class="scroll-carousel position-relative overflow-hidden pb-5">
+    <div class="scroll-track d-flex gap-3 overflow-x-auto">
+      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25 ms-3 ms-md-4" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#128274;</span><p class="text-secondary small mt-2 mb-0">End-to-End Encryption</p></div>
+      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#128202;</span><p class="text-secondary small mt-2 mb-0">Custom Dashboards</p></div>
+      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#127757;</span><p class="text-secondary small mt-2 mb-0">Multi-Region Deploy</p></div>
+      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#128268;</span><p class="text-secondary small mt-2 mb-0">Open API &amp; SDK</p></div>
+      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#129302;</span><p class="text-secondary small mt-2 mb-0">ML Anomaly Detection</p></div>
+      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#128241;</span><p class="text-secondary small mt-2 mb-0">Mobile Command Centre</p></div>
+      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#9854;&#65039;</span><p class="text-secondary small mt-2 mb-0">Unlimited Device Scale</p></div>
+      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#129513;</span><p class="text-secondary small mt-2 mb-0">200+ Integrations</p></div>
+      <div class="flex-shrink-0" style="width:24px" aria-hidden="true"></div>
+    </div>
+    <button class="sc-prev car-btn position-absolute top-50 start-0 translate-middle-y ms-3 d-none" style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+    <button class="sc-next car-btn position-absolute top-50 end-0 translate-middle-y me-3" style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="text-center px-3" style="background:#111827;padding-top:6rem!important;padding-bottom:6rem!important">
+  <p class="fw-semibold text-uppercase mb-3" style="font-size:.72rem;letter-spacing:.12em;color:#60a5fa">Get Started</p>
+  <h2 class="text-white fw-bold mb-3" style="font-size:clamp(1.5rem,3vw,2.25rem)">Build Your Connected Ecosystem Today</h2>
+  <p class="text-secondary small lh-lg mx-auto mb-5" style="max-width:400px">Start with a free sandbox, connect your first device in minutes, and scale to millions &mdash; on infrastructure that grows with you.</p>
+  <div class="d-flex justify-content-center gap-3 flex-wrap">
+    <button class="btn btn-primary px-5 py-2">Start Free Sandbox</button>
+    <button class="btn btn-outline-secondary px-5 py-2 text-white">Read the Docs</button>
+  </div>
+</section>
+
+<footer class="bg-white border-top py-3 px-3">
+  <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mx-auto" style="max-width:1280px">
+    <span class="text-muted" style="font-size:.75rem">Anstel &copy; 2026</span>
+    <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Privacy &amp; Legal</a>
+    <a href="index.html" class="text-secondary text-decoration-none" style="font-size:.75rem">&larr; Home</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/main.js"></script>
+<script>
+var PILLARS=[
+  {t:'Universal Device Connectivity',d:'Onboard any device — fleet hardware, environmental sensors, smart locks, edge gateways — over cellular, Wi-Fi, LoRaWAN, or BLE. Zero-touch provisioning at scale.',code:'> Device provisioned in 00:00:04.2s\n> MQTT handshake ✓\n> Telemetry stream active'},
+  {t:'Real-Time Data Intelligence',d:'Stream millions of events per second into our cloud pipeline. Apply rule-based triggers or ML anomaly detection to surface insights the moment they matter.',code:'> Event stream: 1.4M events/min\n> Anomaly detected: device_042\n> Threshold: temp > 85°C ⚠️'},
+  {t:'Automated Response & Control',d:'Close the loop automatically. Trigger alerts, remote commands, or third-party webhooks based on any device state — no manual intervention required.',code:'> Rule triggered: OVERHEAT_ALERT\n> SMS dispatched → +1-555-0142\n> Remote cool-down command sent ✓'}
+];
+$(function(){
+  $('.pillar-btn').on('click',function(){
+    $('.pillar-btn').removeClass('btn-primary active').css({background:'#1f2937',color:'#9ca3af'});
+    $(this).addClass('active btn-primary').css({background:'',color:''});
+    var p=PILLARS[$(this).data('pillar')];
+    $('#pillar-title').text(p.t);
+    $('#pillar-desc').text(p.d);
+    $('#pillar-code').text(p.code);
+  });
+});
+</script>
+</body>
+</html>
