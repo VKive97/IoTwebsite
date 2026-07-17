@@ -16,6 +16,7 @@ body > section > [class*="px-"]{padding-left:var(--site-gutter)!important;paddin
 body > section > .row{--bs-gutter-x:clamp(1.25rem,3vw,3.5rem);--bs-gutter-y:clamp(1.5rem,4vw,3rem)}
 .about-anstel-cta{border-radius:4px;font-size:.875rem;font-weight:600;min-width:180px}
 @media(min-width:768px){.about-pillar + .about-pillar{border-left:1px solid #d1d5db}}
+@media(min-width:768px){.platform-highlight + .platform-highlight{border-left:1px solid #d1d5db}}
 
 @media(max-width:575px){
   :root{--site-gutter:1rem;--section-space:3.25rem;--section-space-tight:2.25rem}
