@@ -147,6 +147,51 @@ body > section > .row{--bs-gutter-x:clamp(1.25rem,3vw,3.5rem);--bs-gutter-y:clam
 .acc-arrow{display:inline-block;transition:transform .2s}
 .acc-arrow.rotated{transform:rotate(180deg)}
 
+/* ── Industries grid ── */
+.industry-card{border:1px solid #e5e7eb;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.industry-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.08);border-color:#93c5fd}
+.industry-icon{width:48px;height:48px;background:rgba(13,110,253,.08);color:#0d6efd;flex-shrink:0}
+.industry-title{font-size:.9rem;line-height:1.3}
+.industry-sub{font-size:.8rem;line-height:1.4}
+@media(max-width:575px){
+  .industry-card{padding:1rem!important}
+  .industry-icon{width:40px;height:40px}
+  .industry-icon svg{width:18px;height:18px}
+}
+
+/* ── Feature cards (Why Anstel) ── */
+.feature-card{border:1px solid #e5e7eb;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.feature-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.08);border-color:#93c5fd}
+.feature-icon{width:52px;height:52px;background:rgba(13,110,253,.08);color:#0d6efd;flex-shrink:0}
+@media(max-width:575px){
+  .feature-card{padding:1.5rem!important}
+  .feature-icon{width:44px;height:44px}
+  .feature-icon svg{width:20px;height:20px}
+}
+
+/* ── Devices grid (spacious, hairline dividers) ── */
+.device-icon{width:56px;height:56px;background:rgba(13,110,253,.08);color:#0d6efd;flex-shrink:0}
+.device-col{padding-top:1.75rem;padding-bottom:1.75rem}
+@media(min-width:576px){.device-col{padding-right:1.5rem}}
+@media(min-width:992px){
+  .device-col{padding:2rem clamp(1.25rem,2vw,2rem)}
+  .device-col:nth-child(4n+2),
+  .device-col:nth-child(4n+3),
+  .device-col:nth-child(4n+4){border-left:1px solid #d1d5db}
+  .device-col:nth-child(n+5){border-top:1px solid #d1d5db}
+}
+
+/* ── One Platform stats grid ── */
+.platform-stat-value{font-size:1.5rem;line-height:1.15}
+@media(max-width:575px){.platform-stat-value{font-size:1.25rem}}
+
+/* ── Final CTA band ── */
+.cta-band .btn{border-radius:4px;font-size:.875rem;font-weight:600;min-width:180px;padding-top:.66rem;padding-bottom:.66rem}
+.cta-primary-btn{background:#4169dc;border:1px solid #4169dc;color:#fff}
+.cta-primary-btn:hover{background:#355bc8;border-color:#355bc8;color:#fff}
+.cta-secondary-btn{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff}
+.cta-secondary-btn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7);color:#fff}
+
 /* ── Carousel bleed padding to align with bootstrap px- classes ── */
 .scroll-track.px-3 { scroll-padding-left: 1rem; scroll-padding-right: 1rem; }
 .scroll-track.px-4 { scroll-padding-left: 1.5rem; scroll-padding-right: 1.5rem; }
