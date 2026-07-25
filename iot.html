@@ -1,165 +1,522 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>IoT Platform | Connected Devices &amp; Sensors &mdash; Autonautics by Anstel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IoT | Connected Intelligence Platform &mdash; Autonautics by Anstel</title>
+  <meta name="description"
+    content="Autonautics IoT connects devices, sensors, machines, and assets through one intelligent platform, transforming real-time data into actionable insights.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    body{padding-top:56px;padding-bottom:56px}
-    .grid-overlay{background-image:linear-gradient(rgba(167,139,250,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(167,139,250,.5) 1px,transparent 1px);background-size:60px 60px}
+    body {
+      padding-top: 56px;
+      padding-bottom: 56px
+    }
   </style>
+
+  <!-- SEO/GEO META -->
+  <link rel="canonical" href="https://www.anstelglobal.com/iot.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anstel Autonautics">
+  <meta property="og:url" content="https://www.anstelglobal.com/iot.html">
+  <meta property="og:title" content="IoT | Connected Intelligence Platform — Autonautics by Anstel">
+  <meta property="og:description" content="Autonautics IoT connects devices, sensors, machines, and assets through one intelligent platform, transforming real-time data into actionable insights.">
+  <meta property="og:image" content="https://www.anstelglobal.com/images/IoT.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IoT | Connected Intelligence Platform — Autonautics by Anstel">
+  <meta name="twitter:description" content="Autonautics IoT connects devices, sensors, machines, and assets through one intelligent platform, transforming real-time data into actionable insights.">
+  <meta name="twitter:image" content="https://www.anstelglobal.com/images/IoT.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Autonautics IoT","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Autonautics IoT connects devices, sensors, machines, and assets through one intelligent platform, transforming real-time data into actionable insights.","url":"https://www.anstelglobal.com/iot.html","image":"https://www.anstelglobal.com/images/IoT.png","brand":{"@type":"Organization","name":"Anstel"},"isPartOf":{"@type":"SoftwareApplication","name":"Autonautics","url":"https://www.anstelglobal.com/autonautics.html"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.anstelglobal.com/"},{"@type":"ListItem","position":2,"name":"Products","item":"https://www.anstelglobal.com/autonautics.html#products"},{"@type":"ListItem","position":3,"name":"IoT","item":"https://www.anstelglobal.com/iot.html"}]}</script>
 </head>
+
 <body class="bg-white">
 
-<!-- HERO -->
-<section class="position-relative overflow-hidden" style="height:90vh;min-height:560px">
-  <img src="images/IoT.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="IoT Platform">
-  <div class="position-absolute top-0 start-0 end-0 bottom-0" style="background:linear-gradient(135deg,rgba(49,10,90,.9),rgba(20,5,40,.75) 60%,rgba(0,0,0,.5))"></div>
-  <div class="position-absolute top-0 start-0 end-0 bottom-0 grid-overlay opacity-10"></div>
-  <div class="position-relative d-flex flex-column justify-content-end px-3 px-md-5 pb-5 h-100" style="z-index:5;max-width:1280px;margin:auto">
-    <p class="fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em;color:#60a5fa">Autonautics &middot; IoT Platform</p>
-    <h1 class="text-white fw-bold lh-sm mb-3" style="font-size:clamp(2rem,5vw,4rem)">Connect.<br>Monitor.<br><span style="color:#c084fc">Control Everything.</span></h1>
-    <p class="text-white text-opacity-50 lh-lg mb-4" style="max-width:480px">Enterprise-grade IoT infrastructure for fleets, facilities, and field operations &mdash; connecting any device, anywhere, at any scale.</p>
-    <div class="d-flex gap-3 flex-wrap">
-      <button class="btn btn-primary px-4 py-2">Start Building</button>
-      <button class="btn px-4 py-2 text-white border border-white border-opacity-25" style="background:rgba(255,255,255,.1);backdrop-filter:blur(8px)">View Documentation</button>
-    </div>
-  </div>
-</section>
-
-<!-- THREE PILLARS (tabs) -->
-<section class="section-pad px-3 px-md-4" style="background:#030712">
-  <div style="max-width:1280px;margin:auto">
-    <p class="fw-semibold text-uppercase mb-2 text-center" style="font-size:.72rem;letter-spacing:.12em;color:#60a5fa">Platform Architecture</p>
-    <h2 class="text-white fw-bold text-center mb-4">One platform. Three layers of intelligence.</h2>
-    <div class="d-flex gap-2 justify-content-center flex-wrap mb-4">
-      <button class="btn btn-primary rounded-pill px-4 py-2 small pillar-btn active" data-pillar="0">&#128225; Connect</button>
-      <button class="btn rounded-pill px-4 py-2 small pillar-btn" style="background:#1f2937;color:#9ca3af" data-pillar="1">&#129504; Analyse</button>
-      <button class="btn rounded-pill px-4 py-2 small pillar-btn" style="background:#1f2937;color:#9ca3af" data-pillar="2">&#9889; Act</button>
-    </div>
-    <div class="row g-4 align-items-center">
-      <div class="col-md-6">
-        <h3 class="text-white fw-bold mb-3" id="pillar-title">Universal Device Connectivity</h3>
-        <p class="text-secondary lh-lg mb-4" id="pillar-desc">Onboard any device &mdash; fleet hardware, environmental sensors, smart locks, edge gateways &mdash; over cellular, Wi-Fi, LoRaWAN, or BLE. Zero-touch provisioning at scale.</p>
-        <div class="p-3 rounded-3" style="border:1px solid rgba(168,85,247,.2);background:rgba(88,28,135,.15)">
-          <pre class="mb-0" style="color:#d8b4fe;font-size:.75rem;font-family:monospace" id="pillar-code">&gt; Device provisioned in 00:00:04.2s
-&gt; MQTT handshake &#10003;
-&gt; Telemetry stream active</pre>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="rounded-4 overflow-hidden border d-flex align-items-center justify-content-center" style="height:280px;background:#111827;border-color:rgba(168,85,247,.2)!important">
-          <img src="images/IoTLogo.png" class="w-100 h-100 object-fit-cover p-5" style="filter:drop-shadow(0 0 32px rgba(167,139,250,.4))" alt="IoT">
-        </div>
+  <!-- Hero -->
+  <section class="position-relative overflow-hidden d-flex flex-column" style="height:100vh;min-height:680px">
+    <img src="images/IoT.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+      alt="IoT Platform">
+    <div class="position-absolute top-0 start-0 end-0 bottom-0"
+      style="background:linear-gradient(135deg,rgba(0,0,0,.75),rgba(0,0,0,.8) 60%,rgba(0,0,0,.65))"></div>
+    <div class="position-absolute start-0 end-0 bottom-0" style="height:30%;background:linear-gradient(to top,rgba(0,0,0,.55),transparent)"></div>
+    <div class="position-relative flex-fill" style="z-index:5">
+      <div class="position-absolute start-0 end-0 d-flex justify-content-center px-4" style="top:26vh">
+        <h1 class="text-white fw-bold text-center mb-0"
+          style="font-size:clamp(2.25rem,6vw,4rem);letter-spacing:-.03em;line-height:1.05">
+          Autonautics IoT</h1>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- SUPPORTED DEVICES (bleed carousel) -->
-<section class="bg-black py-0">
-  <div class="px-3 px-md-4 section-pad pb-3">
-    <p class="fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em;color:#60a5fa">Supported Devices</p>
-    <h2 class="text-white fw-bold mb-2">Works with any hardware</h2>
-    <p class="text-secondary small lh-lg" style="max-width:560px">From off-the-shelf sensors to custom enterprise hardware &mdash; if it can transmit data, our platform can connect it.</p>
-  </div>
-  <div class="scroll-carousel position-relative overflow-hidden pb-5">
-    <div class="scroll-track d-flex gap-3 overflow-x-auto">
-      <div data-card class="flex-shrink-0 p-4 rounded-4 border d-flex gap-3 ms-3 ms-md-4" style="width:80vw;max-width:320px;border-color:rgba(75,85,99,1)!important;background:#111827"><span style="font-size:1.75rem;flex-shrink:0">&#128667;</span><div><h6 class="text-white fw-bold mb-1">Fleet Telematics</h6><p class="mb-2" style="color:#c084fc;font-size:.72rem">500+ vehicle types</p><p class="text-secondary small mb-0">OBD-II, CAN bus, EV battery management</p></div></div>
-      <div data-card class="flex-shrink-0 p-4 rounded-4 border d-flex gap-3" style="width:80vw;max-width:320px;border-color:rgba(75,85,99,1)!important;background:#111827"><span style="font-size:1.75rem;flex-shrink:0">&#128247;</span><div><h6 class="text-white fw-bold mb-1">Smart Cameras</h6><p class="mb-2" style="color:#c084fc;font-size:.72rem">IP &amp; edge AI cameras</p><p class="text-secondary small mb-0">Video analytics, ANPR, object detection</p></div></div>
-      <div data-card class="flex-shrink-0 p-4 rounded-4 border d-flex gap-3" style="width:80vw;max-width:320px;border-color:rgba(75,85,99,1)!important;background:#111827"><span style="font-size:1.75rem;flex-shrink:0">&#127777;&#65039;</span><div><h6 class="text-white fw-bold mb-1">Environmental</h6><p class="mb-2" style="color:#c084fc;font-size:.72rem">Temp, humidity, CO&#8322;</p><p class="text-secondary small mb-0">Cold chain, warehouse, air quality</p></div></div>
-      <div data-card class="flex-shrink-0 p-4 rounded-4 border d-flex gap-3" style="width:80vw;max-width:320px;border-color:rgba(75,85,99,1)!important;background:#111827"><span style="font-size:1.75rem;flex-shrink:0">&#128272;</span><div><h6 class="text-white fw-bold mb-1">Access Control</h6><p class="mb-2" style="color:#c084fc;font-size:.72rem">Smart locks &amp; gates</p><p class="text-secondary small mb-0">RFID, biometric, NFC readers</p></div></div>
-      <div data-card class="flex-shrink-0 p-4 rounded-4 border d-flex gap-3" style="width:80vw;max-width:320px;border-color:rgba(75,85,99,1)!important;background:#111827"><span style="font-size:1.75rem;flex-shrink:0">&#9889;</span><div><h6 class="text-white fw-bold mb-1">Energy Meters</h6><p class="mb-2" style="color:#c084fc;font-size:.72rem">kWh &amp; power quality</p><p class="text-secondary small mb-0">Solar, EV charging, grid monitoring</p></div></div>
-      <div data-card class="flex-shrink-0 p-4 rounded-4 border d-flex gap-3" style="width:80vw;max-width:320px;border-color:rgba(75,85,99,1)!important;background:#111827"><span style="font-size:1.75rem;flex-shrink:0">&#128230;</span><div><h6 class="text-white fw-bold mb-1">Asset Trackers</h6><p class="mb-2" style="color:#c084fc;font-size:.72rem">BLE &amp; GPS tags</p><p class="text-secondary small mb-0">Pallets, containers, high-value assets</p></div></div>
-      <div class="flex-shrink-0" style="width:24px" aria-hidden="true"></div>
+    <div class="position-relative pb-5 px-4" style="z-index:5">
+      <div class="capability-strip-dark">
+        <div class="capability-stat-dark">Multi-Device Connectivity</div>
+        <div class="capability-stat-dark">Real-Time Intelligence</div>
+        <div class="capability-stat-dark">Smart Automation</div>
+        <div class="capability-stat-dark">Enterprise-Ready Platform</div>
+      </div>
     </div>
-    <button class="sc-prev car-btn position-absolute top-50 start-0 translate-middle-y ms-3 d-none" style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
-    <button class="sc-next car-btn position-absolute top-50 end-0 translate-middle-y me-3" style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
-  </div>
-</section>
+  </section>
 
-<!-- DATA PIPELINE (bleed carousel) -->
-<section class="py-0" style="background:#030712">
-  <div class="px-3 px-md-4 section-pad pb-3">
-    <p class="fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em;color:#60a5fa">Data Pipeline</p>
-    <h2 class="text-white fw-bold">From edge to action &mdash; in milliseconds</h2>
-  </div>
-  <div class="scroll-carousel position-relative overflow-hidden pb-5">
-    <div class="scroll-track d-flex gap-3 overflow-x-auto">
-      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25 ms-3 ms-md-4" style="width:72vw;max-width:220px;background:#111827"><span style="font-size:1.5rem">&#128225;</span><p class="fw-semibold text-uppercase mt-2 mb-1" style="font-size:.65rem;letter-spacing:.1em;color:#60a5fa">Edge</p><p class="text-secondary" style="font-size:.72rem">Device collects &amp; pre-processes data locally</p></div>
-      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:72vw;max-width:220px;background:#111827"><span style="font-size:1.5rem">&#128260;</span><p class="fw-semibold text-uppercase mt-2 mb-1" style="font-size:.65rem;letter-spacing:.1em;color:#60a5fa">Ingest</p><p class="text-secondary" style="font-size:.72rem">Secure MQTT/HTTPS stream to cloud gateway</p></div>
-      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:72vw;max-width:220px;background:#111827"><span style="font-size:1.5rem">&#9881;&#65039;</span><p class="fw-semibold text-uppercase mt-2 mb-1" style="font-size:.65rem;letter-spacing:.1em;color:#60a5fa">Process</p><p class="text-secondary" style="font-size:.72rem">Rules engine &amp; ML models run in real time</p></div>
-      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:72vw;max-width:220px;background:#111827"><span style="font-size:1.5rem">&#128452;&#65039;</span><p class="fw-semibold text-uppercase mt-2 mb-1" style="font-size:.65rem;letter-spacing:.1em;color:#60a5fa">Store</p><p class="text-secondary" style="font-size:.72rem">Time-series DB with 5-year retention</p></div>
-      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:72vw;max-width:220px;background:#111827"><span style="font-size:1.5rem">&#9889;</span><p class="fw-semibold text-uppercase mt-2 mb-1" style="font-size:.65rem;letter-spacing:.1em;color:#60a5fa">Act</p><p class="text-secondary" style="font-size:.72rem">Alerts, commands, webhooks dispatched instantly</p></div>
-      <div class="flex-shrink-0" style="width:24px" aria-hidden="true"></div>
+  <!-- Connected Intelligence -->
+  <section class="section-pad text-center px-4" style="background:#0d0d0d">
+    <div class="mx-auto" style="max-width:720px">
+      <p class="fw-semibold text-uppercase mb-3" style="font-size:.72rem;letter-spacing:.12em;color:#fff">
+        Connected Intelligence</p>
+      <h2 class="text-white fw-bold mb-3" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.03em">Connect
+        Every Asset. Unlock Every Insight.</h2>
+      <p class="text-secondary lh-lg mb-0">Autonautics IoT connects devices, sensors, machines, and assets through
+        one intelligent platform, transforming real-time data into actionable insights. Monitor operations,
+        automate responses, and make faster decisions across every connected environment.</p>
     </div>
-    <button class="sc-prev car-btn position-absolute top-50 start-0 translate-middle-y ms-3 d-none" style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
-    <button class="sc-next car-btn position-absolute top-50 end-0 translate-middle-y me-3" style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
-  </div>
-</section>
+  </section>
 
-<!-- CAPABILITIES (bleed carousel) -->
-<section class="py-0" style="background:#030712">
-  <div class="px-3 px-md-4 pt-2 pb-3">
-    <h2 class="text-white fw-bold text-center">Everything built in. Nothing bolted on.</h2>
-  </div>
-  <div class="scroll-carousel position-relative overflow-hidden pb-5">
-    <div class="scroll-track d-flex gap-3 overflow-x-auto">
-      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25 ms-3 ms-md-4" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#128274;</span><p class="text-secondary small mt-2 mb-0">End-to-End Encryption</p></div>
-      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#128202;</span><p class="text-secondary small mt-2 mb-0">Custom Dashboards</p></div>
-      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#127757;</span><p class="text-secondary small mt-2 mb-0">Multi-Region Deploy</p></div>
-      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#128268;</span><p class="text-secondary small mt-2 mb-0">Open API &amp; SDK</p></div>
-      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#129302;</span><p class="text-secondary small mt-2 mb-0">ML Anomaly Detection</p></div>
-      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#128241;</span><p class="text-secondary small mt-2 mb-0">Mobile Command Centre</p></div>
-      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#9854;&#65039;</span><p class="text-secondary small mt-2 mb-0">Unlimited Device Scale</p></div>
-      <div data-card class="flex-shrink-0 text-center p-4 rounded-4 border border-secondary border-opacity-25" style="width:44vw;max-width:180px;background:#111827"><span style="font-size:1.5rem">&#129513;</span><p class="text-secondary small mt-2 mb-0">200+ Integrations</p></div>
-      <div class="flex-shrink-0" style="width:24px" aria-hidden="true"></div>
+  <!-- Connected Operations -->
+  <section class="section-pad px-4" style="background:#141414">
+    <div style="max-width:780px;margin:auto">
+      <p class="fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em;color:#fff">
+        Connected Operations</p>
+      <h2 class="text-white fw-bold mb-3" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.03em">
+        Disconnected Data Creates Disconnected Decisions.</h2>
+      <p class="text-secondary lh-lg mb-0">Businesses rely on data from machines, sensors, vehicles, equipment,
+        and critical assets every day. When this information is isolated across different systems, opportunities
+        are missed and decisions become slower. Autonautics IoT brings operational data together into one
+        connected platform, giving teams complete visibility across their connected environment.</p>
     </div>
-    <button class="sc-prev car-btn position-absolute top-50 start-0 translate-middle-y ms-3 d-none" style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
-    <button class="sc-next car-btn position-absolute top-50 end-0 translate-middle-y me-3" style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
-  </div>
-</section>
 
-<!-- CTA -->
-<section class="text-center px-3" style="background:#111827;padding-top:6rem!important;padding-bottom:6rem!important">
-  <p class="fw-semibold text-uppercase mb-3" style="font-size:.72rem;letter-spacing:.12em;color:#60a5fa">Get Started</p>
-  <h2 class="text-white fw-bold mb-3" style="font-size:clamp(1.5rem,3vw,2.25rem)">Build Your Connected Ecosystem Today</h2>
-  <p class="text-secondary small lh-lg mx-auto mb-5" style="max-width:400px">Start with a free sandbox, connect your first device in minutes, and scale to millions &mdash; on infrastructure that grows with you.</p>
-  <div class="d-flex justify-content-center gap-3 flex-wrap">
-    <button class="btn btn-primary px-5 py-2">Start Free Sandbox</button>
-    <button class="btn btn-outline-secondary px-5 py-2 text-white">Read the Docs</button>
-  </div>
-</section>
+    <div style="max-width:var(--content-max);padding-top:3.5rem;margin:auto">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 g-md-4">
+        <div class="col">
+          <div class="h-100 rounded-4 p-4" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.15)">
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+              style="width:52px;height:52px;background:rgba(255,255,255,.1);color:#fff">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <rect x="4" y="4" width="7" height="7" rx="1" />
+                <rect x="13" y="4" width="7" height="7" rx="1" />
+                <rect x="4" y="13" width="7" height="7" rx="1" />
+                <rect x="13" y="13" width="7" height="7" rx="1" />
+              </svg>
+            </span>
+            <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">
+              Data Silos</p>
+            <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">One View Across Every Asset.</h3>
+            <p class="text-secondary small lh-lg mb-0">Bring data from multiple devices and systems into one
+              unified platform.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 rounded-4 p-4" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.15)">
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+              style="width:52px;height:52px;background:rgba(255,255,255,.1);color:#fff">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </span>
+            <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">
+              Real-Time Visibility</p>
+            <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">Know What&rsquo;s Happening Now.</h3>
+            <p class="text-secondary small lh-lg mb-0">Monitor assets, equipment, and operations as events
+              happen.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 rounded-4 p-4" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.15)">
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+              style="width:52px;height:52px;background:rgba(255,255,255,.1);color:#fff">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 3a5 5 0 00-5 5v3.2c0 .6-.2 1.2-.6 1.7L5 15h14l-1.4-2.1c-.4-.5-.6-1.1-.6-1.7V8a5 5 0 00-5-5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.5 18a2.5 2.5 0 005 0" />
+              </svg>
+            </span>
+            <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">
+              Smart Alerts</p>
+            <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">Respond Before Problems Grow.</h3>
+            <p class="text-secondary small lh-lg mb-0">Receive intelligent notifications that help teams act
+              faster.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 rounded-4 p-4" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.15)">
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+              style="width:52px;height:52px;background:rgba(255,255,255,.1);color:#fff">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 20V10M12 20V4M6 20v-6" />
+              </svg>
+            </span>
+            <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">
+              Operational Insights</p>
+            <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">Turn Data Into Better Decisions.</h3>
+            <p class="text-secondary small lh-lg mb-0">Convert real-time information into meaningful operational
+              intelligence.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 rounded-4 p-4" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.15)">
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+              style="width:52px;height:52px;background:rgba(255,255,255,.1);color:#fff">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" />
+                <circle cx="12" cy="4" r="2" />
+                <circle cx="4" cy="18" r="2" />
+                <circle cx="20" cy="18" r="2" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.3 13.8L5.6 16.5M13.7 13.8l4.7 2.7M12 9v2" />
+              </svg>
+            </span>
+            <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">
+              Scalable Connectivity</p>
+            <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">Connect Without Limits.</h3>
+            <p class="text-secondary small lh-lg mb-0">Support growing deployments across sites, regions, and
+              industries.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 rounded-4 p-4" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.15)">
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+              style="width:52px;height:52px;background:rgba(255,255,255,.1);color:#fff">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 2v6M15 2v6M7 8h10l-1 4a5 5 0 01-8 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 16v6" />
+              </svg>
+            </span>
+            <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">
+              Open Integration</p>
+            <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">Works With Your Ecosystem.</h3>
+            <p class="text-secondary small lh-lg mb-0">Integrate devices, sensors, and business systems through
+              flexible APIs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer class="bg-white border-top py-3 px-3">
-  <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mx-auto" style="max-width:1280px">
-    <span class="text-muted" style="font-size:.75rem">Anstel &copy; 2026</span>
-    <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Privacy &amp; Legal</a>
-    <a href="index.html" class="text-secondary text-decoration-none" style="font-size:.75rem">&larr; Home</a>
-  </div>
-</footer>
+  <!-- Connected Platform -->
+  <section class="overflow-hidden" style="background:#0d0d0d;padding-top:var(--section-space);padding-bottom:var(--section-space)">
+    <div class="px-4 px-md-5 mb-4" style="max-width:var(--content-max);margin:auto">
+      <p class="fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em;color:#fff">
+        Connected Platform</p>
+      <h2 class="text-white fw-bold mb-2" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.03em">One
+        Platform. Every Connected Asset.</h2>
+      <p class="text-secondary lh-lg" style="max-width:640px">Autonautics IoT provides a unified platform to
+        connect, monitor, manage, and optimize devices, sensors, machines, and critical assets. From data
+        collection to intelligent automation, every connected operation is managed through one scalable
+        ecosystem.</p>
+    </div>
+    <div class="scroll-carousel position-relative">
+      <div class="scroll-track d-flex gap-3 overflow-x-auto">
+        <div data-card class="flex-shrink-0 rounded-4 p-4" style="width:82vw;max-width:calc(25% - 21px);margin-left:var(--site-gutter);background:#1a1a1a;border:1px solid rgba(255,255,255,.15);min-height:240px">
+          <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">Device Connectivity</p>
+          <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">Connect Without Complexity.</h3>
+          <p class="text-secondary small lh-lg mb-0">Integrate sensors, gateways, controllers, and smart devices
+            through one connected platform.</p>
+        </div>
+        <div data-card class="flex-shrink-0 rounded-4 p-4" style="width:82vw;max-width:calc(25% - 21px);background:#1a1a1a;border:1px solid rgba(255,255,255,.15);min-height:240px">
+          <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">Device Management</p>
+          <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">Manage Every Connected Device.</h3>
+          <p class="text-secondary small lh-lg mb-0">Configure, organize, and monitor connected assets throughout
+            their lifecycle.</p>
+        </div>
+        <div data-card class="flex-shrink-0 rounded-4 p-4" style="width:82vw;max-width:calc(25% - 21px);background:#1a1a1a;border:1px solid rgba(255,255,255,.15);min-height:240px">
+          <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">Live Monitoring</p>
+          <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">See Every Operation in Real Time.</h3>
+          <p class="text-secondary small lh-lg mb-0">Track live device status, telemetry, and operational
+            conditions from anywhere.</p>
+        </div>
+        <div data-card class="flex-shrink-0 rounded-4 p-4" style="width:82vw;max-width:calc(25% - 21px);background:#1a1a1a;border:1px solid rgba(255,255,255,.15);min-height:240px">
+          <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">Alerts &amp; Automation</p>
+          <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">React Faster. Automate Smarter.</h3>
+          <p class="text-secondary small lh-lg mb-0">Trigger intelligent alerts and automate responses based on
+            predefined rules and real-time events.</p>
+        </div>
+        <div data-card class="flex-shrink-0 rounded-4 p-4" style="width:82vw;max-width:calc(25% - 21px);background:#1a1a1a;border:1px solid rgba(255,255,255,.15);min-height:240px">
+          <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">Reporting &amp; Analytics</p>
+          <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">Transform Data Into Intelligence.</h3>
+          <p class="text-secondary small lh-lg mb-0">Analyze historical trends, operational performance, and
+            business insights through powerful reporting.</p>
+        </div>
+        <div data-card class="flex-shrink-0 rounded-4 p-4" style="width:82vw;max-width:calc(25% - 21px);background:#1a1a1a;border:1px solid rgba(255,255,255,.15);min-height:240px">
+          <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">Open Platform</p>
+          <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">Built to Connect. Ready to Scale.</h3>
+          <p class="text-secondary small lh-lg mb-0">Integrate with enterprise applications, APIs, and
+            third-party systems as your business grows.</p>
+        </div>
+        <div class="flex-shrink-0" style="width:var(--site-gutter)" aria-hidden="true"></div>
+      </div>
+      <button class="sc-prev car-btn position-absolute ms-3 d-none" style="top:42%;z-index:20;transform:translateY(-50%)"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+      <button class="sc-next car-btn position-absolute me-3 end-0" style="top:42%;z-index:20;transform:translateY(-50%)"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+      <div class="d-flex justify-content-center gap-2 mt-4">
+        <button class="dot-btn dot-btn-light active"></button><button class="dot-btn dot-btn-light"></button><button class="dot-btn dot-btn-light"></button><button class="dot-btn dot-btn-light"></button><button class="dot-btn dot-btn-light"></button><button class="dot-btn dot-btn-light"></button>
+      </div>
+    </div>
+  </section>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/navbar.js"></script>
-<script src="js/main.js"></script>
-<script>
-var PILLARS=[
-  {t:'Universal Device Connectivity',d:'Onboard any device — fleet hardware, environmental sensors, smart locks, edge gateways — over cellular, Wi-Fi, LoRaWAN, or BLE. Zero-touch provisioning at scale.',code:'> Device provisioned in 00:00:04.2s\n> MQTT handshake ✓\n> Telemetry stream active'},
-  {t:'Real-Time Data Intelligence',d:'Stream millions of events per second into our cloud pipeline. Apply rule-based triggers or ML anomaly detection to surface insights the moment they matter.',code:'> Event stream: 1.4M events/min\n> Anomaly detected: device_042\n> Threshold: temp > 85°C ⚠️'},
-  {t:'Automated Response & Control',d:'Close the loop automatically. Trigger alerts, remote commands, or third-party webhooks based on any device state — no manual intervention required.',code:'> Rule triggered: OVERHEAT_ALERT\n> SMS dispatched → +1-555-0142\n> Remote cool-down command sent ✓'}
-];
-$(function(){
-  $('.pillar-btn').on('click',function(){
-    $('.pillar-btn').removeClass('btn-primary active').css({background:'#1f2937',color:'#9ca3af'});
-    $(this).addClass('active btn-primary').css({background:'',color:''});
-    var p=PILLARS[$(this).data('pillar')];
-    $('#pillar-title').text(p.t);
-    $('#pillar-desc').text(p.d);
-    $('#pillar-code').text(p.code);
-  });
-});
-</script>
+  <!-- Connected Workflow -->
+  <section class="section-pad px-4" style="background:#141414">
+    <div style="max-width:780px;margin:auto">
+      <p class="fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em;color:#fff">
+        Connected Workflow</p>
+      <h2 class="text-white fw-bold mb-3" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.03em">From
+        Data Collection to Intelligent Action.</h2>
+      <p class="text-secondary lh-lg mb-0">Autonautics IoT transforms raw device data into actionable
+        intelligence through a connected workflow. Every event, reading, and signal flows through one platform to
+        help businesses monitor operations, automate responses, and continuously improve performance.</p>
+    </div>
+
+    <div class="position-relative" style="max-width:var(--content-max);padding-top:4rem;margin:auto">
+      <div class="process-rail d-none d-md-block" style="background:rgba(255,255,255,.12)"></div>
+      <div class="row row-cols-2 row-cols-md-5 g-4">
+        <div class="col process-step">
+          <span class="process-step-num d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+            style="background:#fff;color:#000">1</span>
+          <p class="fw-semibold text-white mb-1">Connect</p>
+          <p class="text-secondary small lh-lg mb-0">Connect sensors, devices, gateways, and machines to one
+            secure platform.</p>
+        </div>
+        <div class="col process-step">
+          <span class="process-step-num d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+            style="background:#fff;color:#000">2</span>
+          <p class="fw-semibold text-white mb-1">Collect</p>
+          <p class="text-secondary small lh-lg mb-0">Capture live telemetry, environmental conditions, and
+            operational data in real time.</p>
+        </div>
+        <div class="col process-step">
+          <span class="process-step-num d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+            style="background:#fff;color:#000">3</span>
+          <p class="fw-semibold text-white mb-1">Analyze</p>
+          <p class="text-secondary small lh-lg mb-0">Process incoming data to identify trends, anomalies, and
+            business insights.</p>
+        </div>
+        <div class="col process-step">
+          <span class="process-step-num d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+            style="background:#fff;color:#000">4</span>
+          <p class="fw-semibold text-white mb-1">Automate</p>
+          <p class="text-secondary small lh-lg mb-0">Trigger alerts, workflows, or system actions based on
+            predefined rules.</p>
+        </div>
+        <div class="col process-step">
+          <span class="process-step-num d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+            style="background:#fff;color:#000">5</span>
+          <p class="fw-semibold text-white mb-1">Optimize</p>
+          <p class="text-secondary small lh-lg mb-0">Improve operational efficiency through continuous monitoring
+            and intelligent decision-making.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connected Intelligence -->
+  <section class="section-pad px-4" style="background:#0d0d0d">
+    <div style="max-width:780px;margin:auto">
+      <p class="fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em;color:#fff">
+        Connected Intelligence</p>
+      <h2 class="text-white fw-bold mb-3" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.03em">Data
+        Becomes Valuable When It Drives Action.</h2>
+      <p class="text-secondary lh-lg mb-0">Collecting data is only the beginning. Autonautics IoT transforms live
+        sensor data into operational intelligence, helping organizations detect issues earlier, automate
+        responses, predict maintenance needs, and make faster, more informed decisions.</p>
+    </div>
+
+    <div style="max-width:var(--content-max);padding-top:3.5rem;margin:auto">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 g-md-4">
+        <div class="col">
+          <div class="h-100 rounded-4 p-4" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.15)">
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+              style="width:52px;height:52px;background:rgba(255,255,255,.1);color:#fff">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h4l2-7 4 14 2-7h6" />
+              </svg>
+            </span>
+            <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">
+              Predictive Insights</p>
+            <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">See Problems Before They Escalate.</h3>
+            <p class="text-secondary small lh-lg mb-0">Identify trends and anomalies early to reduce downtime and
+              operational risk.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 rounded-4 p-4" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.15)">
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+              style="width:52px;height:52px;background:rgba(255,255,255,.1);color:#fff">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 2L3 14h7l-1 8 11-14h-7l1-6z" />
+              </svg>
+            </span>
+            <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">
+              Intelligent Automation</p>
+            <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">Respond Without Delay.</h3>
+            <p class="text-secondary small lh-lg mb-0">Automatically trigger workflows, alerts, and actions when
+              defined conditions are met.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 rounded-4 p-4" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.15)">
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+              style="width:52px;height:52px;background:rgba(255,255,255,.1);color:#fff">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </span>
+            <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">
+              Operational Visibility</p>
+            <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">One Source of Truth.</h3>
+            <p class="text-secondary small lh-lg mb-0">Combine data from multiple assets into one unified
+              operational view.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 rounded-4 p-4" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.15)">
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+              style="width:52px;height:52px;background:rgba(255,255,255,.1);color:#fff">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 20V10M12 20V4M6 20v-6" />
+              </svg>
+            </span>
+            <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">
+              Performance Analytics</p>
+            <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">Measure What Matters.</h3>
+            <p class="text-secondary small lh-lg mb-0">Track operational performance with historical insights and
+              actionable analytics.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 rounded-4 p-4" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.15)">
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+              style="width:52px;height:52px;background:rgba(255,255,255,.1);color:#fff">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3a14 14 0 010 18a14 14 0 010-18" />
+              </svg>
+            </span>
+            <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">
+              Remote Operations</p>
+            <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">Manage from Anywhere.</h3>
+            <p class="text-secondary small lh-lg mb-0">Monitor and control connected assets across multiple
+              locations through one platform.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 rounded-4 p-4" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.15)">
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+              style="width:52px;height:52px;background:rgba(255,255,255,.1);color:#fff">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2l9 5-9 5-9-5 9-5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9 5 9-5" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 17l9 5 9-5" />
+              </svg>
+            </span>
+            <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.6)">
+              Future-Ready Platform</p>
+            <h3 class="text-white fw-bold mb-2" style="font-size:1.1rem">Built for What&rsquo;s Next.</h3>
+            <p class="text-secondary small lh-lg mb-0">Scale from a few connected devices to enterprise-wide IoT
+              deployments without changing platforms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry Solutions -->
+  <section class="overflow-hidden" style="background:#141414;padding-top:var(--section-space);padding-bottom:var(--section-space)">
+    <div class="px-4 px-md-5 mb-4" style="max-width:var(--content-max);margin:auto">
+      <p class="fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em;color:#fff">
+        Industry Solutions</p>
+      <h2 class="text-white fw-bold mb-2" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.03em">Built
+        for Every Connected Industry.</h2>
+      <p class="text-secondary lh-lg" style="max-width:640px">Autonautics IoT adapts to the unique requirements
+        of every industry. Whether you&rsquo;re monitoring infrastructure, managing industrial equipment,
+        optimizing logistics, or building smarter cities, one platform connects your operations with real-time
+        intelligence.</p>
+    </div>
+    <div class="scroll-carousel position-relative">
+      <div class="scroll-track d-flex gap-3 overflow-x-auto">
+        <div data-card class="flex-shrink-0" style="width:82vw;max-width:calc(33vw - 28px);margin-left:var(--site-gutter)">
+          <div class="rounded-4 overflow-hidden mb-3" style="height:280px"><img src="images/IoT.png" class="w-100 h-100 object-fit-cover" alt="Transportation & Logistics"></div>
+          <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.1em;color:rgba(255,255,255,.6)">Transportation &amp; Logistics</p>
+          <h3 class="text-white fw-bold mb-1" style="font-size:1.1rem">Keep Operations Moving.</h3>
+          <p class="text-secondary small lh-lg mb-0">Monitor vehicles, cargo, equipment, and fleet assets with
+            real-time operational visibility.</p>
+        </div>
+        <div data-card class="flex-shrink-0" style="width:82vw;max-width:calc(33vw - 28px)">
+          <div class="rounded-4 overflow-hidden mb-3" style="height:280px"><img src="images/IoT.png" class="w-100 h-100 object-fit-cover" alt="Manufacturing"></div>
+          <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.1em;color:rgba(255,255,255,.6)">Manufacturing</p>
+          <h3 class="text-white fw-bold mb-1" style="font-size:1.1rem">Connect the Factory Floor.</h3>
+          <p class="text-secondary small lh-lg mb-0">Track machines, production equipment, and operational
+            performance to improve efficiency and reduce downtime.</p>
+        </div>
+        <div data-card class="flex-shrink-0" style="width:82vw;max-width:calc(33vw - 28px)">
+          <div class="rounded-4 overflow-hidden mb-3" style="height:280px"><img src="images/IoT.png" class="w-100 h-100 object-fit-cover" alt="Energy & Utilities"></div>
+          <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.1em;color:rgba(255,255,255,.6)">Energy &amp; Utilities</p>
+          <h3 class="text-white fw-bold mb-1" style="font-size:1.1rem">Power Smarter Infrastructure.</h3>
+          <p class="text-secondary small lh-lg mb-0">Monitor energy assets, utility networks, and critical
+            infrastructure through connected intelligence.</p>
+        </div>
+        <div data-card class="flex-shrink-0" style="width:82vw;max-width:calc(33vw - 28px)">
+          <div class="rounded-4 overflow-hidden mb-3" style="height:280px"><img src="images/IoT.png" class="w-100 h-100 object-fit-cover" alt="Smart Cities"></div>
+          <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.1em;color:rgba(255,255,255,.6)">Smart Cities</p>
+          <h3 class="text-white fw-bold mb-1" style="font-size:1.1rem">Create More Connected Communities.</h3>
+          <p class="text-secondary small lh-lg mb-0">Support intelligent infrastructure, public assets,
+            environmental monitoring, and urban operations.</p>
+        </div>
+        <div data-card class="flex-shrink-0" style="width:82vw;max-width:calc(33vw - 28px)">
+          <div class="rounded-4 overflow-hidden mb-3" style="height:280px"><img src="images/IoT.png" class="w-100 h-100 object-fit-cover" alt="Agriculture"></div>
+          <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.1em;color:rgba(255,255,255,.6)">Agriculture</p>
+          <h3 class="text-white fw-bold mb-1" style="font-size:1.1rem">Monitor Every Growing Opportunity.</h3>
+          <p class="text-secondary small lh-lg mb-0">Use connected sensors to improve environmental monitoring,
+            irrigation, and agricultural operations.</p>
+        </div>
+        <div data-card class="flex-shrink-0" style="width:82vw;max-width:calc(33vw - 28px)">
+          <div class="rounded-4 overflow-hidden mb-3" style="height:280px"><img src="images/IoT.png" class="w-100 h-100 object-fit-cover" alt="Healthcare & Cold Chain"></div>
+          <p class="fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.1em;color:rgba(255,255,255,.6)">Healthcare &amp; Cold Chain</p>
+          <h3 class="text-white fw-bold mb-1" style="font-size:1.1rem">Protect Critical Conditions.</h3>
+          <p class="text-secondary small lh-lg mb-0">Track temperature-sensitive assets, medical equipment, and
+            storage environments with continuous monitoring.</p>
+        </div>
+        <div class="flex-shrink-0" style="width:var(--site-gutter)" aria-hidden="true"></div>
+      </div>
+      <button class="sc-prev car-btn position-absolute ms-3 d-none" style="top:42%;z-index:20;transform:translateY(-50%)"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+      <button class="sc-next car-btn position-absolute me-3 end-0" style="top:42%;z-index:20;transform:translateY(-50%)"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-pad px-4 text-center cta-band" style="background:#0d0d0d;border-top:1px solid rgba(255,255,255,.12)">
+    <div class="mx-auto" style="max-width:640px">
+      <p class="fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em;color:#fff">Get
+        Started</p>
+      <h2 class="text-white fw-bold mb-3" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.03em">Ready to
+        Connect Your Operations?</h2>
+      <p class="text-secondary lh-lg mb-5">Whether you&rsquo;re monitoring industrial equipment, managing
+        infrastructure, optimizing logistics, or building smarter environments, Autonautics IoT transforms
+        connected data into operational intelligence&mdash;helping you make faster decisions, automate processes,
+        and operate with confidence.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <button class="btn px-5 py-2 fw-semibold" style="background:#fff;color:#000;border-radius:4px">Talk to
+          an IoT Expert</button>
+        <a href="request-demo.html" class="btn px-5 py-2 text-white border border-white border-opacity-25"
+          style="background:rgba(255,255,255,.08);border-radius:4px">Request a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top py-3 px-3">
+    <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mx-auto" style="max-width:1280px">
+      <span class="text-muted" style="font-size:.75rem">Anstel &copy; 2026</span>
+      <a href="terms-of-use.html" class="text-secondary text-decoration-none" style="font-size:.75rem">Privacy &amp; Legal</a>
+      <a href="contact-sales.html" class="text-secondary text-decoration-none" style="font-size:.75rem">Contact</a>
+      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">News</a>
+      <a href="index.html" class="text-secondary text-decoration-none" style="font-size:.75rem">&larr; Home</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>

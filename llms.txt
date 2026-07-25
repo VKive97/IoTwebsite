@@ -1,0 +1,41 @@
+# Anstel Autonautics
+
+> Autonautics is Anstel's connected operations platform, unifying fleet management, asset management, IoT monitoring, fleet security, last-mile delivery, and business intelligence into one intelligent ecosystem. It replaces disconnected fleet and operations software with a single platform that connects vehicles, drivers, assets, IoT devices, and business systems.
+
+Anstel serves organizations in transportation, logistics, construction, mining, utilities, public services, and other asset-intensive industries. Autonautics products share one platform, one data model, and one set of integrations, so customers can start with a single product and expand without adding disconnected systems.
+
+## Platform
+
+- [Autonautics](https://www.anstelglobal.com/autonautics.html): Overview of Anstel's Connected Operations Platform — how it connects assets, people, IoT devices, and business systems, and how its products work together.
+- [Device Ecosystem](https://www.anstelglobal.com/device-ecosystem.html): The connected hardware layer of Autonautics — GPS trackers, AI cameras, IoT sensors, safety/security hardware, and mobile devices, all managed from one platform.
+
+## Products
+
+- [Connected Fleet](https://www.anstelglobal.com/connected-fleet.html): Core fleet management product — GPS tracking, driver management, maintenance, compliance, and reporting.
+- [Last Mile](https://www.anstelglobal.com/last-mile.html): Delivery execution app for dispatch, route navigation, live tracking, and digital proof of delivery.
+- [Security Monitor](https://www.anstelglobal.com/security-monitor.html): Security operations center for vehicle and driver security, SOS response, and incident coordination.
+- [Merchant](https://www.anstelglobal.com/merchant.html): Marketplace connecting fleet operators with trusted mobility partners (insurance, servicing, finance, roadside assistance).
+- [IoT](https://www.anstelglobal.com/iot.html): Connects devices, sensors, machines, and industrial assets into one monitoring and automation platform.
+- [Job Scheduling](https://www.anstelglobal.com/job-scheduling.html): Plans, dispatches, and tracks field jobs and workforce scheduling.
+
+## Solutions
+
+- [Fleet Management](https://www.anstelglobal.com/fleet-management.html): Complete fleet operations — vehicles, drivers, assets, and maintenance in one platform.
+- [Fleet Tracking](https://www.anstelglobal.com/fleet-tracking.html): Real-time vehicle location, video telematics, and journey history.
+- [Driver Management](https://www.anstelglobal.com/driver-management.html): Driver profiles, performance scorecards, compliance, and safety coaching.
+- [Asset Management](https://www.anstelglobal.com/asset-management.html): Tracking and lifecycle management for non-vehicle fleet and operational assets.
+- [Maintenance Management](https://www.anstelglobal.com/maintenance-management.html): Preventive maintenance scheduling, service history, and compliance tracking.
+- [Dispatch Management](https://www.anstelglobal.com/dispatch-management.html): Intelligent job assignment based on driver availability, vehicle capacity, and location.
+- [Inventory Management](https://www.anstelglobal.com/inventory-management.html): Stock visibility, warehouse operations, and field inventory tracking.
+- [Fleet Security](https://www.anstelglobal.com/fleet-security.html): Security monitoring, SOS response, and vehicle immobilization for fleet protection.
+
+## Advanced Capabilities
+
+- [Video Telematics](https://www.anstelglobal.com/video-telematics.html): Live camera monitoring, AI event detection, and incident video evidence.
+- [Fuel Management](https://www.anstelglobal.com/fuel-management.html): OBD-based fuel monitoring and fuel reporting.
+- [Route Optimization](https://www.anstelglobal.com/route-optimization.html): Intelligent route planning, live ETA, and route performance analytics.
+- [Compliance](https://www.anstelglobal.com/compliance.html): Centralized compliance management, including AIS-140 and regional regulatory requirements.
+- [Emergency Response](https://www.anstelglobal.com/emergency-response.html): Real-time incident detection, live operational context, coordinated response workflows, and post-incident performance insights.
+- [Reports & Analytics](https://www.anstelglobal.com/reports-analytics.html): Real-time analytics, dynamic reporting, and business intelligence across the platform.
+- [Alerts & Notifications](https://www.anstelglobal.com/alerts-notifications.html): Real-time alerting and notification management for fleet events.
+- [API & Integrations](https://www.anstelglobal.com/api-integrations.html): Open APIs and integrations with ERP, CRM, HRMS, and third-party business systems.

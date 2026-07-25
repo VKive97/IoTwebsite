@@ -1,8 +1,14 @@
 /* ── Scroll carousels ── */
 :root{
-  --site-gutter:clamp(1rem,4vw,5rem);
-  --section-space:clamp(3.5rem,7vw,7rem);
-  --section-space-tight:clamp(2.5rem,5vw,5rem);
+  --site-gutter:clamp(1rem,5vw,6rem);
+  --section-space:clamp(4rem,8vw,8rem);
+  --section-space-tight:clamp(3rem,6vw,6rem);
+  --content-max:1280px;
+  /* On screens wider than content-max, align bleed carousels with the same
+     centered column edge as every other section instead of just the raw
+     viewport gutter — otherwise the carousel drifts left of the heading
+     text above it on ultra-wide monitors. */
+  --bleed-gutter:max(var(--site-gutter),calc((100vw - var(--content-max)) / 2));
 }
 html{scroll-behavior:smooth}
 body{overflow-x:hidden}
@@ -19,36 +25,62 @@ body > section > .row{--bs-gutter-x:clamp(1.25rem,3vw,3.5rem);--bs-gutter-y:clam
 @media(min-width:768px){.platform-highlight + .platform-highlight{border-left:1px solid #d1d5db}}
 
 @media(max-width:575px){
-  :root{--site-gutter:1rem;--section-space:3.25rem;--section-space-tight:2.25rem}
+  :root{--site-gutter:1rem;--section-space:3.5rem;--section-space-tight:2.5rem}
   body > section > .row{--bs-gutter-x:1rem;--bs-gutter-y:1.5rem}
 }
 
-.scroll-track{scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none}
-.scroll-track::-webkit-scrollbar{display:none}
-[data-card]{scroll-snap-align:start}
+/* ── Section heading system (shared across all major sections) ── */
+.section-eyebrow{
+  color:#0d6efd;font-weight:600;text-transform:uppercase;letter-spacing:.12em;
+  font-size:.72rem;margin-bottom:.75rem
+}
+.section-heading{
+  font-weight:800;letter-spacing:-.03em;line-height:1.1;color:#171a20;
+  font-size:clamp(2rem,4vw,3.25rem);margin-bottom:.75rem
+}
+.section-lede{color:#4b5563;line-height:1.7;font-size:clamp(1rem,1.2vw,1.125rem);margin-bottom:0}
 
-/* Bleed carousels: keep a full, touch-friendly card in view on narrow screens. */
+.scroll-track{scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-padding-inline:var(--bleed-gutter)}
+.scroll-track::-webkit-scrollbar{display:none}
+[data-card]{scroll-snap-align:center}
+
+/* Bleed carousels: align the left edge with the page's centered content column
+   (same as the heading above it) and let cards bleed off only the right edge. */
+section:has(> .scroll-carousel) > [class*="px-"]{
+  padding-left:var(--bleed-gutter)!important;
+  padding-right:var(--bleed-gutter)!important;
+}
+.scroll-track > [data-card]:first-child{margin-left:var(--bleed-gutter)!important}
+.scroll-track > [aria-hidden="true"]{width:var(--bleed-gutter)!important}
+
+/* Bleed carousels: one dominant "peek" card in view at a time — like Tesla/Apple's
+   product carousels — with slivers of the neighbor cards visible at both edges,
+   consistent across every breakpoint. Overrides whatever width/max-width each card's
+   inline style originally specified (the old equal-width 3-up/4-up grid). */
 .scroll-carousel .scroll-track{-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.scroll-carousel .scroll-track [data-card]{
+  width:78vw!important;
+  max-width:min(78vw,860px)!important;
+}
+/* Taller, more cinematic photo like Tesla/Apple's carousels — was a flat 280px
+   thumbnail, cramped now that each card is much wider. */
+.scroll-carousel .scroll-track [data-card] > [style*="height:280px"]{
+  height:min(56vh,460px)!important;
+}
 @media(max-width:991px){
-  .scroll-carousel .scroll-track{gap:.75rem!important;scroll-padding-inline:1rem}
-  .scroll-carousel .scroll-track [data-card]{max-width:none!important}
-  .scroll-carousel .scroll-track [data-card][style*="width:78vw"]{width:78vw!important}
-  .scroll-carousel .scroll-track [data-card][style*="width:82vw"]{width:82vw!important}
-  .scroll-carousel .scroll-track [data-card][style*="width:88vw"]{width:88vw!important}
+  .scroll-carousel .scroll-track{gap:.75rem!important;scroll-padding-inline:var(--bleed-gutter)}
   .scroll-carousel[style*="height:52vh"]{height:min(55svh,430px)!important;min-height:300px!important}
   .scroll-carousel[style*="height:70vh"]{height:min(68svh,520px)!important;min-height:360px!important}
+  .scroll-carousel .scroll-track [data-card] > [style*="height:280px"]{height:min(50svh,400px)!important}
   .scroll-carousel .sc-prev,.scroll-carousel .sc-next{width:36px;height:36px}
 }
 @media(max-width:575px){
-  .scroll-carousel .scroll-track{gap:.625rem!important;scroll-padding-inline:1rem}
-  .scroll-carousel .scroll-track [data-card][style*="width:78vw"]{width:84vw!important}
-  .scroll-carousel .scroll-track [data-card][style*="width:82vw"]{width:88vw!important}
-  .scroll-carousel .scroll-track [data-card][style*="width:88vw"]{width:90vw!important}
+  .scroll-carousel .scroll-track{gap:.625rem!important;scroll-padding-inline:var(--bleed-gutter)}
+  .scroll-carousel .scroll-track [data-card]{width:84vw!important;max-width:84vw!important}
   .scroll-carousel[style*="height:52vh"]{height:min(58svh,400px)!important;min-height:280px!important}
   .scroll-carousel[style*="height:70vh"]{height:min(70svh,480px)!important;min-height:340px!important}
+  .scroll-carousel .scroll-track [data-card] > [style*="height:280px"]{height:min(42svh,320px)!important}
   .scroll-carousel .sc-prev,.scroll-carousel .sc-next{display:none!important}
-  .scroll-carousel .scroll-track [data-card][style*="max-width:520px"]{padding:1rem!important}
-  .scroll-carousel .scroll-track [data-card][style*="max-width:520px"] [style*="width:120px"]{width:76px!important}
 }
 
 /* ── Hero crossfade ── */
@@ -60,8 +92,8 @@ body > section > .row{--bs-gutter-x:clamp(1.25rem,3vw,3.5rem);--bs-gutter-y:clam
 .hero-slide.active{opacity:1;transform:translateY(0);visibility:visible;animation:heroSlideUp .8s ease-in-out forwards}
 
 /* Hero carousel presentation */
-#hero-content h1{font-size:2.5rem;font-weight:600;line-height:1.1;color:#fff!important;text-shadow:0 1px 3px rgba(0,0,0,.2)}
-#hero-subtitle{color:#fff!important;font-size:1.05rem;line-height:1.35;text-shadow:0 1px 3px rgba(0,0,0,.2)}
+#hero-content h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;letter-spacing:-.03em;line-height:1.05;color:#fff!important;text-shadow:0 1px 3px rgba(0,0,0,.2)}
+#hero-subtitle{color:#fff!important;font-size:clamp(1rem,1.6vw,1.25rem);line-height:1.4;text-shadow:0 1px 3px rgba(0,0,0,.2)}
 .hero-actions{display:flex;width:min(100%,200px)}
 .hero-actions .btn{flex:1;border-radius:4px;padding:.66rem 1.25rem;font-size:.875rem;font-weight:600;line-height:1.25}
 .hero-actions .hero-learn-btn{
@@ -94,8 +126,7 @@ body > section > .row{--bs-gutter-x:clamp(1.25rem,3vw,3.5rem);--bs-gutter-y:clam
 .hero-dot.dot-btn.active{width:13px;background:#fff}
 @media(max-width:767px){
   #hero-content{padding-top:12vh!important}
-  #hero-content h1{font-size:2rem}
-  #hero-subtitle{font-size:.95rem;max-width:330px}
+  #hero-subtitle{max-width:330px}
   .hero-actions{max-width:330px}
   .hero-prev.car-btn{left:16px!important}
   .hero-next.car-btn{right:16px!important}
@@ -141,15 +172,57 @@ body > section > .row{--bs-gutter-x:clamp(1.25rem,3vw,3.5rem);--bs-gutter-y:clam
 .icon-btn{background:none;border:0;border-radius:6px;padding:8px;cursor:pointer;transition:background .15s}
 .icon-btn:hover{background:rgba(0,0,0,.05)}
 .feature-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;display:inline-block}
-.why-card-img{border-radius:1rem;overflow:hidden;background:#f3f4f6}
+.why-card-img{border-radius:1rem;overflow:hidden;background:#f3f4f6;flex:0 0 63%;height:380px;align-self:flex-start}
+.why-card-img img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:767px){.why-card-img{flex:0 0 auto;width:100%;height:260px}}
 .tag-pill{display:inline-block;border:1px solid #e5e7eb;border-radius:999px;padding:6px 16px;font-size:.875rem;color:#4b5563;cursor:default;transition:all .2s}
 .tag-pill:hover{border-color:#93c5fd;color:#2563eb}
 .acc-arrow{display:inline-block;transition:transform .2s}
 .acc-arrow.rotated{transform:rotate(180deg)}
 
+/* ── Mobile mega menu (Tesla-style full-screen slide panel) ── */
+.mob-panel{position:fixed;inset:0;background:#fff;z-index:1100;display:none;flex-direction:column}
+.mob-panel.open{display:flex}
+.mob-view-stack{position:relative;flex:1 1 auto;overflow:hidden}
+.mob-view{
+  position:absolute;top:0;left:0;width:100%;height:100%;overflow-y:auto;background:#fff;
+  transform:translateX(100%);transition:transform .32s cubic-bezier(.4,0,.2,1)
+}
+.mob-view-main{transform:translateX(0)}
+.mob-view-main.pushed{transform:translateX(-100%)}
+.mob-view-sub.active{transform:translateX(0)}
+.mob-panel-topbar{display:flex;justify-content:flex-end;padding:.75rem 1rem;flex-shrink:0}
+.mob-row{
+  width:100%;display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;
+  border:0;border-bottom:1px solid #f3f4f6;background:#fff;font-size:.95rem;font-weight:500;color:#171a20;text-align:left
+}
+.mob-row-link{
+  display:block;padding:1rem 1.25rem;font-size:.95rem;font-weight:500;color:#171a20;
+  text-decoration:none;border-bottom:1px solid #f3f4f6
+}
+.mob-subheader{position:relative;display:flex;align-items:center;justify-content:center;padding:1rem;border-bottom:1px solid #f3f4f6;flex-shrink:0}
+.mob-back-btn{position:absolute;left:.5rem;background:0;border:0;padding:.5rem;color:#171a20;display:flex}
+.mob-subtitle{font-weight:600;font-size:.95rem}
+.mob-close-btn{background:0;border:0;padding:.4rem;color:#171a20;line-height:0;display:flex}
+.mob-subheader .mob-close-btn{position:absolute;right:.5rem}
+.mob-sub-content{padding:1.25rem 1.25rem 2.5rem}
+.mob-product-card{display:block;text-decoration:none;text-align:center;color:inherit}
+.mob-product-card img{width:100%;height:76px;object-fit:contain}
+.mob-product-name{font-weight:600;font-size:.85rem;color:#171a20;margin:.5rem 0 .1rem}
+.mob-product-link{font-size:.78rem;color:#0d6efd}
+.mob-sub-links{border-top:1px solid #f3f4f6;margin-top:1.75rem;padding-top:1.25rem}
+.mob-sub-links + .mob-sub-links{margin-top:1.25rem;border-top:0;padding-top:0}
+.mob-sub-heading{text-transform:uppercase;font-size:.68rem;letter-spacing:.08em;font-weight:600;color:#6c757d;margin-bottom:.75rem}
+.mob-sub-links a{display:block;padding:.5rem 0;font-size:.9rem;color:#374151;text-decoration:none}
+.mob-utility{padding:.5rem 1.25rem 1.5rem;border-top:1px solid #f3f4f6;flex-shrink:0}
+.mob-util-btn{display:flex;align-items:center;gap:.5rem;width:100%;padding:.7rem 0;background:0;border:0;font-size:.9rem;color:#374151;text-align:left}
+
+/* ── Tesla-style flat card (shared base: white, borderless, on light-gray section bg) ── */
+.tesla-card{background:#fff;border-radius:1rem;box-shadow:none;transition:box-shadow .2s ease}
+.tesla-card:hover{box-shadow:0 4px 18px rgba(0,0,0,.07)}
+.tesla-card-link{text-decoration:none;color:inherit;display:block}
+
 /* ── Industries grid ── */
-.industry-card{border:1px solid #e5e7eb;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
-.industry-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.08);border-color:#93c5fd}
 .industry-icon{width:48px;height:48px;background:rgba(13,110,253,.08);color:#0d6efd;flex-shrink:0}
 .industry-title{font-size:.9rem;line-height:1.3}
 .industry-sub{font-size:.8rem;line-height:1.4}
@@ -160,8 +233,6 @@ body > section > .row{--bs-gutter-x:clamp(1.25rem,3vw,3.5rem);--bs-gutter-y:clam
 }
 
 /* ── Feature cards (Why Anstel) ── */
-.feature-card{border:1px solid #e5e7eb;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
-.feature-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.08);border-color:#93c5fd}
 .feature-icon{width:52px;height:52px;background:rgba(13,110,253,.08);color:#0d6efd;flex-shrink:0}
 @media(max-width:575px){
   .feature-card{padding:1.5rem!important}
@@ -169,21 +240,156 @@ body > section > .row{--bs-gutter-x:clamp(1.25rem,3vw,3.5rem);--bs-gutter-y:clam
   .feature-icon svg{width:20px;height:20px}
 }
 
-/* ── Devices grid (spacious, hairline dividers) ── */
-.device-icon{width:56px;height:56px;background:rgba(13,110,253,.08);color:#0d6efd;flex-shrink:0}
-.device-col{padding-top:1.75rem;padding-bottom:1.75rem}
-@media(min-width:576px){.device-col{padding-right:1.5rem}}
-@media(min-width:992px){
-  .device-col{padding:2rem clamp(1.25rem,2vw,2rem)}
-  .device-col:nth-child(4n+2),
-  .device-col:nth-child(4n+3),
-  .device-col:nth-child(4n+4){border-left:1px solid #d1d5db}
-  .device-col:nth-child(n+5){border-top:1px solid #d1d5db}
+/* ── Devices grid (Tesla flat card) ── */
+.device-icon{width:52px;height:52px;background:rgba(13,110,253,.08);color:#0d6efd;flex-shrink:0}
+@media(max-width:575px){
+  .device-card{padding:1.5rem!important}
+  .device-icon{width:44px;height:44px}
+  .device-icon svg{width:20px;height:20px}
 }
 
-/* ── One Platform stats grid ── */
-.platform-stat-value{font-size:1.5rem;line-height:1.15}
-@media(max-width:575px){.platform-stat-value{font-size:1.25rem}}
+/* ── One Platform stats: hero + small stat cards ── */
+.stat-hero-value{font-size:clamp(2.25rem,5vw,3rem);font-weight:700;color:#4169dc;letter-spacing:-.02em;line-height:1.1}
+.stat-sm-icon{color:#111827;margin-bottom:1rem;display:block}
+.stat-sm-value{font-size:clamp(1.5rem,3.4vw,2rem);font-weight:700;color:#111827;line-height:1.1}
+.stat-sm-unit{font-size:clamp(1rem,2vw,1.25rem);font-weight:600;color:#111827}
+@media(max-width:575px){
+  .stat-card-hero{padding:1.5rem!important}
+  .stat-card-sm{padding:1.25rem!important}
+}
+
+/* ── About Anstel: phone showcase + step tabs ── */
+.about-phone-stage{
+  --phone-w:clamp(148px,30vw,260px);
+  --phone-h:calc(var(--phone-w) * 1.846);
+  --stage-gap:clamp(14px,3vw,40px);
+  position:relative;padding:2rem 0;min-height:calc(var(--phone-h) + 4rem)
+}
+.about-phone-track{justify-content:center}
+.about-phone-frame{
+  width:var(--phone-w);height:var(--phone-h);background:#0d1b2a;border-radius:clamp(20px,4vw,36px);
+  padding:clamp(7px,1.4vw,12px);position:relative;z-index:1;flex-shrink:0;margin:0 calc(var(--stage-gap)/2);
+  box-shadow:0 12px 28px rgba(0,0,0,.1);opacity:.5;filter:grayscale(1);transform:scale(.86);
+  transition:opacity .5s ease,filter .5s ease,transform .5s ease,box-shadow .5s ease;cursor:pointer
+}
+.about-phone-frame.active{opacity:1;filter:grayscale(0);transform:scale(1);z-index:2;box-shadow:0 24px 48px rgba(0,0,0,.18);cursor:default}
+@media(max-width:575px){
+  .about-phone-stage{--phone-w:min(72vw,240px);min-height:calc(var(--phone-h) + 2rem)}
+  .about-phone-frame:not(.active){display:none}
+  .about-phone-frame.active{transform:scale(1)}
+}
+.about-phone-notch{
+  position:absolute;top:clamp(7px,1.4vw,12px);left:50%;transform:translateX(-50%);
+  width:clamp(44px,10vw,70px);height:clamp(11px,2.4vw,18px);background:#0d1b2a;border-radius:0 0 12px 12px;z-index:3
+}
+.about-phone-notch::before{
+  content:'';position:absolute;top:35%;left:50%;transform:translateX(-50%);width:clamp(20px,5vw,36px);height:4px;
+  background:#000;border-radius:3px
+}
+.about-phone-screen{position:relative;width:100%;height:100%;border-radius:clamp(14px,3vw,26px);overflow:hidden;background:#0d1b2a}
+.about-phone-panel{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  padding:clamp(1.5rem,6vw,2.75rem) clamp(.75rem,3vw,1.25rem) clamp(.85rem,3vw,1.5rem)
+}
+.about-phone-eyebrow{color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em;font-size:clamp(.55rem,1.4vw,.62rem);font-weight:600;margin-bottom:.5rem}
+.about-phone-graphic{flex:1;display:flex;align-items:center;justify-content:center;min-height:0}
+.about-phone-caption{margin-top:auto}
+.about-phone-caption p:first-child{font-size:clamp(.8rem,2vw,1rem)}
+.about-phone-caption p.small{font-size:clamp(.68rem,1.6vw,.8rem)}
+.about-play-toggle{
+  position:absolute;left:0;bottom:0;width:36px;height:36px;border-radius:8px;background:#e5e7eb;
+  border:0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#374151;z-index:4;
+  transition:background .15s
+}
+.about-play-toggle:hover{background:#d1d5db}
+
+.about-step{cursor:pointer}
+.about-step-track{height:2px;background:#e5e7eb;width:100%;margin-bottom:1.25rem;position:relative;overflow:hidden;border-radius:2px}
+.about-step-fill{position:absolute;left:0;top:0;height:100%;width:0;background:#111827;display:block}
+.about-step.active .about-step-fill{animation:aboutStepFill 4.5s linear forwards}
+.about-step.paused .about-step-fill{animation-play-state:paused}
+.about-step-title{color:#9ca3af;transition:color .2s}
+.about-step.active .about-step-title{color:#111827}
+.about-step-desc{color:#9ca3af;transition:color .2s}
+.about-step.active .about-step-desc{color:#4b5563}
+@keyframes aboutStepFill{from{width:0}to{width:100%}}
+
+/* ── Single-photo step carousel (How It Works, mission workflow, etc.) ── */
+.process-photo-stage{position:relative;border-radius:1.5rem;overflow:hidden;height:clamp(320px,42vw,560px)}
+.about-phone-frame.process-photo-frame{
+  position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;background:none;border-radius:0;
+  box-shadow:none;opacity:0;filter:none;transform:none;z-index:1;transition:opacity .6s ease;cursor:default
+}
+.about-phone-frame.process-photo-frame.active{opacity:1;z-index:2;box-shadow:none;transform:none}
+.process-photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:575px){.about-phone-frame.process-photo-frame:not(.active){display:none}}
+
+/* ── Capability strip (responsive stat grid, no orphaned dividers on wrap) ── */
+.capability-strip{display:grid;grid-template-columns:repeat(2,1fr);row-gap:1.75rem;justify-items:center;max-width:var(--content-max);margin:auto;width:100%}
+@media(min-width:768px){.capability-strip{grid-template-columns:repeat(4,1fr);row-gap:0}}
+.capability-stat{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 1rem;width:100%}
+@media(min-width:768px){
+  .capability-stat{padding:0 2rem}
+  .capability-stat:not(:first-child)::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:48px;background:rgba(108,117,125,.25)}
+}
+.capability-stat-value{font-size:clamp(1.5rem,4vw,2.5rem);font-weight:700;color:#171a20;letter-spacing:-.5px;line-height:1.1}
+.capability-stat-label{color:#6c757d;margin-top:.5rem;font-size:.75rem}
+
+/* Dark single-line variant (IoT, etc.) */
+.capability-strip-dark{display:grid;grid-template-columns:repeat(2,1fr);row-gap:1.25rem;justify-items:center;max-width:var(--content-max);margin:auto;width:100%}
+@media(min-width:768px){.capability-strip-dark{grid-template-columns:repeat(4,1fr);row-gap:0}}
+.capability-stat-dark{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 1rem;width:100%;color:#e5e7eb;font-weight:600;font-size:.92rem}
+@media(min-width:768px){
+  .capability-stat-dark{padding:0 1.5rem}
+  .capability-stat-dark:not(:first-child)::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:32px;background:rgba(255,255,255,.18)}
+}
+
+/* Light single-line variant (Job Scheduling, etc.) */
+.capability-strip-light{display:grid;grid-template-columns:repeat(2,1fr);row-gap:1.25rem;justify-items:center;max-width:var(--content-max);margin:auto;width:100%}
+@media(min-width:768px){.capability-strip-light{grid-template-columns:repeat(4,1fr);row-gap:0}}
+.capability-stat-light{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 1rem;width:100%;color:#171a20;font-weight:600;font-size:.92rem}
+@media(min-width:768px){
+  .capability-stat-light{padding:0 1.5rem}
+  .capability-stat-light:not(:first-child)::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:32px;background:rgba(0,0,0,.12)}
+}
+
+/* ── Global presence map (Leaflet) ── */
+.presence-map-wrap{border:1px solid #e5e7eb;overflow:hidden}
+#presence-map{height:560px;border-radius:.75rem;background:#e9edf2;cursor:default}
+#presence-map .leaflet-control-zoom{display:none}
+#presence-map .leaflet-control-attribution{font-size:.65rem;background:rgba(255,255,255,.8)}
+.presence-tooltip{
+  background:#171a20!important;color:#fff!important;border:0!important;border-radius:6px!important;
+  font-weight:600;font-size:.75rem;padding:.3rem .6rem!important;box-shadow:0 4px 10px rgba(0,0,0,.15)!important
+}
+.presence-tooltip::before{display:none!important}
+@media(max-width:767px){#presence-map{height:420px}}
+@media(max-width:575px){#presence-map{height:340px}}
+
+/* ── Process steps (numbered, connected rail) ── */
+.process-step{position:relative}
+.process-step-num{
+  width:38px;height:38px;background:#4169dc;color:#fff;font-weight:700;font-size:.9rem;
+  flex-shrink:0;position:relative;z-index:1
+}
+.process-rail{position:absolute;top:19px;left:10%;right:10%;height:1px;background:#e5e7eb;z-index:0}
+
+/* ── Platform flow diagram ── */
+.platform-flow-node{
+  background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;padding:1.1rem 1.5rem;
+  max-width:440px;margin:0 auto;text-align:center
+}
+.platform-flow-chevron{display:flex;justify-content:center;padding:.4rem 0;color:#9ca3af}
+.platform-flow-hub{
+  background:#0d1b2a;border-radius:1.25rem;padding:2rem 1.5rem;max-width:560px;margin:0 auto;
+  box-shadow:0 24px 48px rgba(13,27,42,.18);text-align:center
+}
+.platform-flow-chip{
+  background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;padding:.4rem 1rem;font-size:.78rem;font-weight:600
+}
+.platform-flow-sep{color:rgba(255,255,255,.35)}
+.platform-flow-output{max-width:640px;margin:0 auto;text-align:center}
 
 /* ── Final CTA band ── */
 .cta-band .btn{border-radius:4px;font-size:.875rem;font-weight:600;min-width:180px;padding-top:.66rem;padding-bottom:.66rem}
@@ -191,6 +397,8 @@ body > section > .row{--bs-gutter-x:clamp(1.25rem,3vw,3.5rem);--bs-gutter-y:clam
 .cta-primary-btn:hover{background:#355bc8;border-color:#355bc8;color:#fff}
 .cta-secondary-btn{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff}
 .cta-secondary-btn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7);color:#fff}
+.cta-action-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);transition:all .2s ease}
+.cta-action-card:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.28);transform:translateY(-3px)}
 
 /* ── Carousel bleed padding to align with bootstrap px- classes ── */
 .scroll-track.px-3 { scroll-padding-left: 1rem; scroll-padding-right: 1rem; }

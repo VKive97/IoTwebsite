@@ -8,6 +8,8 @@
   <meta name="description"
     content="Anstel's Autonautics platform delivers connected fleet management, GPS tracking, IoT telematics, driver analytics, and operational intelligence.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="css/styles.css">
   <style>
     body {
@@ -15,6 +17,116 @@
       padding-bottom: 56px
     }
   </style>
+
+  <!-- SEO/GEO META -->
+  <link rel="canonical" href="https://www.anstelglobal.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anstel Autonautics">
+  <meta property="og:url" content="https://www.anstelglobal.com/">
+  <meta property="og:title" content="Autonautics by Anstel | Connected Fleet Management Platform">
+  <meta property="og:description" content="Autonautics by Anstel is a connected fleet management platform that helps organizations manage fleet tracking, drivers, assets, maintenance, security, dispatch, compliance, IoT devices, and operational intelligence from one unified platform.">
+  <meta property="og:image" content="https://www.anstelglobal.com/images/AutonauticsECO.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Autonautics by Anstel | Connected Fleet Management Platform">
+  <meta name="twitter:description" content="Autonautics by Anstel is a connected fleet management platform for GPS tracking, IoT telematics, fleet operations, driver management, maintenance, dispatch, compliance, and intelligent business insights.">
+  <meta name="twitter:image" content="https://www.anstelglobal.com/images/AutonauticsECO.png">
+
+  <!-- Website Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Autonautics by Anstel",
+    "url":"https://www.anstelglobal.com/",
+    "publisher":{
+      "@type":"Organization",
+      "name":"Anstel",
+      "url":"https://www.anstelglobal.com/"
+    }
+  }
+  </script>
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Anstel",
+    "url":"https://www.anstelglobal.com/",
+    "logo":"https://www.anstelglobal.com/images/anstel.svg",
+    "description":"Anstel develops Autonautics, a connected fleet management and mobility platform that helps organizations manage fleet operations, GPS tracking, IoT devices, vehicle security, last-mile delivery, driver management, maintenance, reporting, compliance, and business intelligence from one unified platform.",
+    "brand":{
+      "@type":"Brand",
+      "name":"Autonautics"
+    },
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Suite 18, 12 Tyron Road",
+      "addressLocality":"Lindfield",
+      "addressRegion":"NSW",
+      "postalCode":"2070",
+      "addressCountry":"AU"
+    },
+    "contactPoint":[
+      {
+        "@type":"ContactPoint",
+        "contactType":"sales",
+        "email":"sales@anstelglobal.com",
+        "telephone":"+61-2-9416-0444",
+        "areaServed":"AU",
+        "availableLanguage":"English"
+      },
+      {
+        "@type":"ContactPoint",
+        "contactType":"sales",
+        "telephone":"+91-96675-39207",
+        "areaServed":"IN",
+        "availableLanguage":"English"
+      }
+    ],
+    "knowsAbout":[
+      "Fleet Management",
+      "Fleet Tracking",
+      "GPS Tracking",
+      "IoT Telematics",
+      "Driver Management",
+      "Asset Management",
+      "Maintenance Management",
+      "Fleet Security",
+      "Video Telematics",
+      "Last Mile Delivery",
+      "Dispatch Management",
+      "Job Scheduling",
+      "Route Optimization",
+      "Compliance Management",
+      "Fuel Management",
+      "Reporting and Analytics",
+      "Connected Mobility",
+      "Fleet Operations"
+    ],
+    "sameAs":[]
+  }
+  </script>
+
+  <!-- Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {
+        "@type":"ListItem",
+        "position":1,
+        "name":"Home",
+        "item":"https://www.anstelglobal.com/"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -90,21 +202,33 @@
                 <p class="text-muted" style="font-size:.7rem">Connected devices &amp; sensors</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
+            <div class="col-6 col-md-4 col-lg-3"><a href="job-scheduling.html" class="mega-product-card d-block">
+                <div class="d-flex align-items-center justify-content-center mx-auto rounded-4"
+                  style="height:80px;width:80px;background:rgba(13,110,253,.08)">
+                  <svg width="34" height="34" fill="none" stroke="#0d6efd" stroke-width="1.6" viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="17" rx="2" />
+                    <path stroke-linecap="round" d="M16 2v4M8 2v4M3 9h18" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.5 14l2 2 4-4" />
+                  </svg>
+                </div>
+                <p class="fw-semibold small text-dark mt-2 card-name">Job Scheduling</p>
+                <p class="text-muted" style="font-size:.7rem">Plan, dispatch &amp; track jobs</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
           </div>
         </div>
         <div class="border-start ps-4 flex-shrink-0" style="width:176px">
-          <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Features
+          <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Explore
           </p>
           <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Reports &amp; Analytics</a>
+            <li class="mb-2"><a href="autonautics.html" class="small text-secondary text-decoration-none">Platform Overview</a>
             </li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Fleet Intelligence</a></li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Predictive Maintenance</a>
+            <li class="mb-2"><a href="autonautics.html#products" class="small text-secondary text-decoration-none">Compare Products</a></li>
+            <li class="mb-2"><a href="device-ecosystem.html" class="small text-secondary text-decoration-none">Device Ecosystem</a>
             </li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Compliance &amp; AIS-140</a>
+            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Customer Success</a>
             </li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Emergency Response</a></li>
-            <li><a href="#" class="small text-secondary text-decoration-none">Route Optimization</a></li>
+            <li><a href="request-demo.html" class="small text-secondary text-decoration-none">Request a Demo</a></li>
           </ul>
         </div>
       </div>
@@ -115,76 +239,78 @@
       <div class="d-flex gap-4 px-4 py-4" style="max-width:1280px;margin:auto">
         <div class="flex-grow-1">
           <div class="row g-4">
-            <div class="col-6 col-md-3"><a href="connected-fleet.html" class="mega-product-card d-block"><img
+            <div class="col-6 col-md-3"><a href="fleet-management.html" class="mega-product-card d-block"><img
                   src="images/connectedECO.png" alt="">
                 <p class="fw-semibold small text-dark mt-2 card-name">Fleet Management</p>
-                <p class="text-muted" style="font-size:.7rem">Full fleet operations platform</p><span
+                <p class="text-muted" style="font-size:.7rem">Complete fleet operations.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
-            <div class="col-6 col-md-3"><a href="connected-fleet.html" class="mega-product-card d-block"><img
+            <div class="col-6 col-md-3"><a href="fleet-tracking.html" class="mega-product-card d-block"><img
                   src="images/connected fleet.png" alt="">
                 <p class="fw-semibold small text-dark mt-2 card-name">Fleet Tracking</p>
-                <p class="text-muted" style="font-size:.7rem">Live GPS vehicle tracking</p><span
+                <p class="text-muted" style="font-size:.7rem">Real-time fleet visibility.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
-            <div class="col-6 col-md-3"><a href="connected-fleet.html" class="mega-product-card d-block"><img
+            <div class="col-6 col-md-3"><a href="driver-management.html" class="mega-product-card d-block"><img
                   src="images/connectedECO.png" alt="">
                 <p class="fw-semibold small text-dark mt-2 card-name">Driver Management</p>
-                <p class="text-muted" style="font-size:.7rem">Driver behaviour &amp; scorecards</p><span
+                <p class="text-muted" style="font-size:.7rem">Driver safety &amp; performance.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
-            <div class="col-6 col-md-3"><a href="connected-fleet.html" class="mega-product-card d-block"><img
+            <div class="col-6 col-md-3"><a href="asset-management.html" class="mega-product-card d-block"><img
                   src="images/connected fleet.png" alt="">
-                <p class="fw-semibold small text-dark mt-2 card-name">Asset Tracking</p>
-                <p class="text-muted" style="font-size:.7rem">Track any connected asset</p><span
+                <p class="fw-semibold small text-dark mt-2 card-name">Asset Management</p>
+                <p class="text-muted" style="font-size:.7rem">Fleet &amp; operational assets.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
-            <div class="col-6 col-md-3"><a href="last-mile.html" class="mega-product-card d-block"><img
+            <div class="col-6 col-md-3"><a href="maintenance-management.html" class="mega-product-card d-block"><img
+                  src="images/connectedfleet-replay.png" alt="">
+                <p class="fw-semibold small text-dark mt-2 card-name">Maintenance Management</p>
+                <p class="text-muted" style="font-size:.7rem">Fleet &amp; asset maintenance.</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+            <div class="col-6 col-md-3"><a href="dispatch-management.html" class="mega-product-card d-block">
+                <div class="d-flex align-items-center justify-content-center mx-auto rounded-4"
+                  style="height:80px;width:80px;background:rgba(13,110,253,.08)">
+                  <svg width="34" height="34" fill="none" stroke="#0d6efd" stroke-width="1.6" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l18-9-9 18-2-7-7-2z" />
+                  </svg>
+                </div>
+                <p class="fw-semibold small text-dark mt-2 card-name">Dispatch Management</p>
+                <p class="text-muted" style="font-size:.7rem">Intelligent workforce dispatch.</p><span
+                  class="small text-secondary">Learn More &rarr;</span>
+              </a></div>
+            <div class="col-6 col-md-3"><a href="inventory-management.html" class="mega-product-card d-block"><img
                   src="images/LastmileECO.png" alt="">
-                <p class="fw-semibold small text-dark mt-2 card-name">Last Mile Delivery</p>
-                <p class="text-muted" style="font-size:.7rem">Dispatch &amp; delivery execution</p><span
+                <p class="fw-semibold small text-dark mt-2 card-name">Inventory Management</p>
+                <p class="text-muted" style="font-size:.7rem">Field inventory &amp; assets.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
-            <div class="col-6 col-md-3"><a href="security-monitor.html" class="mega-product-card d-block"><img
+            <div class="col-6 col-md-3"><a href="fleet-security.html" class="mega-product-card d-block"><img
                   src="images/SecurityECO.png" alt="">
                 <p class="fw-semibold small text-dark mt-2 card-name">Fleet Security</p>
-                <p class="text-muted" style="font-size:.7rem">Vehicle &amp; depot security</p><span
-                  class="small text-secondary">Learn More &rarr;</span>
-              </a></div>
-            <div class="col-6 col-md-3"><a href="iot.html" class="mega-product-card d-block"><img
-                  src="images/IoTLogo.png" alt="">
-                <p class="fw-semibold small text-dark mt-2 card-name">IoT Monitoring</p>
-                <p class="text-muted" style="font-size:.7rem">Connected devices &amp; sensors</p><span
-                  class="small text-secondary">Learn More &rarr;</span>
-              </a></div>
-            <div class="col-6 col-md-3"><a href="connected-fleet.html" class="mega-product-card d-block"><img
-                  src="images/connectedECO.png" alt="">
-                <p class="fw-semibold small text-dark mt-2 card-name">Fuel Management</p>
-                <p class="text-muted" style="font-size:.7rem">Monitor &amp; reduce fuel costs</p><span
+                <p class="text-muted" style="font-size:.7rem">Security operations.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
           </div>
         </div>
         <div class="border-start ps-4 flex-shrink-0" style="width:192px">
-          <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Specialized
-            Solutions</p>
+          <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Advanced Capabilities</p>
           <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Dispatch Management</a></li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Video Telematics</a></li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Cold Chain Monitoring</a>
+            <li class="mb-2"><a href="video-telematics.html" class="small text-secondary text-decoration-none">Video Telematics</a></li>
+              <li><a href="fuel-management.html" class="small text-secondary text-decoration-none">Fuel Management</a>
             </li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Industrial Asset
-                Monitoring</a></li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Generator Monitoring</a></li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Reports &amp; Analytics</a>
+            <li class="mb-2"><a href="route-optimization.html" class="small text-secondary text-decoration-none">Route Optimization</a></li>
+            <li class="mb-2"><a href="compliance.html" class="small text-secondary text-decoration-none">Compliance</a>
             </li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Fleet Intelligence</a></li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Predictive Maintenance</a>
+            <li class="mb-2"><a href="emergency-response.html" class="small text-secondary text-decoration-none">Emergency Response</a></li>
+            <li class="mb-2"><a href="reports-analytics.html" class="small text-secondary text-decoration-none">Reports &amp; Analytics</a>
             </li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Route Optimization</a></li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Compliance &amp; AIS-140</a>
+            <li class="mb-2"><a href="alerts-notifications.html" class="small text-secondary text-decoration-none">Alerts
+                &amp; Notifications</a>
             </li>
-            <li><a href="#" class="small text-secondary text-decoration-none">Emergency Response</a></li>
+            <li class="mb-2"><a href="api-integrations.html" class="small text-secondary text-decoration-none">API &amp; Integrations</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -228,60 +354,207 @@
       </div>
     </div>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="bg-white border-top d-lg-none"
-      style="display:none!important;max-height:80vh;overflow-y:auto">
-      <ul class="list-unstyled mb-0 border-bottom">
-        <li class="border-bottom">
-          <button
-            class="mob-acc-btn w-100 d-flex justify-content-between align-items-center px-4 py-3 small fw-medium text-dark bg-white border-0">Autonautics
-            <span class="acc-arrow">&#9662;</span></button>
-          <div class="mob-acc-body px-4 pb-3 bg-light" style="display:none">
-            <div class="row g-2">
-              <div class="col-6"><a href="connected-fleet.html"
-                  class="small text-dark text-decoration-none fw-semibold">Connected Fleet</a></div>
-              <div class="col-6"><a href="last-mile.html" class="small text-dark text-decoration-none fw-semibold">Last
-                  Mile</a></div>
-              <div class="col-6"><a href="security-monitor.html"
-                  class="small text-dark text-decoration-none fw-semibold">Security Monitor</a></div>
-              <div class="col-6"><a href="merchant.html"
-                  class="small text-dark text-decoration-none fw-semibold">Merchant</a></div>
-              <div class="col-6"><a href="iot.html" class="small text-dark text-decoration-none fw-semibold">IoT</a>
+    <!-- Mobile menu (Tesla-style full-screen slide panel) -->
+    <div id="mobile-menu" class="mob-panel d-lg-none">
+      <div class="mob-panel-topbar">
+        <button class="mob-close-btn" data-mob-close aria-label="Close menu">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mob-view-stack">
+        <!-- Main view -->
+        <div class="mob-view mob-view-main active">
+          <ul class="list-unstyled mb-0">
+            <li><button class="mob-row" data-mob-open="autonautics">Autonautics
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6" />
+                </svg></button></li>
+            <li><button class="mob-row" data-mob-open="solutions">Solutions
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6" />
+                </svg></button></li>
+            <li><a href="#" class="mob-row-link">Charging</a></li>
+            <li><button class="mob-row" data-mob-open="discover">Discover
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6" />
+                </svg></button></li>
+            <li><a href="#" class="mob-row-link">Shop</a></li>
+          </ul>
+          <div class="mob-utility">
+            <button class="mob-util-btn">Help</button>
+            <button class="mob-util-btn">Region
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6" />
+              </svg></button>
+            <button class="mob-util-btn">Account</button>
+          </div>
+        </div>
+
+        <!-- Sub view: Autonautics -->
+        <div class="mob-view mob-view-sub" data-mob-view="autonautics">
+          <div class="mob-subheader">
+            <button class="mob-back-btn" data-mob-back aria-label="Back">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6" />
+              </svg>
+            </button>
+            <span class="mob-subtitle">Autonautics</span>
+            <button class="mob-close-btn" data-mob-close aria-label="Close menu">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mob-sub-content">
+            <div class="row g-3">
+              <div class="col-6"><a href="connected-fleet.html" class="mob-product-card"><img
+                    src="images/connected fleet.png" alt="">
+                  <p class="mob-product-name">Connected Fleet</p><span class="mob-product-link">Learn More</span>
+                </a></div>
+              <div class="col-6"><a href="last-mile.html" class="mob-product-card"><img src="images/Lastmile.png"
+                    alt="">
+                  <p class="mob-product-name">Last Mile</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="security-monitor.html" class="mob-product-card"><img
+                    src="images/Security.png" alt="">
+                  <p class="mob-product-name">Security Monitor</p><span class="mob-product-link">Learn
+                    More</span></a></div>
+              <div class="col-6"><a href="merchant.html" class="mob-product-card"><img src="images/Merchant.png"
+                    alt="">
+                  <p class="mob-product-name">Merchant</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="iot.html" class="mob-product-card"><img src="images/IoTLogo.png" alt="">
+                  <p class="mob-product-name">IoT</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="job-scheduling.html" class="mob-product-card">
+                  <div class="d-flex align-items-center justify-content-center mx-auto rounded-4"
+                    style="height:76px;width:76px;background:rgba(13,110,253,.08)">
+                    <svg width="30" height="30" fill="none" stroke="#0d6efd" stroke-width="1.6" viewBox="0 0 24 24">
+                      <rect x="3" y="4" width="18" height="17" rx="2" />
+                      <path stroke-linecap="round" d="M16 2v4M8 2v4M3 9h18" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.5 14l2 2 4-4" />
+                    </svg>
+                  </div>
+                  <p class="mob-product-name">Job Scheduling</p><span class="mob-product-link">Learn More</span></a>
               </div>
             </div>
-          </div>
-        </li>
-        <li class="border-bottom">
-          <button
-            class="mob-acc-btn w-100 d-flex justify-content-between align-items-center px-4 py-3 small fw-medium text-dark bg-white border-0">Solutions
-            <span class="acc-arrow">&#9662;</span></button>
-          <div class="mob-acc-body px-4 pb-3 bg-light" style="display:none">
-            <div class="row g-2">
-              <div class="col-6"><a href="connected-fleet.html" class="small text-dark text-decoration-none">Fleet
-                  Management</a></div>
-              <div class="col-6"><a href="connected-fleet.html" class="small text-dark text-decoration-none">Fleet
-                  Tracking</a></div>
-              <div class="col-6"><a href="connected-fleet.html" class="small text-dark text-decoration-none">Driver
-                  Management</a></div>
-              <div class="col-6"><a href="last-mile.html" class="small text-dark text-decoration-none">Last Mile
-                  Delivery</a></div>
-              <div class="col-6"><a href="security-monitor.html" class="small text-dark text-decoration-none">Fleet
-                  Security</a></div>
-              <div class="col-6"><a href="iot.html" class="small text-dark text-decoration-none">IoT Monitoring</a>
-              </div>
+            <div class="mob-sub-links">
+              <p class="mob-sub-heading">Explore</p>
+              <a href="autonautics.html">Platform Overview</a>
+              <a href="autonautics.html#products">Compare Products</a>
+              <a href="device-ecosystem.html">Device Ecosystem</a>
+              <a href="#">Customer Success</a>
+              <a href="request-demo.html">Request a Demo</a>
             </div>
           </div>
-        </li>
-        <li class="border-bottom"><a href="#"
-            class="d-block px-4 py-3 small fw-medium text-dark text-decoration-none">Charging</a></li>
-        <li class="border-bottom"><a href="#"
-            class="d-block px-4 py-3 small fw-medium text-dark text-decoration-none">Discover</a></li>
-        <li><a href="#" class="d-block px-4 py-3 small fw-medium text-dark text-decoration-none">Shop</a></li>
-      </ul>
-      <div class="d-flex gap-4 px-4 py-3 border-top bg-light">
-        <button class="small text-secondary bg-white border-0 p-0">Help</button>
-        <button class="small text-secondary bg-white border-0 p-0">Region</button>
-        <button class="small text-secondary bg-white border-0 p-0">Account</button>
+        </div>
+
+        <!-- Sub view: Solutions -->
+        <div class="mob-view mob-view-sub" data-mob-view="solutions">
+          <div class="mob-subheader">
+            <button class="mob-back-btn" data-mob-back aria-label="Back">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6" />
+              </svg>
+            </button>
+            <span class="mob-subtitle">Solutions</span>
+            <button class="mob-close-btn" data-mob-close aria-label="Close menu">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mob-sub-content">
+            <div class="row g-3">
+              <div class="col-6"><a href="fleet-management.html" class="mob-product-card"><img
+                    src="images/connectedECO.png" alt="">
+                  <p class="mob-product-name">Fleet Management</p><span class="mob-product-link">Learn
+                    More</span></a></div>
+              <div class="col-6"><a href="fleet-tracking.html" class="mob-product-card"><img
+                    src="images/connected fleet.png" alt="">
+                  <p class="mob-product-name">Fleet Tracking</p><span class="mob-product-link">Learn
+                    More</span></a></div>
+              <div class="col-6"><a href="driver-management.html" class="mob-product-card"><img
+                    src="images/connectedECO.png" alt="">
+                  <p class="mob-product-name">Driver Management</p><span class="mob-product-link">Learn
+                    More</span></a></div>
+              <div class="col-6"><a href="asset-management.html" class="mob-product-card"><img
+                    src="images/connected fleet.png" alt="">
+                  <p class="mob-product-name">Asset Management</p><span class="mob-product-link">Learn
+                    More</span></a></div>
+              <div class="col-6"><a href="maintenance-management.html" class="mob-product-card"><img
+                    src="images/connectedfleet-replay.png" alt="">
+                  <p class="mob-product-name">Maintenance Management</p><span class="mob-product-link">Learn
+                    More</span></a></div>
+              <div class="col-6"><a href="dispatch-management.html" class="mob-product-card">
+                  <div class="d-flex align-items-center justify-content-center mx-auto rounded-4"
+                    style="height:76px;width:76px;background:rgba(13,110,253,.08)">
+                    <svg width="30" height="30" fill="none" stroke="#0d6efd" stroke-width="1.6" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l18-9-9 18-2-7-7-2z" />
+                    </svg>
+                  </div>
+                  <p class="mob-product-name">Dispatch Management</p><span class="mob-product-link">Learn
+                    More</span></a></div>
+              <div class="col-6"><a href="inventory-management.html" class="mob-product-card"><img
+                    src="images/LastmileECO.png" alt="">
+                  <p class="mob-product-name">Inventory Management</p><span class="mob-product-link">Learn
+                    More</span></a></div>
+              <div class="col-6"><a href="fleet-security.html" class="mob-product-card"><img
+                    src="images/SecurityECO.png" alt="">
+                  <p class="mob-product-name">Fleet Security</p><span class="mob-product-link">Learn
+                    More</span></a></div>
+            </div>
+            <div class="mob-sub-links">
+              <p class="mob-sub-heading">Advanced Capabilities</p>
+              <a href="video-telematics.html">Video Telematics</a>
+              <a href="fuel-management.html">Fuel Management</a>
+              <a href="route-optimization.html">Route Optimization</a>
+              <a href="compliance.html">Compliance</a>
+              <a href="emergency-response.html">Emergency Response</a>
+              <a href="reports-analytics.html">Reports &amp; Analytics</a>
+              <a href="alerts-notifications.html">Alerts &amp; Notifications</a>
+              <a href="api-integrations.html">API &amp; Integrations</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub view: Discover -->
+        <div class="mob-view mob-view-sub" data-mob-view="discover">
+          <div class="mob-subheader">
+            <button class="mob-back-btn" data-mob-back aria-label="Back">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6" />
+              </svg>
+            </button>
+            <span class="mob-subtitle">Discover</span>
+            <button class="mob-close-btn" data-mob-close aria-label="Close menu">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mob-sub-content">
+            <div class="mob-sub-links" style="margin-top:0;border-top:0;padding-top:0">
+              <p class="mob-sub-heading">Resources</p>
+              <a href="#">Demo Drive</a>
+              <a href="#">Insurance</a>
+              <a href="#">Current Offers</a>
+              <a href="#">Customer Stories</a>
+              <a href="#">Safety</a>
+            </div>
+            <div class="mob-sub-links">
+              <p class="mob-sub-heading">Location Services</p>
+              <a href="#">Find Us</a>
+              <a href="#">Find a Collision Center</a>
+              <a href="#">Find a Certified Installer</a>
+            </div>
+            <div class="mob-sub-links">
+              <p class="mob-sub-heading">Company</p>
+              <a href="#">About</a>
+              <a href="#">Careers</a>
+              <a href="#">Investor Relations</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -338,7 +611,7 @@
     </div>
     <div class="position-relative d-flex flex-column align-items-center text-center px-4 fade-up" id="hero-content"
       style="padding-top:7vh;z-index:10">
-      <h1 class="fs-2 fs-md-1 fw-medium text-white mb-1" id="hero-title">One Platform. Every Operation.</h1>
+      <h1 class="text-white mb-2" id="hero-title">One Platform. Every Operation.</h1>
       <p class="text-white mt-1 mb-0" id="hero-subtitle">Connect fleets, assets and operations intelligently.</p>
       <div class="hero-actions mt-3">
         <a href="connected-fleet.html" id="hero-btn" class="btn hero-learn-btn">Learn More</a>
@@ -365,13 +638,12 @@
 
   <!-- ABOUT ANSTEL -->
   <section class="bg-white section-pad about-anstel">
-    <div class="container-xl px-4 px-md-5">
-      <div class="about-anstel-copy" style="max-width:1120px">
-        <p class="text-primary fw-semibold text-uppercase small mb-3" style="letter-spacing:.12em;font-size:.72rem">
-          About Anstel</p>
-        <h2 class="fw-bold mb-2" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.04em">Powering Connected
+    <div class="px-4 px-md-5">
+      <div class="about-anstel-copy" style="max-width:var(--content-max)">
+        <p class="section-eyebrow">About Anstel</p>
+        <h2 class="section-heading">Powering Connected
           Fleet, Asset &amp; IoT Operations</h2>
-        <p class="text-secondary lh-base mb-4" style="font-size:clamp(1rem,1.4vw,1.125rem)">Anstel develops intelligent
+        <p class="section-lede mb-4">Anstel develops intelligent
           software that helps organizations manage fleet operations, connected assets, IoT devices, driver activities,
           last mile deliveries, fleet security, and business services through one connected platform. By transforming
           real-time operational data into visibility, automation, and actionable intelligence, Anstel enables businesses
@@ -380,26 +652,111 @@
             aria-hidden="true">&rarr;</span></a>
       </div>
 
-      <div class="row g-4 g-md-0 mt-5 pt-md-3" style="max-width:1120px">
-        <div class="col-12 col-md-4 about-pillar">
-          <div class="h-100 pe-md-4">
-            <h3 class="h5 fw-semibold mb-3">Connected Operations</h3>
-            <p class="text-secondary lh-lg mb-0">Bring fleets, assets, drivers, IoT devices, and business operations
+      <div class="about-showcase mt-5 pt-md-3" style="max-width:var(--content-max)">
+        <div class="about-phone-stage position-relative">
+          <button id="about-play-toggle" class="about-play-toggle" aria-label="Pause auto-play">
+            <svg class="icon-pause" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+              <rect x="6" y="4" width="4" height="16" rx="1" />
+              <rect x="14" y="4" width="4" height="16" rx="1" />
+            </svg>
+            <svg class="icon-play" width="14" height="14" fill="currentColor" viewBox="0 0 24 24"
+              style="display:none">
+              <path d="M7 4l14 8-14 8V4z" />
+            </svg>
+          </button>
+          <div class="about-phone-track d-flex align-items-center" id="about-phone-track">
+            <div class="about-phone-frame active" data-phone="0">
+              <div class="about-phone-notch"></div>
+              <div class="about-phone-screen">
+                <div class="about-phone-panel active">
+                  <p class="about-phone-eyebrow">Connected Operations</p>
+                  <div class="about-phone-graphic">
+                    <svg width="100%" height="100%" viewBox="0 0 220 160" fill="none">
+                      <g stroke="#4169dc" stroke-width="1.5" opacity=".55">
+                        <path d="M40 40L110 80M110 80L180 40M110 80L60 130M110 80L170 125" />
+                      </g>
+                      <circle cx="40" cy="40" r="7" fill="#1d3a75" />
+                      <circle cx="180" cy="40" r="7" fill="#1d3a75" />
+                      <circle cx="60" cy="130" r="7" fill="#1d3a75" />
+                      <circle cx="170" cy="125" r="7" fill="#1d3a75" />
+                      <circle cx="110" cy="80" r="11" fill="#4169dc" />
+                    </svg>
+                  </div>
+                  <div class="about-phone-caption">
+                    <p class="fw-semibold text-white mb-1">One Connected Platform</p>
+                    <p class="text-white-50 mb-0 small">Fleets, assets, drivers, and IoT devices unified in real
+                      time on a single intelligent platform.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about-phone-frame" data-phone="1">
+              <div class="about-phone-notch"></div>
+              <div class="about-phone-screen">
+                <div class="about-phone-panel active">
+                  <p class="about-phone-eyebrow">Real-Time Intelligence</p>
+                  <div class="about-phone-graphic">
+                    <svg width="100%" height="100%" viewBox="0 0 220 160" fill="none">
+                      <circle cx="178" cy="34" r="20" stroke="#4169dc" stroke-width="2.5" />
+                      <text x="178" y="39" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">92</text>
+                      <path d="M20 110C45 60 65 130 90 90S140 40 170 70" stroke="#4169dc" stroke-width="2"
+                        fill="none" />
+                      <circle cx="90" cy="90" r="4.5" fill="#fff" />
+                    </svg>
+                  </div>
+                  <div class="about-phone-caption">
+                    <p class="fw-semibold text-white mb-1">Live Operational Intelligence</p>
+                    <p class="text-white-50 mb-0 small">Every signal is transformed into visibility, automation, and
+                      actionable insight.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about-phone-frame" data-phone="2">
+              <div class="about-phone-notch"></div>
+              <div class="about-phone-screen">
+                <div class="about-phone-panel active">
+                  <p class="about-phone-eyebrow">Built for Growth</p>
+                  <div class="about-phone-graphic">
+                    <svg width="100%" height="100%" viewBox="0 0 220 160" fill="none">
+                      <g fill="#4169dc">
+                        <rect x="30" y="105" width="22" height="35" rx="2" opacity=".45" />
+                        <rect x="70" y="85" width="22" height="55" rx="2" opacity=".65" />
+                        <rect x="110" y="60" width="22" height="80" rx="2" opacity=".85" />
+                        <rect x="150" y="35" width="22" height="105" rx="2" />
+                      </g>
+                      <path d="M30 100L70 78 110 52 150 28" stroke="#fff" stroke-width="1.5" opacity=".6" />
+                    </svg>
+                  </div>
+                  <div class="about-phone-caption">
+                    <p class="fw-semibold text-white mb-1">Scales With Your Operations</p>
+                    <p class="text-white-50 mb-0 small">From growing businesses to large enterprise deployments,
+                      built to scale securely.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 g-lg-5 mt-4 about-steps">
+          <div class="col-12 col-md-4 about-step active" data-step="0">
+            <div class="about-step-track"><span class="about-step-fill"></span></div>
+            <h3 class="h5 fw-semibold mb-2 about-step-title">Connected Operations</h3>
+            <p class="lh-lg mb-0 about-step-desc">Bring fleets, assets, drivers, IoT devices, and business operations
               together through intelligent software.</p>
           </div>
-        </div>
-        <div class="col-12 col-md-4 about-pillar">
-          <div class="h-100 px-md-4">
-            <h3 class="h5 fw-semibold mb-3">Real-Time Intelligence</h3>
-            <p class="text-secondary lh-lg mb-0">Transform live operational data into visibility, automation, and
+          <div class="col-12 col-md-4 about-step" data-step="1">
+            <div class="about-step-track"><span class="about-step-fill"></span></div>
+            <h3 class="h5 fw-semibold mb-2 about-step-title">Real-Time Intelligence</h3>
+            <p class="lh-lg mb-0 about-step-desc">Transform live operational data into visibility, automation, and
               actionable insights.</p>
           </div>
-        </div>
-        <div class="col-12 col-md-4 about-pillar">
-          <div class="h-100 ps-md-4">
-            <h3 class="h5 fw-semibold mb-3">Built for Growth</h3>
-            <p class="text-secondary lh-lg mb-0">Designed to support organizations of every size with scalable, secure,
-              and connected solutions.</p>
+          <div class="col-12 col-md-4 about-step" data-step="2">
+            <div class="about-step-track"><span class="about-step-fill"></span></div>
+            <h3 class="h5 fw-semibold mb-2 about-step-title">Built for Growth</h3>
+            <p class="lh-lg mb-0 about-step-desc">Designed to support organizations of every size with scalable,
+              secure, and connected solutions.</p>
           </div>
         </div>
       </div>
@@ -408,13 +765,13 @@
   </section>
 
   <!-- SOLUTIONS CAROUSEL -->
-  <section id="solutions" class="bg-white overflow-hidden pb-4">
-    <div class="px-4 px-md-5 mb-4" style="max-width:1100px">
-      <p class="text-primary fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em">Our
-        Solutions</p>
-      <h2 class="fw-bold mb-3" style="font-size:clamp(1.75rem,3.5vw,2.75rem);letter-spacing:-.03em">Solutions for Every
+  <section id="solutions" class="bg-light overflow-hidden"
+    style="padding-top:var(--section-space-tight);padding-bottom:2.5rem">
+    <div class="px-4 px-md-5 mb-4">
+      <p class="section-eyebrow">Our Solutions</p>
+      <h2 class="section-heading">Solutions for Every
         Operational Challenge</h2>
-      <p class="text-secondary lh-lg mb-0" style="max-width:960px">Every business faces unique operational challenges,
+      <p class="section-lede" style="max-width:960px">Every business faces unique operational challenges,
         from managing fleets and tracking vehicles to monitoring connected assets, securing operations, and optimizing
         deliveries. Anstel delivers intelligent software solutions that improve operational visibility, automate
         workflows, strengthen security, optimize efficiency, and transform real-time data into smarter business
@@ -422,7 +779,8 @@
     </div>
     <div class="scroll-carousel position-relative" style="height:52vh;min-height:280px">
       <div class="scroll-track d-flex gap-3 h-100 overflow-x-auto">
-        <div data-card class="flex-shrink-0 h-100 ms-4 ms-md-5" style="width:78vw;max-width:calc(25vw - 20px)">
+        <div data-card class="flex-shrink-0 h-100"
+          style="width:78vw;max-width:calc(25vw - 20px);margin-left:var(--site-gutter)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0d1b2a;cursor:pointer"
             onclick="location='connected-fleet.html'"><img src="images/connectedECO.png"
               class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="">
@@ -591,7 +949,7 @@
             </div>
           </div>
         </div>
-        <div class="flex-shrink-0 pe-4 pe-md-5" aria-hidden="true"></div>
+        <div class="flex-shrink-0" style="width:var(--site-gutter)" aria-hidden="true"></div>
       </div>
       <button class="sc-prev car-btn position-absolute top-50 start-0 translate-middle-y ms-3 d-none"
         style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24">
@@ -612,13 +970,12 @@
   </section>
 
   <!-- PLATFORM INTELLIGENCE SECTION -->
-  <section class="bg-light section-pad platform-intelligence">
-    <div class="container-xl px-4 px-md-5">
-      <div class="row align-items-end g-4" style="max-width:1120px">
+  <section class="bg-white section-pad platform-intelligence">
+    <div class="px-4 px-md-5">
+      <div class="row align-items-end g-4" style="max-width:var(--content-max)">
         <div class="col-12 col-lg-7">
-          <p class="text-primary fw-semibold text-uppercase small mb-3" style="letter-spacing:.12em;font-size:.72rem">
-            Autonautics Platform</p>
-          <h2 class="fw-bold lh-sm mb-3" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.04em">The
+          <p class="section-eyebrow">Autonautics Platform</p>
+          <h2 class="section-heading">The
             Intelligence Behind Connected Operations</h2>
         </div>
         <div class="col-12 col-lg-5">
@@ -630,7 +987,7 @@
         </div>
       </div>
 
-      <div class="mt-5 pt-md-3" style="max-width:1120px">
+      <div class="mt-5 pt-md-3" style="max-width:var(--content-max)">
         <p class="fw-semibold mb-4">Platform Highlights</p>
         <div class="row g-4 g-md-0">
           <div class="col-12 col-md-4 platform-highlight">
@@ -658,29 +1015,27 @@
       </div>
 
       <div class="mt-5">
-        <a href="connected-fleet.html" class="btn btn-dark about-anstel-cta px-4 py-2">Discover Autonautics <span
+        <a href="autonautics.html" class="btn btn-dark about-anstel-cta px-4 py-2">Discover Autonautics <span
             aria-hidden="true">&rarr;</span></a>
       </div>
     </div>
   </section>
 
   <!-- PLATFORM PRODUCTS CAROUSEL -->
-  <section class="bg-white pt-5 pt-md-6">
-    <div class="container-xl px-4 px-md-5" style="max-width:1200px">
-      <p class="text-primary fw-semibold text-uppercase small mb-3" style="letter-spacing:.12em;font-size:.72rem">
-        Products</p>
-      <h2 class="fw-bold mb-3" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.04em">Purpose-Built Products.
+  <section class="bg-light overflow-hidden" style="padding-top:var(--section-space)">
+    <div class="px-4 px-md-5 mb-4">
+      <p class="section-eyebrow">Products</p>
+      <h2 class="section-heading">Purpose-Built Products.
         One Connected Platform.</h2>
-      <p class="text-secondary lh-lg mb-0" style="max-width:1000px">Every organization operates differently. That's why
+      <p class="section-lede" style="max-width:1000px">Every organization operates differently. That's why
         Autonautics offers purpose-built products for fleet operations, dispatch management, last mile delivery, fleet
         security, IoT monitoring, and connected business services. Each product works independently or together through
         one intelligent platform, giving organizations the flexibility to scale as their operations grow.</p>
     </div>
-  </section>
-  <section class="bg-white overflow-hidden">
     <div class="scroll-carousel position-relative" style="height:70vh;min-height:380px">
       <div class="scroll-track d-flex gap-3 h-100 overflow-x-auto">
-        <div data-card class="flex-shrink-0 h-100 ms-4 ms-md-5" style="width:82vw;max-width:calc(50vw - 24px)">
+        <div data-card class="flex-shrink-0 h-100"
+          style="width:82vw;max-width:calc(50vw - 24px);margin-left:var(--site-gutter)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#c0b8a8"><img
               src="images/connectedFleetMain.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
               alt="Connected Fleet">
@@ -782,7 +1137,7 @@
             </div>
           </div>
         </div>
-        <div class="flex-shrink-0 pe-4 pe-md-5" aria-hidden="true"></div>
+        <div class="flex-shrink-0" style="width:var(--site-gutter)" aria-hidden="true"></div>
       </div>
       <button class="sc-prev car-btn position-absolute top-50 start-0 translate-middle-y ms-3 d-none"
         style="z-index:20"><svg width="16" height="16" fill="none" stroke="#333" stroke-width="2" viewBox="0 0 24 24">
@@ -800,151 +1155,13 @@
     </div>
   </section>
 
-  <!-- INDUSTRIES -->
-  <section class="bg-light section-pad industries-section">
-    <div class="container-xl px-4 px-md-5" style="max-width:1200px">
-      <p class="text-primary fw-semibold text-uppercase small mb-3" style="letter-spacing:.12em;font-size:.72rem">
-        Industries</p>
-      <h2 class="fw-bold mb-3" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.04em">Built for Every
-        Industry That Moves</h2>
-      <p class="text-secondary lh-lg mb-5" style="max-width:1000px">From transportation and logistics to
-        construction, mining, utilities, public services, and industrial operations, Anstel helps organizations
-        improve visibility, optimize operations, strengthen safety, and make smarter business decisions through
-        connected fleet, asset, and IoT technologies.</p>
-
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3 g-md-4">
-        <div class="col">
-          <a href="#" class="industry-card d-block h-100 rounded-4 bg-white p-4 text-decoration-none">
-            <span class="industry-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z" />
-                <circle cx="5.5" cy="18.5" r="2.5" />
-                <circle cx="18.5" cy="18.5" r="2.5" />
-              </svg>
-            </span>
-            <p class="fw-semibold text-dark mb-1 industry-title">Transportation &amp; Logistics</p>
-            <p class="text-secondary mb-0 industry-sub">Optimize fleet and delivery operations.</p>
-          </a>
-        </div>
-        <div class="col">
-          <a href="#" class="industry-card d-block h-100 rounded-4 bg-white p-4 text-decoration-none">
-            <span class="industry-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
-              </svg>
-            </span>
-            <p class="fw-semibold text-dark mb-1 industry-title">Construction</p>
-            <p class="text-secondary mb-0 industry-sub">Track equipment, vehicles, and workforce.</p>
-          </a>
-        </div>
-        <div class="col">
-          <a href="#" class="industry-card d-block h-100 rounded-4 bg-white p-4 text-decoration-none">
-            <span class="industry-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 20L9 8l4 6 3-4 5 10H3z" />
-              </svg>
-            </span>
-            <p class="fw-semibold text-dark mb-1 industry-title">Mining</p>
-            <p class="text-secondary mb-0 industry-sub">Monitor heavy assets and remote operations.</p>
-          </a>
-        </div>
-        <div class="col">
-          <a href="#" class="industry-card d-block h-100 rounded-4 bg-white p-4 text-decoration-none">
-            <span class="industry-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 2C12 2 5 10.5 5 15a7 7 0 0014 0c0-4.5-7-13-7-13z" />
-              </svg>
-            </span>
-            <p class="fw-semibold text-dark mb-1 industry-title">Oil &amp; Gas</p>
-            <p class="text-secondary mb-0 industry-sub">Improve operational visibility and safety.</p>
-          </a>
-        </div>
-        <div class="col">
-          <a href="#" class="industry-card d-block h-100 rounded-4 bg-white p-4 text-decoration-none">
-            <span class="industry-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" />
-              </svg>
-            </span>
-            <p class="fw-semibold text-dark mb-1 industry-title">Utilities</p>
-            <p class="text-secondary mb-0 industry-sub">Manage field operations and critical assets.</p>
-          </a>
-        </div>
-        <div class="col">
-          <a href="#" class="industry-card d-block h-100 rounded-4 bg-white p-4 text-decoration-none">
-            <span class="industry-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M3 21h18M4 21V10M20 21V10M2 10l10-6 10 6M7 21v-5M12 21v-5M17 21v-5" />
-              </svg>
-            </span>
-            <p class="fw-semibold text-dark mb-1 industry-title">Government &amp; Public Services</p>
-            <p class="text-secondary mb-0 industry-sub">Support connected public operations.</p>
-          </a>
-        </div>
-        <div class="col">
-          <a href="#" class="industry-card d-block h-100 rounded-4 bg-white p-4 text-decoration-none">
-            <span class="industry-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0l-1 14a2 2 0 01-2 2H7a2 2 0 01-2-2L4 6h16z" />
-              </svg>
-            </span>
-            <p class="fw-semibold text-dark mb-1 industry-title">Waste Management</p>
-            <p class="text-secondary mb-0 industry-sub">Optimize collection fleets and assets.</p>
-          </a>
-        </div>
-        <div class="col">
-          <a href="#" class="industry-card d-block h-100 rounded-4 bg-white p-4 text-decoration-none">
-            <span class="industry-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 2v20M4.2 7.5l15.6 9M4.2 16.5l15.6-9M12 2l-2 2m2-2l2 2M12 22l-2-2m2 2l2-2M4.2 7.5l2.7.7m-2.7-.7l.7-2.7M19.8 7.5l-2.7.7m2.7-.7l-.7-2.7M4.2 16.5l2.7-.7m-2.7.7l.7 2.7M19.8 16.5l-2.7-.7m2.7.7l-.7 2.7" />
-              </svg>
-            </span>
-            <p class="fw-semibold text-dark mb-1 industry-title">Cold Chain &amp; Distribution</p>
-            <p class="text-secondary mb-0 industry-sub">Protect temperature-sensitive operations.</p>
-          </a>
-        </div>
-        <div class="col">
-          <a href="#" class="industry-card d-block h-100 rounded-4 bg-white p-4 text-decoration-none">
-            <span class="industry-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2 22V10l6 4v-4l6 4V6l6 4v12H2z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2 22h20" />
-              </svg>
-            </span>
-            <p class="fw-semibold text-dark mb-1 industry-title">Manufacturing</p>
-            <p class="text-secondary mb-0 industry-sub">Monitor industrial assets and operations.</p>
-          </a>
-        </div>
-        <div class="col">
-          <a href="#" class="industry-card d-block h-100 rounded-4 bg-white p-4 text-decoration-none">
-            <span class="industry-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" />
-              </svg>
-            </span>
-            <p class="fw-semibold text-dark mb-1 industry-title">Emergency &amp; Security Services</p>
-            <p class="text-secondary mb-0 industry-sub">Support rapid response and operational readiness.</p>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- DEVICES -->
   <section class="bg-white section-pad devices-section">
-    <div class="container-xl px-4 px-md-5" style="max-width:1120px">
-      <p class="text-primary fw-semibold text-uppercase small mb-3" style="letter-spacing:.12em;font-size:.72rem">
-        Devices</p>
-      <h2 class="fw-bold mb-3" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.04em">Connect Every Device to
+    <div class="px-4 px-md-5">
+      <p class="section-eyebrow">Devices</p>
+      <h2 class="section-heading">Connect Every Device to
         One Intelligent Platform</h2>
-      <p class="text-secondary lh-lg mb-0" style="max-width:960px">Anstel's Autonautics platform connects with a wide
+      <p class="section-lede" style="max-width:960px">Anstel's Autonautics platform connects with a wide
         range of GPS trackers, AI dash cameras, sensors, telematics devices, and industrial IoT hardware to deliver
         real-time visibility, automation, and operational intelligence. Whether you're deploying new hardware or
         integrating existing devices, Anstel enables organizations to build connected operations without disrupting
@@ -953,9 +1170,9 @@
 
       <div class="mt-5 pt-md-3">
         <p class="fw-semibold mb-4">Device Categories</p>
-        <div class="row g-4 g-lg-0 device-grid">
+        <div class="row g-3 g-md-4 device-grid">
           <div class="col-12 col-sm-6 col-lg-3 device-col">
-            <div class="h-100">
+            <div class="device-card tesla-card h-100 rounded-4 bg-white p-4">
               <span class="device-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -968,7 +1185,7 @@
             </div>
           </div>
           <div class="col-12 col-sm-6 col-lg-3 device-col">
-            <div class="h-100">
+            <div class="device-card tesla-card h-100 rounded-4 bg-white p-4">
               <span class="device-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -980,7 +1197,7 @@
             </div>
           </div>
           <div class="col-12 col-sm-6 col-lg-3 device-col">
-            <div class="h-100">
+            <div class="device-card tesla-card h-100 rounded-4 bg-white p-4">
               <span class="device-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -993,7 +1210,7 @@
             </div>
           </div>
           <div class="col-12 col-sm-6 col-lg-3 device-col">
-            <div class="h-100">
+            <div class="device-card tesla-card h-100 rounded-4 bg-white p-4">
               <span class="device-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -1005,7 +1222,7 @@
             </div>
           </div>
           <div class="col-12 col-sm-6 col-lg-3 device-col">
-            <div class="h-100">
+            <div class="device-card tesla-card h-100 rounded-4 bg-white p-4">
               <span class="device-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                   <rect x="3" y="3" width="7" height="7" rx="1" />
@@ -1019,7 +1236,7 @@
             </div>
           </div>
           <div class="col-12 col-sm-6 col-lg-3 device-col">
-            <div class="h-100">
+            <div class="device-card tesla-card h-100 rounded-4 bg-white p-4">
               <span class="device-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                   <circle cx="12" cy="8" r="4" />
@@ -1032,7 +1249,7 @@
             </div>
           </div>
           <div class="col-12 col-sm-6 col-lg-3 device-col">
-            <div class="h-100">
+            <div class="device-card tesla-card h-100 rounded-4 bg-white p-4">
               <span class="device-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -1045,7 +1262,7 @@
             </div>
           </div>
           <div class="col-12 col-sm-6 col-lg-3 device-col">
-            <div class="h-100">
+            <div class="device-card tesla-card h-100 rounded-4 bg-white p-4">
               <span class="device-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                   <circle cx="12" cy="12" r="3" />
@@ -1072,17 +1289,17 @@
 
   <!-- WHY ANSTEL -->
   <section class="bg-light section-pad why-anstel-section">
-    <div class="container-xl px-4 px-md-5" style="max-width:1120px">
-      <p class="text-primary fw-semibold text-uppercase small mb-3" style="letter-spacing:.12em;font-size:.72rem">Why
+    <div class="px-4 px-md-5">
+      <p class="section-eyebrow">Why
         Anstel</p>
-      <h2 class="fw-bold mb-3" style="font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.04em">Why Organizations
+      <h2 class="section-heading">Why Organizations
         Choose Anstel</h2>
-      <p class="text-secondary lh-lg mb-5" style="max-width:820px">A unified platform that helps organizations
+      <p class="section-lede mb-5" style="max-width:820px">A unified platform that helps organizations
         improve visibility, automate operations, strengthen security, and make smarter business decisions.</p>
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 g-md-4">
         <div class="col">
-          <div class="feature-card h-100 rounded-4 bg-white p-4 p-lg-5">
+          <div class="feature-card tesla-card h-100 rounded-4 bg-white p-4 p-lg-5">
             <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -1095,7 +1312,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="feature-card h-100 rounded-4 bg-white p-4 p-lg-5">
+          <div class="feature-card tesla-card h-100 rounded-4 bg-white p-4 p-lg-5">
             <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -1109,7 +1326,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="feature-card h-100 rounded-4 bg-white p-4 p-lg-5">
+          <div class="feature-card tesla-card h-100 rounded-4 bg-white p-4 p-lg-5">
             <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="3" />
@@ -1123,7 +1340,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="feature-card h-100 rounded-4 bg-white p-4 p-lg-5">
+          <div class="feature-card tesla-card h-100 rounded-4 bg-white p-4 p-lg-5">
             <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -1136,7 +1353,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="feature-card h-100 rounded-4 bg-white p-4 p-lg-5">
+          <div class="feature-card tesla-card h-100 rounded-4 bg-white p-4 p-lg-5">
             <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -1150,7 +1367,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="feature-card h-100 rounded-4 bg-white p-4 p-lg-5">
+          <div class="feature-card tesla-card h-100 rounded-4 bg-white p-4 p-lg-5">
             <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -1165,18 +1382,19 @@
       </div>
 
       <div class="mt-5 text-center">
-        <a href="#" class="btn btn-dark about-anstel-cta px-4 py-2">Schedule a Demo <span
+        <a href="request-demo.html" class="btn btn-dark about-anstel-cta px-4 py-2">Schedule a Demo <span
             aria-hidden="true">&rarr;</span></a>
       </div>
     </div>
   </section>
 
   <!-- One PLatform SECTION -->
-  <section class="bg-white section-pad px-4 px-md-5 border-top border-light">
-    <div class="mx-auto" style="max-width:1280px">
-      <div class="mb-5" style="max-width:600px">
-        <h2 class="fw-bold mb-2">One Platform. Complete Fleet Control</h2>
-        <p class="text-secondary small mb-0">
+  <section class="bg-white section-pad px-4 px-md-5">
+    <div style="max-width:var(--content-max);margin:auto">
+      <div class="mb-5" style="max-width:640px">
+        <p class="section-eyebrow">Platform</p>
+        <h2 class="section-heading">One Platform. Complete Fleet Control</h2>
+        <p class="section-lede">
           Bring tracking, operations, maintenance, safety, compliance, and business intelligence together in one
           connected fleet platform designed for modern mobility.</p>
         <!-- <div class="d-flex gap-2">
@@ -1185,139 +1403,99 @@
         </div> -->
       </div>
 
-      <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-4 platform-stats-grid">
-        <div class="col">
-          <div class="d-flex align-items-center gap-2">
-            <div>
-              <p class="fw-bold mb-0 platform-stat-value">15+</p>
-              <p class="text-secondary small mb-0">Years of Innovation</p>
-            </div>
-            <span
-              class="d-inline-flex align-items-center justify-content-center rounded-circle text-white ms-2 flex-shrink-0"
-              style="width:28px;height:28px;background:#4169dc">
-              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15a6 6 0 100-12 6 6 0 000 12z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.21 13.89L7 23l5-3 5 3-1.21-9.11" />
-              </svg>
-            </span>
+      <div class="row g-3 g-md-4">
+        <div class="col-12 col-md-6">
+          <div class="stat-card-hero tesla-card rounded-4 bg-white p-4 p-lg-5 h-100">
+            <p class="stat-hero-value mb-2">15+</p>
+            <p class="fw-semibold mb-0">Years of Innovation</p>
           </div>
         </div>
-        <div class="col">
-          <div class="d-flex align-items-center gap-2">
-            <div>
-              <p class="fw-bold mb-0 platform-stat-value">24×7</p>
-              <p class="text-secondary small mb-0">Fleet Monitoring</p>
-            </div>
-            <span
-              class="d-inline-flex align-items-center justify-content-center rounded-circle text-white ms-2 flex-shrink-0"
-              style="width:28px;height:28px;background:#0d1b2a">
-              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M22 12h-4l-3 9L9 3l-3 9H2" />
-              </svg>
-            </span>
+        <div class="col-12 col-md-6">
+          <div class="stat-card-hero tesla-card rounded-4 bg-white p-4 p-lg-5 h-100">
+            <p class="stat-hero-value mb-2">24×7</p>
+            <p class="fw-semibold mb-0">Fleet Monitoring</p>
           </div>
         </div>
+      </div>
+
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-6 g-3 g-md-4 mt-1">
         <div class="col">
-          <div class="d-flex align-items-center gap-2">
-            <div>
-              <p class="fw-bold mb-0 platform-stat-value">20+</p>
-              <p class="text-secondary small mb-0">Business Reports</p>
-            </div>
-            <span
-              class="d-inline-flex align-items-center justify-content-center rounded-circle text-white ms-2 flex-shrink-0"
-              style="width:28px;height:28px;background:#4169dc">
-              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <div class="stat-card-sm tesla-card rounded-4 bg-white p-4 h-100">
+            <span class="stat-sm-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M18 20V10M12 20V4M6 20v-6" />
               </svg>
             </span>
+            <p class="mb-1"><span class="stat-sm-value">20</span><span class="stat-sm-unit">+</span></p>
+            <p class="text-secondary small mb-0">Business Reports</p>
           </div>
         </div>
         <div class="col">
-          <div class="d-flex align-items-center gap-2">
-            <div>
-              <p class="fw-bold mb-0 platform-stat-value">15+</p>
-              <p class="text-secondary small mb-0">Core Modules</p>
-            </div>
-            <span
-              class="d-inline-flex align-items-center justify-content-center rounded-circle text-white ms-2 flex-shrink-0"
-              style="width:28px;height:28px;background:#0d1b2a">
-              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <div class="stat-card-sm tesla-card rounded-4 bg-white p-4 h-100">
+            <span class="stat-sm-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                 <rect x="3" y="3" width="7" height="7" rx="1" />
                 <rect x="14" y="3" width="7" height="7" rx="1" />
                 <rect x="14" y="14" width="7" height="7" rx="1" />
                 <rect x="3" y="14" width="7" height="7" rx="1" />
               </svg>
             </span>
+            <p class="mb-1"><span class="stat-sm-value">15</span><span class="stat-sm-unit">+</span></p>
+            <p class="text-secondary small mb-0">Core Modules</p>
           </div>
         </div>
         <div class="col">
-          <div class="d-flex align-items-center gap-2">
-            <div>
-              <p class="fw-bold mb-0 platform-stat-value">50+</p>
-              <p class="text-secondary small mb-0">Smart Alerts</p>
-            </div>
-            <span
-              class="d-inline-flex align-items-center justify-content-center rounded-circle text-white ms-2 flex-shrink-0"
-              style="width:28px;height:28px;background:#4169dc">
-              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <div class="stat-card-sm tesla-card rounded-4 bg-white p-4 h-100">
+            <span class="stat-sm-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M18 8a6 6 0 00-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.73 21a2 2 0 01-3.46 0" />
               </svg>
             </span>
+            <p class="mb-1"><span class="stat-sm-value">50</span><span class="stat-sm-unit">+</span></p>
+            <p class="text-secondary small mb-0">Smart Alerts</p>
           </div>
         </div>
         <div class="col">
-          <div class="d-flex align-items-center gap-2">
-            <div>
-              <p class="fw-bold mb-0 platform-stat-value">AI Powered</p>
-              <p class="text-secondary small mb-0">Fleet Intelligence</p>
-            </div>
-            <span
-              class="d-inline-flex align-items-center justify-content-center rounded-circle text-white ms-2 flex-shrink-0"
-              style="width:28px;height:28px;background:#0d1b2a">
-              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <div class="stat-card-sm tesla-card rounded-4 bg-white p-4 h-100">
+            <span class="stat-sm-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                 <rect x="6" y="6" width="12" height="12" rx="2" />
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M6 1v3M18 1v3M6 20v3M18 20v3M1 6h3M1 18h3M20 6h3M20 18h3" />
               </svg>
             </span>
+            <p class="stat-sm-value mb-1" style="font-size:clamp(1rem,2.4vw,1.35rem)">AI Powered</p>
+            <p class="text-secondary small mb-0">Fleet Intelligence</p>
           </div>
         </div>
         <div class="col">
-          <div class="d-flex align-items-center gap-2">
-            <div>
-              <p class="fw-bold mb-0 platform-stat-value">One Platform</p>
-              <p class="text-secondary small mb-0">Connected Ecosystem</p>
-            </div>
-            <span
-              class="d-inline-flex align-items-center justify-content-center rounded-circle text-white ms-2 flex-shrink-0"
-              style="width:28px;height:28px;background:#4169dc">
-              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <div class="stat-card-sm tesla-card rounded-4 bg-white p-4 h-100">
+            <span class="stat-sm-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                 <circle cx="18" cy="5" r="2.5" />
                 <circle cx="6" cy="12" r="2.5" />
                 <circle cx="18" cy="19" r="2.5" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.3 10.7l7.4-4.4M8.3 13.3l7.4 4.4" />
               </svg>
             </span>
+            <p class="stat-sm-value mb-1" style="font-size:clamp(1rem,2.4vw,1.35rem)">One Platform</p>
+            <p class="text-secondary small mb-0">Connected Ecosystem</p>
           </div>
         </div>
         <div class="col">
-          <div class="d-flex align-items-center gap-2">
-            <div>
-              <p class="fw-bold mb-0 platform-stat-value">Web + Mobile</p>
-              <p class="text-secondary small mb-0">Cross-Platform Access</p>
-            </div>
-            <span
-              class="d-inline-flex align-items-center justify-content-center rounded-circle text-white ms-2 flex-shrink-0"
-              style="width:28px;height:28px;background:#0d1b2a">
-              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <div class="stat-card-sm tesla-card rounded-4 bg-white p-4 h-100">
+            <span class="stat-sm-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                 <rect x="1" y="4" width="14" height="10" rx="1" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 17h6" />
                 <rect x="15" y="9" width="8" height="13" rx="1.5" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="M18 19h2" />
               </svg>
             </span>
+            <p class="stat-sm-value mb-1" style="font-size:clamp(1rem,2.4vw,1.35rem)">Web + Mobile</p>
+            <p class="text-secondary small mb-0">Cross-Platform Access</p>
           </div>
         </div>
       </div>
@@ -1325,13 +1503,12 @@
   </section>
 
    <!-- SUCCESS STORIES + INSIGHTS -->
-  <section class="bg-white section-pad">
+  <section class="bg-light section-pad">
     <div class="px-4 px-md-5 mb-4">
-      <p class="text-primary fw-semibold text-uppercase mb-2" style="font-size:.72rem;letter-spacing:.12em">Resources
-      </p>
-      <h2 class="fw-bold" style="font-size:clamp(1.25rem,2.5vw,1.75rem)">Insights &amp; Success Stories</h2>
+      <p class="section-eyebrow">Resources</p>
+      <h2 class="section-heading mb-0">Insights &amp; Success Stories</h2>
     </div>
-    <div class="container-xl px-4 px-md-5">
+    <div class="px-4 px-md-5">
       <div class="row g-4">
         <div class="col-12 col-md-6">
           <article class="h-100 rounded-4 d-flex align-items-center justify-content-between p-4 p-lg-5 gap-3"
@@ -1363,21 +1540,32 @@
         </div>
       </div>
     </div>
-    <div class="mt-4" style="height:420px"><iframe title="Locations Map"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=-128.5%2C22.5%2C-63.5%2C51.5&layer=mapnik"
-        class="w-100 h-100 border-0 rounded-4" loading="lazy"></iframe></div>
+  </section>
+
+  <!-- GLOBAL PRESENCE MAP -->
+  <section class="bg-white section-pad presence-section">
+    <div class="px-4 px-md-5">
+      <p class="section-eyebrow">Global Presence</p>
+      <h2 class="section-heading">Where Anstel Operates</h2>
+      <p class="section-lede mb-5" style="max-width:820px">From South Asia to the Pacific, Anstel supports
+        connected fleet, asset, and IoT operations across four countries.</p>
+
+      <div class="presence-map-wrap tesla-card rounded-4 bg-white p-3 p-md-4">
+        <div id="presence-map" aria-label="Map highlighting Anstel's operating countries: India, Australia, Fiji, and Papua New Guinea"></div>
+      </div>
+    </div>
   </section>
 
   <!-- FINAL CTA -->
   <section class="section-pad text-center cta-band" style="background:#0d1b2a">
     <div class="container-xl px-4 px-md-5 mx-auto" style="max-width:760px">
-      <h2 class="fw-bold text-white mb-3" style="font-size:clamp(1.75rem,3.5vw,2.75rem);letter-spacing:-.03em">Ready
+      <h2 class="section-heading text-white mb-3">Ready
         to Transform Your Operations?</h2>
-      <p class="text-white-50 lh-lg mb-4" style="font-size:1.05rem">See how Anstel's connected platform can help your
+      <p class="text-white-50 lh-lg mb-4" style="font-size:clamp(1rem,1.6vw,1.15rem)">See how Anstel's connected platform can help your
         organization improve visibility, automate operations, and make smarter business decisions.</p>
       <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-        <a href="#" class="btn cta-primary-btn px-4 py-2">Schedule a Demo</a>
-        <a href="#" class="btn cta-secondary-btn px-4 py-2">Contact Sales</a>
+        <a href="request-demo.html" class="btn cta-primary-btn px-4 py-2">Schedule a Demo</a>
+        <a href="contact-sales.html" class="btn cta-secondary-btn px-4 py-2">Contact Sales</a>
       </div>
     </div>
   </section>
@@ -1393,11 +1581,11 @@
   <footer class="bg-white border-top py-3 px-4 px-md-5">
     <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mx-auto" style="max-width:1280px">
       <span class="text-muted" style="font-size:.75rem">Anstel &copy; 2026</span>
-      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Privacy &amp; Legal</a>
-      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Contact</a>
+      <a href="terms-of-use.html" class="text-secondary text-decoration-none" style="font-size:.75rem">Privacy &amp; Legal</a>
+      <a href="contact-sales.html" class="text-secondary text-decoration-none" style="font-size:.75rem">Contact</a>
       <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">News</a>
       <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Get Updates</a>
-      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Locations</a>
+      <a href="contact-sales.html#locations" class="text-secondary text-decoration-none" style="font-size:.75rem">Locations</a>
       <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Learn</a>
     </div>
   </footer>
@@ -1428,6 +1616,8 @@
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="js/main.js"></script>
   <script>
     (function ($) {
