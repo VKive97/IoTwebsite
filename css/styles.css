@@ -1,8 +1,8 @@
 /* ── Scroll carousels ── */
 :root{
   --site-gutter:clamp(1rem,5vw,6rem);
-  --section-space:clamp(4rem,8vw,8rem);
-  --section-space-tight:clamp(3rem,6vw,6rem);
+  --section-space:clamp(5rem,10vw,11rem);
+  --section-space-tight:clamp(4rem,7vw,8rem);
   --content-max:1280px;
   /* On screens wider than content-max, align bleed carousels with the same
      centered column edge as every other section instead of just the raw
@@ -25,7 +25,7 @@ body > section > .row{--bs-gutter-x:clamp(1.25rem,3vw,3.5rem);--bs-gutter-y:clam
 @media(min-width:768px){.platform-highlight + .platform-highlight{border-left:1px solid #d1d5db}}
 
 @media(max-width:575px){
-  :root{--site-gutter:1rem;--section-space:3.5rem;--section-space-tight:2.5rem}
+  :root{--site-gutter:1rem;--section-space:4.5rem;--section-space-tight:3.25rem}
   body > section > .row{--bs-gutter-x:1rem;--bs-gutter-y:1.5rem}
 }
 
@@ -177,6 +177,13 @@ section:has(> .scroll-carousel) > [class*="px-"]{
 @media(max-width:767px){.why-card-img{flex:0 0 auto;width:100%;height:260px}}
 .tag-pill{display:inline-block;border:1px solid #e5e7eb;border-radius:999px;padding:6px 16px;font-size:.875rem;color:#4b5563;cursor:default;transition:all .2s}
 .tag-pill:hover{border-color:#93c5fd;color:#2563eb}
+
+/* ── Event media slot (Events page: image, carousel, or video placeholder — same box treatment) ── */
+.event-media{position:relative;border-radius:1rem;overflow:hidden;height:clamp(240px,32vw,380px);background:#f3f4f6}
+.event-media img{width:100%;height:100%;object-fit:cover;display:block}
+.event-media.carousel .carousel-item{height:clamp(240px,32vw,380px)}
+.event-media-video img{filter:brightness(.75)}
+.event-play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.92);color:#171a20;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.25)}
 .acc-arrow{display:inline-block;transition:transform .2s}
 .acc-arrow.rotated{transform:rotate(180deg)}
 
@@ -209,7 +216,7 @@ section:has(> .scroll-carousel) > [class*="px-"]{
 .mob-product-card{display:block;text-decoration:none;text-align:center;color:inherit}
 .mob-product-card img{width:100%;height:76px;object-fit:contain}
 .mob-product-name{font-weight:600;font-size:.85rem;color:#171a20;margin:.5rem 0 .1rem}
-.mob-product-link{font-size:.78rem;color:#0d6efd}
+.mob-product-link{font-size:.78rem;color:#6c757d}
 .mob-sub-links{border-top:1px solid #f3f4f6;margin-top:1.75rem;padding-top:1.25rem}
 .mob-sub-links + .mob-sub-links{margin-top:1.25rem;border-top:0;padding-top:0}
 .mob-sub-heading{text-transform:uppercase;font-size:.68rem;letter-spacing:.08em;font-weight:600;color:#6c757d;margin-bottom:.75rem}
@@ -221,6 +228,20 @@ section:has(> .scroll-carousel) > [class*="px-"]{
 .tesla-card{background:#fff;border-radius:1rem;box-shadow:none;transition:box-shadow .2s ease}
 .tesla-card:hover{box-shadow:0 4px 18px rgba(0,0,0,.07)}
 .tesla-card-link{text-decoration:none;color:inherit;display:block}
+
+/* ── Flat gray card (tesla.com feature-grid look: no border/shadow, subtle radius) ── */
+.tesla-card-flat{background:#f4f4f4;border-radius:.5rem;transition:background .2s ease}
+.tesla-card-flat:hover{background:#eee}
+
+/* ── Near-full-height image band (keeps the site's side gutter, fills most of the viewport height) ── */
+.full-bleed-media{position:relative;overflow:hidden;height:clamp(420px,90vh,880px);border-radius:1rem}
+.full-bleed-media img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ── Section immediately following a full-bleed band: tight top padding, image sits close to the heading ── */
+body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
+
+/* ── Generous vertical rhythm between a heading block and the row below it ── */
+.tesla-gap{margin-top:clamp(3rem,6vw,5.5rem)}
 
 /* ── Industries grid ── */
 .industry-icon{width:48px;height:48px;background:rgba(13,110,253,.08);color:#0d6efd;flex-shrink:0}
@@ -314,8 +335,13 @@ section:has(> .scroll-carousel) > [class*="px-"]{
 .about-step.active .about-step-desc{color:#4b5563}
 @keyframes aboutStepFill{from{width:0}to{width:100%}}
 
+/* ── Large step typography (wide 3-up trackers, e.g. homepage Platform Highlights) ── */
+.about-steps-lg .about-step-track{margin-bottom:1.75rem}
+.about-steps-lg .about-step-title{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.about-steps-lg .about-step-desc{font-size:1rem}
+
 /* ── Single-photo step carousel (How It Works, mission workflow, etc.) ── */
-.process-photo-stage{position:relative;border-radius:1.5rem;overflow:hidden;height:clamp(320px,42vw,560px)}
+.process-photo-stage{position:relative;border-radius:1rem;overflow:hidden;height:clamp(420px,80vh,820px)}
 .about-phone-frame.process-photo-frame{
   position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;background:none;border-radius:0;
   box-shadow:none;opacity:0;filter:none;transform:none;z-index:1;transition:opacity .6s ease;cursor:default
@@ -334,6 +360,14 @@ section:has(> .scroll-carousel) > [class*="px-"]{
 }
 .capability-stat-value{font-size:clamp(1.5rem,4vw,2.5rem);font-weight:700;color:#171a20;letter-spacing:-.5px;line-height:1.1}
 .capability-stat-label{color:#6c757d;margin-top:.5rem;font-size:.75rem}
+
+/* ── Tesla spec-strip (columns hug their content and cluster together, unlike the stretched capability-strip grid) ── */
+.tesla-spec-row{display:flex;flex-wrap:wrap;justify-content:center;column-gap:0;row-gap:2rem}
+.tesla-spec{padding:0 2.25rem;text-align:center}
+.tesla-spec + .tesla-spec{border-left:1px solid #e2e2e2}
+.tesla-spec-value{font-size:clamp(2.25rem,4.2vw,3.25rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;color:#171a20;min-height:clamp(2.25rem,4.2vw,3.25rem);display:flex;align-items:flex-end;justify-content:center}
+.tesla-spec-unit{font-size:1.15rem;font-weight:600;margin-left:.2rem;color:#333}
+.tesla-spec-label{color:#6b7280;font-size:.95rem;margin-top:.5rem}
 
 /* Dark single-line variant (IoT, etc.) */
 .capability-strip-dark{display:grid;grid-template-columns:repeat(2,1fr);row-gap:1.25rem;justify-items:center;max-width:var(--content-max);margin:auto;width:100%}
@@ -400,6 +434,35 @@ section:has(> .scroll-carousel) > [class*="px-"]{
 .cta-action-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);transition:all .2s ease}
 .cta-action-card:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.28);transform:translateY(-3px)}
 
+/* ── Light numbered step badge (Request Demo, Fleet Tracking "How It Works", etc.) ── */
+.step-num{width:44px;height:44px;border-radius:50%;background:rgba(13,110,253,.08);color:#0d6efd;font-weight:700;font-size:.95rem}
+
+/* ── FAQ accordion (Request Demo, Homepage, and any solution/product page) ── */
+.demo-accordion .accordion-item{
+  background:#fff;border:1px solid #e5e7eb;border-radius:1rem;margin-bottom:.75rem;
+  overflow:hidden;transition:border-color .2s ease,box-shadow .2s ease;
+}
+.demo-accordion .accordion-item:hover{border-color:#d1d5db;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.demo-accordion .accordion-item:last-child{margin-bottom:0}
+.demo-accordion .accordion-button{background:transparent;font-weight:600;font-size:.98rem;color:#171a20;padding:1.15rem 1.5rem;box-shadow:none}
+.demo-accordion .accordion-button:not(.collapsed){background:#f9fafb;color:#171a20;box-shadow:none}
+.demo-accordion .accordion-button:focus{box-shadow:none}
+.demo-accordion .accordion-button::after{
+  background-image:none!important;content:'+';font-size:1.4rem;font-weight:400;color:#4169dc;
+  line-height:1;width:20px;height:20px;display:flex;align-items:center;justify-content:center;
+  transition:none;flex-shrink:0;
+}
+.demo-accordion .accordion-button:not(.collapsed)::after{content:'\2212'}
+.demo-accordion .accordion-body{padding:0 1.5rem 1.25rem;color:#4b5563;font-size:.92rem;line-height:1.7}
+
+/* ── Tesla-style form inputs (Request Demo, Contact Us) ── */
+.tesla-form .form-control,
+.tesla-form .form-select{border-radius:.75rem;padding:.65rem 1rem;border-color:#d1d5db;font-size:.9rem}
+.tesla-form .form-control:focus,
+.tesla-form .form-select:focus{border-color:#4169dc;box-shadow:0 0 0 .2rem rgba(65,105,220,.15)}
+.tesla-form label{font-size:.78rem;font-weight:600;color:#4b5563;margin-bottom:.4rem}
+.form-success-msg{display:none}
+
 /* ── Carousel bleed padding to align with bootstrap px- classes ── */
 .scroll-track.px-3 { scroll-padding-left: 1rem; scroll-padding-right: 1rem; }
 .scroll-track.px-4 { scroll-padding-left: 1.5rem; scroll-padding-right: 1.5rem; }
@@ -414,3 +477,19 @@ section:has(> .scroll-carousel) > [class*="px-"]{
   .scroll-track.px-lg-4 { scroll-padding-left: 1.5rem; scroll-padding-right: 1.5rem; }
   .scroll-track.px-lg-5 { scroll-padding-left: 3rem; scroll-padding-right: 3rem; }
 }
+
+/* ── Coming Soon (photo-mosaic backdrop + glass card) ── */
+.coming-soon-hero{position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:2rem 1.25rem}
+.coming-soon-mosaic{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);gap:2px;background:#0d1017}
+.coming-soon-mosaic img{width:100%;height:100%;object-fit:cover;filter:grayscale(.35) brightness(.5)}
+@media(max-width:767px){.coming-soon-mosaic{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(4,1fr)}}
+.coming-soon-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,13,20,.6),rgba(10,13,20,.8))}
+.coming-soon-card{position:relative;z-index:2;max-width:640px;width:100%;padding:clamp(2rem,5vw,3.5rem);text-align:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:1.5rem;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.coming-soon-teaser{display:flex;justify-content:center;gap:clamp(1.25rem,4vw,2.25rem);flex-wrap:wrap;margin-top:2.25rem}
+.coming-soon-teaser-item{display:flex;flex-direction:column;align-items:center;gap:.6rem;color:rgba(255,255,255,.85);width:84px}
+.coming-soon-teaser-icon{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;color:#fff}
+.coming-soon-teaser-item span.small{font-size:.72rem;line-height:1.3}
+
+/* ── Footer social icons ── */
+.social-footer-link{color:#6c757d;transition:color .15s;display:inline-flex}
+.social-footer-link:hover{color:#171a20}

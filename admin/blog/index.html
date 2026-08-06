@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Knowledge Center Admin — Anstel</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css">
+  <style>
+    body{background:#f4f4f5}
+    #posts-table td, #posts-table th{vertical-align:middle;font-size:.9rem}
+    .admin-shell{max-width:1180px;margin:auto;padding:2.5rem 1.5rem 6rem}
+    #editor-container{height:420px;background:#fff}
+    .ql-toolbar.ql-snow{border-radius:.75rem .75rem 0 0;background:#fff}
+    .ql-container.ql-snow{border-radius:0 0 .75rem .75rem;font-size:1rem}
+    .ql-editor h2{font-size:1.6rem;font-weight:700;margin:1rem 0 .5rem}
+    .ql-editor h3{font-size:1.3rem;font-weight:700;margin:.85rem 0 .5rem}
+    .ql-editor img{max-width:100%;height:auto;display:block;margin:.5rem 0}
+    .ql-editor iframe.ql-video{width:100%;aspect-ratio:16/9;height:auto}
+    .ql-editor .ql-video-file video{width:100%;border-radius:.5rem;display:block}
+    .ql-url-btn{width:28px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:700;color:#444;background:none;border:0;cursor:pointer;vertical-align:top}
+    .ql-url-btn:hover{color:#06c}
+  </style>
+</head>
+
+<body>
+
+  <div class="admin-shell">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+      <h1 class="h4 fw-bold mb-0">Knowledge Center Admin</h1>
+      <div class="d-flex gap-2">
+        <a href="/company/blog/" target="_blank" class="btn btn-outline-dark btn-sm">View Live Knowledge Center &rarr;</a>
+        <a href="/" class="btn btn-outline-secondary btn-sm">&larr; Back to Site</a>
+      </div>
+    </div>
+    <p class="text-muted small mb-4">Posts save to this browser's local storage only &mdash; a working
+      prototype of the authoring flow, not a shared/live backend yet.</p>
+
+    <!-- LIST VIEW -->
+    <div id="list-view">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <p class="fw-semibold mb-0">All Posts</p>
+        <button class="btn btn-dark btn-sm" id="new-post-btn">+ New Post</button>
+      </div>
+      <div class="tesla-card-flat p-0" style="overflow:hidden">
+        <table class="table mb-0" id="posts-table">
+          <thead>
+            <tr>
+              <th class="ps-3">Title</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Date</th>
+              <th class="text-end pe-3">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="posts-tbody"></tbody>
+        </table>
+      </div>
+      <p id="posts-empty" class="text-muted text-center py-5" style="display:none">No posts yet &mdash; create
+        your first one.</p>
+    </div>
+
+    <!-- EDITOR VIEW -->
+    <div id="editor-view" style="display:none">
+      <button class="btn btn-link ps-0 mb-3 text-decoration-none" id="back-to-list">&larr; All Posts</button>
+
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <div class="tesla-form tesla-card-flat p-4">
+            <label>Title</label>
+            <input type="text" class="form-control mb-3" id="f-title" placeholder="Post title">
+
+            <label>Slug (URL)</label>
+            <input type="text" class="form-control mb-3" id="f-slug" placeholder="post-url-slug">
+
+            <label>Category</label>
+            <input type="text" class="form-control mb-3" id="f-category" placeholder="e.g. Fleet Management">
+
+            <label>Cover Image (Hero)</label>
+            <div class="d-flex gap-2 mb-2">
+              <input type="text" class="form-control" id="f-cover" placeholder="Image URL, or upload a file">
+              <label class="btn btn-outline-secondary mb-0 flex-shrink-0" style="white-space:nowrap">Upload
+                <input type="file" accept="image/*" class="d-none" id="f-cover-upload">
+              </label>
+            </div>
+            <img id="f-cover-preview" class="rounded-3 mb-3" style="max-height:70px;display:none">
+
+            <label>Excerpt</label>
+            <textarea class="form-control mb-3" id="f-excerpt" rows="2" placeholder="One or two lines shown on the blog listing card"></textarea>
+
+            <label>Status</label>
+            <select class="form-select mb-1" id="f-status">
+              <option value="draft">Draft</option>
+              <option value="published">Published</option>
+            </select>
+          </div>
+
+          <div class="mt-3">
+            <p class="fw-semibold mb-2">Post Content</p>
+            <p class="text-muted small mb-2">Write and format the post like a normal document. The image/video
+              toolbar buttons upload a file directly; use the small "URL" buttons beside them to insert an
+              image or video (YouTube/Vimeo/direct link) from a web address instead.</p>
+            <div id="toolbar">
+              <select class="ql-header">
+                <option value="2">Heading 2</option>
+                <option value="3">Heading 3</option>
+                <option selected>Normal</option>
+              </select>
+              <button class="ql-bold" title="Bold"></button>
+              <button class="ql-italic" title="Italic"></button>
+              <button class="ql-underline" title="Underline"></button>
+              <select class="ql-align" title="Alignment"></select>
+              <button class="ql-blockquote" title="Quote"></button>
+              <button class="ql-link" title="Link"></button>
+              <button class="ql-list" value="ordered" title="Numbered list"></button>
+              <button class="ql-list" value="bullet" title="Bulleted list"></button>
+              <button class="ql-image" title="Upload image"></button>
+              <button type="button" class="ql-url-btn" id="btn-image-url" title="Insert image from URL">URL</button>
+              <button class="ql-video" title="Upload video"></button>
+              <button type="button" class="ql-url-btn" id="btn-video-url" title="Insert video from URL">URL</button>
+              <button class="ql-clean" title="Clear formatting"></button>
+            </div>
+            <div id="editor-container"></div>
+            <input type="file" accept="image/*" class="d-none" id="hidden-image-upload">
+            <input type="file" accept="video/*" class="d-none" id="hidden-video-upload">
+          </div>
+
+          <div class="d-flex gap-2 mt-4">
+            <button class="btn btn-dark px-4" id="save-post-btn">Save Post</button>
+            <button class="btn btn-outline-danger px-4" id="delete-post-btn" style="display:none">Delete</button>
+          </div>
+          <p class="small text-success mt-2 mb-0" id="save-msg" style="display:none">Saved.</p>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <p class="fw-semibold mb-0">Live Preview</p>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Preview width">
+              <button type="button" class="btn btn-outline-dark active" data-preview-w="100%">Desktop</button>
+              <button type="button" class="btn btn-outline-dark" data-preview-w="430px">Mobile</button>
+            </div>
+          </div>
+          <div class="border rounded-4 overflow-hidden mx-auto" id="preview-wrap" style="height:80vh;width:100%;background:#fff;transition:width .2s">
+            <iframe id="preview-frame" style="width:100%;height:100%;border:0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+  <script src="/js/blog.js"></script>
+  <script>
+    (function ($) {
+      var currentId = null;
+      var slugTouched = false;
+
+      // Quill's built-in "video" format only ever renders an <iframe> — correct for
+      // YouTube/Vimeo embeds, but a raw uploaded video file (or a direct .mp4 URL)
+      // isn't a web page, so an iframe just shows blank. Register a second format
+      // that renders a real <video> element for those cases instead.
+      var BlockEmbed = Quill.import('blots/block/embed');
+      function VideoFileBlot() {}
+      VideoFileBlot.prototype = Object.create(BlockEmbed.prototype);
+      VideoFileBlot.prototype.constructor = VideoFileBlot;
+      VideoFileBlot.blotName = 'videoFile';
+      VideoFileBlot.tagName = 'div';
+      VideoFileBlot.className = 'ql-video-file';
+      VideoFileBlot.create = function (url) {
+        var node = BlockEmbed.create.call(this);
+        var video = document.createElement('video');
+        video.setAttribute('controls', '');
+        video.setAttribute('src', url);
+        node.appendChild(video);
+        return node;
+      };
+      VideoFileBlot.value = function (node) {
+        var video = node.querySelector('video');
+        return video ? video.getAttribute('src') : '';
+      };
+      Quill.register(VideoFileBlot);
+
+      var quill = new Quill('#editor-container', {
+        theme: 'snow',
+        placeholder: 'Write your post…',
+        modules: {
+          toolbar: '#toolbar'
+        }
+      });
+
+      // Custom handlers for the built-in Image/Video toolbar buttons — both trigger a
+      // real, always-present <input type="file"> already sitting in the page (the
+      // same pattern the working Cover Image upload uses), instead of a throwaway
+      // input created in memory, which some browsers won't reliably open a file
+      // picker for.
+      var toolbar = quill.getModule('toolbar');
+      var pendingRange = null;
+      toolbar.addHandler('image', function () {
+        pendingRange = quill.getSelection(true);
+        document.getElementById('hidden-image-upload').click();
+      });
+      toolbar.addHandler('video', function () {
+        pendingRange = quill.getSelection(true);
+        document.getElementById('hidden-video-upload').click();
+      });
+
+      quill.on('text-change', updatePreview);
+
+      function handleUpload(embedType) {
+        return function () {
+          var file = this.files[0];
+          if (!file) return;
+          var range = pendingRange || quill.getSelection(true) || { index: quill.getLength() };
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            quill.insertEmbed(range.index, embedType, e.target.result, 'user');
+            quill.setSelection(range.index + 1);
+            updatePreview();
+          };
+          reader.readAsDataURL(file);
+          this.value = ''; // allow re-selecting the same file later
+        };
+      }
+      $('#hidden-image-upload').on('change', handleUpload('image'));
+      $('#hidden-video-upload').on('change', handleUpload('videoFile'));
+
+      /* Returns an iframe embed URL for YouTube/Vimeo links, or null for anything
+         else (a direct video file, which needs a real <video> tag instead). */
+      function toEmbedUrl(url) {
+        url = String(url || '').trim();
+        var yt = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{6,})/);
+        if (yt) return 'https://www.youtube.com/embed/' + yt[1];
+        var vm = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+        if (vm) return 'https://player.vimeo.com/video/' + vm[1];
+        return null;
+      }
+
+      $('#btn-image-url').on('click', function () {
+        var range = quill.getSelection(true);
+        var url = prompt('Paste an image URL:');
+        if (!url) return;
+        quill.insertEmbed(range.index, 'image', url.trim(), 'user');
+        quill.setSelection(range.index + 1);
+        updatePreview();
+      });
+
+      $('#btn-video-url').on('click', function () {
+        var range = quill.getSelection(true);
+        var url = prompt('Paste a YouTube/Vimeo link, or a direct video file URL:');
+        if (!url) return;
+        var embed = toEmbedUrl(url);
+        if (embed) {
+          quill.insertEmbed(range.index, 'video', embed, 'user');
+        } else {
+          quill.insertEmbed(range.index, 'videoFile', url.trim(), 'user');
+        }
+        quill.setSelection(range.index + 1);
+        updatePreview();
+      });
+
+      function updatePreview() {
+        var title = $('#f-title').val() || 'Untitled Post';
+        var cover = $('#f-cover').val();
+        var category = $('#f-category').val();
+        var doc = '<!doctype html><html><head><meta charset="UTF-8">' +
+          '<meta name="viewport" content="width=device-width,initial-scale=1">' +
+          '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">' +
+          '<link rel="stylesheet" href="/css/styles.css">' +
+          '<style>body{padding:2.5rem 1.5rem 5rem}' +
+          '.post-content img{max-width:100%;height:auto;border-radius:.75rem;display:block;margin:1.5rem auto}' +
+          '.post-content iframe{width:100%;aspect-ratio:16/9;height:auto;border-radius:.75rem;border:0;display:block;margin:1.5rem auto}' +
+          '.post-content video{width:100%;border-radius:.75rem;display:block;margin:1.5rem auto}' +
+          '.post-content blockquote{border-left:3px solid #171a20;padding-left:1rem;font-style:italic;color:#374151;margin:1.5rem 0}' +
+          '.post-content h2,.post-content h3{margin-top:2rem;margin-bottom:1rem;font-weight:700}' +
+          '.post-content p{line-height:1.75;color:#374151}</style></head><body>' +
+          '<div style="max-width:720px;margin:auto">' +
+          (category ? '<p class="section-eyebrow">' + AnstelBlog.escapeHtml(category) + '</p>' : '') +
+          '<h1 class="fw-bold mb-4" style="font-size:clamp(1.75rem,4vw,2.75rem);letter-spacing:-.03em">' + AnstelBlog.escapeHtml(title) + '</h1>' +
+          (cover ? '<img src="' + AnstelBlog.escapeHtml(cover) + '" class="img-fluid rounded-4 w-100 mb-4" style="max-height:420px;object-fit:cover" alt="">' : '') +
+          '<div class="post-content">' + quill.root.innerHTML + '</div>' +
+          '</div></body></html>';
+        document.getElementById('preview-frame').srcdoc = doc;
+      }
+
+      function renderPostsTable() {
+        var posts = AnstelBlog.getPosts().sort(function (a, b) { return (b.updatedAt || 0) - (a.updatedAt || 0); });
+        $('#posts-empty').toggle(posts.length === 0);
+        $('#posts-tbody').html(posts.map(function (p) {
+          return '<tr>' +
+            '<td class="ps-3 fw-semibold">' + AnstelBlog.escapeHtml(p.title || 'Untitled') + '</td>' +
+            '<td class="text-secondary">' + AnstelBlog.escapeHtml(p.category || '—') + '</td>' +
+            '<td><span class="badge ' + (p.status === 'published' ? 'bg-success' : 'bg-secondary') + '">' + p.status + '</span></td>' +
+            '<td class="text-secondary small">' + new Date(p.updatedAt || Date.now()).toLocaleDateString() + '</td>' +
+            '<td class="text-end pe-3">' +
+            '<button class="btn btn-sm btn-outline-dark me-1" data-edit="' + p.id + '">Edit</button>' +
+            '<button class="btn btn-sm btn-outline-danger" data-del="' + p.id + '">Delete</button>' +
+            '</td></tr>';
+        }).join(''));
+      }
+
+      function showList() {
+        $('#editor-view').hide();
+        $('#list-view').show();
+        renderPostsTable();
+      }
+
+      function showEditor() {
+        $('#list-view').hide();
+        $('#editor-view').show();
+        updatePreview();
+      }
+
+      function newPost() {
+        currentId = null;
+        slugTouched = false;
+        $('#f-title, #f-slug, #f-category, #f-cover, #f-excerpt').val('');
+        $('#f-status').val('draft');
+        $('#f-cover-preview').hide();
+        $('#delete-post-btn').hide();
+        $('#save-msg').hide();
+        quill.setContents([]);
+        showEditor();
+      }
+
+      function editPost(id) {
+        var post = AnstelBlog.getPosts().find(function (p) { return p.id === id; });
+        if (!post) return;
+        currentId = post.id;
+        slugTouched = true;
+        $('#f-title').val(post.title || '');
+        $('#f-slug').val(post.slug || '');
+        $('#f-category').val(post.category || '');
+        $('#f-cover').val(post.coverImage || '');
+        $('#f-excerpt').val(post.excerpt || '');
+        $('#f-status').val(post.status || 'draft');
+        if (post.coverImage) $('#f-cover-preview').attr('src', post.coverImage).show(); else $('#f-cover-preview').hide();
+        quill.root.innerHTML = post.content || '';
+        $('#delete-post-btn').show();
+        $('#save-msg').hide();
+        showEditor();
+      }
+
+      function savePost() {
+        var post = {
+          id: currentId || (Date.now().toString(36) + Math.random().toString(36).slice(2, 7)),
+          title: $('#f-title').val().trim(),
+          slug: AnstelBlog.slugify($('#f-slug').val() || $('#f-title').val()),
+          category: $('#f-category').val().trim(),
+          coverImage: $('#f-cover').val().trim(),
+          excerpt: $('#f-excerpt').val().trim(),
+          status: $('#f-status').val(),
+          content: quill.root.innerHTML,
+          updatedAt: Date.now()
+        };
+        try {
+          AnstelBlog.upsertPost(post);
+        } catch (e) {
+          alert('Could not save — this browser\'s local storage is full (usually from a large uploaded image or video). Try a smaller file, or use a URL instead of uploading.');
+          return;
+        }
+        currentId = post.id;
+        $('#f-slug').val(post.slug);
+        $('#delete-post-btn').show();
+        $('#save-msg').show();
+        setTimeout(function () { $('#save-msg').fadeOut(); }, 1800);
+      }
+
+      $(function () {
+        renderPostsTable();
+
+        $('#new-post-btn').on('click', newPost);
+        $('#back-to-list').on('click', showList);
+        $('#save-post-btn').on('click', savePost);
+
+        $('#delete-post-btn').on('click', function () {
+          if (!currentId) return;
+          if (confirm('Delete this post? This can\'t be undone.')) {
+            AnstelBlog.deletePost(currentId);
+            showList();
+          }
+        });
+
+        $('#posts-tbody').on('click', '[data-edit]', function () { editPost($(this).data('edit').toString()); });
+        $('#posts-tbody').on('click', '[data-del]', function () {
+          var id = $(this).data('del').toString();
+          if (confirm('Delete this post? This can\'t be undone.')) {
+            AnstelBlog.deletePost(id);
+            renderPostsTable();
+          }
+        });
+
+        $('#f-cover-upload').on('change', function () {
+          var file = this.files[0];
+          if (!file) return;
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            $('#f-cover').val(e.target.result);
+            $('#f-cover-preview').attr('src', e.target.result).show();
+            updatePreview();
+          };
+          reader.readAsDataURL(file);
+        });
+
+        $('#f-cover').on('input', function () {
+          var v = $(this).val();
+          if (v) $('#f-cover-preview').attr('src', v).show(); else $('#f-cover-preview').hide();
+        });
+
+        $('#f-title, #f-cover, #f-category').on('input', updatePreview);
+        $('#f-title').on('input', function () {
+          if (!slugTouched) $('#f-slug').val(AnstelBlog.slugify($(this).val()));
+        });
+        $('#f-slug').on('input', function () { slugTouched = true; });
+
+        $('[data-preview-w]').on('click', function () {
+          $('[data-preview-w]').removeClass('active');
+          $(this).addClass('active');
+          $('#preview-wrap').css('width', $(this).data('preview-w'));
+        });
+      });
+    })(jQuery);
+  </script>
+</body>
+
+</html>

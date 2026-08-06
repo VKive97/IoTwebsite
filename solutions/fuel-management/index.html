@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fuel Management Software for Fleets | Anstel</title>
+  <meta name="description"
+    content="Autonautics fuel management catches fuel theft and waste with OBD-powered monitoring, live consumption data, and dynamic reports across every vehicle.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    body {
+      padding-top: 56px;
+      padding-bottom: 56px
+    }
+  </style>
+
+  <!-- SEO/GEO META -->
+  <link rel="canonical" href="https://www.anstelglobal.com/solutions/fuel-management/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anstel Autonautics">
+  <meta property="og:url" content="https://www.anstelglobal.com/solutions/fuel-management/">
+  <meta property="og:title" content="Fuel Management Software for Fleets | Anstel">
+  <meta property="og:description" content="Autonautics fuel management catches fuel theft and waste with OBD-powered monitoring, live consumption data, and dynamic reports across every vehicle.">
+  <meta property="og:image" content="https://www.anstelglobal.com/images/connectedECO.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fuel Management Software for Fleets | Anstel">
+  <meta name="twitter:description" content="Autonautics fuel management catches fuel theft and waste with OBD-powered monitoring, live consumption data, and dynamic reports across every vehicle.">
+  <meta name="twitter:image" content="https://www.anstelglobal.com/images/connectedECO.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Autonautics Fuel Management","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Autonautics Fuel Management catches fuel theft and waste with OBD-powered monitoring, live consumption data, and dynamic reports across every vehicle.","url":"https://www.anstelglobal.com/solutions/fuel-management/","image":"https://www.anstelglobal.com/images/connectedECO.png","brand":{"@type":"Organization","name":"Anstel"},"isPartOf":{"@type":"SoftwareApplication","name":"Autonautics","url":"https://www.anstelglobal.com/platform/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.anstelglobal.com/"},{"@type":"ListItem","position":2,"name":"Solutions","item":"https://www.anstelglobal.com/platform/#solutions"},{"@type":"ListItem","position":3,"name":"Fuel Management","item":"https://www.anstelglobal.com/solutions/fuel-management/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does OBD fuel monitoring work?","acceptedAnswer":{"@type":"Answer","text":"A device connects to the vehicle's OBD-II port and reads fuel-consumption data directly from the engine's CAN bus, the same data the vehicle's own computer uses, so no separate fuel sensor has to be fitted to the tank."}},{"@type":"Question","name":"Can it detect fuel theft?","acceptedAnswer":{"@type":"Answer","text":"Yes. Autonautics flags sudden fuel-level drops that don't match normal consumption or a logged refuel event, so unauthorised draining or siphoning shows up as an alert instead of a mystery on the fuel bill."}},{"@type":"Question","name":"Does it work with my existing vehicles?","acceptedAnswer":{"@type":"Answer","text":"Most vehicles built since the mid-2000s have an OBD-II port. Autonautics supports OBD and fuel-sensor hardware from Teltonika, Queclink, Jimi, and 20+ other models, so it fits most existing fleets without new wiring."}},{"@type":"Question","name":"How far back does fuel history go?","acceptedAnswer":{"@type":"Answer","text":"Fuel and consumption history is available to review for up to 90 days, with longer retention available on request."}},{"@type":"Question","name":"Can I export fuel reports?","acceptedAnswer":{"@type":"Answer","text":"Yes. Fuel reports export to PDF or Excel, or feed directly into your own systems, alongside the 20+ other built-in Autonautics reports."}},{"@type":"Question","name":"What does fuel management cost?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on fleet size and the devices you use. Request a demo for a quote on your fleet."}}]}</script>
+</head>
+
+<body class="bg-white">
+
+  <!-- Hero -->
+  <section class="position-relative overflow-hidden" style="height:100vh;min-height:640px">
+    <img src="/images/connectedECO.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+      alt="Fuel Management">
+    <div class="position-absolute top-0 start-0 end-0 bottom-0"
+      style="background:linear-gradient(to bottom,rgba(0,0,0,.15),transparent 40%,rgba(0,0,0,.6))"></div>
+    <div class="position-absolute start-0 end-0 d-flex justify-content-center px-4" style="top:26vh;z-index:5">
+      <h1 class="text-white fw-bold text-center mb-0"
+        style="font-size:clamp(2.25rem,6vw,4rem);letter-spacing:-.03em;line-height:1.05">
+        Fuel Management</h1>
+    </div>
+  </section>
+
+  <!-- Capability Strip -->
+  <section class="bg-white border-bottom border-light py-4 py-md-5 px-4 px-md-5">
+    <div class="capability-strip-light">
+      <div class="capability-stat-light">OBD Fuel Monitoring</div>
+      <div class="capability-stat-light">Theft &amp; Waste Alerts</div>
+      <div class="capability-stat-light">90-Day History</div>
+      <div class="capability-stat-light">20+ Reports</div>
+    </div>
+    <div class="text-center mt-4 mt-md-5">
+      <a href="/demo/" class="btn btn-outline-dark rounded-pill px-5 py-2 fw-medium" style="font-size:.85rem;border-color:#d1d5db;transition:all .2s">Request a Demo</a>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section-pad px-4">
+    <div style="max-width:720px">
+      <p class="section-eyebrow">Fuel Management</p>
+      <h2 class="section-heading">Catch Fuel Theft and Waste Before It Adds Up.</h2>
+      <p class="text-muted lh-lg mb-0">Autonautics fuel management reads consumption data directly from your
+        vehicles, flags theft and waste as they happen, and turns fuel history into reports you can act
+        on&mdash;so fuel spend stops being a guess.</p>
+    </div>
+  </section>
+
+  <!-- What Is Fuel Management -->
+  <section class="section-pad bg-light px-4">
+    <div style="max-width:780px;margin:auto">
+      <p class="section-eyebrow">Overview</p>
+      <h2 class="section-heading">What Is Fuel Management?</h2>
+      <p class="section-lede mb-3">Fuel management is the use of connected devices and software to monitor how
+        much fuel a vehicle uses, when it's refuelled, and whether fuel is disappearing somewhere it
+        shouldn&rsquo;t. Instead of reconciling fuel cards and odometer readings by hand, a connected device
+        reports consumption automatically and the platform does the comparison for you.</p>
+      <p class="section-lede mb-0">For fleets, fuel is often the single largest controllable operating
+        cost&mdash;which makes it one of the fastest places to find real savings once you can actually see
+        where it's going.</p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section-pad bg-white px-4">
+    <div style="max-width:780px;margin:auto">
+      <p class="section-eyebrow">How It Works</p>
+      <h2 class="section-heading">How Does Fuel Monitoring Work?</h2>
+    </div>
+
+ <div class="row row-cols-1 row-cols-md-3 g-3 g-md-4" style="padding-top:3rem">
+      <div class="col">
+        <div class="feature-card tesla-card-flat h-100 p-4 p-lg-5">
+          <span class="step-num d-inline-flex align-items-center justify-content-center rounded-circle mb-3">01</span>
+          <h3 class="h5 fw-semibold mb-2">Connect to the Vehicle</h3>
+          <p class="text-secondary lh-lg mb-0">An OBD-II device plugs into the vehicle&rsquo;s diagnostic port
+            and reads fuel-consumption data straight from the engine&rsquo;s CAN bus&mdash;no fuel-tank sensor
+            required on most vehicles.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="feature-card tesla-card-flat h-100 p-4 p-lg-5">
+          <span class="step-num d-inline-flex align-items-center justify-content-center rounded-circle mb-3">02</span>
+          <h3 class="h5 fw-semibold mb-2">Compare Against the Pattern</h3>
+          <p class="text-secondary lh-lg mb-0">Autonautics tracks each vehicle&rsquo;s normal consumption and
+            refuel pattern, so a drop that doesn&rsquo;t match a logged refuel event stands out immediately.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="feature-card tesla-card-flat h-100 p-4 p-lg-5">
+          <span class="step-num d-inline-flex align-items-center justify-content-center rounded-circle mb-3">03</span>
+          <h3 class="h5 fw-semibold mb-2">Alert and Report</h3>
+          <p class="text-secondary lh-lg mb-0">Sudden drops trigger an alert to the right person, while every
+            litre is logged into reports you can filter, export, or automate.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:780px;padding-top:2.5rem;margin:auto">
+      <p class="text-secondary lh-lg mb-0">Autonautics supports OBD and fuel-sensor hardware from Teltonika,
+        Queclink, and Jimi, plus 20+ other device models&mdash;so fuel monitoring runs on the hardware you
+        already have installed for tracking.</p>
+    </div>
+  </section>
+
+  <!-- OBD Fuel Monitoring -->
+  <section class="section-pad px-4" style="background:#f9fafb">
+ <div class="row g-4 g-lg-5 align-items-center">
+      <div class="col-lg-6">
+        <p class="section-eyebrow">OBD Fuel Monitoring</p>
+        <h2 class="section-heading">Capture Fuel Data Directly from Your Vehicles.</h2>
+        <p class="text-secondary small lh-lg mb-4">Autonautics reads fuel-related data directly from compatible
+          OBD-II devices, giving you a centralised view of consumption across the fleet without manual fuel-card
+          reconciliation.</p>
+        <div class="row g-2">
+          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+              class="small text-secondary">OBD-II Integration</span></div>
+          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+              class="small text-secondary">Theft &amp; Drop Alerts</span></div>
+          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+              class="small text-secondary">Vehicle-Level Data</span></div>
+          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+              class="small text-secondary">Centralised Visibility</span></div>
+          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+              class="small text-secondary">Idle-Fuel Tracking</span></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="rounded-4 overflow-hidden" style="height:400px">
+          <img src="/images/connectedECO.png" class="w-100 h-100 object-fit-cover" alt="OBD Fuel Monitoring">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Fuel Reports -->
+  <section class="section-pad px-4 bg-white">
+    <div>
+      <p class="section-eyebrow">Dynamic Fuel Reports</p>
+      <h2 class="section-heading">Turn Fuel Data Into Actionable Reports.</h2>
+      <p class="text-muted small lh-lg mb-5" style="max-width:640px">Access fuel data through dynamic reports
+        built around your operation. Filter by vehicle, driver, or date range, and export or automate delivery
+        to the right people.</p>
+
+      <div class="process-photo-stage position-relative">
+        <button class="about-play-toggle" aria-label="Pause auto-play">
+          <svg class="icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="6" y="4" width="4" height="16" rx="1" />
+            <rect x="14" y="4" width="4" height="16" rx="1" />
+          </svg>
+          <svg class="icon-play d-none" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+        <div class="about-phone-frame process-photo-frame active" data-phone="0">
+          <img src="/images/connectedfleet-replay.png" alt="Report Builder">
+        </div>
+        <div class="about-phone-frame process-photo-frame" data-phone="1">
+          <img src="/images/connectedECO.png" alt="Advanced Filtering">
+        </div>
+        <div class="about-phone-frame process-photo-frame" data-phone="2">
+          <img src="/images/connectedFleetMain.png" alt="Historical Records">
+        </div>
+        <div class="about-phone-frame process-photo-frame" data-phone="3">
+          <img src="/images/connectedfleet-replay.png" alt="Export & Sharing">
+        </div>
+        <div class="about-phone-frame process-photo-frame" data-phone="4">
+          <img src="/images/connectedECO.png" alt="Saved Report Views">
+        </div>
+      </div>
+
+      <div class="row g-4 mt-1 about-steps about-steps-lg">
+        <div class="col-6 col-md about-step active" data-step="0">
+          <div class="about-step-track"><span class="about-step-fill"></span></div>
+          <h3 class="fw-semibold mb-2 about-step-title">Report Builder</h3>
+          <p class="small lh-lg mb-0 about-step-desc">Build fuel reports from 20+ templates or your own
+            filters.</p>
+        </div>
+        <div class="col-6 col-md about-step" data-step="1">
+          <div class="about-step-track"><span class="about-step-fill"></span></div>
+          <h3 class="fw-semibold mb-2 about-step-title">Advanced Filtering</h3>
+          <p class="small lh-lg mb-0 about-step-desc">Filter fuel data by vehicle, group, date range, and
+            operational criteria.</p>
+        </div>
+        <div class="col-6 col-md about-step" data-step="2">
+          <div class="about-step-track"><span class="about-step-fill"></span></div>
+          <h3 class="fw-semibold mb-2 about-step-title">Historical Records</h3>
+          <p class="small lh-lg mb-0 about-step-desc">Review up to 90 days of fuel history to spot
+            patterns.</p>
+        </div>
+        <div class="col-6 col-md about-step" data-step="3">
+          <div class="about-step-track"><span class="about-step-fill"></span></div>
+          <h3 class="h6 fw-semibold mb-2 about-step-title">Export &amp; Sharing</h3>
+          <p class="small lh-lg mb-0 about-step-desc">Export fuel reports in multiple formats for analysis
+            and collaboration.</p>
+        </div>
+        <div class="col-6 col-md about-step" data-step="4">
+          <div class="about-step-track"><span class="about-step-fill"></span></div>
+          <h3 class="h6 fw-semibold mb-2 about-step-title">Saved Views</h3>
+          <p class="small lh-lg mb-0 about-step-desc">Save frequently used report configurations for quick
+            and consistent access.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fuel Visibility -->
+  <section class="section-pad px-4 bg-light">
+ <div>
+      <p class="section-eyebrow">Fuel Visibility</p>
+      <h2 class="section-heading">Make Better Decisions with Greater Fuel Visibility.</h2>
+      <p class="text-muted small mb-5 lh-lg" style="max-width:640px">See fuel data alongside the rest of your
+        fleet operations, so consumption, idling, and routes tell one connected story instead of five separate
+        reports.</p>
+      <div class="row g-3">
+        <div class="col-sm-6 col-lg-4">
+          <div class="tesla-card bg-white p-4 rounded-4 h-100">
+            <h6 class="fw-semibold mb-2">Centralised Fuel Visibility</h6>
+            <p class="text-secondary small mb-0">View fuel data across your whole fleet from one platform.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="tesla-card bg-white p-4 rounded-4 h-100">
+            <h6 class="fw-semibold mb-2">Vehicle Fuel Records</h6>
+            <p class="text-secondary small mb-0">Access fuel data for any individual vehicle whenever
+              needed.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="tesla-card bg-white p-4 rounded-4 h-100">
+            <h6 class="fw-semibold mb-2">Idle &amp; Route Correlation</h6>
+            <p class="text-secondary small mb-0">See how idling and route choice affect fuel spend per
+              vehicle.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="tesla-card bg-white p-4 rounded-4 h-100">
+            <h6 class="fw-semibold mb-2">Historical Fuel Data</h6>
+            <p class="text-secondary small mb-0">Review past fuel records to support audits and reviews.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="tesla-card bg-white p-4 rounded-4 h-100">
+            <h6 class="fw-semibold mb-2">Informed Decisions</h6>
+            <p class="text-secondary small mb-0">Use fuel data to support day-to-day fleet management
+              decisions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Uses It -->
+  <section class="section-pad bg-white px-4">
+    <div style="max-width:780px;margin:auto">
+      <p class="section-eyebrow">Who Uses It</p>
+      <h2 class="section-heading">Who Uses Fuel Management?</h2>
+      <p class="section-lede mb-0">Any fleet where fuel is a major line item: logistics and transport
+        operators running high-mileage routes, construction and mining fleets running heavy diesel equipment,
+        waste and utility fleets with fixed routes, and any multi-vehicle operation that issues fuel cards and
+        wants to know exactly where the fuel is going.</p>
+    </div>
+  </section>
+
+  <!-- Available in Autonautics Products -->
+  <section class="section-pad px-4 bg-light">
+    <div class="mb-4" style="max-width:640px;margin:auto">
+      <p class="section-eyebrow">Available in Autonautics Products</p>
+      <h2 class="section-heading">Where You&rsquo;ll Find Fuel Management</h2>
+    </div>
+ <div class="row g-3 justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="tesla-card p-4 rounded-4 h-100" style="background:#f9fafb">
+          <a href="/platform/connected-fleet/" class="fw-bold text-decoration-none d-inline-block mb-2" style="color:#171a20;font-size:1.05rem">Connected Fleet <span aria-hidden="true">&rarr;</span></a>
+          <p class="text-secondary small lh-lg mb-0">Monitor fuel consumption and control costs alongside
+            tracking, drivers, and maintenance.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="tesla-card p-4 rounded-4 h-100" style="background:#f9fafb">
+          <a href="/platform/last-mile/" class="fw-bold text-decoration-none d-inline-block mb-2" style="color:#171a20;font-size:1.05rem">Last Mile <span aria-hidden="true">&rarr;</span></a>
+          <p class="text-secondary small lh-lg mb-0">Keep delivery routes fuel-efficient alongside live ETAs
+            and dispatch.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="tesla-card p-4 rounded-4 h-100" style="background:#f9fafb">
+          <a href="/platform/iot/" class="fw-bold text-decoration-none d-inline-block mb-2" style="color:#171a20;font-size:1.05rem">IoT Platform <span aria-hidden="true">&rarr;</span></a>
+          <p class="text-secondary small lh-lg mb-0">Connect fuel and sensor data alongside other connected
+            equipment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-pad bg-white px-4">
+    <div style="max-width:780px;margin:auto">
+      <p class="section-eyebrow">FAQ</p>
+      <h2 class="section-heading">Fuel Management FAQs</h2>
+    </div>
+    <div style="max-width:820px;padding-top:3rem;margin:auto">
+      <div class="accordion demo-accordion" id="fm-faq">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#fm-faq-1">How does OBD fuel monitoring work?</button>
+          </h3>
+          <div id="fm-faq-1" class="accordion-collapse collapse show" data-bs-parent="#fm-faq">
+            <div class="accordion-body">A device connects to the vehicle&rsquo;s OBD-II port and reads
+              fuel-consumption data directly from the engine&rsquo;s CAN bus&mdash;the same data the
+              vehicle&rsquo;s own computer uses&mdash;so no separate fuel sensor has to be fitted to the
+              tank.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#fm-faq-2">Can it detect fuel theft?</button>
+          </h3>
+          <div id="fm-faq-2" class="accordion-collapse collapse" data-bs-parent="#fm-faq">
+            <div class="accordion-body">Yes. Autonautics flags sudden fuel-level drops that don&rsquo;t match
+              normal consumption or a logged refuel event, so unauthorised draining or siphoning shows up as an
+              alert instead of a mystery on the fuel bill.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#fm-faq-3">Does it work with my existing vehicles?</button>
+          </h3>
+          <div id="fm-faq-3" class="accordion-collapse collapse" data-bs-parent="#fm-faq">
+            <div class="accordion-body">Most vehicles built since the mid-2000s have an OBD-II port.
+              Autonautics supports OBD and fuel-sensor hardware from Teltonika, Queclink, Jimi, and 20+ other
+              models, so it fits most existing fleets without new wiring.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#fm-faq-4">How far back does fuel history go?</button>
+          </h3>
+          <div id="fm-faq-4" class="accordion-collapse collapse" data-bs-parent="#fm-faq">
+            <div class="accordion-body">Fuel and consumption history is available to review for up to 90
+              days, with longer retention available on request.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#fm-faq-5">Can I export fuel reports?</button>
+          </h3>
+          <div id="fm-faq-5" class="accordion-collapse collapse" data-bs-parent="#fm-faq">
+            <div class="accordion-body">Yes. Fuel reports export to PDF or Excel, or feed directly into your
+              own systems, alongside the 20+ other built-in Autonautics reports.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#fm-faq-6">What does fuel management cost?</button>
+          </h3>
+          <div id="fm-faq-6" class="accordion-collapse collapse" data-bs-parent="#fm-faq">
+            <div class="accordion-body">Pricing depends on fleet size and the devices you use. <a
+                href="/demo/">Request a demo</a> for a quote on your fleet.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-pad px-4 text-center cta-band" style="background:#0d1b2a">
+    <div class="mx-auto" style="max-width:640px">
+      <p class="section-eyebrow">Get Started</p>
+      <h2 class="section-heading text-white">See Where Your Fuel Is Going.</h2>
+      <p class="text-secondary small lh-lg mb-5">Book a 30-minute demo and we&rsquo;ll show live fuel data,
+        theft alerts, and reports using your vehicles.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="/demo/" class="btn cta-primary-btn px-5 py-2">Request a Demo</a>
+        <a href="/company/contact/" class="btn cta-secondary-btn px-5 py-2">Talk to Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top py-3 px-3">
+    <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mx-auto" style="max-width:1280px">
+      <span class="text-muted" style="font-size:.75rem">Anstel &copy; 2026</span>
+      <a href="/legal/terms/" class="text-secondary text-decoration-none" style="font-size:.75rem">Privacy &amp; Legal</a>
+      <a href="/company/contact/" class="text-secondary text-decoration-none" style="font-size:.75rem">Contact</a>
+      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">News</a>
+      <a href="/" class="text-secondary text-decoration-none" style="font-size:.75rem">&larr; Home</a>
+      <span class="d-flex align-items-center gap-3"><a href="https://www.instagram.com/my_autonautics/" target="_blank" rel="noopener" aria-label="Instagram" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/profile.php?id=61592764293665" target="_blank" rel="noopener" aria-label="Facebook" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg></a><a href="https://x.com/my_autonautics" target="_blank" rel="noopener" aria-label="X (Twitter)" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-6.9l-5.4-6.9L4.8 22H1.7l8.1-9.3L1 2h7.1l4.9 6.3L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg></a><a href="https://www.linkedin.com/showcase/autonautics/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4V21H3V8.98zM9 8.98h3.83v1.64h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9V8.98z"/></svg></a><a href="https://youtube.com/@anstel6482" target="_blank" rel="noopener" aria-label="YouTube" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.94-1.9-.94-2.36-1C17 2.5 12 2.5 12 2.5h-.01s-5 0-8.2.34c-.46.06-1.46.06-2.36 1-.71.72-.94 2.36-.94 2.36S.2 8.1.2 10v1.9c0 1.9.25 3.8.25 3.8s.23 1.64.94 2.36c.9.94 2.08.9 2.6 1C5.85 19.5 12 19.6 12 19.6s5 0 8.2-.34c.46-.06 1.46-.06 2.36-1 .71-.72.94-2.36.94-2.36s.25-1.9.25-3.8V10c0-1.9-.25-3.8-.25-3.8zM9.7 14.1V7.9l6.2 3.1-6.2 3.1z"/></svg></a><a href="https://au.pinterest.com/autonautics/" target="_blank" rel="noopener" aria-label="Pinterest" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.63 7.86 6.35 9.32-.09-.79-.17-2.01.03-2.88.19-.79 1.23-5.02 1.23-5.02s-.31-.63-.31-1.55c0-1.45.84-2.54 1.89-2.54.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.49-.25 1.05.52 1.9 1.55 1.9 1.86 0 3.29-1.96 3.29-4.79 0-2.5-1.8-4.25-4.37-4.25-2.98 0-4.72 2.23-4.72 4.54 0 .9.34 1.86.78 2.39.09.1.1.2.07.3-.08.32-.25 1.02-.28 1.16-.04.19-.15.23-.34.14-1.26-.59-2.05-2.43-2.05-3.91 0-3.19 2.32-6.12 6.68-6.12 3.51 0 6.24 2.5 6.24 5.84 0 3.49-2.2 6.29-5.25 6.29-1.03 0-1.99-.53-2.32-1.16l-.63 2.4c-.23.88-.85 1.98-1.26 2.65.95.29 1.96.45 3.01.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></a></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

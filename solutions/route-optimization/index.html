@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Route Optimization Software | Anstel</title>
+  <meta name="description"
+    content="Plan the most efficient multi-stop routes, track them live against plan, and turn completed journeys into reports that improve the next route.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    body {
+      padding-top: 56px;
+      padding-bottom: 56px
+    }
+  </style>
+
+  <!-- SEO/GEO META -->
+  <link rel="canonical" href="https://www.anstelglobal.com/solutions/route-optimization/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anstel Autonautics">
+  <meta property="og:url" content="https://www.anstelglobal.com/solutions/route-optimization/">
+  <meta property="og:title" content="Route Optimization Software | Anstel">
+  <meta property="og:description" content="Plan the most efficient multi-stop routes, track them live against plan, and turn completed journeys into reports that improve the next route.">
+  <meta property="og:image" content="https://www.anstelglobal.com/images/connectedECO.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Route Optimization Software | Anstel">
+  <meta name="twitter:description" content="Plan the most efficient multi-stop routes, track them live against plan, and turn completed journeys into reports that improve the next route.">
+  <meta name="twitter:image" content="https://www.anstelglobal.com/images/connectedECO.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Autonautics Route Optimization","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Autonautics Route Optimization plans efficient multi-stop routes, tracks them live against plan, and turns completed journeys into reports that improve future routes.","url":"https://www.anstelglobal.com/solutions/route-optimization/","image":"https://www.anstelglobal.com/images/connectedECO.png","brand":{"@type":"Organization","name":"Anstel"},"isPartOf":{"@type":"SoftwareApplication","name":"Autonautics","url":"https://www.anstelglobal.com/platform/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.anstelglobal.com/"},{"@type":"ListItem","position":2,"name":"Solutions","item":"https://www.anstelglobal.com/platform/#solutions"},{"@type":"ListItem","position":3,"name":"Route Optimization","item":"https://www.anstelglobal.com/solutions/route-optimization/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Route Optimization and Dispatch Management?","acceptedAnswer":{"@type":"Answer","text":"Route Optimization plans the most efficient path for a set of stops. Dispatch Management decides which driver gets which job. Most operations plan the route after dispatch has assigned the work."}},{"@type":"Question","name":"What's the difference between Route Optimization and Last Mile?","acceptedAnswer":{"@type":"Answer","text":"Route Optimization is the planning layer — working out the best sequence of stops. Last Mile is the app drivers use to execute that route, track live progress, and capture proof of delivery."}},{"@type":"Question","name":"Does it handle multi-stop routes?","acceptedAnswer":{"@type":"Answer","text":"Yes. Route Optimization plans multi-stop routes and sequences them for the shortest efficient path, factoring in priority and time windows."}},{"@type":"Question","name":"Can I compare planned vs actual routes?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every route is tracked against its plan, so you can see route compliance and deviations, and use that history to plan better next time."}},{"@type":"Question","name":"Does it detect when a driver goes off-route?","acceptedAnswer":{"@type":"Answer","text":"Yes. Route deviations are flagged as they happen so dispatchers can respond before a delay compounds."}},{"@type":"Question","name":"What does route optimization cost?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on fleet size and the products you use. Request a demo for a quote on your operation."}}]}</script>
+</head>
+
+<body class="bg-white">
+
+  <!-- Hero -->
+  <section class="position-relative overflow-hidden" style="height:100vh;min-height:640px">
+    <img src="/images/connectedECO.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+      alt="Route Optimization">
+    <div class="position-absolute top-0 start-0 end-0 bottom-0"
+      style="background:linear-gradient(to bottom,rgba(0,0,0,.15),transparent 40%,rgba(0,0,0,.6))"></div>
+    <div class="position-absolute start-0 end-0 d-flex justify-content-center px-4" style="top:26vh;z-index:5">
+      <h1 class="text-white fw-bold text-center mb-0"
+        style="font-size:clamp(2.25rem,6vw,4rem);letter-spacing:-.03em;line-height:1.05">Route Optimization</h1>
+    </div>
+  </section>
+
+  <!-- Trust Indicators -->
+  <section class="bg-white border-bottom border-light py-4 py-md-5 px-4 px-md-5">
+    <div class="capability-strip-light">
+      <div class="capability-stat-light">Intelligent Route Planning</div>
+      <div class="capability-stat-light">Live Route Visibility</div>
+      <div class="capability-stat-light">Accurate ETA</div>
+      <div class="capability-stat-light">Route Intelligence</div>
+    </div>
+    <div class="text-center mt-4 mt-md-5">
+      <a href="/demo/" class="btn btn-outline-dark rounded-pill px-5 py-2 fw-medium" style="font-size:.85rem;border-color:#d1d5db;transition:all .2s">Request a Demo</a>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section-pad px-4">
+    <div style="max-width:760px">
+      <p class="section-eyebrow">Route Optimization</p>
+      <h2 class="section-heading">What Is Route Optimization?</h2>
+      <p class="text-muted lh-lg mb-3">Route optimization plans the most efficient sequence of stops for a
+        journey, then tracks the route live against that plan&mdash;reducing travel time, improving on-time
+        arrivals, and maximizing fleet efficiency.</p>
+      <p class="text-muted lh-lg mb-0">It&rsquo;s the planning layer: <a href="/solutions/dispatch-management/"
+          class="fw-semibold text-decoration-none">Dispatch Management</a> decides which driver gets the job, and
+        <a href="/platform/last-mile/" class="fw-semibold text-decoration-none">Last Mile</a> is what the driver
+        uses to execute the route once it&rsquo;s planned.</p>
+    </div>
+  </section>
+
+  <!-- Intelligent Route Planning -->
+  <section class="section-pad px-4" style="background:#f9fafb">
+ <div class="row g-4 g-lg-5 align-items-center">
+      <div class="col-lg-6">
+        <p class="section-eyebrow">Intelligent Route Planning</p>
+        <h2 class="section-heading">Plan Smarter. Deliver Faster.</h2>
+        <p class="text-secondary small lh-lg mb-4">Create optimized routes that reduce travel time, improve
+          fleet utilization, and keep every journey running efficiently from the very start.</p>
+        <div class="row g-2">
+          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+              class="small text-secondary">Intelligent Route Planning</span></div>
+          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+              class="small text-secondary">Multi-Stop Planning</span></div>
+          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+              class="small text-secondary">Trip Scheduling</span></div>
+          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+              class="small text-secondary">Driver &amp; Vehicle Assignment</span></div>
+          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
+              class="small text-secondary">Route Prioritization</span></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="rounded-4 overflow-hidden" style="height:400px">
+          <img src="/images/connectedECO.png" class="w-100 h-100 object-fit-cover" alt="Intelligent Route Planning">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Route Execution & Navigation -->
+  <section class="section-pad bg-white px-4">
+    <div style="max-width:780px;margin:auto">
+      <p class="section-eyebrow">Route Execution &amp; Navigation</p>
+      <h2 class="section-heading">Keep Every Journey on Track.</h2>
+      <p class="section-lede">Turn route plans into smooth operations with real-time navigation, live route
+        monitoring, and instant visibility into every journey.</p>
+    </div>
+
+ <div style="padding-top:3.5rem">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 g-md-4">
+        <div class="col">
+          <div class="feature-card tesla-card-flat h-100 p-4">
+            <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 3L3 5v16l6-2 6 2 6-2V3l-6 2-6-2z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v16M15 5v16" />
+              </svg>
+            </span>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
+              Route Navigation</p>
+            <h3 class="fw-bold mb-2">Guide Every Driver.</h3>
+            <p class="text-secondary small lh-lg mb-0">Guide drivers with planned routes for efficient and
+              consistent journeys.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-card tesla-card-flat h-100 p-4">
+            <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3" />
+              </svg>
+            </span>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
+              Journey Progress</p>
+            <h3 class="fw-bold mb-2">Track Every Trip.</h3>
+            <p class="text-secondary small lh-lg mb-0">Track every trip in real time from departure to arrival.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-card tesla-card-flat h-100 p-4">
+            <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M23 4v6h-6M1 20v-6h6" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3.5 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.5 15" />
+              </svg>
+            </span>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
+              Planned vs Actual Route</p>
+            <h3 class="fw-bold mb-2">Compare the Difference.</h3>
+            <p class="text-secondary small lh-lg mb-0">Compare planned routes with actual journeys to improve
+              route compliance.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-card tesla-card-flat h-100 p-4">
+            <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2L2 20h20L12 2z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v5M12 17h.01" />
+              </svg>
+            </span>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
+              Route Deviation Detection</p>
+            <h3 class="fw-bold mb-2">Catch It Before It Delays You.</h3>
+            <p class="text-secondary small lh-lg mb-0">Identify off-route movements instantly and respond before
+              delays escalate.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-card tesla-card-flat h-100 p-4">
+            <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="12" rx="2" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 20h8M12 16v4" />
+              </svg>
+            </span>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
+              Live Route Monitoring</p>
+            <h3 class="fw-bold mb-2">See Every Route at Once.</h3>
+            <p class="text-secondary small lh-lg mb-0">Monitor active routes from a centralized dashboard with
+              complete visibility.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live ETA & Route Visibility -->
+  <section class="section-pad px-4 bg-light">
+    <div>
+      <p class="section-eyebrow">Live ETA &amp; Route Visibility</p>
+      <h2 class="section-heading">Know Every Arrival Before It Happens.</h2>
+      <p class="text-muted small lh-lg mb-5" style="max-width:640px">Track every journey with live ETA,
+        real-time route visibility, and continuous location updates to keep operations synchronized and
+        customers informed.</p>
+
+      <div class="process-photo-stage position-relative">
+        <button class="about-play-toggle" aria-label="Pause auto-play">
+          <svg class="icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="6" y="4" width="4" height="16" rx="1" />
+            <rect x="14" y="4" width="4" height="16" rx="1" />
+          </svg>
+          <svg class="icon-play d-none" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+        <div class="about-phone-frame process-photo-frame active" data-phone="0">
+          <img src="/images/connectedFleetMain.png" alt="Live ETA">
+        </div>
+        <div class="about-phone-frame process-photo-frame" data-phone="1">
+          <img src="/images/connectedECO.png" alt="Real-Time Route Tracking">
+        </div>
+        <div class="about-phone-frame process-photo-frame" data-phone="2">
+          <img src="/images/connectedfleet-replay.png" alt="Journey Timeline">
+        </div>
+        <div class="about-phone-frame process-photo-frame" data-phone="3">
+          <img src="/images/connectedFleetMain.png" alt="Vehicle Visibility">
+        </div>
+        <div class="about-phone-frame process-photo-frame" data-phone="4">
+          <img src="/images/connectedECO.png" alt="Arrival Status">
+        </div>
+      </div>
+
+      <div class="row g-4 mt-1 about-steps about-steps-lg">
+        <div class="col-6 col-md about-step active" data-step="0">
+          <div class="about-step-track"><span class="about-step-fill"></span></div>
+          <h3 class="fw-semibold mb-2 about-step-title">Live ETA</h3>
+          <p class="small lh-lg mb-0 about-step-desc">Provide accurate arrival estimates with continuously
+            updated journey progress.</p>
+        </div>
+        <div class="col-6 col-md about-step" data-step="1">
+          <div class="about-step-track"><span class="about-step-fill"></span></div>
+          <h3 class="fw-semibold mb-2 about-step-title">Real-Time Route Tracking</h3>
+          <p class="small lh-lg mb-0 about-step-desc">Monitor every active route with complete live
+            visibility.</p>
+        </div>
+        <div class="col-6 col-md about-step" data-step="2">
+          <div class="about-step-track"><span class="about-step-fill"></span></div>
+          <h3 class="fw-semibold mb-2 about-step-title">Journey Timeline</h3>
+          <p class="small lh-lg mb-0 about-step-desc">View trip milestones from departure to final
+            destination.</p>
+        </div>
+        <div class="col-6 col-md about-step" data-step="3">
+          <div class="about-step-track"><span class="about-step-fill"></span></div>
+          <h3 class="h6 fw-semibold mb-2 about-step-title">Vehicle Visibility</h3>
+          <p class="small lh-lg mb-0 about-step-desc">Know where every vehicle is throughout its journey.</p>
+        </div>
+        <div class="col-6 col-md about-step" data-step="4">
+          <div class="about-step-track"><span class="about-step-fill"></span></div>
+          <h3 class="h6 fw-semibold mb-2 about-step-title">Arrival Status</h3>
+          <p class="small lh-lg mb-0 about-step-desc">Track completed, ongoing, and upcoming arrivals in real
+            time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Route Intelligence -->
+  <section class="section-pad bg-white px-4">
+    <div style="max-width:780px;margin:auto">
+      <p class="section-eyebrow">Route Intelligence</p>
+      <h2 class="section-heading">Every Route Makes the Next One Better.</h2>
+      <p class="section-lede">Analyze completed journeys with route performance insights, travel trends, and
+        operational reports to continuously improve efficiency, reduce costs, and optimize fleet operations.</p>
+    </div>
+
+ <div style="padding-top:3.5rem">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 g-md-4">
+        <div class="col">
+          <div class="feature-card tesla-card-flat h-100 p-4">
+            <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 20V10M12 20V4M6 20v-6" />
+              </svg>
+            </span>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
+              Route Analytics</p>
+            <h3 class="fw-bold mb-2">Measure What Matters.</h3>
+            <p class="text-secondary small lh-lg mb-0">Measure route performance with meaningful operational
+              insights.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-card tesla-card-flat h-100 p-4">
+            <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3" />
+              </svg>
+            </span>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
+              Travel Time Analysis</p>
+            <h3 class="fw-bold mb-2">Find the Delays.</h3>
+            <p class="text-secondary small lh-lg mb-0">Identify delays and optimize journey durations.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-card tesla-card-flat h-100 p-4">
+            <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 3L3 5v16l6-2 6 2 6-2V3l-6 2-6-2z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v16M15 5v16" />
+              </svg>
+            </span>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
+              Distance Analysis</p>
+            <h3 class="fw-bold mb-2">Track Every Mile.</h3>
+            <p class="text-secondary small lh-lg mb-0">Monitor route distances to improve operational
+              efficiency.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-card tesla-card-flat h-100 p-4">
+            <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12l2.5 2.5L16 9" />
+              </svg>
+            </span>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
+              Route Compliance</p>
+            <h3 class="fw-bold mb-2">Stay Consistent.</h3>
+            <p class="text-secondary small lh-lg mb-0">Compare planned and completed routes to improve
+              consistency.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-card tesla-card-flat h-100 p-4">
+            <span class="feature-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 2h9l5 5v15H6z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 2v5h5" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 13h6M9 17h6M9 9h2" />
+              </svg>
+            </span>
+            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
+              Performance Reports</p>
+            <h3 class="fw-bold mb-2">Plan the Next Route Better.</h3>
+            <p class="text-secondary small lh-lg mb-0">Generate actionable reports for smarter route planning
+              and decision-making.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Outcomes -->
+  <section class="section-pad px-4" style="background:#f9fafb">
+ <div>
+      <p class="section-eyebrow">Business Outcomes</p>
+      <h2 class="section-heading">Every Route. Every Resource. Optimized.</h2>
+      <p class="text-muted small mb-5 lh-lg" style="max-width:640px">Improve operational
+        efficiency with smarter routing, better fleet utilization, and real-time route visibility. Reduce travel
+        time, lower operating costs, and deliver a more reliable customer experience.</p>
+      <div class="row g-3">
+        <div class="col-sm-6 col-lg-4">
+          <div class="tesla-card bg-white p-4 rounded-4 h-100">
+            <h6 class="fw-semibold mb-2">Reduce Travel Time</h6>
+            <p class="text-secondary small mb-0">Optimize routes to minimize delays and improve journey
+              efficiency.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="tesla-card bg-white p-4 rounded-4 h-100">
+            <h6 class="fw-semibold mb-2">Lower Operating Costs</h6>
+            <p class="text-secondary small mb-0">Reduce unnecessary mileage, fuel consumption, and operational
+              expenses.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="tesla-card bg-white p-4 rounded-4 h-100">
+            <h6 class="fw-semibold mb-2">Increase Fleet Productivity</h6>
+            <p class="text-secondary small mb-0">Complete more trips with better route planning and execution.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="tesla-card bg-white p-4 rounded-4 h-100">
+            <h6 class="fw-semibold mb-2">Improve On-Time Deliveries</h6>
+            <p class="text-secondary small mb-0">Deliver consistently with accurate ETAs and live route
+              visibility.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="tesla-card bg-white p-4 rounded-4 h-100">
+            <h6 class="fw-semibold mb-2">Maximize Fleet Utilization</h6>
+            <p class="text-secondary small mb-0">Make better use of vehicles, drivers, and available resources.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Available in Autonautics Products -->
+  <section class="section-pad px-4 bg-white">
+    <div class="mb-4" style="max-width:640px;margin:auto">
+      <p class="section-eyebrow">Available in Autonautics Products</p>
+      <h2 class="section-heading">Where You&rsquo;ll Find Route Optimization</h2>
+    </div>
+ <div class="row g-3 justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="tesla-card p-4 rounded-4 h-100" style="background:#f9fafb">
+          <a href="/platform/connected-fleet/" class="fw-bold text-decoration-none d-inline-block mb-2" style="color:#171a20;font-size:1.05rem">Connected Fleet <span aria-hidden="true">&rarr;</span></a>
+          <p class="text-secondary small lh-lg mb-0">Optimize fleet routes to reduce travel time, fuel costs,
+            and improve vehicle utilization.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="tesla-card p-4 rounded-4 h-100" style="background:#f9fafb">
+          <a href="/platform/last-mile/" class="fw-bold text-decoration-none d-inline-block mb-2" style="color:#171a20;font-size:1.05rem">Last Mile <span aria-hidden="true">&rarr;</span></a>
+          <p class="text-secondary small lh-lg mb-0">Deliver faster with intelligent route planning, optimized
+            delivery sequences, and accurate ETAs.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="tesla-card p-4 rounded-4 h-100" style="background:#f9fafb">
+          <a href="/platform/job-scheduling/" class="fw-bold text-decoration-none d-inline-block mb-2" style="color:#171a20;font-size:1.05rem">Job Scheduling <span aria-hidden="true">&rarr;</span></a>
+          <p class="text-secondary small lh-lg mb-0">Help field teams reach every destination efficiently with
+            optimized daily schedules and travel routes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-pad bg-light px-4">
+    <div style="max-width:780px;margin:auto">
+      <p class="section-eyebrow">FAQ</p>
+      <h2 class="section-heading">Route Optimization FAQs</h2>
+    </div>
+    <div style="max-width:820px;padding-top:3rem;margin:auto">
+      <div class="accordion demo-accordion" id="ro-faq">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#ro-faq-1">What&rsquo;s the difference between Route Optimization and Dispatch
+              Management?</button>
+          </h3>
+          <div id="ro-faq-1" class="accordion-collapse collapse show" data-bs-parent="#ro-faq">
+            <div class="accordion-body">Route Optimization plans the most efficient path for a set of stops.
+              Dispatch Management decides which driver gets which job. Most operations plan the route after
+              dispatch has assigned the work.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#ro-faq-2">What&rsquo;s the difference between Route Optimization and Last
+              Mile?</button>
+          </h3>
+          <div id="ro-faq-2" class="accordion-collapse collapse" data-bs-parent="#ro-faq">
+            <div class="accordion-body">Route Optimization is the planning layer&mdash;working out the best
+              sequence of stops. Last Mile is the app drivers use to execute that route, track live progress,
+              and capture proof of delivery.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#ro-faq-3">Does it handle multi-stop routes?</button>
+          </h3>
+          <div id="ro-faq-3" class="accordion-collapse collapse" data-bs-parent="#ro-faq">
+            <div class="accordion-body">Yes. Route Optimization plans multi-stop routes and sequences them for
+              the shortest efficient path, factoring in priority and time windows.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#ro-faq-4">Can I compare planned vs actual routes?</button>
+          </h3>
+          <div id="ro-faq-4" class="accordion-collapse collapse" data-bs-parent="#ro-faq">
+            <div class="accordion-body">Yes. Every route is tracked against its plan, so you can see route
+              compliance and deviations, and use that history to plan better next time.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#ro-faq-5">Does it detect when a driver goes off-route?</button>
+          </h3>
+          <div id="ro-faq-5" class="accordion-collapse collapse" data-bs-parent="#ro-faq">
+            <div class="accordion-body">Yes. Route deviations are flagged as they happen so dispatchers can
+              respond before a delay compounds.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#ro-faq-6">What does route optimization cost?</button>
+          </h3>
+          <div id="ro-faq-6" class="accordion-collapse collapse" data-bs-parent="#ro-faq">
+            <div class="accordion-body">Pricing depends on fleet size and the products you use. <a
+                href="/demo/">Request a demo</a> for a quote on your operation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-pad px-4 text-center cta-band" style="background:#0d1b2a">
+    <div class="mx-auto" style="max-width:640px">
+      <p class="section-eyebrow">Get Started</p>
+      <h2 class="section-heading text-white">The Best Routes Don&rsquo;t Happen by Chance.</h2>
+      <p class="text-secondary small lh-lg mb-5">Plan smarter, optimize every journey, and deliver with
+        confidence using intelligent route optimization, live visibility, and real-time operational insights.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="/demo/" class="btn cta-primary-btn px-5 py-2">Request a Demo</a>
+        <a href="/company/contact/" class="btn cta-secondary-btn px-5 py-2">Talk to Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top py-3 px-3">
+    <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mx-auto" style="max-width:1280px">
+      <span class="text-muted" style="font-size:.75rem">Anstel &copy; 2026</span>
+      <a href="/legal/terms/" class="text-secondary text-decoration-none" style="font-size:.75rem">Privacy &amp; Legal</a>
+      <a href="/company/contact/" class="text-secondary text-decoration-none" style="font-size:.75rem">Contact</a>
+      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">News</a>
+      <a href="/" class="text-secondary text-decoration-none" style="font-size:.75rem">&larr; Home</a>
+      <span class="d-flex align-items-center gap-3"><a href="https://www.instagram.com/my_autonautics/" target="_blank" rel="noopener" aria-label="Instagram" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/profile.php?id=61592764293665" target="_blank" rel="noopener" aria-label="Facebook" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg></a><a href="https://x.com/my_autonautics" target="_blank" rel="noopener" aria-label="X (Twitter)" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-6.9l-5.4-6.9L4.8 22H1.7l8.1-9.3L1 2h7.1l4.9 6.3L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg></a><a href="https://www.linkedin.com/showcase/autonautics/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4V21H3V8.98zM9 8.98h3.83v1.64h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9V8.98z"/></svg></a><a href="https://youtube.com/@anstel6482" target="_blank" rel="noopener" aria-label="YouTube" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.94-1.9-.94-2.36-1C17 2.5 12 2.5 12 2.5h-.01s-5 0-8.2.34c-.46.06-1.46.06-2.36 1-.71.72-.94 2.36-.94 2.36S.2 8.1.2 10v1.9c0 1.9.25 3.8.25 3.8s.23 1.64.94 2.36c.9.94 2.08.9 2.6 1C5.85 19.5 12 19.6 12 19.6s5 0 8.2-.34c.46-.06 1.46-.06 2.36-1 .71-.72.94-2.36.94-2.36s.25-1.9.25-3.8V10c0-1.9-.25-3.8-.25-3.8zM9.7 14.1V7.9l6.2 3.1-6.2 3.1z"/></svg></a><a href="https://au.pinterest.com/autonautics/" target="_blank" rel="noopener" aria-label="Pinterest" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.63 7.86 6.35 9.32-.09-.79-.17-2.01.03-2.88.19-.79 1.23-5.02 1.23-5.02s-.31-.63-.31-1.55c0-1.45.84-2.54 1.89-2.54.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.49-.25 1.05.52 1.9 1.55 1.9 1.86 0 3.29-1.96 3.29-4.79 0-2.5-1.8-4.25-4.37-4.25-2.98 0-4.72 2.23-4.72 4.54 0 .9.34 1.86.78 2.39.09.1.1.2.07.3-.08.32-.25 1.02-.28 1.16-.04.19-.15.23-.34.14-1.26-.59-2.05-2.43-2.05-3.91 0-3.19 2.32-6.12 6.68-6.12 3.51 0 6.24 2.5 6.24 5.84 0 3.49-2.2 6.29-5.25 6.29-1.03 0-1.99-.53-2.32-1.16l-.63 2.4c-.23.88-.85 1.98-1.26 2.65.95.29 1.96.45 3.01.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></a></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

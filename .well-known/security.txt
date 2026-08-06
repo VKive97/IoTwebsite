@@ -1,0 +1,3 @@
+Contact: mailto:sales@anstelglobal.com
+Canonical: https://www.anstelglobal.com/.well-known/security.txt
+Preferred-Languages: en

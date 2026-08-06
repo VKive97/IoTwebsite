@@ -48,11 +48,6 @@ $(function () {
     $('.mob-view-main').removeClass('pushed');
   });
 
-  /* ── Location modal ── */
-  $('.loc-dismiss, .loc-btn').on('click', function () {
-    $('#loc-modal').fadeOut(200);
-  });
-
   /* ── Scroll carousel factory ── */
   function initCarousel($wrap) {
     var $track = $wrap.find('.scroll-track');
