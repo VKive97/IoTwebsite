@@ -16,29 +16,61 @@
     #editor-container{height:420px;background:#fff}
     .ql-toolbar.ql-snow{border-radius:.75rem .75rem 0 0;background:#fff}
     .ql-container.ql-snow{border-radius:0 0 .75rem .75rem;font-size:1rem}
+    .ql-editor h1{font-size:2rem;font-weight:800;margin:1.25rem 0 .6rem}
     .ql-editor h2{font-size:1.6rem;font-weight:700;margin:1rem 0 .5rem}
     .ql-editor h3{font-size:1.3rem;font-weight:700;margin:.85rem 0 .5rem}
     .ql-editor img{max-width:100%;height:auto;display:block;margin:.5rem 0}
     .ql-editor iframe.ql-video{width:100%;aspect-ratio:16/9;height:auto}
     .ql-editor .ql-video-file video{width:100%;border-radius:.5rem;display:block}
-    .ql-url-btn{width:28px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:700;color:#444;background:none;border:0;cursor:pointer;vertical-align:top}
-    .ql-url-btn:hover{color:#06c}
+    .ql-editor pre.ql-syntax,.ql-editor pre{background:#171a20;color:#e5e7eb;border-radius:.5rem;padding:1rem;font-size:.85rem}
+    .url-btn{width:32px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:700;color:#444;background:none;border:1px solid transparent;border-radius:4px;cursor:pointer;vertical-align:top;margin-right:6px}
+    .url-btn:hover{color:#06c;border-color:#e5e7eb}
+    #toolbar.ql-toolbar.ql-snow{padding:10px 12px;display:flex;flex-wrap:wrap;align-items:center;row-gap:8px}
+    #toolbar .ql-formats{margin-right:12px;padding-right:12px;border-right:1px solid #e5e7eb;margin-bottom:0}
+    #toolbar .ql-formats:last-child{border-right:0;padding-right:0;margin-right:0}
+    #toolbar .ql-picker{margin-right:4px}
+    .new-category-row{display:flex}
+    #login-gate{display:flex}
+    html.admin-authed #login-gate{display:none}
+    #admin-app{display:none}
+    html.admin-authed #admin-app{display:block}
+    .login-gate{min-height:100vh;align-items:center;justify-content:center;background:#f4f4f5;padding:1.5rem}
+    .login-card{width:100%;max-width:380px;background:#fff;border-radius:1rem;padding:2.25rem 2rem;box-shadow:0 1px 3px rgba(0,0,0,.08)}
   </style>
 </head>
 
 <body>
+  <script>
+    if (localStorage.getItem('anstel_admin_token')) {
+      document.documentElement.classList.add('admin-authed');
+    }
+  </script>
 
+  <div id="login-gate" class="login-gate">
+    <div class="login-card">
+      <h1 class="h5 fw-bold mb-1">Knowledge Center Admin</h1>
+      <p class="text-muted small mb-4">Sign in to manage posts.</p>
+      <form id="login-form">
+        <label class="small fw-semibold mb-1">Username</label>
+        <input type="text" class="form-control mb-3" id="login-username" autocomplete="username" required>
+        <label class="small fw-semibold mb-1">Password</label>
+        <input type="password" class="form-control mb-3" id="login-password" autocomplete="current-password" required>
+        <p class="small text-danger mb-3" id="login-error" style="display:none">Incorrect username or password.</p>
+        <button type="submit" class="btn btn-dark w-100">Sign In</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="admin-app">
   <div class="admin-shell">
     <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
       <h1 class="h4 fw-bold mb-0">Knowledge Center Admin</h1>
       <div class="d-flex gap-2">
-        <a href="/company/blog/" target="_blank" class="btn btn-outline-dark btn-sm">View Live Knowledge Center &rarr;</a>
+        <a href="/company/knowledge-center/" target="_blank" class="btn btn-outline-dark btn-sm">View Live Knowledge Center &rarr;</a>
         <a href="/" class="btn btn-outline-secondary btn-sm">&larr; Back to Site</a>
+        <button class="btn btn-outline-secondary btn-sm" id="logout-btn">Log Out</button>
       </div>
     </div>
-    <p class="text-muted small mb-4">Posts save to this browser's local storage only &mdash; a working
-      prototype of the authoring flow, not a shared/live backend yet.</p>
-
     <!-- LIST VIEW -->
     <div id="list-view">
       <div class="d-flex justify-content-between align-items-center mb-3">
@@ -77,7 +109,12 @@
             <input type="text" class="form-control mb-3" id="f-slug" placeholder="post-url-slug">
 
             <label>Category</label>
-            <input type="text" class="form-control mb-3" id="f-category" placeholder="e.g. Fleet Management">
+            <select class="form-select mb-3" id="f-category"></select>
+            <div class="new-category-row gap-2 mb-3" id="new-category-row" style="display:none">
+              <input type="text" class="form-control" id="new-category-input" placeholder="New category name">
+              <button type="button" class="btn btn-dark flex-shrink-0" id="add-category-btn">Add</button>
+              <button type="button" class="btn btn-outline-secondary flex-shrink-0" id="cancel-category-btn">Cancel</button>
+            </div>
 
             <label>Cover Image (Hero)</label>
             <div class="d-flex gap-2 mb-2">
@@ -87,9 +124,6 @@
               </label>
             </div>
             <img id="f-cover-preview" class="rounded-3 mb-3" style="max-height:70px;display:none">
-
-            <label>Excerpt</label>
-            <textarea class="form-control mb-3" id="f-excerpt" rows="2" placeholder="One or two lines shown on the blog listing card"></textarea>
 
             <label>Status</label>
             <select class="form-select mb-1" id="f-status">
@@ -104,24 +138,49 @@
               toolbar buttons upload a file directly; use the small "URL" buttons beside them to insert an
               image or video (YouTube/Vimeo/direct link) from a web address instead.</p>
             <div id="toolbar">
-              <select class="ql-header">
-                <option value="2">Heading 2</option>
-                <option value="3">Heading 3</option>
-                <option selected>Normal</option>
-              </select>
-              <button class="ql-bold" title="Bold"></button>
-              <button class="ql-italic" title="Italic"></button>
-              <button class="ql-underline" title="Underline"></button>
-              <select class="ql-align" title="Alignment"></select>
-              <button class="ql-blockquote" title="Quote"></button>
-              <button class="ql-link" title="Link"></button>
-              <button class="ql-list" value="ordered" title="Numbered list"></button>
-              <button class="ql-list" value="bullet" title="Bulleted list"></button>
-              <button class="ql-image" title="Upload image"></button>
-              <button type="button" class="ql-url-btn" id="btn-image-url" title="Insert image from URL">URL</button>
-              <button class="ql-video" title="Upload video"></button>
-              <button type="button" class="ql-url-btn" id="btn-video-url" title="Insert video from URL">URL</button>
-              <button class="ql-clean" title="Clear formatting"></button>
+              <span class="ql-formats">
+                <select class="ql-header">
+                  <option value="1">Heading 1</option>
+                  <option value="2">Heading 2</option>
+                  <option value="3">Heading 3</option>
+                  <option selected>Normal</option>
+                </select>
+                <select class="ql-size">
+                  <option value="small">Small</option>
+                  <option selected>Normal</option>
+                  <option value="large">Large</option>
+                  <option value="huge">Huge</option>
+                </select>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-bold" title="Bold"></button>
+                <button class="ql-italic" title="Italic"></button>
+                <button class="ql-underline" title="Underline"></button>
+                <button class="ql-strike" title="Strikethrough"></button>
+              </span>
+              <span class="ql-formats">
+                <select class="ql-color" title="Text color"></select>
+                <select class="ql-background" title="Highlight color"></select>
+              </span>
+              <span class="ql-formats">
+                <select class="ql-align" title="Alignment"></select>
+                <button class="ql-list" value="ordered" title="Numbered list"></button>
+                <button class="ql-list" value="bullet" title="Bulleted list"></button>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-blockquote" title="Quote"></button>
+                <button class="ql-code-block" title="Code block"></button>
+                <button class="ql-link" title="Link"></button>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-image" title="Upload image"></button>
+                <button type="button" class="url-btn" id="btn-image-url" title="Insert image from URL">URL</button>
+                <button class="ql-video" title="Upload video"></button>
+                <button type="button" class="url-btn" id="btn-video-url" title="Insert video from URL">URL</button>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-clean" title="Clear formatting"></button>
+              </span>
             </div>
             <div id="editor-container"></div>
             <input type="file" accept="image/*" class="d-none" id="hidden-image-upload">
@@ -150,6 +209,7 @@
       </div>
     </div>
   </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -157,6 +217,38 @@
   <script src="/js/blog.js"></script>
   <script>
     (function ($) {
+      $('#login-form').on('submit', async function (e) {
+        e.preventDefault();
+        var user = $('#login-username').val().trim();
+        var pass = $('#login-password').val();
+        var $btn = $(this).find('button[type=submit]');
+        $btn.prop('disabled', true).text('Signing in…');
+        $('#login-error').hide();
+        try {
+          var result = await AnstelBlog.login(user, pass);
+          if (result && result.token) {
+            document.documentElement.classList.add('admin-authed');
+          } else {
+            $('#login-error').text('Incorrect username or password.').show();
+          }
+        } catch (err) {
+          $('#login-error').text('Could not reach the API. Make sure you\'re on the same network as the server.').show();
+        } finally {
+          $btn.prop('disabled', false).text('Sign In');
+        }
+      });
+
+      function requireReauth() {
+        AnstelBlog.logout();
+        document.documentElement.classList.remove('admin-authed');
+        alert('Your session has expired. Please log in again.');
+      }
+
+      $('#logout-btn').on('click', function () {
+        AnstelBlog.logout();
+        document.documentElement.classList.remove('admin-authed');
+      });
+
       var currentId = null;
       var slugTouched = false;
 
@@ -212,18 +304,24 @@
       quill.on('text-change', updatePreview);
 
       function handleUpload(embedType) {
-        return function () {
+        return async function () {
           var file = this.files[0];
           if (!file) return;
           var range = pendingRange || quill.getSelection(true) || { index: quill.getLength() };
-          var reader = new FileReader();
-          reader.onload = function (e) {
-            quill.insertEmbed(range.index, embedType, e.target.result, 'user');
+          var input = this;
+          input.disabled = true;
+          try {
+            var url = await AnstelBlog.uploadFile(file);
+            quill.insertEmbed(range.index, embedType, url, 'user');
             quill.setSelection(range.index + 1);
             updatePreview();
-          };
-          reader.readAsDataURL(file);
-          this.value = ''; // allow re-selecting the same file later
+          } catch (err) {
+            if (err.message === 'UNAUTHORIZED') { requireReauth(); }
+            else { alert('Upload failed. Make sure you\'re on the same network as the API server.'); }
+          } finally {
+            input.disabled = false;
+            input.value = ''; // allow re-selecting the same file later
+          }
         };
       }
       $('#hidden-image-upload').on('change', handleUpload('image'));
@@ -266,7 +364,9 @@
       function updatePreview() {
         var title = $('#f-title').val() || 'Untitled Post';
         var cover = $('#f-cover').val();
-        var category = $('#f-category').val();
+        var categoryId = parseInt($('#f-category').val(), 10);
+        var cat = categoriesList.find(function (c) { return c.id === categoryId; });
+        var category = cat ? cat.name : '';
         var doc = '<!doctype html><html><head><meta charset="UTF-8">' +
           '<meta name="viewport" content="width=device-width,initial-scale=1">' +
           '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">' +
@@ -276,8 +376,9 @@
           '.post-content iframe{width:100%;aspect-ratio:16/9;height:auto;border-radius:.75rem;border:0;display:block;margin:1.5rem auto}' +
           '.post-content video{width:100%;border-radius:.75rem;display:block;margin:1.5rem auto}' +
           '.post-content blockquote{border-left:3px solid #171a20;padding-left:1rem;font-style:italic;color:#374151;margin:1.5rem 0}' +
-          '.post-content h2,.post-content h3{margin-top:2rem;margin-bottom:1rem;font-weight:700}' +
-          '.post-content p{line-height:1.75;color:#374151}</style></head><body>' +
+          '.post-content h1,.post-content h2,.post-content h3{margin-top:2rem;margin-bottom:1rem;font-weight:700}' +
+          '.post-content p{font-size:14px;line-height:1.75;color:#374151}' +
+          '.post-content pre{background:#171a20;color:#e5e7eb;border-radius:.75rem;padding:1.25rem;font-size:.88rem;overflow-x:auto;margin:1.5rem 0}</style></head><body>' +
           '<div style="max-width:720px;margin:auto">' +
           (category ? '<p class="section-eyebrow">' + AnstelBlog.escapeHtml(category) + '</p>' : '') +
           '<h1 class="fw-bold mb-4" style="font-size:clamp(1.75rem,4vw,2.75rem);letter-spacing:-.03em">' + AnstelBlog.escapeHtml(title) + '</h1>' +
@@ -287,10 +388,34 @@
         document.getElementById('preview-frame').srcdoc = doc;
       }
 
-      function renderPostsTable() {
-        var posts = AnstelBlog.getPosts().sort(function (a, b) { return (b.updatedAt || 0) - (a.updatedAt || 0); });
-        $('#posts-empty').toggle(posts.length === 0);
-        $('#posts-tbody').html(posts.map(function (p) {
+      var postsCache = [];
+      var categoriesList = [];
+      var ADD_CATEGORY_VALUE = '__add_new__';
+
+      async function loadCategories() {
+        categoriesList = await AnstelBlog.getCategories();
+        categoriesList.sort(function (a, b) { return a.name.localeCompare(b.name); });
+      }
+
+      function populateCategoryDropdown(selectedId) {
+        var html = '<option value=""' + (selectedId ? '' : ' selected') + ' disabled>Select a category…</option>';
+        html += categoriesList.map(function (c) {
+          return '<option value="' + c.id + '"' + (c.id === selectedId ? ' selected' : '') + '>' + AnstelBlog.escapeHtml(c.name) + '</option>';
+        }).join('');
+        html += '<option value="' + ADD_CATEGORY_VALUE + '">+ Add new category…</option>';
+        $('#f-category').html(html);
+      }
+
+      async function renderPostsTable() {
+        $('#posts-tbody').html('<tr><td colspan="5" class="text-center text-muted py-4">Loading…</td></tr>');
+        try {
+          postsCache = (await AnstelBlog.getPosts()).sort(function (a, b) { return (b.updatedAt || 0) - (a.updatedAt || 0); });
+        } catch (err) {
+          $('#posts-tbody').html('<tr><td colspan="5" class="text-center text-danger py-4">Could not reach the API. Make sure you\'re on the same network as the server.</td></tr>');
+          return;
+        }
+        $('#posts-empty').toggle(postsCache.length === 0);
+        $('#posts-tbody').html(postsCache.map(function (p) {
           return '<tr>' +
             '<td class="ps-3 fw-semibold">' + AnstelBlog.escapeHtml(p.title || 'Untitled') + '</td>' +
             '<td class="text-secondary">' + AnstelBlog.escapeHtml(p.category || '—') + '</td>' +
@@ -318,7 +443,10 @@
       function newPost() {
         currentId = null;
         slugTouched = false;
-        $('#f-title, #f-slug, #f-category, #f-cover, #f-excerpt').val('');
+        $('#f-title, #f-slug, #f-cover').val('');
+        populateCategoryDropdown(null);
+        $('#new-category-row').hide();
+        $('#f-category').show();
         $('#f-status').val('draft');
         $('#f-cover-preview').hide();
         $('#delete-post-btn').hide();
@@ -328,15 +456,16 @@
       }
 
       function editPost(id) {
-        var post = AnstelBlog.getPosts().find(function (p) { return p.id === id; });
+        var post = postsCache.find(function (p) { return p.id === id; });
         if (!post) return;
         currentId = post.id;
         slugTouched = true;
         $('#f-title').val(post.title || '');
         $('#f-slug').val(post.slug || '');
-        $('#f-category').val(post.category || '');
+        populateCategoryDropdown(post.categoryId);
+        $('#new-category-row').hide();
+        $('#f-category').show();
         $('#f-cover').val(post.coverImage || '');
-        $('#f-excerpt').val(post.excerpt || '');
         $('#f-status').val(post.status || 'draft');
         if (post.coverImage) $('#f-cover-preview').attr('src', post.coverImage).show(); else $('#f-cover-preview').hide();
         quill.root.innerHTML = post.content || '';
@@ -345,65 +474,83 @@
         showEditor();
       }
 
-      function savePost() {
+      async function savePost() {
         var post = {
-          id: currentId || (Date.now().toString(36) + Math.random().toString(36).slice(2, 7)),
+          id: currentId || null,
           title: $('#f-title').val().trim(),
           slug: AnstelBlog.slugify($('#f-slug').val() || $('#f-title').val()),
-          category: $('#f-category').val().trim(),
+          categoryId: parseInt($('#f-category').val(), 10) || null,
           coverImage: $('#f-cover').val().trim(),
-          excerpt: $('#f-excerpt').val().trim(),
           status: $('#f-status').val(),
-          content: quill.root.innerHTML,
-          updatedAt: Date.now()
+          content: quill.root.innerHTML
         };
+        var $btn = $('#save-post-btn');
+        $btn.prop('disabled', true).text('Saving…');
         try {
-          AnstelBlog.upsertPost(post);
-        } catch (e) {
-          alert('Could not save — this browser\'s local storage is full (usually from a large uploaded image or video). Try a smaller file, or use a URL instead of uploading.');
-          return;
+          var saved = await AnstelBlog.upsertPost(post);
+          currentId = saved.id;
+          $('#f-slug').val(saved.slug);
+          $('#delete-post-btn').show();
+          $('#save-msg').show();
+          setTimeout(function () { $('#save-msg').fadeOut(); }, 1800);
+        } catch (err) {
+          if (err.message === 'UNAUTHORIZED') { requireReauth(); }
+          else { alert('Could not save. Make sure you\'re on the same network as the API server.'); }
+        } finally {
+          $btn.prop('disabled', false).text('Save Post');
         }
-        currentId = post.id;
-        $('#f-slug').val(post.slug);
-        $('#delete-post-btn').show();
-        $('#save-msg').show();
-        setTimeout(function () { $('#save-msg').fadeOut(); }, 1800);
       }
 
       $(function () {
+        loadCategories();
         renderPostsTable();
 
         $('#new-post-btn').on('click', newPost);
         $('#back-to-list').on('click', showList);
         $('#save-post-btn').on('click', savePost);
 
-        $('#delete-post-btn').on('click', function () {
+        $('#delete-post-btn').on('click', async function () {
           if (!currentId) return;
-          if (confirm('Delete this post? This can\'t be undone.')) {
-            AnstelBlog.deletePost(currentId);
+          if (!confirm('Delete this post? This can\'t be undone.')) return;
+          try {
+            await AnstelBlog.deletePost(currentId);
             showList();
+          } catch (err) {
+            if (err.message === 'UNAUTHORIZED') { requireReauth(); }
+            else { alert('Could not delete. Make sure you\'re on the same network as the API server.'); }
           }
         });
 
-        $('#posts-tbody').on('click', '[data-edit]', function () { editPost($(this).data('edit').toString()); });
-        $('#posts-tbody').on('click', '[data-del]', function () {
-          var id = $(this).data('del').toString();
-          if (confirm('Delete this post? This can\'t be undone.')) {
-            AnstelBlog.deletePost(id);
+        $('#posts-tbody').on('click', '[data-edit]', function () { editPost($(this).data('edit')); });
+        $('#posts-tbody').on('click', '[data-del]', async function () {
+          var id = $(this).data('del');
+          if (!confirm('Delete this post? This can\'t be undone.')) return;
+          try {
+            await AnstelBlog.deletePost(id);
             renderPostsTable();
+          } catch (err) {
+            if (err.message === 'UNAUTHORIZED') { requireReauth(); }
+            else { alert('Could not delete. Make sure you\'re on the same network as the API server.'); }
           }
         });
 
-        $('#f-cover-upload').on('change', function () {
+        $('#f-cover-upload').on('change', async function () {
           var file = this.files[0];
           if (!file) return;
-          var reader = new FileReader();
-          reader.onload = function (e) {
-            $('#f-cover').val(e.target.result);
-            $('#f-cover-preview').attr('src', e.target.result).show();
+          var input = this;
+          input.disabled = true;
+          try {
+            var url = await AnstelBlog.uploadFile(file);
+            $('#f-cover').val(url);
+            $('#f-cover-preview').attr('src', url).show();
             updatePreview();
-          };
-          reader.readAsDataURL(file);
+          } catch (err) {
+            if (err.message === 'UNAUTHORIZED') { requireReauth(); }
+            else { alert('Upload failed. Make sure you\'re on the same network as the API server.'); }
+          } finally {
+            input.disabled = false;
+            input.value = '';
+          }
         });
 
         $('#f-cover').on('input', function () {
@@ -411,11 +558,55 @@
           if (v) $('#f-cover-preview').attr('src', v).show(); else $('#f-cover-preview').hide();
         });
 
-        $('#f-title, #f-cover, #f-category').on('input', updatePreview);
+        $('#f-title, #f-cover').on('input', updatePreview);
         $('#f-title').on('input', function () {
           if (!slugTouched) $('#f-slug').val(AnstelBlog.slugify($(this).val()));
         });
         $('#f-slug').on('input', function () { slugTouched = true; });
+
+        $('#f-category').on('change', function () {
+          if ($(this).val() === ADD_CATEGORY_VALUE) {
+            $('#f-category').hide();
+            $('#new-category-row').show();
+            $('#new-category-input').val('').focus();
+          }
+          updatePreview();
+        });
+
+        async function confirmNewCategory() {
+          var name = $('#new-category-input').val().trim();
+          if (!name) {
+            populateCategoryDropdown(null);
+            $('#new-category-row').hide();
+            $('#f-category').show();
+            return;
+          }
+          var $btn = $('#add-category-btn');
+          $btn.prop('disabled', true).text('Adding…');
+          try {
+            var created = await AnstelBlog.createCategory(name);
+            await loadCategories();
+            populateCategoryDropdown(created.id);
+            $('#new-category-row').hide();
+            $('#f-category').show();
+            updatePreview();
+          } catch (err) {
+            if (err.message === 'UNAUTHORIZED') { requireReauth(); }
+            else { alert('Could not add category. Make sure you\'re on the same network as the API server.'); }
+          } finally {
+            $btn.prop('disabled', false).text('Add');
+          }
+        }
+
+        $('#add-category-btn').on('click', confirmNewCategory);
+        $('#new-category-input').on('keydown', function (e) {
+          if (e.key === 'Enter') { e.preventDefault(); confirmNewCategory(); }
+        });
+        $('#cancel-category-btn').on('click', function () {
+          populateCategoryDropdown(null);
+          $('#new-category-row').hide();
+          $('#f-category').show();
+        });
 
         $('[data-preview-w]').on('click', function () {
           $('[data-preview-w]').removeClass('active');
