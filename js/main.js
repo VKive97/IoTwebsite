@@ -49,6 +49,112 @@ $(function () {
   });
 
   /* ── Scroll carousel factory ── */
+  /* Iconify icons mapped to the visible card label, never to incidental words in
+     the description. This keeps every symbol semantically tied to its card. */
+  var carouselCardIconMap = {};
+
+  function mapCarouselIcon(icon, labels) {
+    labels.forEach(function (label) { carouselCardIconMap[label.toLowerCase()] = icon; });
+  }
+
+  mapCarouselIcon('material-symbols:directions-car-outline', ['Fleet Management', 'Connected Fleet', 'See Every Vehicle.']);
+  mapCarouselIcon('material-symbols:location-on-outline', ['Fleet Tracking', 'Location-Based Dispatch', 'Live Delivery Tracking', 'Relevant Where You Operate.', 'Zone Management']);
+  mapCarouselIcon('material-symbols:inventory-2-outline', ['Asset Tracking', 'Vehicle Capacity Matching', 'Depot Management']);
+  mapCarouselIcon('material-symbols:person-pin-circle-outline', ['Driver Management', 'Smart Driver Assignment', "Coach Before It's a Problem.", 'Workforce Management', 'Assign']);
+  mapCarouselIcon('material-symbols:local-gas-station-outline', ['Fuel Management', 'Find the Waste.']);
+  mapCarouselIcon('material-symbols:local-shipping-outline', ['Last Mile Delivery', 'Delivery Assignment', 'Delivery Completion', 'Keep Operations Moving.']);
+  mapCarouselIcon('material-symbols:route-outline', ['Dispatch Management', 'Route Navigation', 'Scheduling & Dispatch', 'Operational Coordination', 'Dispatch', 'Execute', 'Services That Fit Your Journey.']);
+  mapCarouselIcon('material-symbols:shield-outline', ['Fleet Security', 'Security Monitor', 'Stay in Command.', 'Fleet Risk Visibility', 'Insurance That Reflects Your Fleet.']);
+  mapCarouselIcon('material-symbols:warning-outline', ['SOS Emergency Response', 'Take Action When It Matters.', 'Real-Time Incident Alerts', 'Be There When Needed.']);
+  mapCarouselIcon('material-symbols:description-outline', ['Incident Management', 'Every Incident. One Mission.']);
+  mapCarouselIcon('material-symbols:no-crash-outline', ['Vehicle Immobilization']);
+  mapCarouselIcon('material-symbols:schedule-outline', ['Incident Timeline']);
+  mapCarouselIcon('material-symbols:groups-outline', ['Deploy the Right Team.', 'Operator Coordination', 'Better Together.']);
+  mapCarouselIcon('material-symbols:description-outline', ['Incident Documentation', 'Security Reports', 'Complete Service Records']);
+  mapCarouselIcon('material-symbols:dashboard-outline', ['Decisions Backed by Intelligence.', 'Incident Analytics', 'Response Performance', 'Security Event Trends', 'Operational Insights', 'Transform Data Into Intelligence.', 'Itemized Service Costs', 'Support Business Growth.']);
+  mapCarouselIcon('material-symbols:visibility-outline', ['See Every Mission Unfold.', 'See Every Operation in Real Time.']);
+  mapCarouselIcon('material-symbols:sensors', ['IoT Monitoring', 'IoT Platform', 'Manage Every Connected Device.']);
+  mapCarouselIcon('material-symbols:videocam-outline', ['Video Telematics']);
+  mapCarouselIcon('material-symbols:device-thermostat', ['Cold Chain Monitoring', 'Protect Critical Conditions.']);
+  mapCarouselIcon('material-symbols:bolt-outline', ['Generator Monitoring']);
+  mapCarouselIcon('material-symbols:account-tree-outline', ['How the Autonautics Platform Works', 'Become Part of the Ecosystem.', 'Connect Without Complexity.', 'Built to Connect. Ready to Scale.']);
+  mapCarouselIcon('material-symbols:calendar-month-outline', ['Job Scheduling']);
+  mapCarouselIcon('material-symbols:task-alt', ['Job Management', 'Create']);
+  mapCarouselIcon('material-symbols:task-alt', ['Complete']);
+  mapCarouselIcon('material-symbols:storefront-outline', ['Merchant', 'List Your Services.', 'Explore Trusted Options.', 'Reach the Right Customers.', 'Discover Trusted Solutions.']);
+  mapCarouselIcon('material-symbols:handshake-outline', ['Engage Directly.', 'Support Every Stage of Ownership.']);
+  mapCarouselIcon('material-symbols:recommend-outline', ['Get Matched Intelligently.', 'Recommendations That Make Sense.']);
+  mapCarouselIcon('material-symbols:verified-outline', ['Built on Quality, Not Quantity.']);
+  mapCarouselIcon('material-symbols:health-and-safety-outline', ['Deliver Smarter Coverage.']);
+  mapCarouselIcon('material-symbols:groups-outline', ['Be There When Needed.']);
+  mapCarouselIcon('material-symbols:factory-outline', ['Connect the Factory Floor.']);
+  mapCarouselIcon('material-symbols:factory-outline', ['Power Smarter Infrastructure.']);
+  mapCarouselIcon('material-symbols:groups-outline', ['Create More Connected Communities.']);
+  mapCarouselIcon('material-symbols:agriculture-outline', ['Monitor Every Growing Opportunity.']);
+  mapCarouselIcon('material-symbols:bolt-outline', ['React Faster. Automate Smarter.']);
+  mapCarouselIcon('material-symbols:build-outline', ['Cut Unexpected Breakdowns.', 'Repair & Parts History']);
+  mapCarouselIcon('material-symbols:automation-outline', ['Let the Rules Do the Work.']);
+  mapCarouselIcon('material-symbols:photo-camera-outline', ['Proof of Delivery']);
+
+  function fallbackCarouselIcon(label) {
+    var rules = [
+      [/fuel/i, 'material-symbols:local-gas-station-outline'], [/cold|temperature/i, 'material-symbols:device-thermostat'],
+      [/video|camera/i, 'material-symbols:videocam-outline'], [/driver|workforce|person/i, 'material-symbols:person-outline'],
+      [/security|risk|protect/i, 'material-symbols:shield-outline'], [/incident|emergency|alert/i, 'material-symbols:warning-outline'],
+      [/maintenance|repair|service/i, 'material-symbols:build-outline'], [/delivery|shipping/i, 'material-symbols:local-shipping-outline'],
+      [/route|dispatch/i, 'material-symbols:route-outline'], [/track|location/i, 'material-symbols:location-on-outline'],
+      [/schedule|calendar|job/i, 'material-symbols:calendar-month-outline'], [/report|analytic|insight|performance/i, 'material-symbols:dashboard-outline'],
+      [/device|sensor|iot/i, 'material-symbols:sensors'], [/merchant|customer/i, 'material-symbols:storefront-outline']
+    ];
+    for (var i = 0; i < rules.length; i++) if (rules[i][0].test(label)) return rules[i][1];
+    return 'material-symbols:widgets-outline';
+  }
+
+  function ensureIconify() {
+    if (window.customElements && customElements.get('iconify-icon')) return;
+    if (document.querySelector('script[data-iconify-cards]')) return;
+    var script = document.createElement('script');
+    script.src = 'https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js';
+    script.async = true;
+    script.dataset.iconifyCards = '';
+    document.head.appendChild(script);
+  }
+
+  function addCarouselCardIcon($card) {
+    if ($card.is('[data-no-card-icon]') || $card.find('.carousel-card-icon').length) return;
+
+    var $overlay = $card.find('.position-absolute.bottom-0').filter(function () {
+      return $(this).find('h1,h2,h3,h4,h5,h6,p,button,a').length > 0;
+    }).first();
+    var $heading = $card.find('h1,h2,h3,h4,h5,h6').first();
+    var $title = $heading.length ? $heading : $card.find('p.fw-semibold').first();
+    var label = $title.text().replace(/\s+/g, ' ').trim();
+    var icon = carouselCardIconMap[label.toLowerCase()] || fallbackCarouselIcon(label);
+    var $description = $card.find('p').not('.text-uppercase').not($title).first();
+    var $leadingMedia = $card.children().first();
+    var hasLeadingMedia = $leadingMedia.find('img,video,picture').length > 0;
+    var isLight = $card.find('.text-white').length > 0;
+    var className = 'carousel-card-icon' + (isLight ? ' carousel-card-icon--light' : '');
+    var markup = '<span class="' + className + '" aria-hidden="true">' +
+      '<iconify-icon icon="' + icon + '"></iconify-icon></span>';
+
+    $title.addClass('carousel-card-title');
+    $description.addClass('carousel-card-description');
+
+    if ($overlay.length) {
+      $overlay.prepend(markup);
+    } else if (hasLeadingMedia) {
+      $leadingMedia.after(markup);
+    } else {
+      $card.prepend(markup);
+    }
+  }
+
+  ensureIconify();
+  $('.scroll-carousel [data-card]').each(function () {
+    addCarouselCardIcon($(this));
+  });
+
   function initCarousel($wrap) {
     var $track = $wrap.find('.scroll-track');
     var $prev  = $wrap.find('.sc-prev');
@@ -69,6 +175,19 @@ $(function () {
       }).get();
     }
     function total() { return $track.find('[data-card]').length; }
+
+    function targetFor(i) {
+      var maxScroll = Math.max(0, $track[0].scrollWidth - $track[0].clientWidth);
+      var target;
+      if (i <= 0) {
+        target = 0;
+      } else if (i >= total() - 1) {
+        target = maxScroll;
+      } else {
+        target = cardCenters()[i] || 0;
+      }
+      return Math.max(0, Math.min(target, maxScroll));
+    }
 
     function go(i) {
       idx = Math.max(0, Math.min(i, total() - 1));
@@ -93,10 +212,33 @@ $(function () {
       $next.toggleClass('d-none', idx >= total() - 1);
     }
 
+    // Three visible cards make the AI carousel's first two center positions nearly
+    // identical. Arrow navigation skips such tiny stops so every click visibly moves.
+    function arrowIndex(direction) {
+      if (!$wrap.hasClass('ai-event-carousel')) return idx + direction;
+
+      var $firstCard = $track.find('[data-card]').first();
+      var minimumMove = ($firstCard.outerWidth() || 0) * 0.35;
+      var currentTarget = targetFor(idx);
+      var last = total() - 1;
+      var candidate = idx + direction;
+
+      while (candidate >= 0 && candidate <= last) {
+        var candidateTarget = targetFor(candidate);
+        if (Math.abs(candidateTarget - currentTarget) >= minimumMove || candidate === 0 || candidate === last) {
+          if (direction > 0 && candidate < last && targetFor(last) - candidateTarget < minimumMove) return last;
+          if (direction < 0 && candidate > 0 && candidateTarget - targetFor(0) < minimumMove) return 0;
+          return candidate;
+        }
+        candidate += direction;
+      }
+      return direction > 0 ? last : 0;
+    }
+
     // Center-mode carousel: only one card is ever in focus, so every arrow click
     // steps exactly one card at a time — no multi-card paging.
-    $prev.on('click', function () { go(idx - 1); });
-    $next.on('click', function () { go(idx + 1); });
+    $prev.on('click', function () { go(arrowIndex(-1)); });
+    $next.on('click', function () { go(arrowIndex(1)); });
     $dots.on('click', function () { go($(this).index()); });
 
     // Find the card nearest a given scroll position. When the final page holds fewer
@@ -265,9 +407,20 @@ $(function () {
     }
     function go(i) {
       cur = (i + $steps.length) % $steps.length;
-      $steps.removeClass('active').eq(cur).addClass('active');
+      $steps.removeClass('active paused').eq(cur).addClass('active').toggleClass('paused', paused);
       $phones.removeClass('active').eq(cur).addClass('active');
       restartFill();
+
+      var $rail = $steps.closest('.business-outcomes-steps');
+      if ($rail.length) {
+        var rail = $rail[0], step = $steps[cur];
+        var stepLeft = step.offsetLeft, stepRight = stepLeft + step.offsetWidth;
+        var viewLeft = rail.scrollLeft, viewRight = viewLeft + rail.clientWidth;
+        var target = viewLeft;
+        if (stepLeft < viewLeft) target = stepLeft;
+        if (stepRight > viewRight) target = stepRight - rail.clientWidth;
+        if (target !== viewLeft) rail.scrollTo({ left: target, behavior: 'smooth' });
+      }
     }
     function schedule() {
       clearTimeout(timer);
@@ -287,54 +440,110 @@ $(function () {
     schedule();
   });
 
-  /* Tesla-style semantic icons
-     Select a clean outline symbol from the card's actual label so repeated,
-     generic artwork is not used for unrelated features. */
+  /* Iconify symbols for the remaining informational cards. Matching is based
+     only on the visible label and ordered from specific concepts to general ones. */
   (function alignFeatureIconsWithLabels() {
-    var icons = {
-      analytics: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 39V24M18 39V15M29 39V28M40 39V8"/><path d="M5 39h38"/></svg>',
-      alert: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 44 41H4L24 6Z"/><path d="M24 18v11M24 35h.01"/></svg>',
-      api: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m17 14-10 10 10 10M31 14l10 10-10 10M28 8 20 40"/></svg>',
-      box: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="m7 15 17-9 17 9v19l-17 9-17-9V15Z"/><path d="m7 15 17 9 17-9M24 24v19M15 10l17 9"/></svg>',
-      camera: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="12" width="29" height="25" rx="3"/><path d="m34 20 9-5v19l-9-5V20ZM12 12l3-6h9l3 6"/><circle cx="19.5" cy="24.5" r="6"/></svg>',
-      cloud: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 38h23a8 8 0 0 0 1-15.9A14 14 0 0 0 11.5 18 10 10 0 0 0 14 38Z"/></svg>',
-      document: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5h18l8 8v30H11V5Z"/><path d="M29 5v9h8M17 23h14M17 30h14M17 37h9"/></svg>',
-      fuel: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 42V8h22v34M5 42h28M13 13h12v10H13z"/><path d="m30 14 6 6v15a4 4 0 0 0 8 0V18l-5-5M39 13v7h5"/></svg>',
-      location: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M39 20c0 11-15 23-15 23S9 31 9 20a15 15 0 1 1 30 0Z"/><circle cx="24" cy="20" r="5"/></svg>',
-      route: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="38" r="4"/><circle cx="38" cy="10" r="4"/><path d="M14 38h8a6 6 0 0 0 0-12h-2a6 6 0 0 1 0-12h14M29 6l5 4-5 4"/></svg>',
-      security: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5 41 12v11c0 10-7 17-17 21C14 40 7 33 7 23V12l17-7Z"/><path d="m17 24 5 5 10-11"/></svg>',
-      sync: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M39 17A17 17 0 0 0 10 12l-3 5M9 31a17 17 0 0 0 29 5l3-5"/><path d="M7 9v8h8M41 39v-8h-8"/></svg>',
-      team: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="19" cy="15" r="7"/><path d="M5 40c1-9 6-14 14-14s13 5 14 14"/><circle cx="35" cy="17" r="5"/><path d="M34 27c6 0 9 4 10 10"/></svg>',
-      temperature: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 29V10a6 6 0 0 1 12 0v19a10 10 0 1 1-12 0Z"/><path d="M25 15v18"/><circle cx="25" cy="36" r="4"/></svg>',
-      time: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="25" r="18"/><path d="M24 15v11l8 5M18 5h12"/></svg>',
-      tools: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M30 8a10 10 0 0 0-12 13L6 33a6 6 0 0 0 9 9l12-12A10 10 0 0 0 40 18l-7 7-7-3-3-7 7-7Z"/></svg>',
-      vehicle: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 34V20h25v14M30 24h7l6 7v3H30M3 34h42"/><circle cx="13" cy="36" r="5"/><circle cx="36" cy="36" r="5"/></svg>',
-      workflow: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="6" width="14" height="11" rx="2"/><rect x="29" y="31" width="14" height="11" rx="2"/><path d="M12 17v12a6 6 0 0 0 6 6h11M36 31V19a6 6 0 0 0-6-6H19"/><path d="m25 9-6 4 6 4M23 31l6 4-6 4"/></svg>'
+    var exactIcons = {
+      'call us': 'material-symbols:call-outline',
+      'email us': 'material-symbols:mail-outline',
+      'one login for everything': 'material-symbols:login',
+      'live data you can trust': 'material-symbols:sensors',
+      'less manual work': 'material-symbols:automation-outline',
+      'grows with you': 'material-symbols:rocket-launch-outline',
+      '15+ years supporting operators': 'material-symbols:workspace-premium-outline',
+      'driver id': 'material-symbols:badge-outline',
+      'driver id (rfid)': 'material-symbols:badge-outline',
+      'ignition & battery': 'material-symbols:battery-charging-full-outline',
+      'door & pto sensors': 'material-symbols:sensor-door-outline',
+      'idle & movement': 'material-symbols:sensors',
+      'trip replay': 'material-symbols:sync-outline',
+      'trip summary': 'material-symbols:summarize-outline',
+      'event-based recording': 'material-symbols:emergency-recording-outline',
+      'gps & video synchronization': 'material-symbols:sync-outline',
+      'incident investigation': 'material-symbols:visibility-outline',
+      'evidence management': 'material-symbols:folder-managed-outline',
+      'video export & sharing': 'material-symbols:hub-outline',
+      'driver coaching': 'material-symbols:school-outline',
+      'performance comparison': 'material-symbols:compare-arrows',
+      'utilization overview': 'material-symbols:dashboard-outline',
+      'continuous monitoring': 'material-symbols:visibility-outline',
+      'data-driven decision making': 'material-symbols:dashboard-outline',
+      'custom alert rules': 'material-symbols:settings-outline',
+      'notification preferences': 'material-symbols:settings-outline',
+      'event configuration': 'material-symbols:settings-outline',
+      'qr & barcode support': 'material-symbols:qr-code-scanner',
+      'field accountability': 'material-symbols:description-outline',
+      'open apis': 'material-symbols:api',
+      'process automation': 'material-symbols:automation-outline',
+      'pause & resume': 'material-symbols:pause-circle-outline',
+      'proof of delivery': 'material-symbols:photo-camera-outline',
+      'manual delivery updates': 'material-symbols:sync-outline',
+      'smartphone ready': 'material-symbols:devices-other-outline',
+      'country-specific offers': 'material-symbols:storefront-outline',
+      'roadside assistance': 'material-symbols:car-repair-outline',
+      'finance': 'material-symbols:account-balance-outline',
+      'insurance': 'material-symbols:health-and-safety-outline',
+      'registration & insurance management': 'material-symbols:health-and-safety-outline',
+      'enterprise systems': 'material-symbols:hub-outline',
+      'flexible platform': 'material-symbols:settings-outline',
+      'one system, not five': 'material-symbols:hub-outline',
+      'lower running costs': 'material-symbols:account-balance-outline',
+      'intelligent planning': 'material-symbols:calendar-month-outline',
+      'faster response': 'material-symbols:bolt-outline',
+      'service catalog': 'material-symbols:description-outline',
+      'smart discovery': 'material-symbols:visibility-outline'
     };
 
     var rules = [
-      [/fuel/i, 'fuel'], [/temperature|cold chain/i, 'temperature'], [/camera|video|evidence|playback/i, 'camera'],
-      [/route|navigation|journey|trip|distance|geofence|location|map/i, 'route'], [/eta|time|history|timeline|delay|calendar|schedul/i, 'time'],
-      [/alert|notification|panic|emergency|incident|risk|deviation|unauthor/i, 'alert'], [/security|safety|compliance|insurance|audit|protect/i, 'security'],
-      [/report|analytics|insight|trend|performance|benchmark|comparison|intelligence/i, 'analytics'], [/document|proof/i, 'document'],
-      [/api|extensible|integration/i, 'api'], [/sync|connected|connectivity|network/i, 'sync'], [/cloud|availability|uptime|reliab/i, 'cloud'],
-      [/inventory|stock|warehouse|asset|equipment|container/i, 'box'], [/driver|workforce|team|people|operator|customer|recipient/i, 'team'],
-      [/maintenance|service|inspection|repair|infringement/i, 'tools'], [/vehicle|fleet|delivery|dispatch|mobile|phone|tracking device/i, 'vehicle'],
-      [/workflow|automat|process|job status|reassign|pause|configuration/i, 'workflow'], [/gps|monitor|visibility|live|real-time/i, 'location']
+      [/fuel/i, 'material-symbols:local-gas-station-outline'],
+      [/temperature|cold chain/i, 'material-symbols:device-thermostat'],
+      [/camera|video|playback/i, 'material-symbols:videocam-outline'],
+      [/panic|sos|emergency/i, 'material-symbols:warning-outline'],
+      [/incident/i, 'material-symbols:warning-outline'],
+      [/unauthor|deviation|delayed|risk/i, 'material-symbols:warning-outline'],
+      [/notification|alert/i, 'material-symbols:notifications-outline'],
+      [/immobilization/i, 'material-symbols:no-crash-outline'],
+      [/security|safety|compliance|protect/i, 'material-symbols:shield-outline'],
+      [/audit|history|timeline/i, 'material-symbols:schedule-outline'],
+      [/route|navigation|journey|trip|distance|geofence|map/i, 'material-symbols:route-outline'],
+      [/eta|response time|shift hours|calendar|schedul/i, 'material-symbols:schedule-outline'],
+      [/location|gps|tracking|visibility|live|real-time/i, 'material-symbols:location-on-outline'],
+      [/report|document|records/i, 'material-symbols:description-outline'],
+      [/analytics|insight|trend|performance|benchmark|analysis|intelligence/i, 'material-symbols:dashboard-outline'],
+      [/api|extensible|code/i, 'material-symbols:api'],
+      [/sync|synchronization/i, 'material-symbols:sync-outline'],
+      [/cloud|availability|uptime|reliab/i, 'material-symbols:cloud-outline'],
+      [/connectivity|network/i, 'material-symbols:hub-outline'],
+      [/integration|connected ecosystem|connected platform/i, 'material-symbols:hub-outline'],
+      [/inventory|stock|warehouse|asset|equipment|container/i, 'material-symbols:inventory-2-outline'],
+      [/driver|workforce|team|people|operator|customer|recipient|partner/i, 'material-symbols:groups-outline'],
+      [/maintenance|service|inspection|repair|infringement/i, 'material-symbols:build-outline'],
+      [/delivery|dispatch/i, 'material-symbols:local-shipping-outline'],
+      [/vehicle|fleet/i, 'material-symbols:directions-car-outline'],
+      [/workflow|automat|process|job status|reassign|configuration/i, 'material-symbols:account-tree-outline'],
+      [/device|sensor|hardware|iot|mobile|phone/i, 'material-symbols:devices-other-outline'],
+      [/scale|scalab|future.ready|innovation/i, 'material-symbols:rocket-launch-outline'],
+      [/centralized|administration|management|dashboard|control/i, 'material-symbols:dashboard-outline'],
+      [/efficiency|productivity|accuracy|readiness|execution/i, 'material-symbols:task-alt'],
+      [/insurance/i, 'material-symbols:health-and-safety-outline']
     ];
 
-    $('.feature-icon, .device-icon').each(function () {
+    $('.industry-icon, .feature-icon, .device-icon').each(function () {
       var $icon = $(this);
       var $label = $icon.nextAll('h2,h3,h4,h5,h6,p').first();
       if (!$label.length) $label = $icon.parent().find('h2,h3,h4,h5,h6').first();
       var label = $label.text().replace(/\s+/g, ' ').trim();
       if (!label) return;
-      for (var i = 0; i < rules.length; i++) {
+      var iconName = exactIcons[label.toLowerCase()] || '';
+      for (var i = 0; !iconName && i < rules.length; i++) {
         if (rules[i][0].test(label)) {
-          $icon.html(icons[rules[i][1]]).attr('data-icon-for', label);
+          iconName = rules[i][1];
           break;
         }
       }
+      if (!iconName) iconName = 'material-symbols:widgets-outline';
+      $icon.html('<iconify-icon icon="' + iconName + '" aria-hidden="true"></iconify-icon>')
+        .attr('data-icon-for', label);
     });
   })();
 
