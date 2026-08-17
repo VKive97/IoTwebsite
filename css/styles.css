@@ -7,6 +7,7 @@
   --section-space:clamp(5rem,10vw,11rem);
   --section-space-tight:clamp(4rem,7vw,8rem);
   --content-max:1280px;
+  --ui-radius:8px;
   /* On screens wider than content-max, align bleed carousels with the same
      centered column edge as every other section instead of just the raw
      viewport gutter — otherwise the carousel drifts left of the heading
@@ -274,14 +275,91 @@ section:has(> .scroll-carousel) > [class*="px-"]{
 .icon-btn{background:none;border:0;border-radius:6px;padding:8px;cursor:pointer;transition:background .15s}
 .icon-btn:hover{background:rgba(0,0,0,.05)}
 .feature-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;display:inline-block}
-.why-card-img{border-radius:1rem;overflow:hidden;background:#f3f4f6;flex:0 0 63%;height:380px;align-self:flex-start}
+.why-card-img{border-radius:var(--ui-radius);overflow:hidden;background:#f3f4f6;flex:0 0 63%;height:380px;align-self:flex-start}
 .why-card-img img{width:100%;height:100%;object-fit:cover;display:block}
 @media(max-width:767px){.why-card-img{flex:0 0 auto;width:100%;height:260px}}
+
+/* Security Monitor: Tesla-inspired editorial feature rows. */
+.mission-security-section{background:#fff;padding-bottom:clamp(5rem,9vw,9rem)}
+.mission-security-heading{max-width:1360px;margin:0 auto;padding:clamp(5rem,8vw,8.5rem) clamp(1.5rem,4vw,4rem) clamp(3.5rem,6vw,6rem)}
+.mission-security-heading>p:last-child{max-width:650px;margin-bottom:0}
+.mission-security-list{display:flex;max-width:1360px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);flex-direction:column;gap:clamp(3.5rem,6vw,6.5rem)}
+.mission-security-row{display:grid;grid-template-columns:minmax(0,1.72fr) minmax(280px,.88fr);align-items:stretch;gap:clamp(3rem,6vw,7rem)}
+.mission-security-row .why-card-img{width:100%;height:clamp(390px,35vw,520px);min-width:0;align-self:auto;flex:none;border-radius:var(--ui-radius);background:#f4f4f4}
+.mission-security-row .why-card-img img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.mission-security-row:hover .why-card-img img{transform:scale(1.015)}
+.mission-security-copy{display:flex;align-items:center;padding:clamp(2rem,4vw,4rem) 0}
+.mission-security-copy>div{max-width:390px}
+.mission-security-copy h3{margin-bottom:1.25rem!important;font-size:clamp(1.7rem,2.15vw,2.35rem);font-weight:600!important;line-height:1.12;letter-spacing:-.035em;color:#171a20}
+.mission-security-copy>div>p:first-child{margin-bottom:.65rem!important;color:#393c41!important;font-size:.82rem!important;font-weight:500!important;letter-spacing:0!important;text-transform:none!important}
+.mission-security-copy>div>p:last-child{max-width:390px!important;margin-bottom:0;color:#393c41!important;font-size:clamp(.9rem,1vw,1rem)!important;line-height:1.55!important}
+@media(max-width:991px){
+  .mission-security-row{grid-template-columns:minmax(0,1.45fr) minmax(250px,.8fr);gap:2.5rem}
+  .mission-security-row .why-card-img{height:390px}
+}
+@media(max-width:767px){
+  .mission-security-heading{padding-bottom:3.5rem}
+  .mission-security-list{gap:4.5rem}
+  .mission-security-row{display:flex;flex-direction:column;gap:0}
+  .mission-security-row .why-card-img{height:clamp(250px,66vw,390px)}
+  .mission-security-copy{padding:2rem .1rem 0}
+  .mission-security-copy>div{max-width:100%}
+}
+
+/* Last Mile: same editorial rhythm and radius as Mission Security. */
+.last-mile-feature-section{background:#fff;padding-bottom:clamp(5rem,9vw,9rem)}
+.last-mile-feature-heading{max-width:1360px;margin:0 auto;padding:clamp(5rem,8vw,8.5rem) clamp(1.5rem,4vw,4rem) clamp(3.5rem,6vw,6rem)}
+.last-mile-feature-heading>p:last-child{max-width:650px;margin-bottom:0}
+.last-mile-feature-list{display:flex;max-width:1360px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);flex-direction:column;gap:clamp(3.5rem,6vw,6.5rem)}
+.last-mile-feature-row{display:grid;grid-template-columns:minmax(0,1.72fr) minmax(280px,.88fr);align-items:stretch;gap:clamp(3rem,6vw,7rem)}
+.last-mile-feature-row .why-card-img{width:100%;height:clamp(390px,35vw,520px);min-width:0;align-self:auto;flex:none;border-radius:var(--ui-radius);background:#f4f4f4}
+.last-mile-feature-row .why-card-img img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.last-mile-feature-row:hover .why-card-img img{transform:scale(1.015)}
+.last-mile-feature-copy{display:flex;align-items:center;padding:clamp(2rem,4vw,4rem) 0}
+.last-mile-feature-copy>div{max-width:390px}
+.last-mile-feature-copy h3{margin-bottom:1.25rem!important;font-size:clamp(1.7rem,2.15vw,2.35rem);font-weight:600!important;line-height:1.12;letter-spacing:-.035em;color:#171a20}
+.last-mile-feature-copy>div>p:first-child{margin-bottom:.65rem!important;color:#393c41!important;font-size:.82rem!important;font-weight:500!important;letter-spacing:0!important;text-transform:none!important}
+.last-mile-feature-copy>div>p:last-child{max-width:390px;margin-bottom:0;color:#393c41!important;font-size:clamp(.9rem,1vw,1rem)!important;line-height:1.55!important}
+.last-mile-how-image{height:280px;margin-bottom:1rem;overflow:hidden;border-radius:var(--ui-radius);background:#f4f4f4}
+.last-mile-how-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+[data-card]:hover .last-mile-how-image img{transform:scale(1.02)}
+.last-mile-how-section{padding:clamp(5rem,8vw,8rem) 0 clamp(5rem,7vw,7rem);background:#fff}
+.last-mile-how-heading{max-width:1504px;margin:0 auto clamp(2.75rem,5vw,4.5rem)}
+.last-mile-how-heading>p:last-child{max-width:680px!important;margin-bottom:0}
+.last-mile-how-carousel .scroll-track{gap:clamp(1rem,1.3vw,1.5rem)!important;padding-bottom:1.25rem;scroll-snap-type:x mandatory}
+.last-mile-how-carousel .last-mile-how-card{width:clamp(560px,42vw,800px)!important;max-width:none!important;scroll-snap-align:start}
+.last-mile-how-carousel .last-mile-how-image{height:clamp(430px,30.5vw,580px);margin-bottom:1.65rem;border-radius:var(--ui-radius)}
+.last-mile-how-carousel .last-mile-how-card h5{margin-bottom:.75rem!important;font-size:clamp(1.65rem,2vw,2.1rem);font-weight:600!important;line-height:1.1;letter-spacing:-.035em;color:#171a20}
+.last-mile-how-carousel .last-mile-how-card>p{max-width:720px;margin-bottom:0;color:#393c41!important;font-size:clamp(.95rem,1.12vw,1.12rem)!important;line-height:1.5!important}
+.last-mile-how-carousel .car-btn{top:calc(clamp(430px,30.5vw,580px) / 2);z-index:20;width:44px;height:44px;transform:translateY(-50%);border-radius:var(--ui-radius);background:rgba(255,255,255,.94);box-shadow:0 2px 8px rgba(0,0,0,.16);backdrop-filter:none}
+.last-mile-how-carousel .sc-prev{left:clamp(.75rem,2vw,2rem)}
+.last-mile-how-carousel .sc-next{right:clamp(.75rem,2vw,2rem)}
+.last-mile-how-carousel .car-btn:hover{background:#fff}
+@media(max-width:991px){
+  .last-mile-feature-row{grid-template-columns:minmax(0,1.45fr) minmax(250px,.8fr);gap:2.5rem}
+  .last-mile-feature-row .why-card-img{height:390px}
+  .last-mile-how-carousel .last-mile-how-card{width:72vw!important}
+  .last-mile-how-carousel .last-mile-how-image{height:min(54vw,500px)}
+  .last-mile-how-carousel .car-btn{top:calc(min(54vw,500px) / 2)}
+}
+@media(max-width:767px){
+  .last-mile-feature-heading{padding-bottom:3.5rem}
+  .last-mile-feature-list{gap:4.5rem}
+  .last-mile-feature-row{display:flex;flex-direction:column;gap:0}
+  .last-mile-feature-row .why-card-img{height:clamp(250px,66vw,390px)}
+  .last-mile-feature-copy{padding:2rem .1rem 0}
+  .last-mile-feature-copy>div{max-width:100%}
+  .last-mile-how-heading{margin-bottom:2.5rem}
+  .last-mile-how-carousel .last-mile-how-card{width:86vw!important;max-width:86vw!important}
+  .last-mile-how-carousel .last-mile-how-image{height:64vw;max-height:380px;margin-bottom:1.3rem}
+  .last-mile-how-carousel .last-mile-how-card h5{font-size:1.55rem}
+  .last-mile-how-carousel .car-btn{display:none!important}
+}
 .tag-pill{display:inline-block;border:1px solid #e5e7eb;border-radius:999px;padding:6px 16px;font-size:.875rem;color:#4b5563;cursor:default;transition:all .2s}
 .tag-pill:hover{border-color:#93c5fd;color:#2563eb}
 
 /* ── Event media slot (Events page: image, carousel, or video placeholder — same box treatment) ── */
-.event-media{position:relative;border-radius:1rem;overflow:hidden;height:clamp(240px,32vw,380px);background:#f3f4f6}
+.event-media{position:relative;border-radius:var(--ui-radius);overflow:hidden;height:clamp(240px,32vw,380px);background:#f3f4f6}
 .event-media img{width:100%;height:100%;object-fit:cover;display:block}
 .event-media.carousel .carousel-item{height:clamp(240px,32vw,380px)}
 .event-media-video img{filter:brightness(.75)}
@@ -290,7 +368,7 @@ section:has(> .scroll-carousel) > [class*="px-"]{
    aspect ratio instead of a fixed pixel height, so it scales cleanly at any card
    width; anchored to the top of the source image so logo/text-led graphics don't
    lose their header content when cropped to fill the frame. */
-.blog-cover-media{border-radius:.5rem;height:auto;aspect-ratio:16/10}
+.blog-cover-media{border-radius:var(--ui-radius);height:auto;aspect-ratio:16/10}
 .blog-cover-media img{object-fit:cover;object-position:top}
 .blog-card-title{font-size:1.15rem;font-weight:700;line-height:1.3;letter-spacing:-.01em}
 .blog-card-date{font-size:.85rem;color:#6b7280}
@@ -337,16 +415,16 @@ section:has(> .scroll-carousel) > [class*="px-"]{
 .mob-util-btn{display:flex;align-items:center;gap:.5rem;width:100%;padding:.7rem 0;background:0;border:0;font-size:.9rem;color:#374151;text-align:left}
 
 /* ── Tesla-style flat card (shared base: white, borderless, on light-gray section bg) ── */
-.tesla-card{background:#fff;border-radius:1rem;box-shadow:none;transition:box-shadow .2s ease}
+.tesla-card{background:#fff;border-radius:var(--ui-radius);box-shadow:none;transition:box-shadow .2s ease}
 .tesla-card:hover{box-shadow:0 4px 18px rgba(0,0,0,.07)}
 .tesla-card-link{text-decoration:none;color:inherit;display:block}
 
 /* ── Flat gray card (tesla.com feature-grid look: no border/shadow, subtle radius) ── */
-.tesla-card-flat{background:#f4f4f4;border-radius:.5rem;transition:background .2s ease}
+.tesla-card-flat{background:#f4f4f4;border-radius:var(--ui-radius);transition:background .2s ease}
 .tesla-card-flat:hover{background:#eee}
 
 /* ── Near-full-height image band (keeps the site's side gutter, fills most of the viewport height) ── */
-.full-bleed-media{position:relative;overflow:hidden;height:clamp(420px,90vh,880px);border-radius:1rem}
+.full-bleed-media{position:relative;overflow:hidden;height:clamp(420px,90vh,880px);border-radius:var(--ui-radius)}
 .full-bleed-media img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* ── Section immediately following a full-bleed band: tight top padding, image sits close to the heading ── */
@@ -499,7 +577,7 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
 .about-steps-lg .about-step-desc{font-size:1rem}
 
 /* ── Single-photo step carousel (How It Works, mission workflow, etc.) ── */
-.process-photo-stage{position:relative;border-radius:1rem;overflow:hidden;height:clamp(420px,80vh,820px)}
+.process-photo-stage{position:relative;border-radius:var(--ui-radius);overflow:hidden;height:clamp(420px,80vh,820px)}
 .about-phone-frame.process-photo-frame{
   position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;background:none;border-radius:0;
   box-shadow:none;opacity:0;filter:none;transform:none;z-index:1;transition:opacity .6s ease;cursor:default
@@ -776,6 +854,28 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
   background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.18);
   border-radius:999px;padding:.4rem 1rem;font-size:.78rem;font-weight:600
 }
+
+/* Security Monitor capability strip */
+.security-capability-strip{padding:clamp(3rem,5vw,4.5rem) var(--site-gutter);background:#fff;border-bottom:1px solid #eceef1}
+.security-capability-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:min(100%,1120px);margin:auto}
+.security-capability-item{position:relative;display:flex;min-width:0;min-height:88px;flex-direction:column;align-items:center;justify-content:center;padding:0 clamp(1rem,2.5vw,2rem);text-align:center}
+.security-capability-item:not(:last-child)::after{content:"";position:absolute;top:50%;right:0;width:1px;height:48px;background:#d7dae0;transform:translateY(-50%)}
+.security-capability-item strong{color:#171a20;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:600;letter-spacing:-.04em;line-height:1;white-space:nowrap}
+.security-capability-item span{margin-top:.7rem;color:#69707a;font-size:.75rem;line-height:1.3;white-space:nowrap}
+.security-capability-action{margin-top:clamp(2.25rem,4vw,3.25rem);text-align:center}
+.security-capability-action .btn{min-width:205px;border-color:#d1d5db;font-size:.85rem;transition:background .2s ease,color .2s ease,border-color .2s ease}
+@media(max-width:767px){.security-capability-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:560px}.security-capability-item{min-height:108px}.security-capability-item:nth-child(2)::after{display:none}.security-capability-item:nth-child(-n+2){border-bottom:1px solid #e2e4e8}}
+@media(max-width:420px){.security-capability-strip{padding-inline:1rem}.security-capability-item{padding-inline:.5rem}.security-capability-item strong{font-size:1.6rem}.security-capability-item span{font-size:.68rem}}
+
+/* Security Monitor introduction — Tesla-style editorial image followed by copy */
+.security-intro-layout{display:flex;width:min(100%,var(--content-max));flex-direction:column;margin:auto}
+.security-intro-copy{max-width:1160px;margin-top:clamp(2.5rem,5vw,4.25rem);padding-inline:clamp(0rem,8vw,7rem)}
+.security-intro-copy .section-heading{margin-bottom:.75rem}
+.security-intro-visual{position:relative;width:100%;aspect-ratio:2.45/1;overflow:hidden;border-radius:var(--ui-radius);background:#0d1622}
+.security-intro-visual::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.08);pointer-events:none}
+.security-intro-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+@media(max-width:991px){.security-intro-copy{max-width:760px;padding-inline:0}.security-intro-visual{aspect-ratio:16/9}}
+@media(max-width:575px){.security-intro-visual{aspect-ratio:4/3}.security-intro-visual img{object-position:58% center}}
 
 /* Integrations: connected architecture visual */
 .integration-architecture{width:calc(100% + (var(--site-gutter) * 2));max-width:none;margin:clamp(5rem,9vw,8rem) calc(var(--site-gutter) * -1) 0;padding:clamp(2.25rem,5vw,4.5rem) var(--site-gutter);background:#f4f4f4;border-radius:0;color:#171a20;overflow:hidden}
