@@ -95,6 +95,11 @@ $(function () {
   mapCarouselIcon('material-symbols:build-outline', ['Cut Unexpected Breakdowns.', 'Repair & Parts History']);
   mapCarouselIcon('material-symbols:automation-outline', ['Let the Rules Do the Work.']);
   mapCarouselIcon('material-symbols:photo-camera-outline', ['Proof of Delivery']);
+  mapCarouselIcon('material-symbols:local-shipping-outline', ['Logistics & Transport']);
+  mapCarouselIcon('material-symbols:construction', ['Construction & Mining']);
+  mapCarouselIcon('material-symbols:device-thermostat', ['Cold Chain']);
+  mapCarouselIcon('material-symbols:recycling-outline', ['Waste & Utilities']);
+  mapCarouselIcon('material-symbols:home-repair-service-outline', ['Field Service']);
 
   function fallbackCarouselIcon(label) {
     var rules = [

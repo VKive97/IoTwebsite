@@ -97,7 +97,7 @@
           <img src="/images/vehicle-assignment.png" alt="Driver assigned to a fleet vehicle">
         </div>
         <div class="about-phone-frame process-photo-frame" data-phone="2">
-          <img src="/images/connectedfleet-replay.png" alt="Driver Records">
+          <img src="/images/driver-records-v2.png" alt="Driver licenses, permits, training certifications, and employment records organized securely">
         </div>
       </div>
 
@@ -151,7 +151,14 @@
               <div class="about-phone-panel active">
                 <p class="about-phone-eyebrow">Driver Scorecards</p>
                 <div class="about-phone-graphic">
-                  <img src="/images/connectedfleet-replay.png" class="w-100" style="object-fit:contain" alt="Driver Scorecards">
+                  <div class="driver-phone-ui driver-score-ui" aria-label="Driver score of 92 with safety, efficiency, and compliance results">
+                    <div class="driver-score-ring"><strong>92</strong><span>Excellent</span></div>
+                    <div class="driver-score-metrics">
+                      <span><i style="--value:94%"></i><b>Safety</b><small>94</small></span>
+                      <span><i style="--value:89%"></i><b>Efficiency</b><small>89</small></span>
+                      <span><i style="--value:96%"></i><b>Compliance</b><small>96</small></span>
+                    </div>
+                  </div>
                 </div>
                 <div class="about-phone-caption">
                   <p class="text-white fw-semibold mb-1">Driver Scorecards</p>
@@ -166,7 +173,17 @@
               <div class="about-phone-panel active">
                 <p class="about-phone-eyebrow">Performance Trends</p>
                 <div class="about-phone-graphic">
-                  <img src="/images/connectedECO.png" class="w-100" style="object-fit:contain" alt="Performance Trends">
+                  <div class="driver-phone-ui driver-trend-ui" aria-label="Driver performance score improving over six weeks">
+                    <div class="driver-trend-head"><span>Overall score</span><strong>92 <small>+8%</small></strong></div>
+                    <svg viewBox="0 0 220 125" role="img" aria-label="Upward performance trend chart">
+                      <defs><linearGradient id="driverTrendFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b82f6" stop-opacity=".38"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></linearGradient></defs>
+                      <path class="trend-grid" d="M8 22H212M8 60H212M8 98H212"/>
+                      <path class="trend-fill" d="M8 94C30 90 39 80 58 82S88 69 108 72s29-27 48-20 32-18 56-29V110H8Z"/>
+                      <path class="trend-line" d="M8 94C30 90 39 80 58 82S88 69 108 72s29-27 48-20 32-18 56-29"/>
+                      <circle cx="212" cy="23" r="5"/>
+                    </svg>
+                    <div class="driver-trend-labels"><span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span></div>
+                  </div>
                 </div>
                 <div class="about-phone-caption">
                   <p class="text-white fw-semibold mb-1">Performance Trends</p>
@@ -181,7 +198,13 @@
               <div class="about-phone-panel active">
                 <p class="about-phone-eyebrow">Behaviour Insights</p>
                 <div class="about-phone-graphic">
-                  <img src="/images/connectedFleetMain.png" class="w-100" style="object-fit:contain" alt="Behaviour Insights">
+                  <div class="driver-phone-ui driver-behaviour-ui" aria-label="Driving behaviour event summary">
+                    <div class="behaviour-summary"><span>Safety events</span><strong>6 <small>this week</small></strong></div>
+                    <div class="behaviour-row"><span class="behaviour-icon">S</span><p><b>Speeding</b><small>2 events</small></p><em class="is-low">Low</em></div>
+                    <div class="behaviour-row"><span class="behaviour-icon">B</span><p><b>Harsh braking</b><small>1 event</small></p><em class="is-low">Low</em></div>
+                    <div class="behaviour-row"><span class="behaviour-icon">A</span><p><b>Rapid acceleration</b><small>1 event</small></p><em class="is-low">Low</em></div>
+                    <div class="behaviour-row"><span class="behaviour-icon">I</span><p><b>Excessive idling</b><small>2 events</small></p><em class="is-watch">Watch</em></div>
+                  </div>
                 </div>
                 <div class="about-phone-caption">
                   <p class="text-white fw-semibold mb-1">Behaviour Insights</p>
@@ -237,7 +260,8 @@
       </div>
       <div class="col-lg-6">
         <div class="rounded-4 overflow-hidden" style="height:400px">
-          <img src="/images/connectedECO.png" class="w-100 h-100 object-fit-cover" alt="Driver Compliance">
+          <img src="/images/driver-compliance-v2.png" class="w-100 h-100 object-fit-cover"
+            alt="Driver compliance dashboard showing licence, certification, medical record, and renewal status">
         </div>
       </div>
     </div>
