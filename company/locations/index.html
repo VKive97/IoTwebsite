@@ -4,199 +4,714 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Our Locations | Offices Across Australia, India &amp; Fiji &mdash; Autonautics by Anstel</title>
+  <title>Anstel Offices &amp; Operating Regions | Australia, India &amp; Fiji</title>
   <meta name="description"
-    content="Find Anstel's offices in Sydney (Australia), Gurugram (India), and Suva (Fiji), with operations extending across Papua New Guinea and the wider Oceania region.">
+    content="Find Anstel offices in Sydney, Gurugram and Suva, plus operational coverage across Papua New Guinea and the wider Oceania region.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/styles.css">
   <style>
+    :root {
+      --locations-gutter: clamp(1.25rem, 5vw, 5rem)
+    }
+
     body {
       padding-top: 56px;
-      padding-bottom: 56px
+      padding-bottom: 56px;
+      color: #171a20;
+      background: #fff
+    }
+
+    .locations-shell {
+      width: min(100%, 1280px);
+      margin-inline: auto
+    }
+
+    .locations-masthead {
+      padding: clamp(7rem, 13vw, 12rem) var(--locations-gutter) clamp(5rem, 9vw, 8rem)
+    }
+
+    .locations-masthead h1 {
+      max-width: 980px;
+      margin: 0;
+      font-size: clamp(3.4rem, 8vw, 7.4rem);
+      font-weight: 600;
+      letter-spacing: -.065em;
+      line-height: .94
+    }
+
+    .locations-masthead p {
+      max-width: 720px;
+      margin: clamp(2rem, 4vw, 3.5rem) 0 0;
+      color: #5c6066;
+      font-size: clamp(1.05rem, 1.55vw, 1.3rem);
+      line-height: 1.7
+    }
+
+    .locations-facts-wrap {
+      padding-bottom: clamp(4.5rem, 8vw, 7rem)
+    }
+
+    .locations-facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .75rem;
+      padding-inline: var(--locations-gutter)
+    }
+
+    .locations-fact {
+      display: flex;
+      min-height: 190px;
+      padding: clamp(2rem, 3vw, 2.75rem) clamp(1.5rem, 2.5vw, 2.5rem);
+      border-radius: 8px;
+      flex-direction: column;
+      justify-content: center;
+      background: #f4f4f4
+    }
+
+    .locations-fact strong,
+    .locations-fact span {
+      display: block
+    }
+
+    .locations-fact strong {
+      font-size: clamp(1.35rem, 1.9vw, 1.8rem);
+      font-weight: 600;
+      letter-spacing: -.035em;
+      line-height: 1.15
+    }
+
+    .locations-fact span {
+      margin-top: .45rem;
+      color: #6a6e74;
+      font-size: .8rem
+    }
+
+    .locations-section {
+      padding: clamp(6rem, 11vw, 10rem) var(--locations-gutter)
+    }
+
+    .locations-section--soft {
+      background: #f4f4f4
+    }
+
+    .locations-heading {
+      max-width: 790px;
+      margin-bottom: clamp(3rem, 6vw, 5rem)
+    }
+
+    .locations-eyebrow {
+      margin: 0 0 1rem;
+      color: #5d6269;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase
+    }
+
+    .locations-heading h2 {
+      margin: 0;
+      font-size: clamp(2.6rem, 5.8vw, 5rem);
+      font-weight: 600;
+      letter-spacing: -.055em;
+      line-height: 1
+    }
+
+    .locations-heading>p:last-child {
+      max-width: 690px;
+      margin: 1.5rem 0 0;
+      color: #62666d;
+      font-size: clamp(1rem, 1.25vw, 1.12rem);
+      line-height: 1.75
+    }
+
+    .office-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(1rem, 2vw, 1.5rem)
+    }
+
+    .office-card {
+      display: flex;
+      min-width: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      flex-direction: column;
+      background: #fff
+    }
+
+    .office-map {
+      height: clamp(220px, 20vw, 285px);
+      overflow: hidden;
+      background: #e7e8ea
+    }
+
+    .office-map iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(1) contrast(.92)
+    }
+
+    .office-copy {
+      display: flex;
+      height: 100%;
+      padding: clamp(1.6rem, 3vw, 2.5rem);
+      flex-direction: column
+    }
+
+    .office-label {
+      margin: 0 0 1.1rem;
+      color: #62666d;
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase
+    }
+
+    .office-copy h3 {
+      margin: 0;
+      font-size: clamp(1.55rem, 2.3vw, 2.15rem);
+      font-weight: 600;
+      letter-spacing: -.035em
+    }
+
+    .office-role {
+      min-height: 3.5em;
+      margin: .8rem 0 1.5rem;
+      color: #62666d;
+      font-size: .86rem;
+      line-height: 1.7
+    }
+
+    .office-copy address {
+      margin: 0 0 1.6rem;
+      color: #30343a;
+      font-size: .88rem;
+      font-style: normal;
+      line-height: 1.7
+    }
+
+    .office-actions {
+      display: flex;
+      margin-top: auto;
+      flex-wrap: wrap;
+      gap: .6rem
+    }
+
+    .office-action {
+      display: inline-flex;
+      min-height: 42px;
+      padding: .65rem 1rem;
+      border-radius: 4px;
+      align-items: center;
+      justify-content: center;
+      color: #171a20;
+      font-size: .78rem;
+      font-weight: 600;
+      text-decoration: none;
+      background: #f0f0f0;
+      transition: background-color .2s ease
+    }
+
+    .office-action:hover {
+      color: #171a20;
+      background: #dedfe1
+    }
+
+    .coverage-layout {
+      display: grid;
+      grid-template-columns: minmax(260px, .8fr) minmax(0, 1.45fr);
+      gap: clamp(3rem, 9vw, 9rem)
+    }
+
+    .coverage-intro h2 {
+      margin: 0;
+      font-size: clamp(2.6rem, 5vw, 4.8rem);
+      font-weight: 600;
+      letter-spacing: -.055em;
+      line-height: 1.03
+    }
+
+    .coverage-intro p:last-child {
+      margin: 1.4rem 0 0;
+      color: #62666d;
+      line-height: 1.75
+    }
+
+    .coverage-list {
+      display: grid;
+      gap: .75rem
+    }
+
+    .coverage-item {
+      display: grid;
+      grid-template-columns: minmax(150px, .65fr) minmax(0, 1.35fr);
+      gap: 2rem;
+      padding: clamp(2rem, 4vw, 3rem);
+      border-radius: 8px;
+      background: #f4f4f4
+    }
+
+    .coverage-item h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 600
+    }
+
+    .coverage-item p {
+      margin: 0;
+      color: #62666d;
+      font-size: .9rem;
+      line-height: 1.75
+    }
+
+    .support-section {
+      padding: clamp(6rem, 11vw, 10rem) var(--locations-gutter);
+      color: #fff;
+      background: #171a20
+    }
+
+    .support-section .locations-eyebrow,
+    .support-section .locations-heading>p:last-child,
+    .support-item p {
+      color: #aeb1b6
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .75rem
+    }
+
+    .support-item {
+      padding: clamp(2.5rem, 5vw, 4rem);
+      border-radius: 8px;
+      background: #22252a
+    }
+
+    .support-item+.support-item {
+      padding-left: clamp(2.5rem, 5vw, 4rem)
+    }
+
+    .support-number {
+      display: block;
+      margin-bottom: clamp(3rem, 7vw, 6rem);
+      color: #74787f;
+      font-size: .72rem
+    }
+
+    .support-item h3 {
+      margin: 0 0 1rem;
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+      font-weight: 600;
+      letter-spacing: -.025em
+    }
+
+    .support-item p {
+      margin: 0;
+      font-size: .88rem;
+      line-height: 1.75
+    }
+
+    .locations-cta-wrap {
+      padding: clamp(5rem, 9vw, 8rem) var(--locations-gutter)
+    }
+
+    .locations-cta {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      max-width: 1120px;
+      margin-inline: auto;
+      padding: clamp(2.5rem, 5vw, 4.5rem);
+      border-radius: 12px;
+      align-items: center;
+      gap: clamp(2rem, 6vw, 5rem);
+      background: #f4f4f4
+    }
+
+    .locations-cta h2 {
+      margin: 0;
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      font-weight: 600;
+      letter-spacing: -.05em;
+      line-height: 1.05
+    }
+
+    .locations-cta p {
+      max-width: 600px;
+      margin: 1rem 0 0;
+      color: #62666d;
+      line-height: 1.7
+    }
+
+    .locations-cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem
+    }
+
+    .locations-button {
+      display: inline-flex;
+      min-height: 48px;
+      padding: .75rem 1.5rem;
+      border-radius: 4px;
+      align-items: center;
+      justify-content: center;
+      font-size: .84rem;
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    .locations-button--primary {
+      color: #fff;
+      background: #171a20
+    }
+
+    .locations-button--primary:hover {
+      color: #fff;
+      background: #30343a
+    }
+
+    .locations-button--secondary {
+      color: #171a20;
+      background: #dedfe1
+    }
+
+    .locations-button--secondary:hover {
+      color: #171a20;
+      background: #d2d4d7
+    }
+
+    @media (max-width: 991px) {
+      .office-grid,
+      .support-grid {
+        grid-template-columns: 1fr
+      }
+
+      .office-role {
+        min-height: 0
+      }
+
+      .office-map {
+        height: 260px
+      }
+
+      .coverage-layout,
+      .locations-cta {
+        grid-template-columns: 1fr
+      }
+
+      .support-item,
+      .support-item+.support-item {
+        padding: 2.5rem
+      }
+
+      .support-number {
+        margin-bottom: 2rem
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .locations-fact strong {
+        white-space: nowrap
+      }
+    }
+
+    @media (max-width: 767px) {
+      .locations-masthead {
+        padding-top: 6rem
+      }
+
+      .locations-facts {
+        grid-template-columns: 1fr
+      }
+
+      .locations-fact {
+        min-height: 150px
+      }
+
+      .coverage-item {
+        grid-template-columns: 1fr;
+        gap: .75rem
+      }
+
+      .locations-cta {
+        text-align: center
+      }
+
+      .locations-cta-actions,
+      .locations-button {
+        width: 100%
+      }
     }
   </style>
 
   <!-- SEO/GEO META -->
   <link rel="canonical" href="https://www.anstelglobal.com/company/locations/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Anstel Autonautics">
+  <meta property="og:site_name" content="Anstel">
   <meta property="og:url" content="https://www.anstelglobal.com/company/locations/">
-  <meta property="og:title" content="Our Locations | Offices Across Australia, India &amp; Fiji — Autonautics by Anstel">
-  <meta property="og:description" content="Find Anstel's offices in Sydney (Australia), Gurugram (India), and Suva (Fiji), with operations extending across Papua New Guinea and the wider Oceania region.">
-  <meta property="og:image" content="https://www.anstelglobal.com/images/AutonauticsLanding.png">
+  <meta property="og:title" content="Anstel Offices &amp; Operating Regions | Australia, India &amp; Fiji">
+  <meta property="og:description" content="Find Anstel offices in Sydney, Gurugram and Suva, plus operational coverage across Papua New Guinea and the wider Oceania region.">
+  <meta property="og:image" content="https://www.anstelglobal.com/images/about-anstel-hero-v2.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Our Locations | Offices Across Australia, India &amp; Fiji — Autonautics by Anstel">
-  <meta name="twitter:description" content="Find Anstel's offices in Sydney (Australia), Gurugram (India), and Suva (Fiji), with operations extending across Papua New Guinea and the wider Oceania region.">
-  <meta name="twitter:image" content="https://www.anstelglobal.com/images/AutonauticsLanding.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.anstelglobal.com/"},{"@type":"ListItem","position":2,"name":"Our Locations","item":"https://www.anstelglobal.com/company/locations/"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Anstel Pty Ltd — Sydney Headquarters","image":"https://www.anstelglobal.com/images/AutonauticsLanding.png","telephone":"+61-2-9416-0444","address":{"@type":"PostalAddress","streetAddress":"Suite 18, 12 Tyron Road","addressLocality":"Lindfield","addressRegion":"NSW","postalCode":"2070","addressCountry":"AU"},"parentOrganization":{"@type":"Organization","name":"Anstel","url":"https://www.anstelglobal.com/"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"ANSTEL Private Limited — India Office","image":"https://www.anstelglobal.com/images/AutonauticsLanding.png","telephone":"+91-96675-39207","address":{"@type":"PostalAddress","streetAddress":"Plot no. 740, 1st Floor, Phase V, Udyog Vihar, Sector 19","addressLocality":"Gurugram","addressRegion":"Haryana","postalCode":"122016","addressCountry":"IN"},"parentOrganization":{"@type":"Organization","name":"Anstel","url":"https://www.anstelglobal.com/"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Anstel — Fiji Office","image":"https://www.anstelglobal.com/images/AutonauticsLanding.png","telephone":"+679-719-0440","address":{"@type":"PostalAddress","streetAddress":"Tamavua","addressLocality":"Suva","addressCountry":"FJ"},"parentOrganization":{"@type":"Organization","name":"Anstel","url":"https://www.anstelglobal.com/"}}</script>
+  <meta name="twitter:title" content="Anstel Offices &amp; Operating Regions | Australia, India &amp; Fiji">
+  <meta name="twitter:description" content="Find Anstel offices in Sydney, Gurugram and Suva, plus operational coverage across Papua New Guinea and the wider Oceania region.">
+  <meta name="twitter:image" content="https://www.anstelglobal.com/images/about-anstel-hero-v2.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://www.anstelglobal.com/company/locations/#webpage",
+        "url": "https://www.anstelglobal.com/company/locations/",
+        "name": "Anstel Offices and Operating Regions",
+        "description": "Anstel offices in Sydney, Gurugram and Suva, with operational coverage across Papua New Guinea and wider Oceania.",
+        "inLanguage": "en",
+        "dateModified": "2026-08-23",
+        "isPartOf": {"@type": "WebSite", "@id": "https://www.anstelglobal.com/#website", "name": "Anstel", "url": "https://www.anstelglobal.com/"},
+        "about": {"@id": "https://www.anstelglobal.com/#organization"},
+        "mainEntity": {"@id": "https://www.anstelglobal.com/company/locations/#offices"}
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.anstelglobal.com/#organization",
+        "name": "Anstel",
+        "url": "https://www.anstelglobal.com/",
+        "logo": "https://www.anstelglobal.com/images/anstel.svg"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://www.anstelglobal.com/company/locations/#offices",
+        "name": "Anstel physical offices",
+        "numberOfItems": 3,
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "item": {"@id": "https://www.anstelglobal.com/company/locations/#sydney-office"}},
+          {"@type": "ListItem", "position": 2, "item": {"@id": "https://www.anstelglobal.com/company/locations/#gurugram-office"}},
+          {"@type": "ListItem", "position": 3, "item": {"@id": "https://www.anstelglobal.com/company/locations/#suva-office"}}
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.anstelglobal.com/company/locations/#sydney-office",
+        "name": "Anstel Pty Ltd — Sydney Headquarters",
+        "telephone": "+61-2-9416-0444",
+        "parentOrganization": {"@id": "https://www.anstelglobal.com/#organization"},
+        "address": {"@type": "PostalAddress", "streetAddress": "Suite 18, 12 Tryon Road", "addressLocality": "Lindfield", "addressRegion": "NSW", "postalCode": "2070", "addressCountry": "AU"}
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.anstelglobal.com/company/locations/#gurugram-office",
+        "name": "ANSTEL Private Limited — Gurugram Office",
+        "telephone": "+91-124-411-8178",
+        "parentOrganization": {"@id": "https://www.anstelglobal.com/#organization"},
+        "address": {"@type": "PostalAddress", "streetAddress": "Plot no. 786, 3rd Floor, Phase V, Udyog Vihar, Sector 19", "addressLocality": "Gurugram", "addressRegion": "Haryana", "postalCode": "122016", "addressCountry": "IN"}
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.anstelglobal.com/company/locations/#suva-office",
+        "name": "Anstel — Suva Office",
+        "telephone": "+679-719-0440",
+        "parentOrganization": {"@id": "https://www.anstelglobal.com/#organization"},
+        "address": {"@type": "PostalAddress", "streetAddress": "Tamavua", "addressLocality": "Suva", "addressCountry": "FJ"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.anstelglobal.com/company/locations/#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.anstelglobal.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Locations", "item": "https://www.anstelglobal.com/company/locations/"}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-white">
 
-  <!-- Hero -->
-  <section class="position-relative overflow-hidden" style="height:100vh;min-height:640px">
-    <img src="/images/AutonauticsLanding.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-      alt="Our Locations">
-    <div class="position-absolute top-0 start-0 end-0 bottom-0"
-      style="background:linear-gradient(to bottom,rgba(0,0,0,.15),transparent 40%,rgba(0,0,0,.6))"></div>
-    <div class="position-absolute start-0 end-0 d-flex justify-content-center px-4" style="top:26vh;z-index:5">
-      <h1 class="text-white fw-bold text-center mb-0"
-        style="font-size:clamp(2.25rem,6vw,4rem);letter-spacing:-.03em;line-height:1.05">Our Locations</h1>
-    </div>
-  </section>
+  <main id="main-content">
+    <header class="locations-masthead">
+      <div class="locations-shell">
+        <h1>Offices &amp;<br>Operating Regions</h1>
+        <p>Anstel has physical offices in Australia, India and Fiji, with operational coverage extending into
+          Papua New Guinea and the wider Oceania region.</p>
+      </div>
+    </header>
 
-  <!-- Value Strip -->
-  <section class="bg-white border-bottom border-light py-4 py-md-5 px-4 px-md-5">
-    <div class="capability-strip-light">
-      <div class="capability-stat-light">3 Regional Offices</div>
-      <div class="capability-stat-light">4 Countries Served</div>
-      <div class="capability-stat-light">Asia-Pacific Coverage</div>
-      <div class="capability-stat-light">Local-Hours Support</div>
-    </div>
-  </section>
+    <section class="locations-facts-wrap" aria-label="Anstel location summary">
+      <div class="locations-shell locations-facts">
+        <div class="locations-fact">
+          <strong>3 physical offices</strong>
+          <span>Sydney, Gurugram and Suva</span>
+        </div>
+        <div class="locations-fact">
+          <strong>Asia-Pacific coverage</strong>
+          <span>Regional delivery and customer support</span>
+        </div>
+        <div class="locations-fact">
+          <strong>Local teams</strong>
+          <span>Engineering, operations and field support</span>
+        </div>
+      </div>
+    </section>
 
-  <!-- Intro -->
-  <section class="section-pad px-4">
-    <div style="max-width:720px">
-      <p class="text-muted lh-lg mb-0">Anstel operates across the Asia-Pacific region, with offices in Australia,
-        India, and Fiji, and operations extending across Papua New Guinea and the wider Oceania region. Having
-        engineering and support staff based in-region means shorter response times, local-hours availability,
-        and teams who understand the regulatory and connectivity conditions specific to each market.</p>
-    </div>
-  </section>
+    <section class="locations-section locations-section--soft" aria-labelledby="office-heading">
+      <div class="locations-shell">
+        <div class="locations-heading">
+          <p class="locations-eyebrow">Physical Offices</p>
+          <h2 id="office-heading">Where to find Anstel.</h2>
+          <p>These are Anstel&rsquo;s verified office locations. Each card provides the legal or operating entity,
+            office function, address, local telephone number and map directions.</p>
+        </div>
 
-  <!-- Offices -->
-  <section class="section-pad px-4" style="background:#f9fafb">
- <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 g-md-4">
-      <div class="col">
-        <div class="tesla-card rounded-4 bg-white h-100 overflow-hidden">
-          <div style="height:130px">
-            <iframe src="https://www.google.com/maps?q=Suite+18%2C+12+Tyron+Road%2C+Lindfield+NSW+2070%2C+Australia&output=embed"
-              width="100%" height="130" style="border:0;display:block" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade" title="Map: Sydney office"></iframe>
+        <div class="office-grid">
+          <article class="office-card" id="sydney-office">
+            <div class="office-map">
+              <iframe
+                src="https://www.google.com/maps?q=Suite+18%2C+12+Tryon+Road%2C+Lindfield+NSW+2070%2C+Australia&amp;output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Map showing Anstel's Sydney headquarters"></iframe>
+            </div>
+            <div class="office-copy">
+              <p class="office-label">Global Headquarters</p>
+              <h3>Sydney, Australia</h3>
+              <p class="office-role">Corporate governance, core research and development, and enterprise partnerships.</p>
+              <address>
+                <strong>Anstel Pty Ltd</strong><br>
+                Suite 18, 12 Tryon Road<br>
+                Lindfield NSW 2070<br>
+                Australia
+              </address>
+              <div class="office-actions">
+                <a class="office-action" href="tel:+61294160444" aria-label="Call Anstel Sydney office">+61 2 9416 0444</a>
+                <a class="office-action" href="https://www.google.com/maps/search/?api=1&amp;query=Suite+18%2C+12+Tryon+Road%2C+Lindfield+NSW+2070%2C+Australia"
+                  target="_blank" rel="noopener">Directions</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="office-card" id="gurugram-office">
+            <div class="office-map">
+              <iframe
+                src="https://www.google.com/maps?q=Plot+no.+786%2C+3rd+Floor%2C+Phase+V%2C+Udyog+Vihar%2C+Sector+19%2C+Gurugram%2C+Haryana+122016%2C+India&amp;output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Map showing Anstel's Gurugram office"></iframe>
+            </div>
+            <div class="office-copy">
+              <p class="office-label">South Asia Hub</p>
+              <h3>Gurugram, India</h3>
+              <p class="office-role">Software engineering, platform operations and regional sales.</p>
+              <address>
+                <strong>ANSTEL Private Limited</strong><br>
+                Plot no. 786, 3rd Floor, Phase V<br>
+                Udyog Vihar, Sector 19<br>
+                Gurugram, Haryana 122016, India
+              </address>
+              <div class="office-actions">
+                <a class="office-action" href="tel:+911244118178" aria-label="Call Anstel Gurugram office">+91 124 411 8178</a>
+                <a class="office-action" href="https://www.google.com/maps/search/?api=1&amp;query=Plot+no.+786%2C+3rd+Floor%2C+Phase+V%2C+Udyog+Vihar%2C+Sector+19%2C+Gurugram%2C+Haryana+122016%2C+India"
+                  target="_blank" rel="noopener">Directions</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="office-card" id="suva-office">
+            <div class="office-map">
+              <iframe src="https://www.google.com/maps?q=Tamavua%2C+Suva%2C+Fiji&amp;output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Map showing Anstel's Suva office"></iframe>
+            </div>
+            <div class="office-copy">
+              <p class="office-label">Pacific Hub</p>
+              <h3>Suva, Fiji</h3>
+              <p class="office-role">Telecom deployment, field operations and regional customer support.</p>
+              <address>
+                <strong>Anstel</strong><br>
+                Tamavua<br>
+                Suva, Fiji Islands
+              </address>
+              <div class="office-actions">
+                <a class="office-action" href="tel:+6797190440" aria-label="Call Anstel Suva office">+679 719 0440</a>
+                <a class="office-action" href="https://www.google.com/maps/search/?api=1&amp;query=Tamavua%2C+Suva%2C+Fiji"
+                  target="_blank" rel="noopener">Directions</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="locations-section" aria-labelledby="coverage-heading">
+      <div class="locations-shell coverage-layout">
+        <div class="coverage-intro">
+          <p class="locations-eyebrow">Operating Coverage</p>
+          <h2 id="coverage-heading">Beyond our office locations.</h2>
+          <p>Operational coverage means Anstel supports customers or deployments in the region. It does not imply
+            that Anstel maintains a physical office in every listed market.</p>
+        </div>
+        <div class="coverage-list">
+          <article class="coverage-item">
+            <h3>Papua New Guinea</h3>
+            <p>Anstel supports operations from National District, Waigani Road, Allotment 33, Port Moresby. Regional
+              enquiries are coordinated through the Suva or Sydney office.</p>
+          </article>
+          <article class="coverage-item">
+            <h3>Wider Oceania</h3>
+            <p>Regional deployments and customer support across Oceania are coordinated through Anstel&rsquo;s Pacific
+              hub in Suva, with assistance from the Sydney headquarters when required.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-section" aria-labelledby="regional-support-heading">
+      <div class="locations-shell">
+        <div class="locations-heading">
+          <p class="locations-eyebrow">Why Regional Presence Matters</p>
+          <h2 id="regional-support-heading">Local teams. Faster answers.</h2>
+          <p>Anstel&rsquo;s offices bring technical, operational and customer-facing teams closer to the markets they support.</p>
+        </div>
+        <div class="support-grid">
+          <article class="support-item">
+            <span class="support-number">01</span>
+            <h3>Local-hours availability</h3>
+            <p>Regional teams provide a practical contact point during working hours that align with local operations.</p>
+          </article>
+          <article class="support-item">
+            <span class="support-number">02</span>
+            <h3>Market understanding</h3>
+            <p>In-region staff understand local connectivity conditions, operating realities and regional requirements.</p>
+          </article>
+          <article class="support-item">
+            <span class="support-number">03</span>
+            <h3>Connected delivery</h3>
+            <p>Engineering, deployment and support teams coordinate across offices to deliver Autonautics and Anstel IoT solutions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="locations-cta-wrap" aria-labelledby="locations-cta-heading">
+      <div class="locations-shell">
+        <div class="locations-cta">
+          <div>
+            <h2 id="locations-cta-heading">Talk to the right Anstel team.</h2>
+            <p>Tell us where you operate and what you need. We&rsquo;ll connect you with the appropriate regional office.</p>
           </div>
-          <div class="p-4">
-            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
-              Headquarters</p>
-            <h3 class="h6 fw-bold mb-1">Sydney, Australia</h3>
-            <p class="text-secondary small mb-3">Anstel Pty Ltd<br>Suite 18, 12 Tyron Road,<br>Lindfield NSW 2070,
-              Australia</p>
-            <a href="tel:+61294160444" class="small fw-semibold text-decoration-none"
-              style="color:#171a20">+61 2 9416 0444</a>
+          <div class="locations-cta-actions">
+            <a href="/company/contact/" class="locations-button locations-button--primary">Contact Anstel</a>
+            <a href="/demo/" class="locations-button locations-button--secondary">Request a Demo</a>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="tesla-card rounded-4 bg-white h-100 overflow-hidden">
-          <div style="height:130px">
-            <iframe src="https://www.google.com/maps?q=Plot+no.+740%2C+1st+Floor%2C+Phase+V%2C+Udyog+Vihar%2C+Sector+19%2C+Gurugram%2C+Haryana+122016%2C+India&output=embed"
-              width="100%" height="130" style="border:0;display:block" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade" title="Map: Gurugram office"></iframe>
-          </div>
-          <div class="p-4">
-            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
-              India Office</p>
-            <h3 class="h6 fw-bold mb-1">Gurugram, India</h3>
-            <p class="text-secondary small mb-3">ANSTEL Private Limited<br>Plot no. 740, 1st Floor, Phase V,
-              Udyog Vihar,<br>Sector 19, Gurugram &ndash; Haryana 122016</p>
-            <a href="tel:+919667539207" class="small fw-semibold text-decoration-none d-block"
-              style="color:#171a20">+91 96675 39207</a>
-            <a href="https://wa.me/911244183657" target="_blank" rel="noopener"
-              class="small fw-semibold text-decoration-none d-block" style="color:#171a20">+91 124 418 3657 (WhatsApp)</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="tesla-card rounded-4 bg-white h-100 overflow-hidden">
-          <div style="height:130px">
-            <iframe src="https://www.google.com/maps?q=Tamavua%2C+Suva%2C+Fiji&output=embed"
-              width="100%" height="130" style="border:0;display:block" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade" title="Map: Fiji office"></iframe>
-          </div>
-          <div class="p-4">
-            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
-              Fiji Office</p>
-            <h3 class="h6 fw-bold mb-1">Suva, Fiji</h3>
-            <p class="text-secondary small mb-3">Tamavua,<br>Suva, Fiji Islands</p>
-            <a href="tel:+6797190440" class="small fw-semibold text-decoration-none"
-              style="color:#171a20">+679 719 0440</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="tesla-card rounded-4 bg-white p-4 h-100">
-          <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
-            Papua New Guinea</p>
-          <h3 class="h6 fw-bold mb-1">Operating in PNG</h3>
-          <p class="text-secondary small mb-0">Anstel operates in Papua New Guinea as part of our wider
-            Oceania coverage. Reach out via the Fiji or Sydney office above and we&rsquo;ll connect you.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Regional Presence Matters -->
-  <section class="section-pad bg-white px-4">
-    <div style="max-width:780px;margin:auto">
-      <p class="section-eyebrow">Why It Matters</p>
-      <h2 class="section-heading">Local Teams. Faster Answers.</h2>
-      <p class="section-lede">Every office is staffed with people who understand the market they serve&mdash;from
-        regional compliance requirements to local connectivity conditions&mdash;so support doesn&rsquo;t depend
-        on time zones lining up.</p>
-    </div>
-
- <div style="padding-top:3.5rem">
-      <div class="row row-cols-1 row-cols-sm-3 g-3 g-md-4">
-        <div class="col">
-          <div class="feature-card tesla-card-flat h-100 p-4">
-            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
-              Local-Hours Availability</p>
-            <h3 class="fw-bold mb-2">Support in Your Time Zone.</h3>
-            <p class="text-secondary small lh-lg mb-0">In-region teams mean shorter wait times and support
-              during hours that actually match your working day.</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="feature-card tesla-card-flat h-100 p-4">
-            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
-              Regional Expertise</p>
-            <h3 class="fw-bold mb-2">Teams Who Know the Market.</h3>
-            <p class="text-secondary small lh-lg mb-0">Local staff understand region-specific regulations,
-              connectivity conditions, and operating realities.</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="feature-card tesla-card-flat h-100 p-4">
-            <p class="text-muted fw-semibold text-uppercase mb-2" style="font-size:.68rem;letter-spacing:.12em">
-              Growing Footprint</p>
-            <h3 class="fw-bold mb-2">Expanding Alongside Our Customers.</h3>
-            <p class="text-secondary small lh-lg mb-0">As Autonautics grows into new markets, our regional
-              presence grows with it.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section-pad px-4 text-center cta-band" style="background:#0d1b2a">
-    <div class="mx-auto" style="max-width:640px">
-      <p class="section-eyebrow">Get Started</p>
-      <h2 class="section-heading text-white">Talk to the Team Closest to You.</h2>
-      <p class="text-secondary small lh-lg mb-5">Have a general question, or ready for a quote or demo? We&rsquo;ll
-        connect you with the right team.</p>
-      <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <a href="/demo/" class="btn cta-primary-btn px-5 py-2">Request a Demo</a>
-        <a href="/company/contact/" class="btn cta-secondary-btn px-5 py-2">Contact Us</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="bg-white border-top py-3 px-3">
+  <footer class="bg-white py-3 px-3">
     <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mx-auto" style="max-width:1280px">
       <span class="text-muted" style="font-size:.75rem">Anstel &copy; 2026</span>
       <a href="/legal/terms/" class="text-secondary text-decoration-none" style="font-size:.75rem">Privacy &amp; Legal</a>

@@ -14,6 +14,118 @@
       padding-top: 56px;
       padding-bottom: 56px
     }
+
+    .partner-gallery {
+      max-width: 1180px;
+      margin: clamp(3.5rem, 7vw, 6rem) auto 0;
+      overflow: hidden;
+      border: 1px solid #dedfe1;
+      border-radius: 12px;
+      background: #fff
+    }
+
+    .partner-gallery-primary,
+    .partner-gallery-secondary {
+      display: grid
+    }
+
+    .partner-gallery-primary {
+      grid-template-columns: repeat(3, minmax(0, 1fr))
+    }
+
+    .partner-gallery-secondary {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid #dedfe1
+    }
+
+    .partner-gallery-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      padding: clamp(2rem, 4vw, 4rem);
+      background: #fff;
+      transition: background-color .3s ease
+    }
+
+    .partner-gallery-primary .partner-gallery-item {
+      min-height: clamp(190px, 19vw, 250px)
+    }
+
+    .partner-gallery-secondary .partner-gallery-item {
+      min-height: clamp(145px, 14vw, 185px)
+    }
+
+    .partner-gallery-item+.partner-gallery-item {
+      border-left: 1px solid #dedfe1
+    }
+
+    .partner-gallery-item img {
+      display: block;
+      width: 100%;
+      height: 72px;
+      max-width: 210px;
+      object-fit: contain;
+      filter: grayscale(1) contrast(1.1);
+      opacity: .62;
+      transition: filter .3s ease, opacity .3s ease, transform .3s ease
+    }
+
+    .partner-gallery-item--symbol img {
+      max-width: 105px
+    }
+
+    .partner-gallery-item:hover {
+      background: #f7f7f7
+    }
+
+    .partner-gallery-item:hover img {
+      filter: grayscale(0) contrast(1);
+      opacity: 1;
+      transform: scale(1.05)
+    }
+
+    @media (max-width: 767px) {
+      .partner-gallery-primary,
+      .partner-gallery-secondary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-top: 0
+      }
+
+      .partner-gallery-primary .partner-gallery-item,
+      .partner-gallery-secondary .partner-gallery-item {
+        min-height: 145px;
+        border-top: 1px solid #dedfe1
+      }
+
+      .partner-gallery-item:nth-child(odd) {
+        border-left: 0
+      }
+
+      .partner-gallery-primary .partner-gallery-item:first-child,
+      .partner-gallery-primary .partner-gallery-item:nth-child(2) {
+        border-top: 0
+      }
+    }
+
+    @media (max-width: 479px) {
+      .partner-gallery-primary,
+      .partner-gallery-secondary {
+        grid-template-columns: 1fr
+      }
+
+      .partner-gallery-item,
+      .partner-gallery-primary .partner-gallery-item:first-child,
+      .partner-gallery-primary .partner-gallery-item:nth-child(2) {
+        min-height: 130px;
+        border-top: 1px solid #dedfe1;
+        border-left: 0 !important
+      }
+
+      .partner-gallery-primary .partner-gallery-item:first-child {
+        border-top: 0
+      }
+    }
   </style>
 
   <!-- SEO/GEO META -->
@@ -204,41 +316,30 @@
         solutions for both large multi-national fleets and SMEs.</p>
     </div>
 
- <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3 g-md-4" style="padding-top:3.5rem">
-      <div class="col">
-        <div class="tesla-card rounded-4 bg-white p-3 p-lg-4 h-100 text-center d-flex flex-column justify-content-center">
-          <p class="fw-bold mb-1" style="color:#171a20">Telstra</p>
-          <p class="text-muted small mb-0">Australia</p>
+    <div class="partner-gallery" role="list" aria-label="Anstel trusted customers and partners">
+      <div class="partner-gallery-primary">
+        <div class="partner-gallery-item" role="listitem">
+          <img src="/images/partner-icici-lombard.png" alt="ICICI Lombard" loading="lazy">
+        </div>
+        <div class="partner-gallery-item partner-gallery-item--symbol" role="listitem">
+          <img src="/images/partner-larsen-toubro.png" alt="Larsen and Toubro" loading="lazy">
+        </div>
+        <div class="partner-gallery-item partner-gallery-item--symbol" role="listitem">
+          <img src="/images/partner-toyota.png" alt="Toyota" loading="lazy">
         </div>
       </div>
-      <div class="col">
-        <div class="tesla-card rounded-4 bg-white p-3 p-lg-4 h-100 text-center d-flex flex-column justify-content-center">
-          <p class="fw-bold mb-1" style="color:#171a20">Singtel Optus</p>
-          <p class="text-muted small mb-0">Australia</p>
+      <div class="partner-gallery-secondary">
+        <div class="partner-gallery-item" role="listitem">
+          <img src="/images/partner-digicel.png" alt="Digicel" loading="lazy">
         </div>
-      </div>
-      <div class="col">
-        <div class="tesla-card rounded-4 bg-white p-3 p-lg-4 h-100 text-center d-flex flex-column justify-content-center">
-          <p class="fw-bold mb-1" style="color:#171a20">Vodafone</p>
-          <p class="text-muted small mb-0">Global</p>
+        <div class="partner-gallery-item" role="listitem">
+          <img src="/images/partner-kineis.png" alt="Kineis" loading="lazy">
         </div>
-      </div>
-      <div class="col">
-        <div class="tesla-card rounded-4 bg-white p-3 p-lg-4 h-100 text-center d-flex flex-column justify-content-center">
-          <p class="fw-bold mb-1" style="color:#171a20">Spark NZ</p>
-          <p class="text-muted small mb-0">New Zealand</p>
+        <div class="partner-gallery-item partner-gallery-item--symbol" role="listitem">
+          <img src="/images/partner-coca-cola.png" alt="Coca-Cola" loading="lazy">
         </div>
-      </div>
-      <div class="col">
-        <div class="tesla-card rounded-4 bg-white p-3 p-lg-4 h-100 text-center d-flex flex-column justify-content-center">
-          <p class="fw-bold mb-1" style="color:#171a20">Digicel</p>
-          <p class="text-muted small mb-0">Pacific &amp; Caribbean</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="tesla-card rounded-4 bg-white p-3 p-lg-4 h-100 text-center d-flex flex-column justify-content-center">
-          <p class="fw-bold mb-1" style="color:#171a20">Unlimit-Reliance</p>
-          <p class="text-muted small mb-0">India</p>
+        <div class="partner-gallery-item partner-gallery-item--symbol" role="listitem">
+          <img src="/images/partner-sail.png" alt="Steel Authority of India Limited" loading="lazy">
         </div>
       </div>
     </div>
