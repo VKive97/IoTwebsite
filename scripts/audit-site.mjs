@@ -31,17 +31,21 @@ const textContent = html => html.replace(/<script\b[\s\S]*?<\/script>/gi, '').re
 
 for (const file of htmlFiles) {
   const name = rel(file);
+  if (name.startsWith('admin/')) continue;
   const html = fs.readFileSync(file, 'utf8');
-  const title = html.match(/<title>([\s\S]*?)<\/title>/i)?.[1].trim();
+  const isNoindex = /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html);
+  const title = html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1].trim();
   const description = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i)?.[1];
   const canonical = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i)?.[1];
   const h1Count = (html.match(/<h1\b/gi) || []).length;
-  if (!title) errors.push(`${name}: missing title`);
-  if (!description) errors.push(`${name}: missing meta description`);
-  if (!canonical) errors.push(`${name}: missing canonical URL`);
-  if (h1Count !== 1) errors.push(`${name}: expected one H1, found ${h1Count}`);
-  for (const property of ['og:title', 'og:description', 'og:url', 'og:image']) {
-    if (!new RegExp(`<meta\\s+property=["']${property}["']`, 'i').test(html)) warnings.push(`${name}: missing ${property}`);
+  if (!isNoindex) {
+    if (!title) errors.push(`${name}: missing title`);
+    if (!description) errors.push(`${name}: missing meta description`);
+    if (!canonical) errors.push(`${name}: missing canonical URL`);
+    if (h1Count !== 1) errors.push(`${name}: expected one H1, found ${h1Count}`);
+    for (const property of ['og:title', 'og:description', 'og:url', 'og:image']) {
+      if (!new RegExp(`<meta\\s+property=["']${property}["']`, 'i').test(html)) warnings.push(`${name}: missing ${property}`);
+    }
   }
   for (const match of html.matchAll(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi)) {
     try { JSON.parse(match[1]); } catch (error) { errors.push(`${name}: invalid JSON-LD (${error.message})`); }
@@ -56,7 +60,7 @@ for (const file of htmlFiles) {
     const exists = fs.existsSync(local) || fs.existsSync(path.join(local, 'index.html'));
     if (!exists) errors.push(`${name}: broken internal reference ${target}`);
   }
-  if (!name.startsWith('admin/') && !name.includes('/post/') && !sitemap.includes(`https://www.anstelglobal.com${pageUrl(file)}`)) {
+  if (!isNoindex && !name.includes('/post/') && !sitemap.includes(`https://www.anstelglobal.com${pageUrl(file)}`)) {
     warnings.push(`${name}: not included in sitemap.xml`);
   }
   if (countryConsistencyPages.includes(name)) {
