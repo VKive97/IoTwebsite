@@ -4,6 +4,15 @@
 
 Anstel serves organizations in transportation, logistics, construction, mining, utilities, public services, and other asset-intensive industries. Autonautics products share one platform, one data model, and one set of integrations, so customers can start with a single product and expand without adding disconnected systems.
 
+## Regions
+
+- [Regions Overview](https://www.anstelglobal.com/regions/): Autonautics by Anstel availability across five Asia-Pacific countries.
+- [Australia](https://www.anstelglobal.com/regions/australia/): Australian fleet, asset, IoT, and connected operations support.
+- [India](https://www.anstelglobal.com/regions/india/): Indian fleet technology, engineering, deployment, and regional support.
+- [Fiji](https://www.anstelglobal.com/regions/fiji/): Fiji and Pacific connected operations supported from Suva.
+- [Papua New Guinea](https://www.anstelglobal.com/regions/papua-new-guinea/): Operational availability in Papua New Guinea, coordinated through Pacific teams.
+- [New Zealand](https://www.anstelglobal.com/regions/new-zealand/): New Zealand availability coordinated through Sydney and Pacific teams.
+
 ## Platform
 
 - [Autonautics](https://www.anstelglobal.com/platform/): Overview of Anstel's Connected Operations Platform — how it connects assets, people, IoT devices, and business systems, and how its products work together.

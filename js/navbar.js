@@ -117,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <li class="mb-2"><a href="/company/about/" class="small text-secondary text-decoration-none">About Anstel</a></li>
               <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Careers</a></li>
               <li class="mb-2"><a href="/company/locations/" class="small text-secondary text-decoration-none">Locations</a></li>
+              <li class="mb-2"><a href="/regions/" class="small text-secondary text-decoration-none">Regions</a></li>
               <li><a href="/company/contact/" class="small text-secondary text-decoration-none">Contact Us</a></li>
             </ul>
           </div>
@@ -238,6 +239,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <a href="/company/about/">About Anstel</a>
               <a href="#">Careers</a>
               <a href="/company/locations/">Locations</a>
+              <a href="/regions/">Regions</a>
               <a href="/company/contact/">Contact Us</a>
             </div>
           </div>
