@@ -13,6 +13,10 @@ Anstel serves organizations in transportation, logistics, construction, mining, 
 - [Papua New Guinea](https://www.anstelglobal.com/regions/papua-new-guinea/): Operational availability in Papua New Guinea, coordinated through Pacific teams.
 - [New Zealand](https://www.anstelglobal.com/regions/new-zealand/): New Zealand availability coordinated through Sydney and Pacific teams.
 
+## Knowledge Centre
+
+- [GPS Tracking and Fleet Management in Papua New Guinea](https://www.anstelglobal.com/company/knowledge-center/gps-tracking-papua-new-guinea/): Guidance on fleet visibility, fuel control, driver safety and vehicle security for Papua New Guinea operations.
+
 ## Platform
 
 - [Autonautics](https://www.anstelglobal.com/platform/): Overview of Anstel's Connected Operations Platform — how it connects assets, people, IoT devices, and business systems, and how its products work together.
