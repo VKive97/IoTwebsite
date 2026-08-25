@@ -1,8 +1,9 @@
 /* Wires #demo-form (/demo/) and #contact-form (/company/contact/) to the
-   public Autonautics API. The API must allow CORS requests from
-   https://www.anstelglobal.com. */
+   AutonauticsBlog.API service. NOTE: the API currently only has a LAN address
+   (no public host yet), so these forms only submit successfully from machines
+   on the same network as the API server — see js/blog.js for the same caveat. */
 (function () {
-  var API_BASE = 'https://api.anstelglobal.com';
+  var API_BASE = 'http://192.168.4.9:9814';
 
   function fieldValue(form, id) {
     var el = form.querySelector('#' + id);
