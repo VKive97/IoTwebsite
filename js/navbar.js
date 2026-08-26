@@ -274,7 +274,14 @@ document.addEventListener('DOMContentLoaded', function () {
     </button>
   `;
 
-  document.body.insertBefore(header, document.body.firstChild);
+  var skipLink = document.querySelector('.skip-link');
+
+  if (skipLink) {
+    document.body.insertBefore(header, skipLink.nextSibling);
+  } else {
+    document.body.insertBefore(header, document.body.firstChild);
+  }
+
   document.body.insertBefore(overlay, header.nextSibling);
   // document.body.appendChild(bar); // schedule-bar disabled sitewide
 });

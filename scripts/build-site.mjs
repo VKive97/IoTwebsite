@@ -52,8 +52,14 @@ for (const file of htmlFiles) {
         const data = JSON.parse(source);
         if (data['@type'] !== 'BlogPosting') return script;
         data.publisher = { '@id': `${site}/#organization` };
-        const topics = Array.isArray(data.about) ? data.about.filter(item => item !== 'Autonautics') : [];
-        data.about = [{ '@id': `${site}/#autonautics` }, ...topics];
+        const autonauticsId = `${site}/#autonautics`;
+        const topics = Array.isArray(data.about)
+          ? data.about.filter(item =>
+              item !== 'Autonautics' &&
+              item?.['@id'] !== autonauticsId
+            )
+          : [];
+        data.about = [{ '@id': autonauticsId }, ...topics];
         return `<script type="application/ld+json">${JSON.stringify(data)}</script>`;
       } catch { return script; }
     });

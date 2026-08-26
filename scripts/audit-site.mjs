@@ -63,6 +63,11 @@ for (const file of htmlFiles) {
         if (data.brand?.['@id'] !== 'https://www.anstelglobal.com/#autonautics' || data.brand?.name !== 'Autonautics') errors.push(`${name}: SoftwareApplication brand hierarchy is incorrect`);
         if (data.publisher?.['@id'] !== 'https://www.anstelglobal.com/#organization') errors.push(`${name}: SoftwareApplication publisher hierarchy is incorrect`);
       }
+      if (name === 'index.html' && data['@type'] === 'WebSite' && data.name !== 'Anstel') errors.push(`${name}: WebSite schema name must be Anstel`);
+      if (Array.isArray(data.about)) {
+        const aboutIds = data.about.map(item => item?.['@id']).filter(Boolean);
+        if (new Set(aboutIds).size !== aboutIds.length) errors.push(`${name}: duplicate JSON-LD about @id`);
+      }
     } catch (error) { errors.push(`${name}: invalid JSON-LD (${error.message})`); }
   }
   for (const img of html.matchAll(/<img\b([^>]*)>/gi)) {
