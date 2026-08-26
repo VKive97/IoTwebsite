@@ -18,14 +18,6 @@ function walk(dir) {
 const fallbackNav = `<header class="static-site-nav" data-static-nav><a href="/" class="static-site-logo" aria-label="Anstel home"><img src="/images/anstel.svg" width="115" height="40" alt="Anstel"></a><nav aria-label="Primary navigation"><a href="/platform/">Autonautics</a><a href="/solutions/fleet-management/">Solutions</a><a href="/industries/">Industries</a><a href="/company/knowledge-center/">Knowledge Centre</a><a href="/company/customer-stories/">Customer Stories</a><a href="/regions/">Regions</a><a href="/company/contact/">Contact</a></nav></header>`;
 
 const htmlFiles = walk(root).filter(file => file.endsWith('.html'));
-const regionalAvailabilityPages = new Set([
-  'platform/connected-fleet/index.html',
-  'solutions/fleet-management/index.html',
-  'solutions/fleet-tracking/index.html',
-  'solutions/fuel-management/index.html',
-  'solutions/video-telematics/index.html',
-  'solutions/fleet-security/index.html'
-]);
 const homepageSource = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const sharedFooter = homepageSource.match(/<footer\b[\s\S]*?<\/footer>/i)?.[0];
 if (!sharedFooter) throw new Error('Homepage footer is required as the shared footer template.');
@@ -99,13 +91,8 @@ for (const file of htmlFiles) {
   html = html.replaceAll('Which industries use Anstel?', 'Which industries does Anstel serve?');
   html = html.replaceAll('Autonautics supports compatible GPS tracking and telematics deployments across Papua New Guinea, subject to network and device coverage.', 'Anstel supports Autonautics GPS tracking and compatible telematics deployments across Papua New Guinea, subject to network and device coverage.');
 
-  // Turn the repeated plain regional links into one shared visual component.
-  if (regionalAvailabilityPages.has(rel)) {
-    html = html
-      .replace(/<section class="section-pad bg-light px-4">(?=\s*<div style="max-width:820px;margin:auto">\s*<p class="section-eyebrow">Regional Availability<\/p>)/i, '<section class="regional-availability">')
-      .replace(/<div style="max-width:820px;margin:auto">(?=\s*<p class="section-eyebrow">Regional Availability<\/p>)/i, '<div class="regional-availability-inner">')
-      .replace(/<nav class="d-flex flex-wrap gap-3" aria-label="Regional availability">/i, '<nav class="regional-market-grid" aria-label="Regional availability">');
-  }
+  // Product and solution pages keep regional discovery in shared navigation and footer links.
+  html = html.replace(/\s*<!-- Regional Availability -->\s*<section class="regional-availability">[\s\S]*?<\/section>/gi, '');
 
   // Shared navbar interactions depend on jQuery, which must load before main.js.
   if (/\/js\/main\.js/.test(html) && !/jquery(?:\.min)?\.js/i.test(html)) {

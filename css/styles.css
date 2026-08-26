@@ -967,29 +967,6 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
   .presence-region-nav a{flex:1 1 calc(50% - .65rem);justify-content:space-between}
 }
 
-/* ── Shared regional availability panel ── */
-.regional-availability{padding:clamp(4rem,8vw,7rem) clamp(1rem,4vw,3rem);background:#fff}
-.regional-availability-inner{
-  max-width:1280px;margin:auto;color:#171a20
-}
-.regional-availability .section-eyebrow{color:#4169dc}
-.regional-availability .section-heading{max-width:840px;color:#171a20;font-size:clamp(2.35rem,5vw,4.75rem);line-height:.98}
-.regional-availability .section-lede{max-width:760px;color:#5c5e62}
-.regional-market-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.75rem;margin-top:clamp(2.5rem,5vw,4.5rem)}
-.regional-market-grid a{
-  position:relative;display:flex;min-height:128px;align-items:flex-end;justify-content:space-between;
-  padding:1.25rem;border-radius:1rem;background:#f4f5f6;color:#171a20;
-  font-size:.88rem;font-weight:650;text-decoration:none;transition:background-color .2s ease,transform .2s ease
-}
-.regional-market-grid a::before{position:absolute;top:1.15rem;left:1.25rem;color:#4169dc;font-size:.67rem;font-weight:700;letter-spacing:.12em}
-.regional-market-grid a:nth-child(1)::before{content:"01"}.regional-market-grid a:nth-child(2)::before{content:"02"}.regional-market-grid a:nth-child(3)::before{content:"03"}.regional-market-grid a:nth-child(4)::before{content:"04"}.regional-market-grid a:nth-child(5)::before{content:"05"}
-.regional-market-grid a::after{content:"→";color:#4169dc;font-size:1rem;transition:transform .2s ease}
-.regional-market-grid a:hover,.regional-market-grid a:focus-visible{background:#e9ebee;color:#171a20;transform:translateY(-3px)}
-.regional-market-grid a:hover::after,.regional-market-grid a:focus-visible::after{transform:translateX(3px)}
-.regional-market-grid a:focus-visible{outline:3px solid rgba(65,105,220,.35);outline-offset:3px}
-@media(max-width:900px){.regional-market-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.regional-market-grid a:last-child{grid-column:1/-1}}
-@media(max-width:575px){.regional-market-grid{grid-template-columns:1fr}.regional-market-grid a:last-child{grid-column:auto}.regional-market-grid a{min-height:96px}}
-
 /* ── Process steps (numbered, connected rail) ── */
 .process-step{position:relative}
 .process-step-num{
