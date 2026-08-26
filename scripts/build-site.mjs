@@ -18,6 +18,18 @@ function walk(dir) {
 const fallbackNav = `<header class="static-site-nav" data-static-nav><a href="/" class="static-site-logo" aria-label="Anstel home"><img src="/images/anstel.svg" width="115" height="40" alt="Anstel"></a><nav aria-label="Primary navigation"><a href="/platform/">Autonautics</a><a href="/solutions/fleet-management/">Solutions</a><a href="/industries/">Industries</a><a href="/company/knowledge-center/">Knowledge Centre</a><a href="/company/customer-stories/">Customer Stories</a><a href="/regions/">Regions</a><a href="/company/contact/">Contact</a></nav></header>`;
 
 const htmlFiles = walk(root).filter(file => file.endsWith('.html'));
+const regionalAvailabilityPages = new Set([
+  'platform/connected-fleet/index.html',
+  'solutions/fleet-management/index.html',
+  'solutions/fleet-tracking/index.html',
+  'solutions/fuel-management/index.html',
+  'solutions/video-telematics/index.html',
+  'solutions/fleet-security/index.html'
+]);
+const homepageSource = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const sharedFooter = homepageSource.match(/<footer\b[\s\S]*?<\/footer>/i)?.[0];
+if (!sharedFooter) throw new Error('Homepage footer is required as the shared footer template.');
+
 for (const file of htmlFiles) {
   const rel = path.relative(root, file).replaceAll('\\', '/');
   if (rel.startsWith('admin/')) continue;
@@ -28,6 +40,24 @@ for (const file of htmlFiles) {
   if (/<meta\s+property=["']og:type["']/i.test(html) && !/<meta\s+property=["']og:site_name["']/i.test(html)) {
     html = html.replace(/(<meta\s+property=["']og:type["'][^>]*>)/i, '$1<meta property="og:site_name" content="Anstel">');
   }
+
+  // Reuse canonical entity IDs wherever page schemas describe Anstel.
+  html = html.replace(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi, (script, source) => {
+    try {
+      const data = JSON.parse(source);
+      let changed = false;
+      if (/^industries\/(?:transportation|logistics-supply-chain|waste-management|food-services-fmcg)\/index\.html$/.test(rel) && data['@type'] === 'Service' && data.provider?.name === 'Anstel') {
+        data.provider['@id'] = `${site}/#organization`;
+        data.provider.brand = { '@id': `${site}/#autonautics` };
+        changed = true;
+      }
+      if ((rel === 'company/contact/index.html' || rel === 'regions/index.html') && data.about?.name === 'Anstel') {
+        data.about['@id'] = `${site}/#organization`;
+        changed = true;
+      }
+      return changed ? `<script type="application/ld+json">${JSON.stringify(data)}</script>` : script;
+    } catch { return script; }
+  });
 
   html = html.replaceAll('"brand":{"@type":"Brand","name":"Autonautics"}', '"brand":{"@id":"https://www.anstelglobal.com/#autonautics"}');
   html = html.replaceAll('"provider":{"@type":"Organization","name":"Anstel","brand":{"@id":"https://www.anstelglobal.com/#autonautics"}}', '"provider":{"@id":"https://www.anstelglobal.com/#organization"}');
@@ -51,6 +81,7 @@ for (const file of htmlFiles) {
       try {
         const data = JSON.parse(source);
         if (data['@type'] !== 'BlogPosting') return script;
+        if (data.author?.name === 'Anstel') data.author['@id'] = `${site}/#organization`;
         data.publisher = { '@id': `${site}/#organization` };
         const autonauticsId = `${site}/#autonautics`;
         const topics = Array.isArray(data.about)
@@ -66,6 +97,23 @@ for (const file of htmlFiles) {
   }
 
   html = html.replaceAll('Which industries use Anstel?', 'Which industries does Anstel serve?');
+  html = html.replaceAll('Autonautics supports compatible GPS tracking and telematics deployments across Papua New Guinea, subject to network and device coverage.', 'Anstel supports Autonautics GPS tracking and compatible telematics deployments across Papua New Guinea, subject to network and device coverage.');
+
+  // Turn the repeated plain regional links into one shared visual component.
+  if (regionalAvailabilityPages.has(rel)) {
+    html = html
+      .replace(/<section class="section-pad bg-light px-4">(?=\s*<div style="max-width:820px;margin:auto">\s*<p class="section-eyebrow">Regional Availability<\/p>)/i, '<section class="regional-availability">')
+      .replace(/<div style="max-width:820px;margin:auto">(?=\s*<p class="section-eyebrow">Regional Availability<\/p>)/i, '<div class="regional-availability-inner">')
+      .replace(/<nav class="d-flex flex-wrap gap-3" aria-label="Regional availability">/i, '<nav class="regional-market-grid" aria-label="Regional availability">');
+  }
+
+  // Shared navbar interactions depend on jQuery, which must load before main.js.
+  if (/\/js\/main\.js/.test(html) && !/jquery(?:\.min)?\.js/i.test(html)) {
+    html = html.replace(
+      /<script src="\/js\/navbar\.js"><\/script>/i,
+      '<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script><script src="/js/navbar.js"></script>'
+    );
+  }
 
   // Resolve or remove unfinished links without leaving empty anchors.
   html = html.replace(/href=["']#["'](?=[^>]*>\s*Customer Success\s*<)/gi, 'href="/company/customer-stories/"');
@@ -93,11 +141,24 @@ for (const file of htmlFiles) {
   html = html.replace(/By submitting, you agree that Anstel may contact you about your inquiry\.(?: See our <a href="\/privacy-policy\/">Privacy Policy<\/a>\.)*/g, 'By submitting, you agree that Anstel may contact you about your inquiry. See our <a href="/privacy-policy/">Privacy Policy</a>.');
   html = html.replace(/We(?:'|&rsquo;|’)ll only use your details to respond to this request\.(?: See our <a href="\/privacy-policy\/">Privacy Policy<\/a>\.)*/g, 'We&rsquo;ll only use your details to respond to this request. See our <a href="/privacy-policy/">Privacy Policy</a>.');
 
-  // Every footer exposes both legal documents.
+  // Use the homepage footer as the single shared footer across every public page.
+  if (/<footer\b/i.test(html)) html = html.replace(/<footer\b[\s\S]*?<\/footer>/i, sharedFooter);
+
+  // Keep one Privacy Policy link and one clearly named Terms link in the footer row.
   if (/<footer\b/i.test(html)) {
     html = html.replace(/<footer\b([\s\S]*?)<\/footer>/gi, footer => {
-      if (footer.includes('/privacy-policy/')) return footer;
-      return footer.replace(/<\/footer>/i, '<a href="/privacy-policy/" class="footer-privacy-link">Privacy Policy</a></footer>');
+      const privacyLink = '<a href="/privacy-policy/" class="footer-legal-link">Privacy Policy</a>';
+      let normalized = footer
+        .replace(/<a\b[^>]*href=["']\/privacy-policy\/["'][^>]*>\s*Privacy Policy\s*<\/a>/gi, '')
+        .replace(/(<a\b[^>]*href=["']\/legal\/terms\/["'][^>]*>)\s*(?:Privacy\s*(?:&amp;|&)\s*Legal|Terms(?:\s*&amp;\s*Conditions)?)\s*(<\/a>)/gi, '$1Terms$2');
+      if (/href=["']\/legal\/terms\//i.test(normalized)) {
+        normalized = normalized.replace(/(<a\b[^>]*href=["']\/legal\/terms\/["'][^>]*>)/i, `${privacyLink}$1`);
+      } else if (/<\/div>/i.test(normalized)) {
+        normalized = normalized.replace(/<\/div>/i, `${privacyLink}</div>`);
+      } else {
+        normalized = normalized.replace(/<\/footer>/i, `${privacyLink}</footer>`);
+      }
+      return normalized;
     });
   }
 

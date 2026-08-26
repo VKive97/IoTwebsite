@@ -28,6 +28,11 @@ const pageUrl = file => {
   return name === 'index.html' ? '/' : `/${name.replace(/index\.html$/, '')}`;
 };
 const textContent = html => html.replace(/<script\b[\s\S]*?<\/script>/gi, '').replace(/<style\b[\s\S]*?<\/style>/gi, '').replace(/<[^>]+>/g, ' ');
+const hasUnlinkedAnstelOrganization = value => {
+  if (!value || typeof value !== 'object') return false;
+  if (value['@type'] === 'Organization' && value.name === 'Anstel' && value['@id'] !== 'https://www.anstelglobal.com/#organization') return true;
+  return Object.values(value).some(hasUnlinkedAnstelOrganization);
+};
 
 for (const file of htmlFiles) {
   const name = rel(file);
@@ -41,6 +46,11 @@ for (const file of htmlFiles) {
   if (/href=["']#["']/i.test(html)) errors.push(`${name}: unfinished href="#" link`);
   if (/<footer\b/i.test(html) && !/<footer\b[\s\S]*?href=["']\/privacy-policy\//i.test(html)) errors.push(`${name}: footer missing Privacy Policy link`);
   if (/\/js\/navbar\.js/.test(html) && !/id=["']site-nav["']/.test(html) && !/data-static-nav/.test(html)) errors.push(`${name}: missing static navigation fallback`);
+  if (/\/js\/main\.js/.test(html)) {
+    const jqueryPosition = html.search(/jquery(?:\.min)?\.js/i);
+    const mainPosition = html.search(/\/js\/main\.js/i);
+    if (jqueryPosition < 0 || jqueryPosition > mainPosition) errors.push(`${name}: jQuery must load before main.js`);
+  }
   if (/<main(?:\s|>)/i.test(html) && !/class=["'][^"']*skip-link/.test(html)) errors.push(`${name}: missing skip-to-content link`);
   if (/class=["'][^"']*skip-link/.test(html) && !/id=["']main-content["']/.test(html)) errors.push(`${name}: skip link target is missing`);
   const title = html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1].trim();
@@ -59,9 +69,13 @@ for (const file of htmlFiles) {
   for (const match of html.matchAll(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi)) {
     try {
       const data = JSON.parse(match[1]);
+      if (hasUnlinkedAnstelOrganization(data)) errors.push(`${name}: Anstel Organization object must reuse #organization`);
       if (/^(?:platform|solutions)\//.test(name) && data['@type'] === 'SoftwareApplication') {
         if (data.brand?.['@id'] !== 'https://www.anstelglobal.com/#autonautics' || data.brand?.name !== 'Autonautics') errors.push(`${name}: SoftwareApplication brand hierarchy is incorrect`);
         if (data.publisher?.['@id'] !== 'https://www.anstelglobal.com/#organization') errors.push(`${name}: SoftwareApplication publisher hierarchy is incorrect`);
+      }
+      if (/^industries\/(?:transportation|logistics-supply-chain|waste-management|food-services-fmcg)\/index\.html$/.test(name) && data['@type'] === 'Service') {
+        if (data.provider?.brand?.['@id'] !== 'https://www.anstelglobal.com/#autonautics') errors.push(`${name}: industry provider must reference the Autonautics brand`);
       }
       if (name === 'index.html' && data['@type'] === 'WebSite' && data.name !== 'Anstel') errors.push(`${name}: WebSite schema name must be Anstel`);
       if (Array.isArray(data.about)) {
