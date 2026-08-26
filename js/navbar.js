@@ -1,6 +1,9 @@
 /* Injects shared navbar + mega-overlay + schedule bar + loc-modal into product pages */
 document.addEventListener('DOMContentLoaded', function () {
 
+  var staticNav = document.querySelector('[data-static-nav]');
+  if (staticNav) staticNav.remove();
+
   /* ── Navbar HTML ── */
   var header = document.createElement('header');
   header.id = 'site-nav';
@@ -10,17 +13,16 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="d-flex align-items-center px-4 px-md-5" style="height:56px;max-width:1536px;margin:auto">
       <a href="/" class="flex-shrink-0"><img src="/images/anstel.svg" height="40" alt="Anstel"></a>
       <nav class="d-none d-lg-flex align-items-center gap-1 mx-auto">
-        <button class="nav-btn" data-mega="autonautics">Autonautics</button>
-        <button class="nav-btn" data-mega="solutions">Solutions</button>
-        <button class="nav-btn" data-mega="industries">Industries</button>
-        <button class="nav-btn" data-mega="discover">Discover</button>
-        <a href="/shop/" class="nav-btn text-dark text-decoration-none">Shop</a>
+        <button class="nav-btn" data-mega="autonautics" aria-expanded="false" aria-controls="mega-autonautics">Autonautics</button>
+        <button class="nav-btn" data-mega="solutions" aria-expanded="false" aria-controls="mega-solutions">Solutions</button>
+        <button class="nav-btn" data-mega="industries" aria-expanded="false" aria-controls="mega-industries">Industries</button>
+        <button class="nav-btn" data-mega="discover" aria-expanded="false" aria-controls="mega-discover">Discover</button>
       </nav>
       <div class="d-none d-lg-flex align-items-center gap-1">
-        <button class="icon-btn" title="Help"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg></button>
-        <button class="icon-btn" title="Region"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></button>
+        <a class="icon-btn" href="/company/contact/" aria-label="Contact Anstel for help"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg></a>
+        <a class="icon-btn" href="/regions/" aria-label="View Autonautics operating regions"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></a>
       </div>
-      <button class="icon-btn d-lg-none ms-auto" id="mobile-toggle" aria-label="Menu">
+      <button class="icon-btn d-lg-none ms-auto" id="mobile-toggle" aria-label="Open primary navigation" aria-expanded="false" aria-controls="mobile-menu">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <li class="mb-2"><a href="/platform/" class="small text-secondary text-decoration-none">Platform Overview</a></li>
             <li class="mb-2"><a href="/platform/#products" class="small text-secondary text-decoration-none">Compare Products</a></li>
             <li class="mb-2"><a href="/platform/device-ecosystem/" class="small text-secondary text-decoration-none">Device Ecosystem</a></li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Customer Success</a></li>
+            <li class="mb-2"><a href="/company/customer-stories/" class="small text-secondary text-decoration-none">Customer Success</a></li>
             <li><a href="/demo/" class="small text-secondary text-decoration-none">Request a Demo</a></li>
           </ul>
         </div>
@@ -115,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
             <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Company</p>
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><a href="/company/about/" class="small text-secondary text-decoration-none">About Anstel</a></li>
-              <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Careers</a></li>
               <li class="mb-2"><a href="/company/locations/" class="small text-secondary text-decoration-none">Locations</a></li>
               <li class="mb-2"><a href="/regions/" class="small text-secondary text-decoration-none">Regions</a></li>
               <li><a href="/company/contact/" class="small text-secondary text-decoration-none">Contact Us</a></li>
@@ -137,11 +138,10 @@ document.addEventListener('DOMContentLoaded', function () {
             <li><button class="mob-row" data-mob-open="solutions">Solutions <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
             <li><button class="mob-row" data-mob-open="industries">Industries <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
             <li><button class="mob-row" data-mob-open="discover">Discover <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
-            <li><a href="/shop/" class="mob-row-link">Shop</a></li>
           </ul>
           <div class="mob-utility">
-            <button class="mob-util-btn">Help</button>
-            <button class="mob-util-btn">Region <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button>
+            <a class="mob-util-btn" href="/company/contact/" aria-label="Contact Anstel for help">Help</a>
+            <a class="mob-util-btn" href="/regions/" aria-label="View Autonautics operating regions">Regions <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></a>
           </div>
         </div>
 
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <a href="/platform/">Platform Overview</a>
               <a href="/platform/#products">Compare Products</a>
               <a href="/platform/device-ecosystem/">Device Ecosystem</a>
-              <a href="#">Customer Success</a>
+              <a href="/company/customer-stories/">Customer Success</a>
               <a href="/demo/">Request a Demo</a>
             </div>
           </div>
@@ -237,7 +237,6 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="mob-sub-links">
               <p class="mob-sub-heading">Company</p>
               <a href="/company/about/">About Anstel</a>
-              <a href="#">Careers</a>
               <a href="/company/locations/">Locations</a>
               <a href="/regions/">Regions</a>
               <a href="/company/contact/">Contact Us</a>

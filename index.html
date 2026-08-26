@@ -32,7 +32,7 @@
 
   <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Autonautics by Anstel">
+  <meta property="og:site_name" content="Anstel">
   <meta property="og:locale" content="en_AU">
   <meta property="og:url" content="https://www.anstelglobal.com/">
   <meta property="og:title" content="Fleet Management Software | Autonautics by Anstel">
@@ -50,6 +50,7 @@
   {
     "@context":"https://schema.org",
     "@type":"WebSite",
+    "@id":"https://www.anstelglobal.com/#website",
     "name":"Autonautics by Anstel",
     "url":"https://www.anstelglobal.com/",
     "publisher":{"@id":"https://www.anstelglobal.com/#organization"}
@@ -63,10 +64,11 @@
     "@type":"Organization",
     "@id":"https://www.anstelglobal.com/#organization",
     "name":"Anstel",
+    "legalName":"Anstel Pty Ltd",
     "url":"https://www.anstelglobal.com/",
     "logo":"https://www.anstelglobal.com/images/anstel.svg",
     "description":"Anstel develops Autonautics, a connected fleet management and mobility platform that helps organizations manage fleet operations, GPS tracking, IoT devices, vehicle security, last-mile delivery, driver management, maintenance, reporting, compliance, and business intelligence from one unified platform.",
-    "brand":{"@type":"Brand","name":"Autonautics"},
+    "brand":{"@id":"https://www.anstelglobal.com/#autonautics"},
     "areaServed":["Australia","India","Fiji","Papua New Guinea","New Zealand"],
     "address":{
       "@type":"PostalAddress",
@@ -115,14 +117,6 @@
       "Video Telematics","Last Mile Delivery","Dispatch Management","Job Scheduling",
       "Route Optimization","Compliance Management","Fuel Management",
       "Reporting and Analytics","Connected Mobility","Fleet Operations"
-    ],
-    "sameAs":[
-      "https://www.instagram.com/my_autonautics/",
-      "https://www.facebook.com/profile.php?id=61592764293665",
-      "https://x.com/my_autonautics",
-      "https://www.linkedin.com/showcase/autonautics/",
-      "https://youtube.com/@anstel6482",
-      "https://au.pinterest.com/autonautics/"
     ]
   }
   </script>
@@ -138,38 +132,40 @@
     "operatingSystem":"Web, iOS, Android",
     "url":"https://www.anstelglobal.com/platform/",
     "publisher":{"@id":"https://www.anstelglobal.com/#organization"},
-    "description":"Autonautics is Anstel's connected fleet management and IoT platform for GPS tracking, driver management, maintenance, dispatch, last-mile delivery, fleet security, and operational reporting."
+    "description":"Autonautics is Anstel's connected fleet management and IoT platform for GPS tracking, driver management, maintenance, dispatch, last-mile delivery, fleet security, and operational reporting.",
+    "sameAs":["https://www.instagram.com/my_autonautics/","https://www.facebook.com/profile.php?id=61592764293665","https://x.com/my_autonautics","https://www.linkedin.com/showcase/autonautics/","https://youtube.com/@anstel6482","https://au.pinterest.com/autonautics/"],
+    "hasPart":[{"@type":"SoftwareApplication","name":"Connected Fleet","url":"https://www.anstelglobal.com/platform/connected-fleet/"},{"@type":"SoftwareApplication","name":"Last Mile","url":"https://www.anstelglobal.com/platform/last-mile/"},{"@type":"SoftwareApplication","name":"Security Monitor","url":"https://www.anstelglobal.com/platform/security-monitor/"},{"@type":"SoftwareApplication","name":"IoT","url":"https://www.anstelglobal.com/platform/iot/"},{"@type":"SoftwareApplication","name":"Job Scheduling","url":"https://www.anstelglobal.com/platform/job-scheduling/"},{"@type":"SoftwareApplication","name":"Merchant","url":"https://www.anstelglobal.com/platform/merchant/"}]
   }
   </script>
 </head>
 
-<body>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
 
   <!-- NAVBAR -->
   <header class="position-fixed top-0 start-0 end-0 bg-white" id="site-nav" style="z-index:1050">
     <div class="d-flex align-items-center px-4 px-md-5" style="height:56px;max-width:1536px;margin:auto">
       <a href="/" class="flex-shrink-0"><img src="/images/anstel.svg" width="115" height="40" alt="Anstel" decoding="async"></a>
       <nav class="d-none d-lg-flex align-items-center gap-1 mx-auto">
-        <button class="nav-btn" data-mega="autonautics">Autonautics</button>
-        <button class="nav-btn" data-mega="solutions">Solutions</button>
-        <button class="nav-btn" data-mega="industries">Industries</button>
-        <button class="nav-btn" data-mega="discover">Discover</button>
-        <!-- <a href="/shop/" class="nav-btn text-dark text-decoration-none">Shop</a> -->
+        <button class="nav-btn" data-mega="autonautics" aria-expanded="false" aria-controls="mega-autonautics">Autonautics</button>
+        <button class="nav-btn" data-mega="solutions" aria-expanded="false" aria-controls="mega-solutions">Solutions</button>
+        <button class="nav-btn" data-mega="industries" aria-expanded="false" aria-controls="mega-industries">Industries</button>
+        <button class="nav-btn" data-mega="discover" aria-expanded="false" aria-controls="mega-discover">Discover</button>
+        <!--  -->
       </nav>
       <div class="d-none d-lg-flex align-items-center gap-1">
-        <button class="icon-btn" title="Help"><svg width="20" height="20" fill="none" stroke="currentColor"
+        <a class="icon-btn" href="/company/contact/" aria-label="Contact Anstel for help"><svg width="20" height="20" fill="none" stroke="currentColor"
             stroke-width="1.8" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" />
             <path stroke-linecap="round" stroke-linejoin="round" d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01" />
-          </svg></button>
-        <button class="icon-btn" title="Region"><svg width="20" height="20" fill="none" stroke="currentColor"
+          </svg></a>
+        <a class="icon-btn" href="/regions/" aria-label="View Autonautics operating regions"><svg width="20" height="20" fill="none" stroke="currentColor"
             stroke-width="1.8" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" />
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
-          </svg></button>
+          </svg></a>
       </div>
-      <button class="icon-btn d-lg-none ms-auto" id="mobile-toggle" aria-label="Menu">
+      <button class="icon-btn d-lg-none ms-auto" id="mobile-toggle" aria-label="Open primary navigation" aria-expanded="false" aria-controls="mobile-menu">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -228,7 +224,7 @@
             <li class="mb-2"><a href="/platform/#products" class="small text-secondary text-decoration-none">Compare Products</a></li>
             <li class="mb-2"><a href="/platform/device-ecosystem/" class="small text-secondary text-decoration-none">Device Ecosystem</a>
             </li>
-            <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Customer Success</a>
+            <li class="mb-2"><a href="/company/customer-stories/" class="small text-secondary text-decoration-none">Customer Success</a>
             </li>
             <li><a href="/demo/" class="small text-secondary text-decoration-none">Request a Demo</a></li>
           </ul>
@@ -346,7 +342,7 @@
             </p>
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><a href="/company/about/" class="small text-secondary text-decoration-none">About Anstel</a></li>
-              <li class="mb-2"><a href="#" class="small text-secondary text-decoration-none">Careers</a></li>
+              <li class="mb-2"></li>
               <li class="mb-2"><a href="/company/locations/" class="small text-secondary text-decoration-none">Locations</a></li>
               <li class="mb-2"><a href="/regions/" class="small text-secondary text-decoration-none">Regions</a></li>
               <li><a href="/company/contact/" class="small text-secondary text-decoration-none">Contact Us</a></li>
@@ -385,14 +381,14 @@
                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6" />
                 </svg></button></li>
-            <!-- <li><a href="/shop/" class="mob-row-link">Shop</a></li> -->
+            <!-- <li></li> -->
           </ul>
           <div class="mob-utility">
-            <button class="mob-util-btn">Help</button>
-            <button class="mob-util-btn">Region
+            <a class="mob-util-btn" href="/company/contact/" aria-label="Contact Anstel for help">Help</a>
+            <a class="mob-util-btn" href="/regions/" aria-label="View Autonautics operating regions">Regions
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6" />
-              </svg></button>
+              </svg></a>
           </div>
         </div>
 
@@ -439,7 +435,7 @@
               <a href="/platform/">Platform Overview</a>
               <a href="/platform/#products">Compare Products</a>
               <a href="/platform/device-ecosystem/">Device Ecosystem</a>
-              <a href="#">Customer Success</a>
+              <a href="/company/customer-stories/">Customer Success</a>
               <a href="/demo/">Request a Demo</a>
             </div>
           </div>
@@ -554,7 +550,7 @@
             <div class="mob-sub-links">
               <p class="mob-sub-heading">Company</p>
               <a href="/company/about/">About Anstel</a>
-              <a href="#">Careers</a>
+
               <a href="/company/locations/">Locations</a>
               <a href="/regions/">Regions</a>
               <a href="/company/contact/">Contact Us</a>
@@ -569,7 +565,7 @@
   <div id="mega-overlay"></div>
 
   <!-- HERO CAROUSEL -->
-  <section class="position-relative overflow-hidden" style="height:90vh">
+  <section id="main-content" class="position-relative overflow-hidden" style="height:90vh">
     <div class="hero-slide active" style="background:linear-gradient(to bottom,#c8d4dc,#b8c8d4,#a8bcc8)">
       <img src="/images/AutonauticsECO.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
         alt="Autonautics" width="1448" height="1086" decoding="async" srcset="/images/AutonauticsECO-640.webp 640w, /images/AutonauticsECO-1280.webp 1280w, /images/AutonauticsECO.webp 1448w" sizes="100vw" loading="eager" fetchpriority="high">
@@ -1456,8 +1452,8 @@
           Bring tracking, operations, maintenance, safety, compliance, and business intelligence together in one
           connected fleet platform designed for modern mobility.</p>
         <!-- <div class="d-flex gap-2">
-          <a href="#" class="btn btn-dark px-4 py-2 small">View Network</a>
-          <a href="#" class="btn btn-outline-secondary px-4 py-2 small">Learn More</a>
+
+
         </div> -->
       </div>
 
@@ -1609,7 +1605,7 @@
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#home-faq-4">Which industries use Anstel?</button>
+              data-bs-target="#home-faq-4">Which industries does Anstel serve?</button>
           </h3>
           <div id="home-faq-4" class="accordion-collapse collapse" data-bs-parent="#home-faq">
             <div class="accordion-body">Logistics and transport, cold chain, construction, mining, waste, and
@@ -1629,7 +1625,7 @@
       </div>
     </div>
   </section>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Anstel do?","acceptedAnswer":{"@type":"Answer","text":"Anstel builds Autonautics, a fleet management and IoT platform that helps organisations track vehicles, manage drivers, monitor assets, run deliveries, and secure operations from one system."}},{"@type":"Question","name":"What is Autonautics?","acceptedAnswer":{"@type":"Answer","text":"Autonautics is Anstel's cloud platform. It connects your GPS trackers, cameras, and sensors, collects their data in real time, and turns it into live tracking, alerts, reports, and automated workflows."}},{"@type":"Question","name":"What hardware does Autonautics support?","acceptedAnswer":{"@type":"Answer","text":"GPS trackers and telematics devices from Teltonika, Queclink, and Jimi, AI dash cameras, fuel and temperature sensors, and industrial IoT hardware, with support for existing devices."}},{"@type":"Question","name":"Which industries use Anstel?","acceptedAnswer":{"@type":"Answer","text":"Logistics and transport, cold chain, construction, mining, waste, and field services, and any operation that runs vehicles, assets, or connected equipment."}},{"@type":"Question","name":"How do I get started?","acceptedAnswer":{"@type":"Answer","text":"Request a demo and the Anstel team will show you the platform on your own use case, then help you connect devices and roll out to your fleet."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Anstel do?","acceptedAnswer":{"@type":"Answer","text":"Anstel builds Autonautics, a fleet management and IoT platform that helps organisations track vehicles, manage drivers, monitor assets, run deliveries, and secure operations from one system."}},{"@type":"Question","name":"What is Autonautics?","acceptedAnswer":{"@type":"Answer","text":"Autonautics is Anstel's cloud platform. It connects your GPS trackers, cameras, and sensors, collects their data in real time, and turns it into live tracking, alerts, reports, and automated workflows."}},{"@type":"Question","name":"What hardware does Autonautics support?","acceptedAnswer":{"@type":"Answer","text":"GPS trackers and telematics devices from Teltonika, Queclink, and Jimi, AI dash cameras, fuel and temperature sensors, and industrial IoT hardware, with support for existing devices."}},{"@type":"Question","name":"Which industries does Anstel serve?","acceptedAnswer":{"@type":"Answer","text":"Logistics and transport, cold chain, construction, mining, waste, and field services, and any operation that runs vehicles, assets, or connected equipment."}},{"@type":"Question","name":"How do I get started?","acceptedAnswer":{"@type":"Answer","text":"Request a demo and the Anstel team will show you the platform on your own use case, then help you connect devices and roll out to your fleet."}}]}</script>
 
   <!-- FINAL CTA -->
   <section class="section-pad text-center cta-band" style="background:#0d1b2a">
@@ -1659,14 +1655,14 @@
       <span class="text-muted" style="font-size:.75rem">Anstel &copy; 2026</span>
       <a href="/legal/terms/" class="text-secondary text-decoration-none" style="font-size:.75rem">Privacy &amp; Legal</a>
       <a href="/company/contact/" class="text-secondary text-decoration-none" style="font-size:.75rem">Contact</a>
-      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">News</a>
-      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Get Updates</a>
+
+
       <a href="/company/locations/" class="text-secondary text-decoration-none" style="font-size:.75rem">Locations</a>
       <a href="/regions/" class="text-secondary text-decoration-none" style="font-size:.75rem">Regions</a>
-      <a href="#" class="text-secondary text-decoration-none" style="font-size:.75rem">Learn</a>
+
       <span class="d-flex align-items-center gap-3"><a href="https://www.instagram.com/my_autonautics/" target="_blank" rel="noopener" aria-label="Instagram" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/profile.php?id=61592764293665" target="_blank" rel="noopener" aria-label="Facebook" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg></a><a href="https://x.com/my_autonautics" target="_blank" rel="noopener" aria-label="X (Twitter)" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-6.9l-5.4-6.9L4.8 22H1.7l8.1-9.3L1 2h7.1l4.9 6.3L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg></a><a href="https://www.linkedin.com/showcase/autonautics/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4V21H3V8.98zM9 8.98h3.83v1.64h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9V8.98z"/></svg></a><a href="https://youtube.com/@anstel6482" target="_blank" rel="noopener" aria-label="YouTube" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.94-1.9-.94-2.36-1C17 2.5 12 2.5 12 2.5h-.01s-5 0-8.2.34c-.46.06-1.46.06-2.36 1-.71.72-.94 2.36-.94 2.36S.2 8.1.2 10v1.9c0 1.9.25 3.8.25 3.8s.23 1.64.94 2.36c.9.94 2.08.9 2.6 1C5.85 19.5 12 19.6 12 19.6s5 0 8.2-.34c.46-.06 1.46-.06 2.36-1 .71-.72.94-2.36.94-2.36s.25-1.9.25-3.8V10c0-1.9-.25-3.8-.25-3.8zM9.7 14.1V7.9l6.2 3.1-6.2 3.1z"/></svg></a><a href="https://au.pinterest.com/autonautics/" target="_blank" rel="noopener" aria-label="Pinterest" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.63 7.86 6.35 9.32-.09-.79-.17-2.01.03-2.88.19-.79 1.23-5.02 1.23-5.02s-.31-.63-.31-1.55c0-1.45.84-2.54 1.89-2.54.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.49-.25 1.05.52 1.9 1.55 1.9 1.86 0 3.29-1.96 3.29-4.79 0-2.5-1.8-4.25-4.37-4.25-2.98 0-4.72 2.23-4.72 4.54 0 .9.34 1.86.78 2.39.09.1.1.2.07.3-.08.32-.25 1.02-.28 1.16-.04.19-.15.23-.34.14-1.26-.59-2.05-2.43-2.05-3.91 0-3.19 2.32-6.12 6.68-6.12 3.51 0 6.24 2.5 6.24 5.84 0 3.49-2.2 6.29-5.25 6.29-1.03 0-1.99-.53-2.32-1.16l-.63 2.4c-.23.88-.85 1.98-1.26 2.65.95.29 1.96.45 3.01.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></a></span>
     </div>
-  </footer>
+  <a href="/privacy-policy/" class="footer-privacy-link">Privacy Policy</a></footer>
 
   <!-- SCHEDULE BAR -->
   <!--

@@ -34,6 +34,15 @@ for (const file of htmlFiles) {
   if (name.startsWith('admin/')) continue;
   const html = fs.readFileSync(file, 'utf8');
   const isNoindex = /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html);
+  const siteName = html.match(/<meta\s+property=["']og:site_name["']\s+content=["']([^"']+)["']/i)?.[1];
+  if (/<meta\s+property=["']og:type["']/i.test(html) && siteName !== 'Anstel') errors.push(`${name}: og:site_name must be Anstel`);
+  if (/alternateName["']?\s*:\s*["']Autonautics by Anstel/i.test(html)) errors.push(`${name}: Autonautics must not be an Organization alternateName`);
+  if (/"brand":\{"@type":"Organization","name":"Anstel"\}/.test(html)) errors.push(`${name}: product brand must reference Autonautics`);
+  if (/href=["']#["']/i.test(html)) errors.push(`${name}: unfinished href="#" link`);
+  if (/<footer\b/i.test(html) && !/<footer\b[\s\S]*?href=["']\/privacy-policy\//i.test(html)) errors.push(`${name}: footer missing Privacy Policy link`);
+  if (/\/js\/navbar\.js/.test(html) && !/id=["']site-nav["']/.test(html) && !/data-static-nav/.test(html)) errors.push(`${name}: missing static navigation fallback`);
+  if (/<main(?:\s|>)/i.test(html) && !/class=["'][^"']*skip-link/.test(html)) errors.push(`${name}: missing skip-to-content link`);
+  if (/class=["'][^"']*skip-link/.test(html) && !/id=["']main-content["']/.test(html)) errors.push(`${name}: skip link target is missing`);
   const title = html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1].trim();
   const description = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i)?.[1];
   const canonical = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i)?.[1];
@@ -48,7 +57,13 @@ for (const file of htmlFiles) {
     }
   }
   for (const match of html.matchAll(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi)) {
-    try { JSON.parse(match[1]); } catch (error) { errors.push(`${name}: invalid JSON-LD (${error.message})`); }
+    try {
+      const data = JSON.parse(match[1]);
+      if (/^(?:platform|solutions)\//.test(name) && data['@type'] === 'SoftwareApplication') {
+        if (data.brand?.['@id'] !== 'https://www.anstelglobal.com/#autonautics' || data.brand?.name !== 'Autonautics') errors.push(`${name}: SoftwareApplication brand hierarchy is incorrect`);
+        if (data.publisher?.['@id'] !== 'https://www.anstelglobal.com/#organization') errors.push(`${name}: SoftwareApplication publisher hierarchy is incorrect`);
+      }
+    } catch (error) { errors.push(`${name}: invalid JSON-LD (${error.message})`); }
   }
   for (const img of html.matchAll(/<img\b([^>]*)>/gi)) {
     if (!/\balt\s*=\s*["'][^"']*["']/i.test(img[1])) warnings.push(`${name}: image missing alt text`);
@@ -68,6 +83,8 @@ for (const file of htmlFiles) {
     for (const country of countries) if (!visibleAndSchema.includes(country)) warnings.push(`${name}: country consistency missing ${country}`);
   }
 }
+
+if (/<(?:priority|changefreq)>/i.test(sitemap)) errors.push('sitemap.xml: obsolete priority/changefreq field');
 
 console.log(`Audited ${htmlFiles.length} HTML files.`);
 if (errors.length) console.log(`\nErrors (${errors.length}):\n- ${[...new Set(errors)].join('\n- ')}`);

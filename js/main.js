@@ -10,11 +10,14 @@ $(function () {
   function hideMenu() {
     $('.mega-menu').fadeOut(150);
     $('#mega-overlay').fadeOut(200);
+    $('[data-mega]').attr('aria-expanded', 'false');
   }
   $('[data-mega]').on('mouseenter', function () {
     clearTimeout(closeTimer);
     var id = $(this).data('mega');
     $('.mega-menu').hide();
+    $('[data-mega]').attr('aria-expanded', 'false');
+    $(this).attr('aria-expanded', 'true');
     $('#mega-' + id).stop(true).fadeIn(150);
     $('#mega-overlay').stop(true).fadeIn(200);
   }).on('mouseleave', function () {
@@ -29,6 +32,7 @@ $(function () {
   /* ── Mobile menu (Tesla-style full-screen slide panel) ── */
   function closeMobPanel() {
     $('#mobile-menu').removeClass('open');
+    $('#mobile-toggle').attr('aria-expanded', 'false').trigger('focus');
     setTimeout(function () {
       $('.mob-view-sub').removeClass('active');
       $('.mob-view-main').removeClass('pushed');
@@ -36,6 +40,8 @@ $(function () {
   }
   $('#mobile-toggle').on('click', function () {
     $('#mobile-menu').addClass('open');
+    $(this).attr('aria-expanded', 'true');
+    setTimeout(function () { $('#mobile-menu').find('button,a').filter(':visible').first().trigger('focus'); }, 50);
   });
   $('[data-mob-close]').on('click', closeMobPanel);
   $('[data-mob-open]').on('click', function () {
@@ -46,6 +52,12 @@ $(function () {
   $('[data-mob-back]').on('click', function () {
     $('.mob-view-sub').removeClass('active');
     $('.mob-view-main').removeClass('pushed');
+  });
+
+  $(document).on('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+    hideMenu();
+    if ($('#mobile-menu').hasClass('open')) closeMobPanel();
   });
 
   /* ── Scroll carousel factory ── */
