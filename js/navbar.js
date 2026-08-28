@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
   header.style.cssText = 'z-index:1050';
   header.innerHTML = `
     <div class="d-flex align-items-center px-4 px-md-5" style="height:56px;max-width:1536px;margin:auto">
-      <a href="/" class="flex-shrink-0"><img src="/images/anstel.svg" height="40" alt="Anstel"></a>
+      <a href="/" class="flex-shrink-0" aria-label="Anstel home"><img src="/images/anstel.svg" width="208" height="40" alt="Anstel" decoding="async"></a>
       <nav class="d-none d-lg-flex align-items-center gap-1 mx-auto">
         <button class="nav-btn" data-mega="autonautics" aria-expanded="false" aria-controls="mega-autonautics">Autonautics</button>
         <button class="nav-btn" data-mega="solutions" aria-expanded="false" aria-controls="mega-solutions">Solutions</button>

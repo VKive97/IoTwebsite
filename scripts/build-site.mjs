@@ -15,7 +15,7 @@ function walk(dir) {
   });
 }
 
-const fallbackNav = `<header class="static-site-nav" data-static-nav><a href="/" class="static-site-logo" aria-label="Anstel home"><img src="/images/anstel.svg" width="115" height="40" alt="Anstel"></a><nav aria-label="Primary navigation"><a href="/platform/">Autonautics</a><a href="/solutions/fleet-management/">Solutions</a><a href="/industries/">Industries</a><a href="/company/knowledge-center/">Knowledge Centre</a><a href="/company/customer-stories/">Customer Stories</a><a href="/regions/">Regions</a><a href="/company/contact/">Contact</a></nav></header>`;
+const fallbackNav = `<header class="static-site-nav" data-static-nav><a href="/" class="static-site-logo" aria-label="Anstel home"><img src="/images/anstel.svg" width="208" height="40" alt="Anstel"></a><nav aria-label="Primary navigation"><a href="/platform/">Autonautics</a><a href="/solutions/fleet-management/">Solutions</a><a href="/industries/">Industries</a><a href="/company/knowledge-center/">Knowledge Centre</a><a href="/company/customer-stories/">Customer Stories</a><a href="/regions/">Regions</a><a href="/company/contact/">Contact</a></nav></header>`;
 
 const htmlFiles = walk(root).filter(file => file.endsWith('.html'));
 const homepageSource = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
@@ -26,6 +26,8 @@ for (const file of htmlFiles) {
   const rel = path.relative(root, file).replaceAll('\\', '/');
   if (rel.startsWith('admin/')) continue;
   let html = fs.readFileSync(file, 'utf8');
+
+  html = html.replace(/(<img src="\/images\/anstel\.svg" width=")115(" height="40")/g, '$1208$2');
 
   // Keep the corporate website identity distinct from page-level product naming.
   html = html.replace(/(<meta\s+property=["']og:site_name["']\s+content=["'])[^"']*(["']\s*\/?>)/gi, '$1Anstel$2');
