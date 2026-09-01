@@ -22,6 +22,30 @@
     return !!(gotcha && gotcha.value);
   }
 
+  function submissionKey(form, opts) {
+    if (!opts.uniqueEmailField) return '';
+    var email = fieldValue(form, opts.uniqueEmailField).toLowerCase();
+    if (!email) return '';
+    var hash = 2166136261;
+    for (var i = 0; i < email.length; i += 1) {
+      hash ^= email.charCodeAt(i);
+      hash = Math.imul(hash, 16777619);
+    }
+    return 'anstel-form-submitted:' + opts.endpoint + ':' + (hash >>> 0).toString(16);
+  }
+
+  function wasSubmitted(key) {
+    if (!key) return false;
+    try { return window.localStorage.getItem(key) === '1'; }
+    catch (error) { return false; }
+  }
+
+  function rememberSubmission(key) {
+    if (!key) return;
+    try { window.localStorage.setItem(key, '1'); }
+    catch (error) { /* Server-side duplicate protection remains authoritative. */ }
+  }
+
   function bindForm(form, opts) {
     if (!form) return;
     var statusEl = form.querySelector('.form-status');
@@ -42,9 +66,15 @@
         return;
       }
 
+      var uniqueKey = submissionKey(form, opts);
+      if (wasSubmitted(uniqueKey)) {
+        setStatus(statusEl, 'error', opts.duplicateMessage);
+        return;
+      }
+
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending…';
+        submitBtn.textContent = 'Sending...';
       }
       setStatus(statusEl, '', '');
 
@@ -54,6 +84,7 @@
         body: JSON.stringify(opts.buildBody(form))
       }).then(function (res) {
         if (!res.ok) throw new Error('REQUEST_FAILED');
+        rememberSubmission(uniqueKey);
         setStatus(statusEl, 'success', opts.successMessage);
         form.reset();
       }).catch(function () {
@@ -69,7 +100,9 @@
 
   bindForm(document.getElementById('demo-form'), {
     endpoint: '/api/Contactus/Create',
-    successMessage: 'Thanks — we’ve received your request and will be in touch within one business day.',
+    uniqueEmailField: 'df-email',
+    duplicateMessage: 'This email address has already requested a demo.',
+    successMessage: "Thanks — we've received your request and will be in touch within one business day.",
     errorMessage: 'Something went wrong sending your request. Please email sales@anstelglobal.com directly.',
     buildBody: function (form) {
       return {
@@ -88,7 +121,9 @@
 
   bindForm(document.getElementById('contact-form'), {
     endpoint: '/api/Contactus/SendMessage',
-    successMessage: 'Thanks — your message has been sent. We’ll get back to you within one business day.',
+    uniqueEmailField: 'cf-email',
+    duplicateMessage: 'This email address has already submitted the contact form.',
+    successMessage: "Thanks — your message has been sent. We'll get back to you within one business day.",
     errorMessage: 'Something went wrong sending your message. Please email sales@anstelglobal.com directly.',
     buildBody: function (form) {
       return {

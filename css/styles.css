@@ -16,6 +16,7 @@
 }
 html{scroll-behavior:smooth}
 body{overflow-x:hidden}
+img{max-width:100%}
 
 /* Shared page rhythm: generous space on large screens, compact and readable on phones. */
 body > section.py-5,
@@ -1106,6 +1107,46 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
 @media(max-width:575px){
   .cta-band-media{height:420px}
   .cta-band-media img{object-position:54% bottom}
+}
+
+/* Keep photography proportional on narrow screens. Desktop dimensions stay
+   unchanged; phones use the same compositions in predictable media frames. */
+@media(max-width:767px){
+  .why-card-img,
+  .mission-security-row .why-card-img,
+  .last-mile-feature-row .why-card-img,
+  .last-mile-how-carousel .last-mile-how-image,
+  .event-media,
+  .event-media.carousel .carousel-item,
+  .fleet-tracking-audience-image{
+    height:auto;
+    min-height:0;
+    aspect-ratio:16/10;
+  }
+
+  div[style*="height:280px"]:has(>img.object-fit-cover),
+  div[style*="height:400px"]:has(>img.object-fit-cover){
+    height:auto!important;
+    aspect-ratio:16/10;
+  }
+
+  .cta-band-media{
+    height:auto;
+    min-height:0;
+    aspect-ratio:4/3;
+  }
+
+  .cta-band-media img,
+  .why-card-img img,
+  .last-mile-how-image img,
+  .event-media img,
+  .fleet-tracking-audience-image img,
+  div[style*="height:280px"]>img.object-fit-cover,
+  div[style*="height:400px"]>img.object-fit-cover{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
 }
 
 /* ── Light numbered step badge (Request Demo, Fleet Tracking "How It Works", etc.) ── */
