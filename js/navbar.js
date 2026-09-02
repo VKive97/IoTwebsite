@@ -117,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Company</p>
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><a href="/company/about/" class="small text-secondary text-decoration-none">About Anstel</a></li>
+              <li class="mb-2"><a href="/company/careers/" class="small text-secondary text-decoration-none">Careers</a></li>
               <li class="mb-2"><a href="/company/partners/" class="small text-secondary text-decoration-none">Partners</a></li>
               <li class="mb-2"><a href="/company/locations/" class="small text-secondary text-decoration-none">Locations</a></li>
               <li class="mb-2"><a href="/regions/" class="small text-secondary text-decoration-none">Regions</a></li>
@@ -238,6 +239,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="mob-sub-links">
               <p class="mob-sub-heading">Company</p>
               <a href="/company/about/">About Anstel</a>
+              <a href="/company/careers/">Careers</a>
               <a href="/company/partners/">Partners</a>
               <a href="/company/locations/">Locations</a>
               <a href="/regions/">Regions</a>

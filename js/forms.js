@@ -10,6 +10,60 @@
     return el ? el.value.trim() : '';
   }
 
+  /* The Contactus API rejects an empty phone or one containing "+", so the demo
+     form derives the dial code from the country <select> and submits a
+     "+"-free number (e.g. "61 412345678"). */
+  var DEMO_DIAL_CODES = {
+    Australia: '61',
+    India: '91',
+    Fiji: '679',
+    'Papua New Guinea': '675',
+    'New Zealand': '64'
+  };
+
+  function composeDemoPhone(form) {
+    var digits = (fieldValue(form, 'df-phone') || '').replace(/\D/g, '');
+    if (!digits) return '';
+    var code = DEMO_DIAL_CODES[fieldValue(form, 'df-country')] || '';
+    if (!code) return digits;
+    digits = digits.replace(/^0+/, '');
+    var national = (digits.indexOf(code) === 0 && digits.length >= code.length + 5)
+      ? digits.slice(code.length)
+      : digits;
+    return code + ' ' + national;
+  }
+
+  // Strip every character matching disallowedRe from the field as it is typed or pasted.
+  function filterInput(el, disallowedRe) {
+    if (!el) return;
+    el.addEventListener('input', function () {
+      var cleaned = el.value.replace(disallowedRe, '');
+      if (cleaned === el.value) return;
+      var drop = el.value.length - cleaned.length;
+      var caret = Math.max(0, (el.selectionStart || cleaned.length) - drop);
+      el.value = cleaned;
+      try { el.setSelectionRange(caret, caret); } catch (error) { /* unsupported input type */ }
+    });
+  }
+
+  function setupDemoPhonePrefix(form) {
+    if (!form) return;
+    var country = form.querySelector('#df-country');
+    var codeEl = form.querySelector('#df-phone-code');
+
+    if (country && codeEl) {
+      var syncCode = function () {
+        var code = DEMO_DIAL_CODES[country.value];
+        codeEl.textContent = code ? '+' + code : '';
+      };
+      country.addEventListener('change', syncCode);
+      syncCode();
+    }
+
+    // Phone: digits and dialling punctuation only. Name: letters, spaces, - ' . only.
+    filterInput(form.querySelector('#df-phone'), /[^\d\s()+-]/g);
+  }
+
   function setStatus(el, kind, message) {
     if (!el) return;
     el.textContent = message;
@@ -108,7 +162,7 @@
       return {
         fullName: fieldValue(form, 'df-name'),
         workEmail: fieldValue(form, 'df-email'),
-        phoneNumber: fieldValue(form, 'df-phone') || null,
+        phoneNumber: composeDemoPhone(form) || null,
         companyName: fieldValue(form, 'df-company') || null,
         country: fieldValue(form, 'df-country') || null,
         fleetSize: fieldValue(form, 'df-fleet-size') || null,
@@ -135,4 +189,10 @@
       };
     }
   });
+
+  setupDemoPhonePrefix(document.getElementById('demo-form'));
+
+  var NON_NAME_CHAR = /[^\p{L}\p{M}\s'.-]/gu;
+  filterInput(document.querySelector('#df-name'), NON_NAME_CHAR);
+  filterInput(document.querySelector('#cf-name'), NON_NAME_CHAR);
 })();
