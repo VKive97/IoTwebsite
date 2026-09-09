@@ -2,17 +2,19 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   var staticNav = document.querySelector('[data-static-nav]');
-  if (staticNav) staticNav.remove();
-
   /* ── Navbar HTML ── */
-  var header = document.createElement('header');
-  header.id = 'site-nav';
-  header.className = 'position-fixed top-0 start-0 end-0 bg-white';
-  header.style.cssText = 'z-index:1050';
-  header.innerHTML = `
+  var header = staticNav || document.createElement('header');
+  if (!staticNav) {
+    header.id = 'site-nav';
+    header.className = 'position-fixed top-0 start-0 end-0 bg-white';
+    header.style.cssText = 'z-index:1050';
+  } else {
+    header.removeAttribute('data-static-nav');
+  }
+  var navMarkup = `
     <div class="d-flex align-items-center px-4 px-md-5" style="height:56px;max-width:1536px;margin:auto">
       <a href="/" class="flex-shrink-0" aria-label="Anstel home"><img src="/images/anstel.svg" width="208" height="40" alt="Anstel" decoding="async"></a>
-      <nav class="d-none d-lg-flex align-items-center gap-1 mx-auto">
+      <nav class="d-none d-lg-flex align-items-center gap-1 mx-auto" aria-label="Primary navigation">
         <button class="nav-btn" data-mega="autonautics" aria-expanded="false" aria-controls="mega-autonautics">Autonautics</button>
         <button class="nav-btn" data-mega="solutions" aria-expanded="false" aria-controls="mega-solutions">Solutions</button>
         <button class="nav-btn" data-mega="industries" aria-expanded="false" aria-controls="mega-industries">Industries</button>
@@ -30,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 
     <!-- Mega: Autonautics -->
-    <div id="mega-autonautics" class="mega-menu">
+    <div id="mega-autonautics" class="mega-menu" role="region" aria-label="Autonautics menu" aria-hidden="true">
       <div class="d-flex gap-4 px-4 py-4" style="max-width:1280px;margin:auto">
         <div class="flex-grow-1">
           <div class="row g-4">
@@ -56,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 
     <!-- Mega: Solutions -->
-    <div id="mega-solutions" class="mega-menu">
+    <div id="mega-solutions" class="mega-menu" role="region" aria-label="Solutions menu" aria-hidden="true">
       <div class="d-flex gap-4 px-4 py-4" style="max-width:1280px;margin:auto">
         <div class="flex-grow-1">
           <div class="row g-4">
@@ -73,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="border-start ps-4 flex-shrink-0" style="width:192px">
           <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Advanced Capabilities</p>
           <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="/solutions/" class="small fw-semibold text-dark text-decoration-none">Solutions Overview</a></li>
             <li class="mb-2"><a href="/solutions/video-telematics/" class="small text-secondary text-decoration-none">Video Telematics</a></li>
             <li class="mb-2"><a href="/solutions/fuel-management/" class="small text-secondary text-decoration-none">Fuel Management</a></li>
             <li class="mb-2"><a href="/solutions/route-optimization/" class="small text-secondary text-decoration-none">Route Optimization</a></li>
@@ -87,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 
     <!-- Mega: Industries -->
-    <div id="mega-industries" class="mega-menu">
+    <div id="mega-industries" class="mega-menu" role="region" aria-label="Industries menu" aria-hidden="true">
       <div class="px-4 py-4" style="max-width:1280px;margin:auto">
         <div class="row g-4">
           <div class="col-6 col-md-3"><a href="/industries/transportation/" class="mega-product-card d-block"><img src="/images/industry-transportation.webp" alt="Transportation"><p class="fw-semibold small text-dark mt-2 card-name">Transportation</p><p class="text-muted" style="font-size:.7rem">Tracking, telematics &amp; route optimization.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
@@ -102,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 
     <!-- Mega: Discover -->
-    <div id="mega-discover" class="mega-menu">
+    <div id="mega-discover" class="mega-menu" role="region" aria-label="Discover menu" aria-hidden="true">
       <div class="px-4 py-4" style="max-width:1280px;margin:auto">
         <div class="row g-4 justify-content-center">
           <div class="col-6 col-md-3">
@@ -129,17 +132,17 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 
     <!-- Mobile menu (Tesla-style full-screen slide panel) -->
-    <div id="mobile-menu" class="mob-panel d-lg-none">
+    <div id="mobile-menu" class="mob-panel d-lg-none" role="dialog" aria-modal="true" aria-label="Primary navigation" aria-hidden="true">
       <div class="mob-panel-topbar">
         <button class="mob-close-btn" data-mob-close aria-label="Close menu"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12"/></svg></button>
       </div>
       <div class="mob-view-stack">
         <div class="mob-view mob-view-main active">
           <ul class="list-unstyled mb-0">
-            <li><button class="mob-row" data-mob-open="autonautics">Autonautics <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
-            <li><button class="mob-row" data-mob-open="solutions">Solutions <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
-            <li><button class="mob-row" data-mob-open="industries">Industries <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
-            <li><button class="mob-row" data-mob-open="discover">Discover <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
+            <li><button class="mob-row" data-mob-open="autonautics" aria-expanded="false" aria-controls="mobile-autonautics">Autonautics <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
+            <li><button class="mob-row" data-mob-open="solutions" aria-expanded="false" aria-controls="mobile-solutions">Solutions <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
+            <li><button class="mob-row" data-mob-open="industries" aria-expanded="false" aria-controls="mobile-industries">Industries <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
+            <li><button class="mob-row" data-mob-open="discover" aria-expanded="false" aria-controls="mobile-discover">Discover <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
           </ul>
           <div class="mob-utility">
             <a class="mob-util-btn" href="/company/contact/" aria-label="Contact Anstel for help">Help</a>
@@ -147,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
 
-        <div class="mob-view mob-view-sub" data-mob-view="autonautics">
+        <div id="mobile-autonautics" class="mob-view mob-view-sub" data-mob-view="autonautics" aria-hidden="true">
           <div class="mob-subheader">
             <button class="mob-back-btn" data-mob-back aria-label="Back"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg></button>
             <span class="mob-subtitle">Autonautics</span>
@@ -173,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
 
-        <div class="mob-view mob-view-sub" data-mob-view="solutions">
+        <div id="mobile-solutions" class="mob-view mob-view-sub" data-mob-view="solutions" aria-hidden="true">
           <div class="mob-subheader">
             <button class="mob-back-btn" data-mob-back aria-label="Back"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg></button>
             <span class="mob-subtitle">Solutions</span>
@@ -192,6 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <div class="mob-sub-links">
               <p class="mob-sub-heading">Advanced Capabilities</p>
+              <a href="/solutions/">View All Solutions</a>
               <a href="/solutions/video-telematics/">Video Telematics</a>
               <a href="/solutions/fuel-management/">Fuel Management</a>
               <a href="/solutions/route-optimization/">Route Optimization</a>
@@ -204,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
 
-        <div class="mob-view mob-view-sub" data-mob-view="industries">
+        <div id="mobile-industries" class="mob-view mob-view-sub" data-mob-view="industries" aria-hidden="true">
           <div class="mob-subheader">
             <button class="mob-back-btn" data-mob-back aria-label="Back"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg></button>
             <span class="mob-subtitle">Industries</span>
@@ -223,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
 
-        <div class="mob-view mob-view-sub" data-mob-view="discover">
+        <div id="mobile-discover" class="mob-view mob-view-sub" data-mob-view="discover" aria-hidden="true">
           <div class="mob-subheader">
             <button class="mob-back-btn" data-mob-back aria-label="Back"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg></button>
             <span class="mob-subtitle">Discover</span>
@@ -251,8 +255,17 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
   `;
 
+  // Apply lazy loading before the markup enters the DOM so hidden menu images
+  // do not join the initial page request queue. The visible brand logo remains eager.
+  if (!staticNav) {
+    header.innerHTML = navMarkup.replace(
+      /<img\s+src=(?!["']\/images\/anstel\.svg)/g,
+      '<img loading="lazy" decoding="async" width="512" height="341" src='
+    );
+  }
+
   /* ── Overlay div ── */
-  var overlay = document.createElement('div');
+  var overlay = document.getElementById('mega-overlay') || document.createElement('div');
   overlay.id = 'mega-overlay';
 
   /* ── Schedule bar ── */
@@ -280,12 +293,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var skipLink = document.querySelector('.skip-link');
 
-  if (skipLink) {
-    document.body.insertBefore(header, skipLink.nextSibling);
-  } else {
-    document.body.insertBefore(header, document.body.firstChild);
+  if (!staticNav) {
+    if (skipLink) {
+      document.body.insertBefore(header, skipLink.nextSibling);
+    } else {
+      document.body.insertBefore(header, document.body.firstChild);
+    }
   }
 
-  document.body.insertBefore(overlay, header.nextSibling);
+  if (!overlay.parentNode) document.body.insertBefore(overlay, header.nextSibling);
   // document.body.appendChild(bar); // schedule-bar disabled sitewide
 });

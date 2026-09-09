@@ -15,7 +15,14 @@ function walk(dir) {
   });
 }
 
-const fallbackNav = `<header class="static-site-nav" data-static-nav><a href="/" class="static-site-logo" aria-label="Anstel home"><img src="/images/anstel.svg" width="208" height="40" alt="Anstel"></a><nav aria-label="Primary navigation"><a href="/platform/">Autonautics</a><a href="/solutions/fleet-management/">Solutions</a><a href="/industries/">Industries</a><a href="/company/knowledge-center/">Knowledge Centre</a><a href="/company/customer-stories/">Customer Stories</a><a href="/regions/">Regions</a><a href="/company/contact/">Contact</a></nav></header>`;
+const navbarSource = fs.readFileSync(path.join(root, 'js', 'navbar.js'), 'utf8');
+const navbarMarkup = navbarSource.match(/var navMarkup = `([\s\S]*?)`;\s*\n\s*\/\/ Apply lazy loading/)?.[1];
+if (!navbarMarkup) throw new Error('Shared navbar markup could not be read from js/navbar.js.');
+const staticNavbarMarkup = navbarMarkup.replace(
+  /<img\s+src=(?!["']\/images\/anstel\.svg)/g,
+  '<img loading="lazy" decoding="async" width="512" height="341" src='
+);
+const completeStaticNav = `<header id="site-nav" class="position-fixed top-0 start-0 end-0 bg-white" style="z-index:1050" data-static-nav>${staticNavbarMarkup}</header><div id="mega-overlay"></div>`;
 
 const htmlFiles = walk(root).filter(file => file.endsWith('.html'));
 const homepageSource = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
@@ -28,6 +35,7 @@ for (const file of htmlFiles) {
   let html = fs.readFileSync(file, 'utf8');
 
   html = html.replace(/(<img src="\/images\/anstel\.svg" width=")115(" height="40")/g, '$1208$2');
+  html = html.replace(/href=["']\/solutions\/fleet-management\/["'](?=[^>]*>\s*Solutions\s*<\/a>)/gi, 'href="/solutions/"');
 
   // Keep the corporate website identity distinct from page-level product naming.
   html = html.replace(/(<meta\s+property=["']og:site_name["']\s+content=["'])[^"']*(["']\s*\/?>)/gi, '$1Anstel$2');
@@ -55,6 +63,13 @@ for (const file of htmlFiles) {
 
   html = html.replaceAll('"brand":{"@type":"Brand","name":"Autonautics"}', '"brand":{"@id":"https://www.anstelglobal.com/#autonautics"}');
   html = html.replaceAll('"provider":{"@type":"Organization","name":"Anstel","brand":{"@id":"https://www.anstelglobal.com/#autonautics"}}', '"provider":{"@id":"https://www.anstelglobal.com/#organization"}');
+
+  // Every solution detail page rolls up to the central Solutions collection.
+  if (/^solutions\/[^/]+\/index\.html$/.test(rel)) {
+    html = html
+      .replaceAll('"name":"Advanced Capabilities","item":"https://www.anstelglobal.com/platform/#advanced-capabilities"', '"name":"Solutions","item":"https://www.anstelglobal.com/solutions/"')
+      .replaceAll('"name":"Solutions","item":"https://www.anstelglobal.com/platform/#solutions"', '"name":"Solutions","item":"https://www.anstelglobal.com/solutions/"');
+  }
 
   // Product and capability pages identify Autonautics as the brand and Anstel as publisher.
   if (/^(?:platform|solutions)\//.test(rel)) {
@@ -113,14 +128,16 @@ for (const file of htmlFiles) {
   html = html.replace(/<a\b[^>]*href=["']#["'][^>]*>[\s\S]*?<\/a>/gi, '');
   html = html.replace(/<a\b[^>]*href=["']\/shop\/["'][^>]*>\s*Shop\s*<\/a>/gi, '');
 
-  // Give every content page a keyboard-accessible route past repeated navigation.
-  if (/<(?:main|section)(?:\s|>)/i.test(html) && !/class=["'][^"']*skip-link/.test(html)) {
+  // Keep the skip link first, then include the complete shared navigation in the
+  // source HTML. JavaScript enhances this structure instead of replacing it.
+  if (/\/js\/navbar\.js/.test(html)) {
+    html = html
+      .replace(/<a\b[^>]*class=["'][^"']*skip-link[^"']*["'][^>]*>[\s\S]*?<\/a>/gi, '')
+      .replace(/<header\b[^>]*(?:data-static-nav|id=["']site-nav["'])[^>]*>[\s\S]*?<\/header>/gi, '')
+      .replace(/<div\b[^>]*id=["']mega-overlay["'][^>]*><\/div>/gi, '')
+      .replace(/<body([^>]*)>/i, `<body$1><a class="skip-link" href="#main-content">Skip to main content</a>${completeStaticNav}`);
+  } else if (/<(?:main|section)(?:\s|>)/i.test(html) && !/class=["'][^"']*skip-link/.test(html)) {
     html = html.replace(/<body([^>]*)>/i, '<body$1><a class="skip-link" href="#main-content">Skip to main content</a>');
-  }
-
-  // Add an HTML navigation fallback to pages whose enhanced navbar is JS-generated.
-  if (/\/js\/navbar\.js/.test(html) && !/id=["']site-nav["']/.test(html) && !/data-static-nav/.test(html)) {
-    html = html.replace(/<body([^>]*)>/i, `<body$1>${fallbackNav}`);
   }
   if (!/id=["']main-content["']/.test(html)) {
     if (/<main(?:\s|>)/i.test(html)) html = html.replace(/<main(\s|>)/i, '<main id="main-content"$1');
