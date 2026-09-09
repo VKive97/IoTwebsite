@@ -108,6 +108,14 @@ for (const file of htmlFiles) {
   html = html.replaceAll('Which industries use Anstel?', 'Which industries does Anstel serve?');
   html = html.replaceAll('Autonautics supports compatible GPS tracking and telematics deployments across Papua New Guinea, subject to network and device coverage.', 'Anstel supports Autonautics GPS tracking and compatible telematics deployments across Papua New Guinea, subject to network and device coverage.');
 
+  if (rel === 'privacy-policy/index.html') {
+    const safeguards = '<h2>How Anstel protects customer information</h2><p>Anstel applies organisational and technical safeguards to protect customer information processed through Autonautics and its supporting systems.</p><ul><li><strong>Encryption:</strong> Information is protected during transmission and, where applicable, while stored.</li><li><strong>Secure authentication:</strong> Account controls help prevent unauthorised access to Autonautics.</li><li><strong>Role-based access:</strong> Users receive access according to their authorised responsibilities.</li><li><strong>Audit logs:</strong> Relevant account and system activities may be recorded to support security reviews and investigations.</li><li><strong>Backups and recovery:</strong> Operational data is backed up and supported by recovery processes designed to maintain service continuity.</li><li><strong>Security monitoring:</strong> Anstel monitors relevant systems and access activity to identify and respond to potential security issues.</li><li><strong>Privacy requests:</strong> Customers and individuals can submit privacy-related enquiries or requests through the <a href="/company/contact/">contact form</a> or using the contact details below.</li></ul>';
+    html = html.replace('Effective 26 August 2026', 'Effective 9 September 2026');
+    if (!html.includes('How Anstel protects customer information')) {
+      html = html.replace('</p><h2>Your choices and rights</h2>', `</p>${safeguards}<h2>Your choices and rights</h2>`);
+    }
+  }
+
   // Product and solution pages keep regional discovery in shared navigation and footer links.
   html = html.replace(/\s*<!-- Regional Availability -->\s*<section class="regional-availability">[\s\S]*?<\/section>/gi, '');
 
