@@ -15,6 +15,21 @@ function walk(dir) {
   });
 }
 
+function australianiseProse(value) {
+  return value
+    .replace(/\borganizations\b/g, 'organisations')
+    .replace(/\borganization\b/g, 'organisation')
+    .replace(/\bbehaviors\b/g, 'behaviours')
+    .replace(/\bbehavior\b/g, 'behaviour')
+    .replace(/\bcentralized\b/g, 'centralised')
+    .replace(/\bauthorized\b/g, 'authorised')
+    .replace(/\bunauthorized\b/g, 'unauthorised')
+    .replace(/\boptimized\b/g, 'optimised')
+    .replace(/\boptimizing\b/g, 'optimising')
+    .replace(/\boptimize\b/g, 'optimise')
+    .replace(/\boptimization\b/g, 'optimisation');
+}
+
 const navbarSource = fs.readFileSync(path.join(root, 'js', 'navbar.js'), 'utf8');
 const navbarMarkup = navbarSource.match(/var navMarkup = `([\s\S]*?)`;\s*\n\s*\/\/ Apply lazy loading/)?.[1];
 if (!navbarMarkup) throw new Error('Shared navbar markup could not be read from js/navbar.js.');
@@ -108,6 +123,56 @@ for (const file of htmlFiles) {
   html = html.replaceAll('Which industries use Anstel?', 'Which industries does Anstel serve?');
   html = html.replaceAll('Autonautics supports compatible GPS tracking and telematics deployments across Papua New Guinea, subject to network and device coverage.', 'Anstel supports Autonautics GPS tracking and compatible telematics deployments across Papua New Guinea, subject to network and device coverage.');
 
+  const copyCorrections = new Map([
+    ['<p class="tesla-spec-value mb-0">4</p>\n          <p class="tesla-spec-label mb-0">Countries Served</p>', '<p class="tesla-spec-value mb-0">5</p>\n          <p class="tesla-spec-label mb-0">Operating Markets</p>'],
+    ['Anstel supports connected fleet, asset, and IoT\n        operations across Australia, New Zealand, India, Papua New Guinea, and Fiji&mdash;with local teams and\n        support in each region.', 'Anstel supports connected fleet, asset, and IoT operations across Australia, New Zealand, India, Papua New Guinea, and Fiji. Operations across the five markets are coordinated by Anstel&rsquo;s teams in Sydney, Gurugram and Suva.'],
+    ['fleet management and IoT product', 'connected fleet and IoT platform'],
+    ['fleet management and connected IoT product', 'connected fleet and IoT platform'],
+    ['our fleet management and IoT\n          product', 'our connected fleet and IoT platform'],
+    ['a connected product designed around', 'a connected fleet and IoT platform designed around'],
+    ['Fleet Services Marketplace | Anstel Merchant', 'Fleet Services Marketplace | Merchant'],
+    ['and complies with AIS-140 and other regional', 'and supports compatible AIS-140 devices and workflows alongside other regional'],
+    ['fatigue indicators, detected automatically from GPS and telematics data with no extra hardware beyond the standard tracker.', 'fatigue and distraction indicators when compatible camera or DMS hardware is installed; tracker-based events such as speeding, harsh braking, rapid acceleration, harsh cornering, and excessive idling do not require camera hardware.'],
+    ['fatigue indicators, detected automatically from GPS and telematics data\n              with no extra hardware beyond the standard tracker.', 'fatigue and distraction indicators when compatible camera or DMS hardware is installed; tracker-based events such as speeding, harsh braking, rapid acceleration, harsh cornering, and excessive idling do not require camera hardware.'],
+    ['Remotely immobilize authorized vehicles when required to', 'When authorised, operators can remotely immobilise compatible vehicles to'],
+    ['Remotely immobilize authorized vehicles during security', 'When authorised, operators can remotely immobilise compatible vehicles during security'],
+    ['planning jobs, scheduling workforce, depots, and zones, and tracking every job live', 'planning jobs and scheduling teams across depots and zones, while tracking every job live'],
+    ['planning jobs, scheduling workforce and depots/zones, and tracking live operational execution.', 'planning jobs and scheduling teams across depots and zones, with live operational execution tracking.'],
+    ['Add products, services, and define', 'Add products and services, and define'],
+    ['the right job to the right workforce', 'the right job to the right worker or team'],
+    ['Know who&rsquo;s available, assigned, in progress, or\n              completed&mdash;all from one operational dashboard.', 'Know who is available or assigned, and which jobs are in progress or completed&mdash;all from one operational dashboard.'],
+    ['helps Fiji organisations', 'helps organisations in Fiji'],
+    ['cloud based', 'cloud-based'],
+    ['insights&mdash;\n        helping', 'insights&mdash;helping'],
+    ['&mdash;no forced hardware switch', ' &mdash; no forced hardware switch'],
+    ['hardware sensors and cloud actionable insights', 'connected hardware and actionable cloud-based insights'],
+    ['Consumer buying probability insight', 'Consumer buying-probability insights'],
+    ['multi-national fleets', 'multinational fleets'],
+    ['R&amp;D Backed Platform', 'R&amp;D-Backed Platform'],
+    ['Government R&amp;D Backed', 'Government R&amp;D-Backed'],
+    ['supports hardware from Teltonika, Queclink, and Jimi and 20+ device models', 'supports selected models from Teltonika, Ruptela, Queclink and Jimi IoT, with 20+ compatible device models overall']
+    ,['Autonautics works with GPS and telematics hardware from Teltonika,\n        Queclink, and Jimi, plus 20+ supported device models, and supports compatible AIS-140 devices and workflows alongside other regional\n        standards&mdash;so you can keep the hardware you already run.', 'Autonautics works with selected GPS and telematics models and supports compatible AIS-140 devices and workflows, as well as other regional standards&mdash;so you can keep compatible hardware you already run.']
+    ,['Connected Fleet is device-agnostic and supports Teltonika, Queclink, Jimi, and 20+ other models', 'Connected Fleet supports selected models from Teltonika, Ruptela, Queclink and Jimi IoT, with 20+ compatible device models overall']
+    ,['Connected Fleet is device-agnostic and supports Teltonika,\n              Queclink, Jimi, and 20+ other models', 'Connected Fleet supports selected models from Teltonika, Ruptela, Queclink and Jimi IoT, with 20+ compatible device models overall']
+    ,['When authorised, operators can remotely immobilise compatible vehicles to\n            help prevent unauthorised movement and support vehicle recovery during security incidents.', 'When authorised, operators can remotely immobilise compatible vehicles. This can help prevent unauthorised movement and support vehicle recovery during security incidents.']
+    ,['When authorised, operators can remotely immobilise compatible vehicles during security\n              incidents or unauthorised activity to help prevent further movement and support vehicle recovery.', 'When authorised, operators can remotely immobilise compatible vehicles. This can help prevent further movement and support vehicle recovery during a security incident or unauthorised activity.']
+    ,['consumer buying probability insights', 'consumer buying-probability insights']
+  ]);
+  for (const [before, after] of copyCorrections) html = html.replaceAll(before, after);
+
+  if (/^industries\/(?:transportation|logistics-supply-chain|waste-management|food-services-fmcg)\/index\.html$/.test(rel)) {
+    const cardTypes = new Map([
+      ['Connected Fleet', 'Product'], ['Last Mile', 'Product'], ['IoT Platform', 'Product'],
+      ['Device Ecosystem', 'Platform'], ['Fleet Tracking', 'Solution'], ['Route Optimization', 'Solution'],
+      ['Fuel Management', 'Solution'], ['Compliance', 'Solution'], ['Dispatch Management', 'Solution'],
+      ['Asset Management', 'Solution'], ['Reports &amp; Analytics', 'Solution'], ['Alerts &amp; Notifications', 'Solution']
+    ]);
+    for (const [title, type] of cardTypes) {
+      const escaped = title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      html = html.replace(new RegExp('(<p class="text-muted fw-semibold text-uppercase mb-2"[^>]*>\\s*)(?:Product|Platform|Solution)(</p>\\s*<h3[^>]*>' + escaped + '</h3>)', 'g'), `$1${type}$2`);
+    }
+  }
+
   if (rel === 'privacy-policy/index.html') {
     const safeguards = '<h2>How Anstel protects customer information</h2><p>Anstel applies organisational and technical safeguards to protect customer information processed through Autonautics and its supporting systems.</p><ul><li><strong>Encryption:</strong> Information is protected during transmission and, where applicable, while stored.</li><li><strong>Secure authentication:</strong> Account controls help prevent unauthorised access to Autonautics.</li><li><strong>Role-based access:</strong> Users receive access according to their authorised responsibilities.</li><li><strong>Audit logs:</strong> Relevant account and system activities may be recorded to support security reviews and investigations.</li><li><strong>Backups and recovery:</strong> Operational data is backed up and supported by recovery processes designed to maintain service continuity.</li><li><strong>Security monitoring:</strong> Anstel monitors relevant systems and access activity to identify and respond to potential security issues.</li><li><strong>Privacy requests:</strong> Customers and individuals can submit privacy-related enquiries or requests through the <a href="/company/contact/">contact form</a> or using the contact details below.</li></ul>';
     html = html.replace('Effective 26 August 2026', 'Effective 9 September 2026');
@@ -175,6 +240,30 @@ for (const file of htmlFiles) {
       return normalized;
     });
   }
+
+  // Use Australian English in prose and descriptive metadata while retaining
+  // official schema types, URLs, identifiers, and capitalised product names.
+  html = html.replace(/<meta\b[^>]*>/gi, tag => {
+    if (!/(?:name|property)=["'][^"']*description["']/i.test(tag)) return tag;
+    return tag.replace(/content=(["'])([\s\S]*?)\1/i, (match, quote, value) => `content=${quote}${australianiseProse(value)}${quote}`);
+  });
+  html = html.replace(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi, (script, source) => {
+    try {
+      const data = JSON.parse(source);
+      const proseKeys = new Set(['description', 'text', 'headline', 'serviceType']);
+      const visit = value => {
+        if (Array.isArray(value)) return value.forEach(visit);
+        if (!value || typeof value !== 'object') return;
+        for (const [key, item] of Object.entries(value)) {
+          if (proseKeys.has(key) && typeof item === 'string') value[key] = australianiseProse(item);
+          else visit(item);
+        }
+      };
+      visit(data);
+      return `<script type="application/ld+json">${JSON.stringify(data)}</script>`;
+    } catch { return script; }
+  });
+  html = html.replace(/(<script\b[\s\S]*?<\/script>|<style\b[\s\S]*?<\/style>|<[^>]+>)|([^<]+)/gi, (match, protectedMarkup, text) => protectedMarkup || australianiseProse(text));
 
   // Add BreadcrumbList to the country pages.
   if (/^regions\/[^/]+\/index\.html$/.test(rel) && !html.includes('"@type":"BreadcrumbList"')) {
