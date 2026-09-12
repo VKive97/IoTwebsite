@@ -1,0 +1,92 @@
+/* One cinematic image with each challenge and description on a shared rail. */
+.waste-challenges{--challenge-duration:6000ms;min-width:0}
+.waste-challenges-stage{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:var(--ui-radius);background:#e3e5e7;touch-action:pan-y}
+.waste-challenge-slide{position:absolute;inset:0;margin:0;opacity:1;visibility:visible;transition:opacity .6s ease,visibility .6s ease}
+.waste-challenge-slide[aria-hidden="true"]{opacity:0;visibility:hidden;pointer-events:none}
+.waste-challenge-slide img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.waste-challenges-toggle{position:absolute;left:1.5rem;bottom:1.5rem;z-index:2;display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:4px;color:#fff;background:rgba(23,26,32,.65);backdrop-filter:blur(8px);cursor:pointer}
+.waste-challenges-toggle:hover{background:rgba(23,26,32,.85)}
+.waste-challenges-toggle[hidden],.waste-challenges[data-paused="true"] .icon-pause,.waste-challenges[data-paused="false"] .icon-play{display:none}
+.waste-challenges-titles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.5rem;margin-top:1.75rem}
+.waste-challenge-title{display:block;width:100%;min-width:0;padding:0;align-self:start;appearance:none;border:0;background:transparent;text-align:left;cursor:pointer}
+.waste-challenge-title:hover .waste-challenge-label{color:#111827}
+.waste-challenge-track span{display:block;width:100%;height:100%;transform:scaleX(0);transform-origin:left;background:#111827}
+.waste-challenge-title[aria-pressed="true"] .waste-challenge-track span{transform:scaleX(1)}
+.waste-challenges[data-running="true"] .waste-challenge-title[aria-pressed="true"] .waste-challenge-track span{animation:wasteChallengeProgress var(--challenge-duration) linear forwards}
+.waste-challenge-title:focus-visible,.waste-challenges-toggle:focus-visible{outline:3px solid #4169dc;outline-offset:5px;border-radius:2px}
+@keyframes wasteChallengeProgress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(max-width:767px){.waste-challenges-titles{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem 1rem}}
+@media(max-width:575px){
+  .waste-challenges-stage{aspect-ratio:4/3}
+  .waste-challenges-toggle{left:.75rem;bottom:.75rem}
+  .waste-challenges-titles{grid-template-columns:minmax(0,1fr);gap:1.5rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .waste-challenge-slide,.waste-challenge-title,.waste-challenge-copy{transition:none}
+  .waste-challenges[data-running="true"] .waste-challenge-track span{animation:none}
+}
+
+/* Connected waste operations: clear steps and compact supporting details. */
+.waste-section-copy{max-width:780px}
+.waste-section-copy>p:last-child{margin-bottom:0!important}
+/* Workflow cards share the homepage device-card surface and typography. */
+.waste-workflow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;min-width:0;padding:0;margin-bottom:0;list-style:none}
+.waste-workflow-step{min-width:0;border:0;box-shadow:none}
+.waste-workflow-icon{display:flex;align-items:center;justify-content:center;width:64px;height:64px;margin-bottom:1rem;color:#171a20}
+.waste-workflow-icon svg{display:block;width:48px;height:48px}
+.waste-detail-item h3{margin:0 0 .75rem;color:#171a20;font-size:clamp(1.125rem,1.6vw,1.375rem);font-weight:600;line-height:1.3;letter-spacing:-.02em}
+.waste-detail-item p{margin:0;color:#5c6168;font-size:.9375rem;line-height:1.7}
+.waste-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(3rem,7vw,7rem);align-items:start}
+.waste-detail-item{padding:1.5rem 0;border:0}
+.waste-detail-item:last-child{padding-bottom:0}
+.waste-faq{width:100%;max-width:960px}
+@media(max-width:991px){
+  .waste-workflow{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .waste-split{grid-template-columns:minmax(0,1fr);gap:2.5rem}
+}
+@media(max-width:575px){
+  .waste-workflow{grid-template-columns:minmax(0,1fr);gap:1rem}
+  .waste-workflow-icon{width:54px;height:54px}
+  .waste-workflow-icon svg{width:44px;height:44px}
+}
+
+/* Borderless surfaces throughout the Waste Management page. */
+body>section,body>footer,.waste-faq .accordion-item,.waste-faq .accordion-button,.cta-band .btn{border:0!important}
+.waste-faq .accordion-item,.waste-faq .accordion-item:hover{box-shadow:none}
+.cta-band .cta-secondary-btn{background:rgba(255,255,255,.12)}
+.cta-band .cta-secondary-btn:hover{background:rgba(255,255,255,.2)}
+
+/* The first card follows the content gutter; neighboring cards bleed to the edge. */
+.waste-bleed-carousel{--waste-card-width:min(78vw,860px);position:relative;width:100vw;min-width:0;margin-left:calc(50% - 50vw)}
+.waste-bleed-track{display:flex;gap:1.5rem;overflow-x:auto;align-items:stretch;padding-block:.25rem;touch-action:pan-x pan-y}
+.waste-bleed-card{display:flex;flex:0 0 auto;flex-direction:column;min-height:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;color:#171a20}
+.waste-bleed-image{aspect-ratio:16/10;width:100%;overflow:hidden;border:0;border-radius:8px;background:#eef0f2}
+.waste-bleed-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.waste-card-icon{display:block;flex:0 0 auto;width:64px;height:64px;margin-bottom:3rem;color:#171a20}
+.waste-card-icon svg{display:block;width:100%;height:100%}
+.waste-card-copy{margin-top:1.5rem;max-width:700px;padding-right:1.25rem}
+.waste-bleed-card h3{margin:0 0 1rem;font-size:clamp(1.65rem,2.7vw,2.5rem);font-weight:600;line-height:1.13;letter-spacing:-.035em}
+.waste-bleed-card p{max-width:510px;margin:0;color:#5c6168;font-size:clamp(1rem,1.25vw,1.125rem);line-height:1.6}
+.waste-bleed-spacer{flex:0 0 auto}
+/* Use the homepage controls over the photo, independent of the caption height. */
+.waste-carousel-controls{position:absolute;top:.25rem;left:0;right:0;height:calc(var(--waste-card-width) * .625);z-index:20;pointer-events:none}
+.waste-carousel-controls button{pointer-events:auto}
+.waste-carousel-controls .car-btn{color:#333}
+.waste-bleed-carousel button:focus-visible{outline:2px solid #4169dc;outline-offset:3px}
+.waste-bleed-track:focus-visible{outline:2px solid #4169dc;outline-offset:-2px}
+
+/* Operational outcomes use quiet, flat cards with no outlines or hover shadows. */
+.waste-outcomes-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.waste-outcome-card{min-width:0;padding:clamp(1.75rem,3vw,2.75rem);border:0;border-radius:8px;background:#fff;box-shadow:none}
+.waste-outcome-card .waste-card-icon{width:48px;height:48px;margin-bottom:2.5rem}
+.waste-outcome-card h3{margin:0 0 .85rem;font-size:clamp(1.2rem,1.65vw,1.5rem);font-weight:600;line-height:1.2;letter-spacing:-.025em;color:#171a20}
+.waste-outcome-card p{margin:0;color:#5c6168;font-size:.9375rem;line-height:1.65}
+@media(max-width:991px){.waste-outcomes-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:575px){
+  .waste-bleed-carousel{--waste-card-width:84vw}
+  .waste-bleed-card{min-height:0;padding:0}
+  .waste-card-copy{margin-top:1.1rem;padding-right:.5rem}
+  .waste-card-icon{width:52px;height:52px;margin-bottom:2.5rem}
+  .waste-outcomes-grid{grid-template-columns:minmax(0,1fr);gap:1rem}
+}
+@media(prefers-reduced-motion:reduce){.waste-bleed-carousel .car-btn{transition:none}}

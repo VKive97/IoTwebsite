@@ -1,0 +1,18 @@
+Device Ecosystem hero — connected fleet hardware
+Generation mode: built-in image_gen.
+Page: platform/device-ecosystem/index.html
+Updated hero, Open Graph image, Twitter image and SoftwareApplication image.
+
+Final assets:
+images/device-ecosystem-hardware-hero-v1.webp (1672x941)
+images/device-ecosystem-hardware-hero-v1-1280.webp (1280x720)
+images/device-ecosystem-hardware-hero-v1-640.webp (640x360)
+
+Final prompt:
+Use case: product-mockup
+Asset type: Fresh photorealistic hero photograph for the Anstel Autonautics Device Ecosystem webpage, wide landscape 16:9.
+Primary request: Make connected fleet HARDWARE the unmistakable subject: GPS tracking units, a vehicle dash camera, a rugged asset tracker, and small IoT sensors working as one device ecosystem.
+Scene: Premium commercial product photography on a clean dark slate workbench in a contemporary vehicle technology lab. A compact, believable set of unbranded fleet telematics devices sits together in the central part of the frame: a matte graphite GPS tracker with a short tidy connector lead, a dual-lens vehicle dash camera on its realistic compact mount with visible glass lens, a weatherproof rectangular asset tracker, an OBD plug-in module, and a small white temperature sensor. Realistic hardware sizes, useful proportions, clean connections and fine surface texture. A slightly blurred vehicle windshield and softly lit workshop architecture in the distant background subtly establish the fleet use case. Do not make the devices look like smartphones or large consumer cameras.
+Composition: Place the main GPS unit, dash camera and sensor close together within the central 38 percent of the image width, in the middle-to-lower area between 48 and 76 percent of image height. A close, slightly elevated three-quarter camera angle makes the lenses and enclosures easy to identify. Devices are large enough to read as real hardware, not tiny scattered props. Leave the upper 42 percent as a calm, dark navy, softly blurred background for an existing white website title. Maintain background all the way to the left and right edges; no decorative frame. The central group must survive a portrait mobile crop. Keep all devices fully inside the frame, with breathing room along the lower edge.
+Lighting and palette: Sophisticated slate, graphite and muted navy, soft cool-blue rim light, restrained neutral daylight highlights revealing the shapes of black devices. Believable subtle contact shadows and lightly reflective workbench. Polished enterprise technology aesthetic, photographic realism, natural optical depth of field, crisp hardware.
+Constraints: No words, numerals, product labels, branding, logos, watermarks, interface panels, diagrams, floating icons, holograms, luminous connection lines, cartoon styling, collage, excessive cables or neon effects. Generate one coherent photographic image, not a webpage mockup.

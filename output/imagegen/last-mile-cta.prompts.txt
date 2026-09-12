@@ -1,0 +1,21 @@
+Last Mile CTA delivery motion loop
+Image generation mode: built-in image_gen
+Video: FFmpeg camera motion applied to the generated still image; no moving subjects or audio.
+Page: platform/last-mile/index.html
+Final assets:
+videos/last-mile-cta-delivery-loop-v1.mp4
+images/last-mile-cta-delivery-v1.webp
+images/last-mile-cta-delivery-v1-640.webp
+images/last-mile-cta-delivery-v1-1280.webp
+Video specification: 12 seconds, 1280x720, 24fps, H.264, silent, seamless slow zoom cycle.
+
+Final image prompt:
+Use case: ads-marketing
+Asset type: Photorealistic 16:9 landscape visual for the bottom call-to-action of an Autonautics Last Mile delivery webpage, also to be used as the source of a slow cinematic camera-motion video loop.
+Primary request: A distinctive last-mile parcel delivery scene, showing the final successful customer delivery rather than a logistics hub or dispatch office.
+Scene: A contemporary suburban Australian townhouse street in soft late-afternoon light. A clean unbranded white electric delivery van is parked at the curb. A professional adult courier wearing a dark navy polo and dark work trousers hands a single small cardboard parcel to an adult customer at a modern townhouse entrance. The recipient accepts the parcel naturally; the courier carries a small delivery phone at their side, screen not readable. The stationary van and a little greenery establish a believable residential delivery setting.
+Composition: Premium wide commercial photograph, one coherent scene with natural perspective. Keep the courier, customer, parcel and van comfortably inside the central 65 percent of the frame for responsive crops. Main interaction in the middle third vertically so the top and bottom can crop gracefully. Leave a calm, slightly darker architectural background along the top 15 percent for a navy gradient from the webpage above. No text or interface inside the image. Subtle atmospheric depth, crisp realistic hands and faces, restrained colours, editorial automotive photography.
+Constraints: Exactly two adults, anatomically correct hands with natural parcel handover, normal street and real van proportions. No logos, brand names, labels, watermarks, UI overlays, borders, caption or advertising text.
+
+FFmpeg motion filter:
+scale=2560:-1,crop=2560:1440,zoompan=z='1.02+0.015*(1-cos(2*PI*on/287))':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=288:s=1280x720:fps=24,format=yuv420p

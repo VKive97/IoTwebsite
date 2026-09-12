@@ -1,0 +1,52 @@
+[
+  {
+    "key": "erp",
+    "stem": "api-ecosystem-erp-v1",
+    "alt": "Operations planner connecting vehicle and dispatch records with an enterprise resource planning system",
+    "prompt": "Wide 16:9 premium commercial photograph for an ERP Integration website section. A professional operations planner at a bright logistics office desk reviews an enterprise resource planning dashboard on a large centred monitor; its simple interface shows coordinated vehicle assignments, dispatch rows and order records, title 'Operations planning'. A small tablet with a fleet map rests beside the monitor. Through glass in the soft background, a loading yard establishes the fleet-business context. The focus is the connection between business orders and fleet operations. Calm clean architectural background, realistic person and hands, natural daylight, muted navy and neutral grey palette. Main screen and action within central 60 percent for responsive framing. Photographic realism, one coherent scene. No logos, brand names, watermark, tiny illegible text, glowing network graphics or collage.",
+    "asset": "images/api-ecosystem-erp-v1.webp",
+    "provider": "Adobe Firefly",
+    "width": 2688,
+    "height": 1536
+  },
+  {
+    "key": "crm",
+    "stem": "api-ecosystem-crm-v1",
+    "alt": "Customer service specialist viewing a customer record and live delivery information during a support call",
+    "prompt": "Wide 16:9 photorealistic editorial business photograph for CRM Integration. A customer service specialist wearing a small telephone headset in a modern bright office views a centred monitor combining a clear generic customer record card and a delivery status timeline; concise screen title 'Customer overview'. A small route map is secondary, not the dominant visual. The specialist calmly speaks with a customer while using the mouse. Desk is uncluttered, background office softly blurred, practical customer support setting. This must communicate customer relationship management and delivery information together. Navy, white and neutral tones, natural daylight, realistic anatomy, premium understated commercial style. Keep person and display central. No branding, logos, watermarks, floating graphics, decorative overlay text or dense fake writing.",
+    "asset": "images/api-ecosystem-crm-v1.webp",
+    "provider": "Adobe Firefly",
+    "width": 2688,
+    "height": 1536
+  },
+  {
+    "key": "accounting",
+    "stem": "api-ecosystem-accounting-v1",
+    "alt": "Finance specialist reconciling fleet invoices and costs in accounting software",
+    "prompt": "Wide 16:9 premium realistic photograph for Accounting Sync on a fleet API integrations page. A finance specialist at a bright clean office desk reconciles fleet operating costs and invoices on a centred laptop. Its simple clear light interface shows an invoice list and a small blue expense chart, title 'Fleet expenses'. A paper invoice with non-readable minimal lines, a calculator and a pen near the laptop clearly establish the accounting task. One hand uses the trackpad, the other holds a pen; anatomically natural. Vehicle keys rest unobtrusively beside the paperwork to tie the context to fleet operations. Calm sophisticated photography, soft window light, muted navy and grey, realistic materials and professional office depth. Keep essential objects and screen near centre. No actual financial numbers, brands, watermarks, holograms, collage or unrelated warehouse imagery.",
+    "asset": "images/api-ecosystem-accounting-v1.webp",
+    "provider": "Adobe Firefly",
+    "width": 2688,
+    "height": 1536
+  },
+  {
+    "key": "analytics",
+    "stem": "api-ecosystem-analytics-v1",
+    "alt": "Business analyst reviewing fleet trends and operating performance across connected data sources",
+    "prompt": "Wide 16:9 photorealistic premium photograph for Business Intelligence integration. A business analyst in a bright contemporary meeting room stands beside a large centred wall display showing a clear restrained analytics dashboard: blue bar charts, an orange trend line and a simple operating-cost breakdown. Concise title 'Fleet insights'. The analyst points naturally toward one trend while a colleague with an open laptop listens at the table. The focus is useful cross-system analysis and business decisions, not a map or call centre. Clean white architecture, daylight, muted navy clothing, crisp visible chart shapes, natural adult anatomy and convincing screen perspective. Keep the analyst and main chart within central 60 percent and leave uncluttered sides. One coherent commercial photograph. No branding, watermarks, floating data overlays, tiny unreadable labels or poster text.",
+    "asset": "images/api-ecosystem-analytics-v1.webp",
+    "provider": "Adobe Firefly",
+    "width": 2688,
+    "height": 1536
+  },
+  {
+    "key": "custom",
+    "stem": "api-ecosystem-custom-v1",
+    "alt": "Software developer building a custom fleet integration using an API console and code editor",
+    "prompt": "Wide 16:9 realistic commercial photograph for Custom Applications integration. A software developer works at a tidy contemporary office desk with a large centred monitor showing a generic code editor beside a clean API test console. The console heading reads 'API connection' and a small green status reads 'Connected'; no other text needs to be readable. A laptop nearby shows a simple fleet vehicle list, demonstrating a custom business application using fleet data. Over-the-shoulder three-quarter view with the screen and developer's hands central. Sophisticated natural daylight, neutral slate and navy colours, restrained technical detail, convincing devices and anatomy. Visibly about building software integrations, not hardware repair or generic charts. No logos, brand names, watermark, colourful hacker effects, glowing network lines, collage or decorative text.",
+    "asset": "images/api-ecosystem-custom-v1.webp",
+    "provider": "Adobe Firefly",
+    "width": 2688,
+    "height": 1536
+  }
+]

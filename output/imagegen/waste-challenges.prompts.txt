@@ -1,0 +1,33 @@
+Generation mode: built-in image_gen
+Website: /industries/waste-management/
+Section: The Challenge - Inefficient Routes Cost More Than Fuel.
+
+Asset: images/waste-challenge-visibility-v1.webp
+Responsive variants: images/waste-challenge-visibility-v1-640.webp, images/waste-challenge-visibility-v1-1280.webp
+Use case: ads-marketing
+Asset type: Wide 16:9 landscape photographic slide for the waste management challenges carousel on Anstel's website, high resolution.
+Style: Premium natural commercial photography, visually cohesive with a clean minimalist enterprise website. Real Australian municipal waste operations, cool navy shadows, white fleet vehicles, subdued green foliage, crisp natural details, realistic materials and proportions.
+Lighting: Soft early morning daylight, gentle sun, believable color grading, clear readable exposure.
+Composition: One single photographic scene, wide cinematic frame, main subjects safely inside the central two-thirds so modest responsive cropping works. No collage or panels. Show the operational challenge through the physical scene.
+Constraints: No text, no typography, no watermark, no brand marks, no logos, no data overlays, no fake UI, no decorative graphics, no illustration or plastic CGI. Do not put any heading or caption in the image.
+Scene: A waste collection dispatcher in a modest modern municipal operations office, viewed from behind and slightly to the side, holding a telephone handset while studying a large paper neighborhood street map and printed collection schedules spread on the desk. Through broad office windows in the background are two white refuse collection trucks in the depot. The scene communicates needing to call drivers to discover where they are. No digital tracking overlays or glowing map pins. Main person and paper map centered comfortably inside the central two thirds of the composition. A natural human working posture, no visible readable writing.
+
+Asset: images/waste-challenge-routes-v1.webp
+Responsive variants: images/waste-challenge-routes-v1-640.webp, images/waste-challenge-routes-v1-1280.webp
+Use case: ads-marketing
+Asset type: Wide 16:9 landscape photographic slide for the waste management challenges carousel on Anstel's website, high resolution.
+Style: Premium natural commercial photography, visually cohesive with a clean minimalist enterprise website. Real Australian municipal waste operations, cool navy shadows, white fleet vehicles, subdued green foliage, crisp natural details, realistic materials and proportions.
+Lighting: Soft early morning daylight, gentle sun, believable color grading, clear readable exposure.
+Composition: One single photographic scene, wide cinematic frame, main subjects safely inside the central two-thirds so modest responsive cropping works. No collage or panels. Show the operational challenge through the physical scene.
+Constraints: No text, no typography, no watermark, no brand marks, no logos, no data overlays, no fake UI, no decorative graphics, no illustration or plastic CGI. Do not put any heading or caption in the image.
+Scene: A realistic white rear-loading municipal waste collection truck stopped safely before a temporary suburban road closure. Three orange traffic cones and a portable striped roadwork barrier block a residential side street at an intersection; an open alternate street is visible to the side. Three-quarter front-side view of the complete white refuse truck with engineered compactor body and amber safety lights, central in frame. Individual wheelie bins along the sidewalk and leafy low-rise homes give waste collection context. The scene communicates a fixed collection route interrupted by changed road conditions. No road sign lettering or route overlays. The truck is entirely visible, correctly proportioned, and has space to turn safely.
+
+Asset: images/waste-challenge-service-v1.webp
+Responsive variants: images/waste-challenge-service-v1-640.webp, images/waste-challenge-service-v1-1280.webp
+Use case: ads-marketing
+Asset type: Wide 16:9 landscape photographic slide for the waste management challenges carousel on Anstel's website, high resolution.
+Style: Premium natural commercial photography, visually cohesive with a clean minimalist enterprise website. Real Australian municipal waste operations, cool navy shadows, white fleet vehicles, subdued green foliage, crisp natural details, realistic materials and proportions.
+Lighting: Soft early morning daylight, gentle sun, believable color grading, clear readable exposure.
+Composition: One single photographic scene, wide cinematic frame, main subjects safely inside the central two-thirds so modest responsive cropping works. No collage or panels. Show the operational challenge through the physical scene.
+Constraints: No text, no typography, no watermark, no brand marks, no logos, no data overlays, no fake UI, no decorative graphics, no illustration or plastic CGI. Do not put any heading or caption in the image.
+Scene: Two closed dark wheelie bins with yellow lids still waiting at the curb after the collection round in a leafy Australian residential neighborhood. A resident seen from behind in unobtrusive casual clothing stands on the sidewalk beside the bins holding a smartphone at chest height to report a missed collection. A white refuse collection truck is visible departing far down the road in the background. Foreground resident and the two bins grouped near the center of the frame, smartphone screen angled away from camera. Restrained natural working-day scene communicating a missed pickup and reactive service request, no exaggerated emotions, no scattered rubbish or overflowing bins.

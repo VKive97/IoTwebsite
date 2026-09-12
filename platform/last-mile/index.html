@@ -63,7 +63,6 @@
             <li class="mb-2"><a href="/platform/" class="small text-secondary text-decoration-none">Platform Overview</a></li>
             <li class="mb-2"><a href="/platform/#products" class="small text-secondary text-decoration-none">Compare Products</a></li>
             <li class="mb-2"><a href="/platform/device-ecosystem/" class="small text-secondary text-decoration-none">Device Ecosystem</a></li>
-            <li class="mb-2"><a href="/company/customer-stories/" class="small text-secondary text-decoration-none">Customer Success</a></li>
             <li><a href="/demo/" class="small text-secondary text-decoration-none">Request a Demo</a></li>
           </ul>
         </div>
@@ -88,7 +87,7 @@
         <div class="border-start ps-4 flex-shrink-0" style="width:192px">
           <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Advanced Capabilities</p>
           <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="/solutions/" class="small fw-semibold text-dark text-decoration-none">Solutions Overview</a></li>
+            <li class="mb-2"><a href="/solutions/" class="small text-secondary text-decoration-none">Solutions Overview</a></li>
             <li class="mb-2"><a href="/solutions/video-telematics/" class="small text-secondary text-decoration-none">Video Telematics</a></li>
             <li class="mb-2"><a href="/solutions/fuel-management/" class="small text-secondary text-decoration-none">Fuel Management</a></li>
             <li class="mb-2"><a href="/solutions/route-optimization/" class="small text-secondary text-decoration-none">Route Optimization</a></li>
@@ -183,7 +182,6 @@
               <a href="/platform/">Platform Overview</a>
               <a href="/platform/#products">Compare Products</a>
               <a href="/platform/device-ecosystem/">Device Ecosystem</a>
-              <a href="/company/customer-stories/">Customer Success</a>
               <a href="/demo/">Request a Demo</a>
             </div>
           </div>
@@ -879,8 +877,15 @@
     <a href="/company/contact/" class="btn cta-secondary-btn px-5 py-2">Talk to Sales</a>
   </div>
     </div>
-    <figure class="cta-band-media mb-0">
-      <img src="/images/cta-field-operations.webp" alt="Field service and delivery teams coordinating work at an urban operations hub" width="1774" height="887" decoding="async" srcset="/images/cta-field-operations-640.webp 640w, /images/cta-field-operations-1280.webp 1280w, /images/cta-field-operations.webp 1774w" sizes="100vw" loading="lazy">
+    <figure class="cta-band-media cta-band-media--video mb-0" data-cta-video data-paused="true">
+      <img src="/images/last-mile-cta-delivery-v1.webp" alt="Courier handing a parcel to a customer at her doorstep beside a delivery van" width="1672" height="941" decoding="async" srcset="/images/last-mile-cta-delivery-v1-640.webp 640w, /images/last-mile-cta-delivery-v1-1280.webp 1280w, /images/last-mile-cta-delivery-v1.webp 1672w" sizes="100vw" loading="lazy">
+      <video id="last-mile-cta-video" muted loop playsinline preload="none" width="1280" height="720" aria-hidden="true" tabindex="-1">
+        <source data-src="/videos/last-mile-cta-delivery-loop-v1.mp4" type="video/mp4">
+      </video>
+      <button class="cta-video-toggle" type="button" aria-label="Play delivery video" aria-controls="last-mile-cta-video" hidden>
+        <svg class="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+        <svg class="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg>
+      </button>
     </figure>
 </section>
 
@@ -902,7 +907,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/js/navbar.js"></script>
 <script src="/js/main.js"></script>
+<script src="/js/cta-video.js"></script>
 </body>
 </html>
-
 

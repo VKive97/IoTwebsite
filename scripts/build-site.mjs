@@ -160,6 +160,42 @@ for (const file of htmlFiles) {
   ]);
   for (const [before, after] of copyCorrections) html = html.replaceAll(before, after);
 
+  if (rel === 'regions/index.html') {
+    html = html.replace(
+      '<img src="/images/industries-hero-v2.webp" width="1536" height="1024" alt="Autonautics connected fleet operations across Asia-Pacific" fetchpriority="high">',
+      '<video id="regions-hero-video" poster="/images/industries-hero-v2-640.webp" muted loop playsinline autoplay preload="none" disablepictureinpicture disableremoteplayback aria-hidden="true"><source data-src="/videos/connected-operations-asia-pacific-hero.mp4" type="video/mp4"></video>'
+    );
+    if (!html.includes('function loadRegionsHeroVideo')) {
+      const videoLoader = `<script>
+  (function () {
+    var video = document.getElementById('regions-hero-video');
+    var source = video && video.querySelector('source[data-src]');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var reduceData = navigator.connection && navigator.connection.saveData;
+    function loadRegionsHeroVideo() {
+      if (!source || reduceMotion || reduceData) return;
+      source.src = source.dataset.src;
+      source.removeAttribute('data-src');
+      video.load();
+      video.play().catch(function () {});
+    }
+    function queueRegionsHeroVideo() {
+      if ('requestIdleCallback' in window) requestIdleCallback(loadRegionsHeroVideo, { timeout: 1200 });
+      else setTimeout(loadRegionsHeroVideo, 250);
+    }
+    if (document.readyState === 'complete') queueRegionsHeroVideo();
+    else window.addEventListener('load', queueRegionsHeroVideo, { once: true });
+    document.addEventListener('visibilitychange', function () {
+      if (!video || !source || source.dataset.src) return;
+      if (document.hidden) video.pause();
+      else video.play().catch(function () {});
+    });
+  }());
+</script>`;
+      html = html.replace('</body>', `${videoLoader}</body>`);
+    }
+  }
+
   if (/^industries\/(?:transportation|logistics-supply-chain|waste-management|food-services-fmcg)\/index\.html$/.test(rel)) {
     const cardTypes = new Map([
       ['Connected Fleet', 'Product'], ['Last Mile', 'Product'], ['IoT Platform', 'Product'],

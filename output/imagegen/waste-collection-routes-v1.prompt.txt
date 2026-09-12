@@ -1,0 +1,17 @@
+Generation mode: built-in image_gen
+Website: /industries/waste-management/
+Section: See Every Collection Vehicle. Optimize Every Route.
+Final asset: images/waste-collection-routes-v1.webp
+Responsive assets: images/waste-collection-routes-v1-640.webp, images/waste-collection-routes-v1-1280.webp
+Original generated PNG retained at tmp/imagegen/waste-collection-routes-v1.png.
+
+Use case: ads-marketing
+Asset type: wide photographic website section image, landscape 16:9, high resolution.
+Primary request: Create the supporting image for Anstel's Waste Management section headed "See Every Collection Vehicle. Optimize Every Route." The heading and copy are rendered separately in HTML, so the image must contain no text.
+Scene/backdrop: A real, orderly leafy Australian suburban neighborhood with connected residential streets, low-rise homes, sidewalks and individual wheelie bins set neatly at the curb. Oblique aerial drone view low enough to clearly recognize the collection vehicles.
+Subject: Three realistic white municipal refuse collection trucks with recognizable compactor bodies and amber safety lights, each on a different stretch of the connected streets. One prominent truck in the lower middle foreground, two smaller trucks distributed across the middle distance. Vehicles fully visible, correctly scaled, positioned in the left-hand travel lane. This is an operational collection scene, not a parked fleet.
+Style/medium: Premium photorealistic commercial photography with understated digital route visualization. Believable buildings, roads and truck engineering, natural textures, crisp detail. Quiet, polished enterprise technology aesthetic.
+Composition/framing: Wide landscape composition, road network linking foreground with background. Main truck and essential route information comfortably inside the frame. No collage, no split-screen.
+Lighting/mood: Clear soft early-morning daylight, subtle cool navy shadows and natural green foliage, white trucks. Bright enough to understand every vehicle.
+Digital layer: Fine electric-blue route paths sit precisely along the actual roads and turn naturally at intersections, connecting collection stops. A few small circular blue stop markers and a simple small blue location pin directly over each truck. Restrained blue glow, clearly legible without obscuring vehicles or roads.
+Constraints: No words, no letters, no numbers, no logos, no watermarks, no dashboard panels, no fake performance statistics. Routes must stay on streets and never cut through houses or gardens. Avoid futuristic holograms, toy-like 3D rendering, oversaturated neon, litter, landfills, crowds, distorted trucks, or giant pins.

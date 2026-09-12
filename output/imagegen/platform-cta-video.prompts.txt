@@ -1,0 +1,24 @@
+Platform overview CTA camera-motion loop
+Image generation mode: built-in image_gen
+Video generation: local FFmpeg camera motion from the generated still; subjects remain still. No audio.
+Page: platform/index.html
+Final assets:
+videos/platform-connected-operations-loop-v1.mp4
+images/platform-cta-connected-operations-poster-v1.webp
+images/platform-cta-connected-operations-poster-v1-640.webp
+Video: 4 seconds, 96 frames, 1280x720, 24 fps, H.264 Main, yuv420p, constant QP 24, faststart, 673550 bytes.
+The final frame is a forced keyframe. Decoded first and last frames are pixel-identical for a clean loop boundary.
+Playback: silent, loops only while visible, pause/play control, reduced-motion still fallback.
+
+Final image prompt:
+Use case: photorealistic-natural
+Asset type: A 16:9 landscape keyframe for a four-second subtle camera-motion video on Anstel Autonautics platform overview CTA.
+Primary request: A bright, light, premium scene communicating connected fleet vehicles, assets, workforce and IoT operations in one coherent real-world environment.
+Scene: Modern clean logistics campus in soft morning daylight. A white unbranded delivery van, a white medium box truck, and tidy loading bays at a contemporary low-rise glass and light-grey warehouse. Two small adult operations staff in navy workwear confer over a tablet beside the parked van, with anatomically correct hands and realistic proportions. Discreet mounted telematics/sensor equipment at the loading bay suggests IoT. Very restrained blue accents. Natural greenery around the campus.
+Composition: Wide editorial corporate photograph, clean and uncluttered. Keep the main van, staff and warehouse entrance comfortably in the central half so a tall mobile crop still conveys connected operations. Subjects around the middle height of the frame, road in lower third, warehouse architecture in upper third, minimal empty sky. Natural perspective, realistic vehicles. Suitable for a smooth slow camera motion video, no directional action or motion blur. Bright neutrals with soft blue tones, calm shadows, airy feel without blown highlights.
+Constraints: No text, typography, labels, readable screens, logos, watermarks, borders, invented UI or floating holograms. One coherent photograph, not a collage. 16:9 landscape.
+
+FFmpeg motion filter:
+scale=3840:-1,crop=3840:2160,zoompan=z='1.02+0.012*(1-cos(2*PI*on/95))':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=96:s=1280x720:fps=24,format=yuv420p
+
+Encode: -frames:v 96 -an -c:v libx264 -preset slow -qp 24 -force_key_frames "expr:eq(n,95)" -profile:v main -level 3.1 -movflags +faststart

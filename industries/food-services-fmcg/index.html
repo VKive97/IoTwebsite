@@ -83,7 +83,6 @@
             <li class="mb-2"><a href="/platform/" class="small text-secondary text-decoration-none">Platform Overview</a></li>
             <li class="mb-2"><a href="/platform/#products" class="small text-secondary text-decoration-none">Compare Products</a></li>
             <li class="mb-2"><a href="/platform/device-ecosystem/" class="small text-secondary text-decoration-none">Device Ecosystem</a></li>
-            <li class="mb-2"><a href="/company/customer-stories/" class="small text-secondary text-decoration-none">Customer Success</a></li>
             <li><a href="/demo/" class="small text-secondary text-decoration-none">Request a Demo</a></li>
           </ul>
         </div>
@@ -108,7 +107,7 @@
         <div class="border-start ps-4 flex-shrink-0" style="width:192px">
           <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Advanced Capabilities</p>
           <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="/solutions/" class="small fw-semibold text-dark text-decoration-none">Solutions Overview</a></li>
+            <li class="mb-2"><a href="/solutions/" class="small text-secondary text-decoration-none">Solutions Overview</a></li>
             <li class="mb-2"><a href="/solutions/video-telematics/" class="small text-secondary text-decoration-none">Video Telematics</a></li>
             <li class="mb-2"><a href="/solutions/fuel-management/" class="small text-secondary text-decoration-none">Fuel Management</a></li>
             <li class="mb-2"><a href="/solutions/route-optimization/" class="small text-secondary text-decoration-none">Route Optimization</a></li>
@@ -203,7 +202,6 @@
               <a href="/platform/">Platform Overview</a>
               <a href="/platform/#products">Compare Products</a>
               <a href="/platform/device-ecosystem/">Device Ecosystem</a>
-              <a href="/company/customer-stories/">Customer Success</a>
               <a href="/demo/">Request a Demo</a>
             </div>
           </div>
@@ -333,27 +331,44 @@
         product long before anyone notices.</p>
     </div>
 
-    <div class="row row-cols-1 row-cols-sm-3 g-3 g-md-4 tesla-gap">
-      <div class="col">
-        <div class="feature-card tesla-card-flat h-100 p-4">
-          <h3 class="fw-bold mb-2">Undetected Excursions</h3>
-          <p class="text-secondary lh-lg mb-0">Temperature or equipment faults go unnoticed until a manual
-            check, by which point product may already be compromised.</p>
+    <div class="cold-chain-challenge-showcase tesla-gap">
+      <div class="about-phone-stage cold-chain-phone-stage position-relative" aria-label="Cold-chain challenges carousel">
+        <button class="about-play-toggle" aria-label="Pause auto-play">
+          <svg class="icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+          <svg class="icon-play d-none" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="about-phone-track d-flex align-items-center">
+          <article class="about-phone-frame active" data-phone="0">
+            <span class="about-phone-notch" aria-hidden="true"></span>
+            <div class="about-phone-screen"><div class="about-phone-panel">
+              <p class="about-phone-eyebrow">Risk 01</p>
+              <div class="about-phone-graphic cold-chain-phone-graphic" aria-hidden="true"><svg viewBox="0 0 120 120"><path d="M60 18v54"/><circle cx="60" cy="82" r="18"/><path d="M48 62V29a12 12 0 0124 0v33"/><path d="M60 48v32"/></svg></div>
+              <div class="about-phone-caption"><p class="small text-white-50 mb-0">Temperature or equipment faults go unnoticed until a manual check, by which point product may already be compromised.</p></div>
+            </div></div>
+          </article>
+          <article class="about-phone-frame" data-phone="1">
+            <span class="about-phone-notch" aria-hidden="true"></span>
+            <div class="about-phone-screen"><div class="about-phone-panel">
+              <p class="about-phone-eyebrow">Risk 02</p>
+              <div class="about-phone-graphic cold-chain-phone-graphic" aria-hidden="true"><svg viewBox="0 0 120 120"><rect x="18" y="28" width="35" height="52" rx="3"/><path d="M53 46h25l18 18v16H53z"/><circle cx="38" cy="87" r="8"/><circle cx="82" cy="87" r="8"/><path class="is-broken" d="M57 22l8 9-8 9 8 9-8 9"/></svg></div>
+              <div class="about-phone-caption"><p class="small text-white-50 mb-0">Cold-chain visibility often stops at the warehouse door, with no continuous view once product is on a delivery vehicle.</p></div>
+            </div></div>
+          </article>
+          <article class="about-phone-frame" data-phone="2">
+            <span class="about-phone-notch" aria-hidden="true"></span>
+            <div class="about-phone-screen"><div class="about-phone-panel">
+              <p class="about-phone-eyebrow">Risk 03</p>
+              <div class="about-phone-graphic cold-chain-phone-graphic" aria-hidden="true"><svg viewBox="0 0 120 120"><path d="M34 20h44l12 12v68H34z"/><path d="M78 20v16h12M46 51h32M46 64h32M46 77h20"/><path class="is-alert" d="M83 71v13M83 91h.1"/></svg></div>
+              <div class="about-phone-caption"><p class="small text-white-50 mb-0">Paper logs and spot checks make it harder to prove food-safety compliance when it's needed.</p></div>
+            </div></div>
+          </article>
         </div>
       </div>
-      <div class="col">
-        <div class="feature-card tesla-card-flat h-100 p-4">
-          <h3 class="fw-bold mb-2">Storage and Transport Aren't Connected</h3>
-          <p class="text-secondary lh-lg mb-0">Cold-chain visibility often stops at the warehouse door, with no
-            continuous view once product is on a delivery vehicle.</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="feature-card tesla-card-flat h-100 p-4">
-          <h3 class="fw-bold mb-2">Manual Compliance Records</h3>
-          <p class="text-secondary lh-lg mb-0">Paper logs and spot checks make it harder to prove food-safety
-            compliance when it's needed.</p>
-        </div>
+
+      <div class="row g-3 mt-3 cold-chain-challenge-tabs" aria-label="Select a cold-chain challenge">
+        <button class="col about-step active text-start border-0 bg-transparent" data-step="0"><span class="about-step-track d-block"><span class="about-step-fill"></span></span><span class="h5 mb-2 about-step-title fw-semibold d-block">Undetected Excursions</span></button>
+        <button class="col about-step text-start border-0 bg-transparent" data-step="1"><span class="about-step-track d-block"><span class="about-step-fill"></span></span><span class="h5 mb-2 about-step-title fw-semibold d-block">Storage and Transport Aren't Connected</span></button>
+        <button class="col about-step text-start border-0 bg-transparent" data-step="2"><span class="about-step-track d-block"><span class="about-step-fill"></span></span><span class="h5 mb-2 about-step-title fw-semibold d-block">Manual Compliance Records</span></button>
       </div>
     </div>
   </section>

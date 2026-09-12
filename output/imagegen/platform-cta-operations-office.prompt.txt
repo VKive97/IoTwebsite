@@ -1,0 +1,17 @@
+Platform overview CTA — fresh operations office image
+Generated with the built-in image_gen tool.
+Page: platform/index.html
+Replaces the previous video CTA with a static, responsive image.
+
+Final assets:
+images/platform-cta-operations-office-v1.webp
+images/platform-cta-operations-office-v1-1280.webp
+images/platform-cta-operations-office-v1-640.webp
+
+Final prompt:
+Use case: photorealistic-natural
+Asset type: Fresh, premium photographic banner for the final CTA on the Anstel Autonautics platform overview website. Wide 16:9 landscape.
+Primary request: A bright, believable connected-operations scene tying together fleet vehicles, logistics assets, people and operational intelligence.
+Scene: Inside a modern glass-fronted logistics operations office in soft morning daylight. One professional adult operations manager in a navy shirt stands beside a clean desk, reviewing a tablet. A large desktop monitor beside the manager shows a restrained fleet route map with small blue location markers and simple abstract status charts, with no readable words or numbers. Through the expansive window directly behind them, clearly visible white delivery vans and a medium box truck stand at tidy warehouse loading bays. A few pallets at a bay and discreet mounted sensor hardware ground the connected operations theme in a real setting.
+Composition: One coherent cinematic commercial photograph, viewed slightly diagonally across the desk toward the window. Keep the manager, tablet, monitor and a visible delivery van within the central 55 percent of the frame for responsive cropping. Eye-level viewpoint, convincing scale and perspective, balanced architectural lines, natural depth. The important content is in the middle half vertically; quiet uncluttered space near the top edge blends into the website's navy gradient. Bright neutral architecture, soft blue and navy accents, subtle greenery, realistic skin and materials. Light, calm and professional, detailed without visual clutter.
+Constraints: Photographic realism. Anatomically correct person and hands; tablet held naturally. No logos, brand marks, slogans, readable text, watermark, floating holograms, network-line overlays, cartoons, illustrations, collage, motion blur or decorative borders.

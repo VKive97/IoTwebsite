@@ -1,0 +1,63 @@
+Waste Management — Bleed carousel images
+Generation mode: built-in image_gen
+Page: industries/waste-management/index.html
+Sections: One Operational View; Where It Can Be Used
+
+Final prompt for each image: the common specification below followed by its Scene.
+Common specification:
+Use case: ads-marketing
+Asset type: High-quality 16:9 landscape photograph for an image-led carousel on a minimalist waste-management technology website.
+Style: Premium photorealistic commercial photography, natural Australian municipal operations, white collection vehicles, subdued greens and cool navy shadows, soft daylight, realistic materials and crisp details, restrained colors. Single coherent scene, no collage.
+Composition: Wide landscape, clearly readable subject kept comfortably inside the frame; image should work at 860px wide on desktop and 320px wide on mobile. No heading or caption in the image; those live separately on the webpage.
+Constraints: No watermarks, no brand logos, no advertising copy, no floating symbols or giant icons, no decorative borders. Where a screen is described, it is a plausible conceptual interface on a real photographed device, using simple graphical elements, no readable text, no invented numerical claims. Bin sensors and collection vehicles should be realistic, no sci-fi machinery.
+Scene:
+
+Bin Status Dashboard
+Card: control-room-visibility-card-1
+Saved paths: images/waste-bin-dashboard-v1.webp; images/waste-bin-dashboard-v1-640.webp; images/waste-bin-dashboard-v1-1280.webp
+Scene: Close three-quarter photographic view of a large desktop monitor in a contemporary municipal waste control room. Screen shows a clean navy dashboard with an orderly grid of six graphical waste-bin status cards: simple bin silhouettes with blue fill levels, one muted amber alert, small battery condition indicators. No readable interface text or numbers. The display is a real physical screen, not a floating graphic. Through the office window beyond, softly focused white refuse collection trucks and orderly bins establish the waste depot context. Monitor dominates center-left, clean desk below, soft daylight.
+
+Bin Map
+Card: control-room-visibility-card-2
+Saved paths: images/waste-bin-map-v1.webp; images/waste-bin-map-v1-640.webp; images/waste-bin-map-v1-1280.webp
+Scene: A rugged tablet resting on a clean desk beside a window overlooking a leafy public park. The tablet screen is the main subject, displaying a pale neighborhood street map with accurately connected streets, green park areas, a handful of small blue location markers containing tiny bin glyphs, and one amber marker indicating a location needing attention. No route line or text, no map brand. The map is seen on the actual tablet glass in a natural three-quarter view. Two orderly public litter bins can be seen out of focus through the window, establishing context.
+
+Vehicle Visibility
+Card: control-room-visibility-card-3
+Saved paths: images/waste-vehicle-visibility-v1.webp; images/waste-vehicle-visibility-v1-640.webp; images/waste-vehicle-visibility-v1-1280.webp
+Scene: Oblique aerial drone photograph of a realistic white rear-loading refuse collection truck driving in the left-hand lane of a broad Australian suburban road, with leafy trees, low-rise homes and individual wheelie bins beside the curb. Truck prominent in center foreground, full compactor body recognizable. A fine understated electric-blue road-aligned route line and a single small blue position ring around the truck suggest live vehicle visibility. No giant pins, text or other data overlays. Connected street network in background, natural soft sunlight.
+
+Collection Scheduling
+Card: control-room-visibility-card-4
+Saved paths: images/waste-collection-scheduling-v1.webp; images/waste-collection-scheduling-v1-640.webp; images/waste-collection-scheduling-v1-1280.webp
+Scene: Photographic close side view of an operations coordinator at a depot desk arranging collection work on a laptop. Real laptop screen displays a clean weekly scheduling interface with a few blue job blocks and a small neighborhood map beside it, no legible text or numerals. The coordinator's natural hand rests on the trackpad; only torso and hands need be visible. Beyond the broad office window, two white municipal refuse collection trucks wait in an orderly bay. Modern functional control room, natural daylight, laptop and hand in sharp focus.
+
+Job Progress
+Card: control-room-visibility-card-5
+Saved paths: images/waste-job-progress-v1.webp; images/waste-job-progress-v1-640.webp; images/waste-job-progress-v1-1280.webp
+Scene: Photorealistic close over-the-shoulder view of a municipal collection worker in a yellow high-visibility vest holding a rugged smartphone in one hand beside a white refuse collection truck. The actual phone screen shows a simple collection task progress interface: a location-map thumbnail, three completed checkmarks and one solid blue completion bar, no readable text or numbers. Phone and natural hand in focus, white truck compactor and two orderly curbside bins softly out of focus behind. Calm, capable field operation in an Australian residential street.
+
+Operational History
+Card: control-room-visibility-card-6
+Saved paths: images/waste-operational-history-v1.webp; images/waste-operational-history-v1-640.webp; images/waste-operational-history-v1-1280.webp
+Scene: A waste operations analyst reviewing historical collection activity at a tidy office workstation, photographed from a gentle side angle. Main monitor displays a clean navy analytical interface with a blue trend line, an orderly horizontal timeline of completed events, and understated rows representing collection records; no readable text or numerals, no fabricated performance claims. A second real window beyond reveals a modest waste vehicle depot. Screen dominates image, analyst only partly visible at right. Thoughtful operational planning, realistic photo, soft daylight.
+
+Municipal and Public Spaces
+Card: operating-environments-card-1
+Saved paths: images/waste-environment-public-v1.webp; images/waste-environment-public-v1-640.webp; images/waste-environment-public-v1-1280.webp
+Scene: Premium editorial photograph of paired public litter and recycling bins in a landscaped Australian municipal park. Two clean robust charcoal metal bins with discreet openings are prominent near the center of a gently curving paved walkway, with additional bins distributed farther down the path. Mature eucalyptus and shade trees, benches, lawns and a softly focused city neighborhood in the distance. Quiet soft morning sun, natural realistic municipal street furniture, no readable labels or signs. Bins are the clear subject, not scenery alone.
+
+Commercial Waste Operations
+Card: operating-environments-card-2
+Saved paths: images/waste-environment-commercial-v1.webp; images/waste-environment-commercial-v1-640.webp; images/waste-environment-commercial-v1-1280.webp
+Scene: A realistic white municipal rear-loading waste collection truck servicing a neat commercial loading area behind a row of modern shops and small businesses. Truck seen in three-quarter rear-side view, large compactor body clearly recognizable. Three charcoal commercial wheeled waste containers line the service bay, one being positioned for collection by a worker wearing a high-visibility vest. Believable safe spacing and scale, clean practical service area, no public shoppers, no brand names, no readable lettering, no rubbish scattered on the ground. Soft daylight.
+
+Recycling Collection
+Card: operating-environments-card-3
+Saved paths: images/waste-environment-recycling-v1.webp; images/waste-environment-recycling-v1-640.webp; images/waste-environment-recycling-v1-1280.webp
+Scene: Photorealistic environmental photograph of a community recycling collection point in a leafy Australian residential area. A row of four sturdy charcoal wheeled recycling bins with alternating yellow and blue lids forms the clear foreground subject, set in a designated paved collection bay. A white recycling refuse truck waits behind them, clearly identifiable but secondary. Low-rise apartments, landscaped greenery and trees provide believable surrounding context. No readable signs, recycling text or branding; color-coded lids communicate the service. Neat, everyday working scene with gentle natural daylight.
+
+Industrial and Managed Sites
+Card: operating-environments-card-4
+Saved paths: images/waste-environment-industrial-v1.webp; images/waste-environment-industrial-v1-640.webp; images/waste-environment-industrial-v1-1280.webp
+Scene: Wide photographic view into an orderly modern industrial campus with warehouses and managed facilities. In the center foreground, a designated waste collection bay holds several large dark wheeled containers alongside a white refuse collection truck with a realistic compactor body. Service lane, safety bollards and clean facility buildings convey a controlled operating area. The bins and truck are central and large enough to recognize immediately, not a distant generic aerial warehouse. Low industrial architecture, soft morning daylight, natural industrial materials, no labels, no logos or readable signage.

@@ -9,6 +9,7 @@
     content="Connect Autonautics to SAP, Salesforce, Zoho, Xero, Tally, and MYOB with REST APIs and webhooks, or build your own integration on our developer platform.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/api-integrations.css">
   <style>
     body {
       padding-top: 56px;
@@ -72,7 +73,6 @@
             <li class="mb-2"><a href="/platform/" class="small text-secondary text-decoration-none">Platform Overview</a></li>
             <li class="mb-2"><a href="/platform/#products" class="small text-secondary text-decoration-none">Compare Products</a></li>
             <li class="mb-2"><a href="/platform/device-ecosystem/" class="small text-secondary text-decoration-none">Device Ecosystem</a></li>
-            <li class="mb-2"><a href="/company/customer-stories/" class="small text-secondary text-decoration-none">Customer Success</a></li>
             <li><a href="/demo/" class="small text-secondary text-decoration-none">Request a Demo</a></li>
           </ul>
         </div>
@@ -97,7 +97,7 @@
         <div class="border-start ps-4 flex-shrink-0" style="width:192px">
           <p class="text-uppercase fw-semibold text-muted mb-3" style="font-size:.68rem;letter-spacing:.1em">Advanced Capabilities</p>
           <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="/solutions/" class="small fw-semibold text-dark text-decoration-none">Solutions Overview</a></li>
+            <li class="mb-2"><a href="/solutions/" class="small text-secondary text-decoration-none">Solutions Overview</a></li>
             <li class="mb-2"><a href="/solutions/video-telematics/" class="small text-secondary text-decoration-none">Video Telematics</a></li>
             <li class="mb-2"><a href="/solutions/fuel-management/" class="small text-secondary text-decoration-none">Fuel Management</a></li>
             <li class="mb-2"><a href="/solutions/route-optimization/" class="small text-secondary text-decoration-none">Route Optimization</a></li>
@@ -192,7 +192,6 @@
               <a href="/platform/">Platform Overview</a>
               <a href="/platform/#products">Compare Products</a>
               <a href="/platform/device-ecosystem/">Device Ecosystem</a>
-              <a href="/company/customer-stories/">Customer Success</a>
               <a href="/demo/">Request a Demo</a>
             </div>
           </div>
@@ -370,30 +369,56 @@
   </section>
 
   <!-- Connected Ecosystem -->
-  <section class="section-pad px-4 bg-white">
- <div class="row g-4 g-lg-5 align-items-center">
-      <div class="col-lg-6">
-        <p class="section-eyebrow">Connected Ecosystem</p>
-        <h2 class="section-heading">Integrate With the Systems You Already Trust.</h2>
-        <p class="text-secondary small lh-lg mb-4">Autonautics seamlessly connects with your existing business
-          applications, creating a unified flow of data across your operations and eliminating silos.</p>
-        <div class="row g-2">
-          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
-              class="small text-secondary">ERP Integration</span></div>
-          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
-              class="small text-secondary">CRM Integration</span></div>
-          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
-              class="small text-secondary">Accounting Sync</span></div>
-          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
-              class="small text-secondary">Business Intelligence</span></div>
-          <div class="col-6 d-flex align-items-center gap-2"><span class="feature-dot bg-primary"></span><span
-              class="small text-secondary">Custom Applications</span></div>
+  <section class="api-ecosystem" data-api-ecosystem aria-labelledby="api-ecosystem-title">
+    <div class="api-ecosystem-shell">
+      <div class="api-ecosystem-intro">
+        <div>
+          <p class="section-eyebrow">Connected Ecosystem</p>
+          <h2 id="api-ecosystem-title">Your systems.<br>Connected.</h2>
         </div>
+        <p>Connect the business systems you already trust. Bring ERP, CRM, accounting, business intelligence and custom applications together with your fleet operations.</p>
       </div>
-      <div class="col-lg-6">
-        <div class="rounded-4 overflow-hidden" style="height:400px">
-          <img src="/images/connectedfleet-replay.webp" class="w-100 h-100 object-fit-cover" alt="Connected Ecosystem" width="1200" height="628" decoding="async" srcset="/images/connectedfleet-replay-640.webp 640w, /images/connectedfleet-replay.webp 1200w" sizes="100vw" loading="lazy">
-        </div>
+      <div class="api-ecosystem-tabs" role="tablist" aria-label="Business system integrations">
+        <button class="api-ecosystem-tab" id="ecosystem-tab-erp" type="button" role="tab" aria-controls="ecosystem-panel-erp" aria-selected="true" tabindex="0">ERP Integration</button>
+        <button class="api-ecosystem-tab" id="ecosystem-tab-crm" type="button" role="tab" aria-controls="ecosystem-panel-crm" aria-selected="false" tabindex="-1">CRM Integration</button>
+        <button class="api-ecosystem-tab" id="ecosystem-tab-accounting" type="button" role="tab" aria-controls="ecosystem-panel-accounting" aria-selected="false" tabindex="-1">Accounting Sync</button>
+        <button class="api-ecosystem-tab" id="ecosystem-tab-analytics" type="button" role="tab" aria-controls="ecosystem-panel-analytics" aria-selected="false" tabindex="-1">Business Intelligence</button>
+        <button class="api-ecosystem-tab" id="ecosystem-tab-custom" type="button" role="tab" aria-controls="ecosystem-panel-custom" aria-selected="false" tabindex="-1">Custom Applications</button>
+      </div>
+    </div>
+    <div class="api-ecosystem-panel" id="ecosystem-panel-erp" role="tabpanel" aria-labelledby="ecosystem-tab-erp" tabindex="0">
+      <img src="/images/api-ecosystem-erp-v1.webp" alt="Operations planner connecting vehicle and dispatch records with an enterprise resource planning system" width="2688" height="1536" sizes="100vw" decoding="async" loading="lazy">
+      <div class="api-ecosystem-shell api-ecosystem-caption">
+        <h3>Connect planning to execution.</h3>
+        <p>Bring vehicle, dispatch and order information into your enterprise systems so teams work from a shared operational view.</p>
+      </div>
+    </div>
+    <div class="api-ecosystem-panel" id="ecosystem-panel-crm" role="tabpanel" aria-labelledby="ecosystem-tab-crm" tabindex="0" hidden>
+      <img src="/images/api-ecosystem-crm-v1.webp" alt="Customer service specialist viewing a customer record and live delivery information during a support call" width="2688" height="1536" sizes="100vw" decoding="async" loading="lazy">
+      <div class="api-ecosystem-shell api-ecosystem-caption">
+        <h3>Keep customer context connected.</h3>
+        <p>Link delivery updates and fleet activity with customer records so service teams have the context to respond.</p>
+      </div>
+    </div>
+    <div class="api-ecosystem-panel" id="ecosystem-panel-accounting" role="tabpanel" aria-labelledby="ecosystem-tab-accounting" tabindex="0" hidden>
+      <img src="/images/api-ecosystem-accounting-v1.webp" alt="Finance specialist reconciling fleet invoices and costs in accounting software" width="2688" height="1536" sizes="100vw" decoding="async" loading="lazy">
+      <div class="api-ecosystem-shell api-ecosystem-caption">
+        <h3>Keep fleet costs in sync.</h3>
+        <p>Connect operating expenses and billing records with your accounting workflows to reduce duplicate data entry.</p>
+      </div>
+    </div>
+    <div class="api-ecosystem-panel" id="ecosystem-panel-analytics" role="tabpanel" aria-labelledby="ecosystem-tab-analytics" tabindex="0" hidden>
+      <img src="/images/api-ecosystem-analytics-v1.webp" alt="Business analyst reviewing fleet trends and operating performance across connected data sources" width="2688" height="1536" sizes="100vw" decoding="async" loading="lazy">
+      <div class="api-ecosystem-shell api-ecosystem-caption">
+        <h3>Turn shared data into insight.</h3>
+        <p>Combine fleet information with business reporting to understand trends, performance and operating costs.</p>
+      </div>
+    </div>
+    <div class="api-ecosystem-panel" id="ecosystem-panel-custom" role="tabpanel" aria-labelledby="ecosystem-tab-custom" tabindex="0" hidden>
+      <img src="/images/api-ecosystem-custom-v1.webp" alt="Software developer building a custom fleet integration using an API console and code editor" width="2688" height="1536" sizes="100vw" decoding="async" loading="lazy">
+      <div class="api-ecosystem-shell api-ecosystem-caption">
+        <h3>Build around your operation.</h3>
+        <p>Use fleet data in the applications your teams already rely on, or connect tools built for your own workflows.</p>
       </div>
     </div>
   </section>
@@ -769,6 +794,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/js/navbar.js"></script>
   <script src="/js/main.js"></script>
+  <script src="/js/api-ecosystem.js" defer></script>
 </body>
 
 </html>

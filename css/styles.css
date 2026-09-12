@@ -590,6 +590,22 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
 .about-phone-caption p:first-child{font-size:clamp(.8rem,2vw,1rem)}
 .about-phone-caption p.small{font-size:clamp(.68rem,1.6vw,.8rem)}
 
+/* Food Services challenge: rotating mobile-frame story */
+.cold-chain-challenge-showcase{max-width:1180px;margin-inline:auto}
+.cold-chain-phone-stage{--phone-w:clamp(190px,24vw,270px);display:flex;align-items:center;overflow:hidden;padding:clamp(3rem,6vw,5.5rem) clamp(1rem,4vw,3rem);background:transparent}
+.cold-chain-phone-stage .about-phone-track{width:100%}
+.cold-chain-phone-stage .about-phone-frame{background:#050608;box-shadow:none;opacity:.38;filter:grayscale(.7);transform:scale(.84)}
+.cold-chain-phone-stage .about-phone-frame.active{opacity:1;filter:none;transform:scale(1);box-shadow:0 26px 55px rgba(0,0,0,.2)}
+.cold-chain-phone-stage .about-phone-screen{background:radial-gradient(circle at 50% 30%,#263a50 0,#132235 44%,#08111d 100%)}
+.cold-chain-phone-stage .about-phone-panel{padding-top:clamp(2rem,5vw,2.75rem)}
+.cold-chain-phone-graphic svg{width:min(82%,150px);fill:none;stroke:#91b7e6;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.cold-chain-phone-graphic .is-broken,.cold-chain-phone-graphic .is-alert{stroke:#f3a65a}
+.cold-chain-phone-stage .about-play-toggle{left:clamp(1rem,4vw,3rem);bottom:clamp(1rem,3vw,2rem);border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.cold-chain-challenge-tabs{max-width:940px;margin-inline:auto;align-items:flex-start}
+.cold-chain-challenge-tabs .about-step{display:block!important;align-self:flex-start;height:auto;padding:0 .75rem 1rem;color:#171a20;appearance:none}
+.cold-chain-challenge-tabs .about-step:focus-visible{outline:3px solid rgba(65,105,220,.35);outline-offset:4px}
+@media(max-width:575px){.cold-chain-challenge-showcase{width:calc(100% + 2rem);margin-left:-1rem}.cold-chain-phone-stage{--phone-w:min(76vw,270px);min-height:calc(var(--phone-h) + 5rem);padding-inline:1rem}.cold-chain-challenge-tabs{width:calc(100% - 2rem);display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory}.cold-chain-challenge-tabs .about-step{min-width:72vw;scroll-snap-align:center}}
+
 /* Driver Management: relevant in-phone performance interfaces */
 .driver-phone-ui{width:100%;color:#f8fafc;font-size:clamp(.48rem,1vw,.68rem)}
 .driver-score-ui{display:flex;flex-direction:column;align-items:center;gap:clamp(.65rem,2vw,1rem)}
@@ -620,20 +636,16 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
 .about-play-toggle:hover{background:#d1d5db}
 
 .about-step{cursor:pointer}
-.about-step-track{height:2px;background:#e5e7eb;width:100%;margin-bottom:1.25rem;position:relative;overflow:hidden;border-radius:2px}
+/* Shared text treatment for image carousels with a title-and-description rail. */
+.about-step-track,.waste-challenge-track{display:block;height:2px;background:#e5e7eb;width:100%;margin-bottom:1.75rem;position:relative;overflow:hidden;border-radius:2px}
 .about-step-fill{position:absolute;left:0;top:0;height:100%;width:0;background:#111827;display:block}
 .about-step.active .about-step-fill{animation:aboutStepFill 4.5s linear forwards}
 .about-step.paused .about-step-fill{animation-play-state:paused}
-.about-step-title{color:#9ca3af;transition:color .2s}
-.about-step.active .about-step-title{color:#111827}
-.about-step-desc{color:#9ca3af;transition:color .2s}
-.about-step.active .about-step-desc{color:#4b5563}
+.about-step-title,.waste-challenge-label{display:block;margin:0 0 .5rem;color:#9ca3af;font-size:clamp(1.5rem,2.6vw,2rem);font-weight:600;line-height:1.15;letter-spacing:-.02em;overflow-wrap:break-word;transition:color .2s}
+.about-step.active .about-step-title,.waste-challenge-title[aria-pressed="true"] .waste-challenge-label{color:#111827}
+.about-step-desc,.waste-challenge-copy{display:block;margin:0;color:#9ca3af;font-size:1rem;font-weight:400;line-height:2;letter-spacing:0;overflow-wrap:break-word;transition:color .2s}
+.about-step.active .about-step-desc,.waste-challenge-title[aria-pressed="true"] .waste-challenge-copy{color:#4b5563}
 @keyframes aboutStepFill{from{width:0}to{width:100%}}
-
-/* ── Large step typography (wide 3-up trackers, e.g. homepage Platform Highlights) ── */
-.about-steps-lg .about-step-track{margin-bottom:1.75rem}
-.about-steps-lg .about-step-title{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:800;letter-spacing:-.02em;line-height:1.15}
-.about-steps-lg .about-step-desc{font-size:1rem}
 
 /* ── Single-photo step carousel (How It Works, mission workflow, etc.) ── */
 .process-photo-stage{position:relative;border-radius:var(--ui-radius);overflow:hidden;height:clamp(420px,80vh,820px)}
@@ -643,6 +655,8 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
 }
 .about-phone-frame.process-photo-frame.active{opacity:1;z-index:2;box-shadow:none;transform:none}
 .process-photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.process-photo-stage.device-management-stage{height:auto;aspect-ratio:3/2;background:#eef2f5}
+.device-management-stage .process-photo-frame img{object-fit:contain}
 @media(max-width:575px){.about-phone-frame.process-photo-frame:not(.active){display:none}}
 
 /* ── Capability strip (responsive stat grid, no orphaned dividers on wrap) ── */
@@ -652,9 +666,6 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
 .video-telematics-stage{height:calc(100vh - 56px);min-height:640px;max-height:none;aspect-ratio:auto;background:#090b0e;border-radius:var(--ui-radius)}
 .video-telematics-stage .process-photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center}
 .video-telematics-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,1.5rem);padding-top:1.5rem}
-.video-telematics-tabs .about-step-title{margin:0 0 .65rem;color:#a4a7ab;font-size:clamp(1.35rem,2.6vw,2.15rem);font-weight:500;letter-spacing:-.035em;line-height:1.15}
-.video-telematics-tabs .about-step-desc{max-width:360px;margin:0;font-size:.9rem;line-height:1.6}
-.video-telematics-tabs .about-step.active .about-step-title{color:#171a20}
 @media(max-width:767.98px){
   .video-telematics-stage{height:72vh;min-height:480px;aspect-ratio:auto}
   .video-telematics-tabs{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
@@ -736,32 +747,7 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
   text-align:left;
   scroll-snap-align:start;
 }
-.business-outcome-step .about-step-track{
-  display:block;
-  flex:0 0 4px;
-  width:100%;
-  height:4px;
-  margin-bottom:1.65rem;
-  background:#c5c6c8;
-  border-radius:0;
-}
-.business-outcome-step .about-step-title{
-  display:block;
-  color:#b9babc;
-  font-size:clamp(1.2rem,1.7vw,1.65rem);
-  font-weight:650;
-  letter-spacing:-.025em;
-  line-height:1.15;
-}
-.business-outcome-step .about-step-desc{
-  display:block;
-  margin-top:.8rem;
-  color:#c3c4c6;
-  font-size:clamp(.86rem,1.05vw,1rem);
-  line-height:1.55;
-}
-.business-outcome-step.active .about-step-title{color:#171a20}
-.business-outcome-step.active .about-step-desc{color:#3f4349}
+.business-outcome-step .about-step-track{flex:0 0 2px}
 .business-outcome-step:focus-visible{outline:2px solid #4169dc;outline-offset:6px}
 @media(max-width:991px){
   .business-outcomes-stage{min-height:320px;aspect-ratio:16/8}
@@ -772,9 +758,6 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
   .business-outcomes-stage .about-play-toggle{left:1rem;bottom:1rem;width:36px;height:36px}
   .business-outcomes-steps{margin-top:1rem;gap:.9rem}
   .business-outcome-step{flex-basis:84vw}
-  .business-outcome-step .about-step-track{margin-bottom:1.15rem}
-  .business-outcome-step .about-step-title{font-size:1.25rem}
-  .business-outcome-step .about-step-desc{font-size:.84rem}
 }
 
 #ai-event-detection{--ai-event-gutter:max(var(--site-gutter),calc((100vw - 1504px) / 2))}
@@ -1134,6 +1117,7 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
 
 /* ── Final CTA band ── */
 .cta-band{padding-right:0!important;padding-bottom:0!important;padding-left:0!important;overflow:hidden}
+.cta-band.cta-band--full-media{padding-right:0!important;padding-bottom:0!important;padding-left:0!important}
 .cta-band-content{position:relative;z-index:2;padding-right:1.5rem;padding-bottom:clamp(3.5rem,6vw,5.5rem);padding-left:1.5rem}
 .cta-band-media{position:relative;width:100%;height:clamp(360px,55vw,720px);overflow:hidden}
 .cta-band-media::before{
@@ -1141,6 +1125,16 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
   background:linear-gradient(to bottom,#0d1b2a 0%,rgba(13,27,42,.7) 32%,transparent 100%)
 }
 .cta-band-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:center bottom}
+.cta-band-media.cta-band-media--full{width:100%;height:auto;min-height:0;margin:0;padding:0;aspect-ratio:auto}
+.cta-band-media.cta-band-media--full::before{content:none}
+.cta-band-media.cta-band-media--full img{height:auto;object-fit:contain;object-position:center}
+.cta-band-media.cta-band-media--video img,.cta-band-media.cta-band-media--video video{object-position:center 35%}
+.cta-band-media--video video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none}
+.cta-band-media--video[data-video-ready="true"] video{opacity:1}
+.cta-video-toggle{position:absolute;left:clamp(1rem,3vw,3rem);bottom:clamp(1rem,3vw,3rem);z-index:2;display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:4px;background:rgba(23,26,32,.65);color:#fff;backdrop-filter:blur(8px);cursor:pointer}
+.cta-video-toggle:hover{background:rgba(23,26,32,.85)}
+.cta-video-toggle[hidden],[data-cta-video][data-paused="true"] .icon-pause,[data-cta-video][data-paused="false"] .icon-play{display:none}
+.cta-video-toggle:focus-visible{outline:3px solid #fff;outline-offset:4px}
 .locations-cta-wrap,.stories-cta-wrap{padding-bottom:0!important;overflow:hidden}
 .locations-cta-wrap>.cta-band-media,.stories-cta-wrap>.cta-band-media{left:50%;width:100vw;margin-top:clamp(3rem,6vw,5rem);transform:translateX(-50%)}
 .cta-band .btn{border-radius:4px;font-size:.875rem;font-weight:600;min-width:180px;padding-top:.66rem;padding-bottom:.66rem}

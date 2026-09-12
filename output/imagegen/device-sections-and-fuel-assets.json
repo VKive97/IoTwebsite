@@ -1,0 +1,146 @@
+[
+  {
+    "key": "compatibility",
+    "stem": "device-ecosystem-compatibility-v1",
+    "alt": "Technician connecting a mixed set of GPS trackers, a dash camera, sensors and a workforce handset at a fleet service bench",
+    "prompt": "Create one premium photorealistic commercial photograph for an Anstel Autonautics fleet device webpage. Landscape 3:2 composition, natural daylight, restrained navy and blue accents, realistic hardware and human anatomy, contemporary professional environment. One coherent photograph, not a collage or website mockup. Keep the essential action and any important display in the central 60 percent of the frame and the central 65 percent vertically so responsive crops remain meaningful. No logos, branding, watermarks, decorative text, floating holograms or digital connection-line overlays. Screens depict a generic illustrative interface, not an existing branded product. Use only the few short on-screen words explicitly requested, with clear simple typography. Section: Built for Every Connected Fleet Device \u2014 Connect the Devices Your Business Already Uses. Show an adult fleet technician at a bright workshop bench registering a diverse, mixed set of EXISTING hardware with a laptop: two different compact GPS tracking units, a small dual-lens dash camera, a white temperature sensor, a rugged asset tracker and a workforce handset. Devices have believable real sizes and distinct designs; this should demonstrate compatibility across device types. The technician handles one tracker beside a connector lead; the other devices are clearly arranged in an organised compact group. A delivery van is softly visible beyond the bench. Three-quarter view of the person, laptop and varied hardware together. The screen can show small generic connected-device icons without readable text. This is a practical integration workspace, visibly different from a studio hardware lineup.",
+    "provider": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      [
+        "images/device-ecosystem-compatibility-v1.webp",
+        1536
+      ],
+      [
+        "images/device-ecosystem-compatibility-v1-1280.webp",
+        1280
+      ],
+      [
+        "images/device-ecosystem-compatibility-v1-640.webp",
+        640
+      ]
+    ]
+  },
+  {
+    "key": "health",
+    "stem": "device-health-monitoring-v1",
+    "alt": "Device health dashboard showing battery levels, signal strength and online status beside a connected tracker",
+    "prompt": "Create one premium photorealistic commercial photograph for an Anstel Autonautics fleet device webpage. Landscape 3:2 composition, natural daylight, restrained navy and blue accents, realistic hardware and human anatomy, contemporary professional environment. One coherent photograph, not a collage or website mockup. Keep the essential action and any important display in the central 60 percent of the frame and the central 65 percent vertically so responsive crops remain meaningful. No logos, branding, watermarks, decorative text, floating holograms or digital connection-line overlays. Screens depict a generic illustrative interface, not an existing branded product. Use only the few short on-screen words explicitly requested, with clear simple typography. Section: Device Health Monitoring. Close three-quarter editorial photograph of a large monitor on a bright operations desk, with a small connected GPS unit and wireless sensor at the monitor base. The display dominates the central frame and clearly shows live HEALTH indicators, not a route map: green connectivity dots, signal-strength bar icons, battery-charge icons, and a restrained small heartbeat/status timeline. Screen title exactly 'Device health'. Three large concise status labels exactly 'Online', 'Signal', 'Battery'. Use just a few well-spaced status cards on a clean light interface, no dense invented table text. An adult operator's hand rests on the mouse near the lower edge. The immediate visual message is checking whether connected devices are healthy and reporting.",
+    "provider": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      [
+        "images/device-health-monitoring-v1.webp",
+        1536
+      ],
+      [
+        "images/device-health-monitoring-v1-1280.webp",
+        1280
+      ],
+      [
+        "images/device-health-monitoring-v1-640.webp",
+        640
+      ]
+    ]
+  },
+  {
+    "key": "configuration",
+    "stem": "device-remote-configuration-v1",
+    "alt": "Fleet administrator sending remote reporting and alert settings to deployed devices from an office laptop",
+    "prompt": "Create one premium photorealistic commercial photograph for an Anstel Autonautics fleet device webpage. Landscape 3:2 composition, natural daylight, restrained navy and blue accents, realistic hardware and human anatomy, contemporary professional environment. One coherent photograph, not a collage or website mockup. Keep the essential action and any important display in the central 60 percent of the frame and the central 65 percent vertically so responsive crops remain meaningful. No logos, branding, watermarks, decorative text, floating holograms or digital connection-line overlays. Screens depict a generic illustrative interface, not an existing branded product. Use only the few short on-screen words explicitly requested, with clear simple typography. Section: Remote Device Configuration. Over-the-shoulder photograph of an adult fleet administrator at a laptop in a clean glass-walled dispatch office. The laptop screen is large, centred and legible, showing a simple settings panel: title 'Device configuration', one reporting-interval control, two toggle switches and a blue action button labelled 'Send configuration'. A small green status pill reads 'Sent'. A row of distant fleet vans is visible through the office window, conveying that the administrator is changing settings on deployed vehicles from the office. No cables connect the laptop to vehicle hardware; do not stage a local repair bench. Focus on the settings screen and the operator using the trackpad. Only these short labels, no paragraphs or extra text.",
+    "provider": "built-in image_gen",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      [
+        "images/device-remote-configuration-v1.webp",
+        1536
+      ],
+      [
+        "images/device-remote-configuration-v1-1280.webp",
+        1280
+      ],
+      [
+        "images/device-remote-configuration-v1-640.webp",
+        640
+      ]
+    ]
+  },
+  {
+    "key": "diagnostics",
+    "stem": "device-diagnostics-v1",
+    "alt": "Technician testing a fleet tracker and its connection leads beside a laptop displaying device diagnostic results",
+    "prompt": "Create one premium photorealistic commercial photograph for an Anstel Autonautics fleet device webpage. Landscape 3:2 composition, natural daylight, restrained navy and blue accents, realistic hardware and human anatomy, contemporary professional environment. One coherent photograph, not a collage or website mockup. Keep the essential action and any important display in the central 60 percent of the frame and the central 65 percent vertically so responsive crops remain meaningful. No logos, branding, watermarks, decorative text, floating holograms or digital connection-line overlays. Screens depict a generic illustrative interface, not an existing branded product. Use only the few short on-screen words explicitly requested, with clear simple typography. Section: Device Diagnostics. Close, realistic service-bench photograph of an adult technician diagnosing a connectivity issue in a compact GPS tracking unit. The unit and its neat connector harness are central in the foreground. The technician holds a multimeter probe against a safe exposed connector while the other hand steadies the unit. Nearby laptop displays a clean diagnostic panel with title 'Device diagnostics', a short connection-test trace and one amber result labelled 'Connection check'. The multimeter is realistically connected and properly proportioned. This is fault-finding and troubleshooting, distinct from battery monitoring or software settings. Crisp hands and diagnostic tools, believable technician work, soft workshop background. Do not show vehicle engine repair, sparks or hazardous wiring.",
+    "provider": "Adobe Firefly",
+    "width": 2304,
+    "height": 1792,
+    "variants": [
+      [
+        "images/device-diagnostics-v1.webp",
+        2304
+      ]
+    ]
+  },
+  {
+    "key": "firmware",
+    "stem": "device-firmware-readiness-v1",
+    "alt": "Fleet gateway connected to a laptop during a firmware installation, with update progress and compatibility checks visible",
+    "prompt": "Create one premium photorealistic commercial photograph for an Anstel Autonautics fleet device webpage. Landscape 3:2 composition, natural daylight, restrained navy and blue accents, realistic hardware and human anatomy, contemporary professional environment. One coherent photograph, not a collage or website mockup. Keep the essential action and any important display in the central 60 percent of the frame and the central 65 percent vertically so responsive crops remain meaningful. No logos, branding, watermarks, decorative text, floating holograms or digital connection-line overlays. Screens depict a generic illustrative interface, not an existing branded product. Use only the few short on-screen words explicitly requested, with clear simple typography. Section: Firmware & Platform Readiness. A tight commercial photograph of a fleet edge gateway on a clean technology service bench connected by one tidy USB service cable to a laptop. The central laptop display clearly shows a firmware installation in progress: title 'Firmware update', one large blue circular progress indicator and the concise status 'Installing'. Two small completed checks below are labelled 'Compatibility' and 'Verified'. A technician's hand is near the gateway but not covering it. The important visual story is maintaining and updating the device software, not changing everyday settings. Soft daylight, silver laptop, matte dark gateway with small status LED, restrained blue accent, uncluttered and highly believable. No route maps, battery dashboard or unrelated repair tools.",
+    "provider": "Adobe Firefly",
+    "width": 2304,
+    "height": 1792,
+    "variants": [
+      [
+        "images/device-firmware-readiness-v1.webp",
+        2304
+      ]
+    ]
+  },
+  {
+    "key": "inventory",
+    "stem": "device-unified-inventory-v1",
+    "alt": "Technician scanning a fleet device into an organised inventory of trackers, cameras and sensors beside a central device register",
+    "prompt": "Create one premium photorealistic commercial photograph for an Anstel Autonautics fleet device webpage. Landscape 3:2 composition, natural daylight, restrained navy and blue accents, realistic hardware and human anatomy, contemporary professional environment. One coherent photograph, not a collage or website mockup. Keep the essential action and any important display in the central 60 percent of the frame and the central 65 percent vertically so responsive crops remain meaningful. No logos, branding, watermarks, decorative text, floating holograms or digital connection-line overlays. Screens depict a generic illustrative interface, not an existing branded product. Use only the few short on-screen words explicitly requested, with clear simple typography. Section: Unified Device Inventory. Photograph inside a bright organised fleet-hardware storeroom. Neat shallow open bins on a central workbench hold grouped GPS trackers, dash cameras, small sensor modules and asset trackers. An adult inventory technician scans a small barcode on one tracker with a compact handheld scanner. The scan action and the inventory devices are central and prominent. Beside the bins, a tablet on a stand shows a simple clean device register titled 'Device inventory', with short status labels 'Available' and 'Deployed'. Background shelves contain additional neatly sorted hardware, softly blurred. Emphasise counting, registering and knowing deployment status of hardware. Barcode stickers are simple non-readable lines; no generated brand or tiny serial-number text. This is an inventory workflow, not a generic warehouse of shipping boxes.",
+    "provider": "Adobe Firefly",
+    "width": 2304,
+    "height": 1792,
+    "variants": [
+      [
+        "images/device-unified-inventory-v1.webp",
+        2304
+      ]
+    ]
+  },
+  {
+    "key": "cta",
+    "stem": "device-ecosystem-deployment-cta-v1",
+    "alt": "Fleet technician installing a compact dash camera inside a delivery van as a connected vehicle fleet is prepared for deployment",
+    "prompt": "Create one premium photorealistic commercial photograph for an Anstel Autonautics fleet device webpage. Landscape 3:2 composition, natural daylight, restrained navy and blue accents, realistic hardware and human anatomy, contemporary professional environment. One coherent photograph, not a collage or website mockup. Keep the essential action and any important display in the central 60 percent of the frame and the central 65 percent vertically so responsive crops remain meaningful. No logos, branding, watermarks, decorative text, floating holograms or digital connection-line overlays. Screens depict a generic illustrative interface, not an existing branded product. Use only the few short on-screen words explicitly requested, with clear simple typography. Section CTA: Build Your Connected Fleet Ecosystem. Wide natural editorial photograph, viewed through the open front passenger door of a parked white delivery van in a bright fleet depot. An adult professional fleet technician in a navy work shirt carefully installs a compact telematics dash camera at the top centre of the windscreen near the rear-view mirror, with a believable mounting bracket and one neatly routed lead. The technician's hands, the small camera and the dashboard form the central focus. A few similar white vans are visible outside through the windscreen, suggesting a larger fleet deployment. Realistic cab geometry and a single coherent viewpoint. The vehicle is stationary. No screen interface is needed in this image. Calm successful setup and readiness, natural morning light, practical professional installation. Keep key installation action near the centre so it survives mobile crops; no detached floating devices, no oversized camera or tool clutter.",
+    "provider": "Adobe Firefly",
+    "width": 2688,
+    "height": 1536,
+    "variants": [
+      [
+        "images/device-ecosystem-deployment-cta-v1.webp",
+        2688
+      ]
+    ]
+  },
+  {
+    "key": "fuel",
+    "stem": "fuel-management-cta-refuelling-v1",
+    "prompt": "Wide photorealistic commercial photograph for a fleet fuel-management webpage CTA. At a clean modern commercial fuel depot in soft morning light, an adult fleet driver in navy workwear is refuelling a white medium-duty delivery truck using a real diesel pump nozzle correctly inserted in the truck's fuel filler. The truck, filler, black fuel hose and pump are clearly visible in the central composition; accurate vehicle and pump geometry. Another fleet truck is softly visible behind. This image must unmistakably communicate fuel consumption and refuelling, not just generic vehicle tracking. Premium natural editorial photography, realistic person and hands, calm neutral blue-grey tones with soft daylight, believable safe parked vehicle. Keep the refuelling action and truck centrally framed for mobile crops, with breathing room top and bottom. No brand logos, labels, readable fuel prices, overlaid charts, interface graphics, fake connection lines, text, watermarks or collage.",
+    "alt": "Fleet driver refuelling a commercial truck at a diesel pump",
+    "provider": "Adobe Firefly",
+    "width": 2688,
+    "height": 1536,
+    "variants": [
+      [
+        "images/fuel-management-cta-refuelling-v1.webp",
+        2688
+      ]
+    ]
+  }
+]
