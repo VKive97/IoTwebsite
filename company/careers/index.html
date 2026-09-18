@@ -10,7 +10,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/styles.css">
   <style>
-    :root{--career-gutter:clamp(1.25rem,5vw,5rem)}body{padding-top:56px;padding-bottom:56px;color:#171a20;background:#fff}.career-shell{width:min(100%,1120px);margin-inline:auto}.career-hero{padding:clamp(7rem,14vw,12rem) var(--career-gutter) clamp(5rem,9vw,8rem)}.career-label{margin:0 0 1rem;color:#5d6269;font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase}.career-hero h1{max-width:980px;margin:0;font-size:clamp(3.5rem,9vw,7.5rem);font-weight:600;letter-spacing:-.065em;line-height:.94}.career-hero p:last-child{max-width:680px;margin:2rem 0 0;color:#5c6066;font-size:clamp(1.05rem,1.55vw,1.3rem);line-height:1.7}.career-photo{height:clamp(420px,55vw,720px);overflow:hidden}.career-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}.career-section{padding:clamp(5rem,10vw,9rem) var(--career-gutter)}.career-section h2{max-width:760px;margin:0;font-size:clamp(2.4rem,5vw,4.5rem);font-weight:600;letter-spacing:-.05em;line-height:1.02}.career-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:clamp(3rem,6vw,5rem);background:#d8dadd}.career-value{min-height:250px;padding:clamp(2rem,4vw,3rem);background:#f4f4f4}.career-value span{display:block;margin-bottom:3.5rem;color:#4169dc;font-size:.72rem;font-weight:700}.career-value h3{margin:0;font-size:1.3rem;font-weight:600}.career-value p{margin:.8rem 0 0;color:#62666d;font-size:.9rem;line-height:1.7}.career-cta{padding:clamp(5rem,10vw,8rem) var(--career-gutter);text-align:center;color:#fff;background:#0d1b2a}.career-cta h2{max-width:800px;margin:0 auto;font-size:clamp(2.5rem,5.5vw,5rem);font-weight:600;letter-spacing:-.055em;line-height:1}.career-cta p{max-width:620px;margin:1.5rem auto 2rem;color:#bbc3ce;line-height:1.7}.career-button{display:inline-flex;min-width:190px;min-height:46px;padding:.75rem 1.25rem;border-radius:4px;align-items:center;justify-content:center;color:#171a20;font-size:.84rem;font-weight:600;text-decoration:none;background:#fff}.career-button:hover{color:#171a20;background:#e7e7e7}@media(max-width:767px){.career-photo{height:auto;aspect-ratio:4/3}.career-values{grid-template-columns:1fr}.career-value{min-height:220px}.career-value span{margin-bottom:2rem}}
+    :root{--career-gutter:clamp(1.25rem,5vw,5rem)}body{padding-top:56px;padding-bottom:56px;color:#171a20;background:#fff}.career-shell{width:min(100%,1120px);margin-inline:auto}.career-hero{padding:clamp(7rem,14vw,12rem) var(--career-gutter) clamp(5rem,9vw,8rem)}.career-label{margin:0 0 1rem;color:#5d6269;font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase}.career-hero h1{max-width:980px;margin:0;font-size:clamp(3.5rem,9vw,7.5rem);font-weight:600;letter-spacing:-.065em;line-height:.94}.career-hero p:last-child{max-width:680px;margin:2rem 0 0;color:#5c6066;font-size:clamp(1.05rem,1.55vw,1.3rem);line-height:1.7}.career-photo{height:clamp(420px,55vw,720px);overflow:hidden}.career-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}.career-section{padding:clamp(5rem,10vw,9rem) var(--career-gutter)}.career-section h2{max-width:760px;margin:0;font-size:clamp(2.4rem,5vw,4.5rem);font-weight:600;letter-spacing:-.05em;line-height:1.02}.career-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:clamp(3rem,6vw,5rem);background:#d8dadd}.career-value{min-height:250px;padding:clamp(2rem,4vw,3rem);background:#f4f4f4}.career-value span{display:block;margin-bottom:3.5rem;color:#4169dc;font-size:.72rem;font-weight:700}.career-value h3{margin:0;font-size:1.3rem;font-weight:600}.career-value p{margin:.8rem 0 0;color:#62666d;font-size:.9rem;line-height:1.7}.career-cta{overflow:hidden;text-align:center;color:#fff;background:#0d1b2a}.career-cta h2{max-width:800px;margin:0 auto;font-size:clamp(2.5rem,5.5vw,5rem);font-weight:600;letter-spacing:-.055em;line-height:1}.career-cta p{max-width:620px;margin:1.5rem auto 2rem;color:#bbc3ce;line-height:1.7}.career-button{display:inline-flex;min-width:190px;min-height:46px;padding:.75rem 1.25rem;border-radius:4px;align-items:center;justify-content:center;color:#171a20;font-size:.84rem;font-weight:600;text-decoration:none;background:#fff}.career-button:hover{color:#171a20;background:#e7e7e7}@media(max-width:767px){.career-photo{height:auto;aspect-ratio:4/3}.career-values{grid-template-columns:1fr}.career-value{min-height:220px}.career-value span{margin-bottom:2rem}}
+    .career-team-photo{margin:clamp(2rem,4vw,3rem) 0 0;overflow:hidden;border-radius:var(--ui-radius);background:#f4f4f4}
+    .career-team-photo img{display:block;width:100%;height:auto}
+    .career-team-photo + .career-values{margin-top:clamp(1.5rem,3vw,2.5rem)}
+    .career-cta-content{padding:clamp(5rem,10vw,8rem) var(--career-gutter)}
+    .career-cta-photo{margin:0}
+    .career-cta-photo img{display:block;width:100%;height:auto}
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Careers at Anstel","url":"https://www.anstelglobal.com/company/careers/","description":"Career opportunities and expressions of interest at Anstel.","about":{"@id":"https://www.anstelglobal.com/#organization"}}</script>
 </head>
@@ -42,8 +48,8 @@
             <div class="col-6 col-md-4 col-lg-3"><a href="/platform/connected-fleet/" class="mega-product-card d-block"><img loading="lazy" decoding="async" width="512" height="341" src="/images/connected fleet.webp" alt=""><p class="fw-semibold small text-dark mt-2 card-name">Connected Fleet</p><p class="text-muted" style="font-size:.7rem">Fleet tracking &amp; operations</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
             <div class="col-6 col-md-4 col-lg-3"><a href="/platform/last-mile/" class="mega-product-card d-block"><img loading="lazy" decoding="async" width="512" height="341" src="/images/Lastmile.webp" alt=""><p class="fw-semibold small text-dark mt-2 card-name">Last Mile</p><p class="text-muted" style="font-size:.7rem">Delivery execution platform</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
             <div class="col-6 col-md-4 col-lg-3"><a href="/platform/security-monitor/" class="mega-product-card d-block"><img loading="lazy" decoding="async" width="512" height="341" src="/images/Security.webp" alt=""><p class="fw-semibold small text-dark mt-2 card-name">Security Monitor</p><p class="text-muted" style="font-size:.7rem">Vehicle &amp; driver security</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/merchant/" class="mega-product-card d-block"><img loading="lazy" decoding="async" width="512" height="341" src="/images/Merchant.webp" alt=""><p class="fw-semibold small text-dark mt-2 card-name">Merchant</p><p class="text-muted" style="font-size:.7rem">Fleet services marketplace</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/iot/" class="mega-product-card d-block"><img loading="lazy" decoding="async" width="512" height="341" src="/images/IoTLogo.webp" alt=""><p class="fw-semibold small text-dark mt-2 card-name">IoT</p><p class="text-muted" style="font-size:.7rem">Connected devices &amp; sensors</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/merchant/" class="mega-product-card d-block"><img loading="lazy" decoding="async" width="512" height="341" src="/images/Merchant.webp" alt=""><p class="fw-semibold small text-dark mt-2 card-name">Autonautics Merchant</p><p class="text-muted" style="font-size:.7rem">Fleet services marketplace</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/iot/" class="mega-product-card d-block"><img loading="lazy" decoding="async" width="512" height="341" src="/images/IoTLogo.webp" alt=""><p class="fw-semibold small text-dark mt-2 card-name">IoT Monitoring</p><p class="text-muted" style="font-size:.7rem">Connected devices &amp; sensors</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
             <div class="col-6 col-md-4 col-lg-3"><a href="/platform/job-scheduling/" class="mega-product-card d-block"><img loading="lazy" decoding="async" width="512" height="341" src="/images/job-scheduling-logo.webp" alt="Job Scheduling"><p class="fw-semibold small text-dark mt-2 card-name">Job Scheduling</p><p class="text-muted" style="font-size:.7rem">Plan, dispatch &amp; track jobs</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
           </div>
         </div>
@@ -163,8 +169,8 @@
               <div class="col-6"><a href="/platform/connected-fleet/" class="mob-product-card"><img loading="lazy" decoding="async" width="512" height="341" src="/images/connected fleet.webp" alt=""><p class="mob-product-name">Connected Fleet</p><span class="mob-product-link">Learn More</span></a></div>
               <div class="col-6"><a href="/platform/last-mile/" class="mob-product-card"><img loading="lazy" decoding="async" width="512" height="341" src="/images/Lastmile.webp" alt=""><p class="mob-product-name">Last Mile</p><span class="mob-product-link">Learn More</span></a></div>
               <div class="col-6"><a href="/platform/security-monitor/" class="mob-product-card"><img loading="lazy" decoding="async" width="512" height="341" src="/images/Security.webp" alt=""><p class="mob-product-name">Security Monitor</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/platform/merchant/" class="mob-product-card"><img loading="lazy" decoding="async" width="512" height="341" src="/images/Merchant.webp" alt=""><p class="mob-product-name">Merchant</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/platform/iot/" class="mob-product-card"><img loading="lazy" decoding="async" width="512" height="341" src="/images/IoTLogo.webp" alt=""><p class="mob-product-name">IoT</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/platform/merchant/" class="mob-product-card"><img loading="lazy" decoding="async" width="512" height="341" src="/images/Merchant.webp" alt=""><p class="mob-product-name">Autonautics Merchant</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/platform/iot/" class="mob-product-card"><img loading="lazy" decoding="async" width="512" height="341" src="/images/IoTLogo.webp" alt=""><p class="mob-product-name">IoT Monitoring</p><span class="mob-product-link">Learn More</span></a></div>
               <div class="col-6"><a href="/platform/job-scheduling/" class="mob-product-card"><img loading="lazy" decoding="async" width="512" height="341" src="/images/job-scheduling-logo.webp" alt="Job Scheduling"><p class="mob-product-name">Job Scheduling</p><span class="mob-product-link">Learn More</span></a></div>
             </div>
             <div class="mob-sub-links">
@@ -258,8 +264,43 @@
   <main id="main-content">
     <section class="career-hero"><div class="career-shell"><p class="career-label">Careers at Anstel</p><h1>Build what keeps the world moving.</h1><p>Join a team creating practical technology for connected vehicles, assets and operations across Asia-Pacific.</p></div></section>
     <figure class="career-photo mb-0"><img src="/images/cta-company-team.webp" alt="Anstel team working together on connected operations" width="1672" height="941" decoding="async" srcset="/images/cta-company-team-640.webp 640w, /images/cta-company-team-1280.webp 1280w, /images/cta-company-team.webp 1672w" sizes="100vw"></figure>
-    <section class="career-section" aria-labelledby="career-values-heading"><div class="career-shell"><p class="career-label">How We Work</p><h2 id="career-values-heading">Simple principles. Meaningful work.</h2><div class="career-values"><article class="career-value"><span>01</span><h3>Solve real problems</h3><p>Build useful products around the everyday needs of customers and operators.</p></article><article class="career-value"><span>02</span><h3>Work as one team</h3><p>Share ideas openly and collaborate across technology, operations and regions.</p></article><article class="career-value"><span>03</span><h3>Keep improving</h3><p>Learn from every deployment and make the next experience clearer and better.</p></article></div></div></section>
-    <section class="career-cta" aria-labelledby="career-cta-heading"><p class="career-label text-white-50">Join Us</p><h2 id="career-cta-heading">Interested in working with Anstel?</h2><p>Send us a short introduction and your résumé. Select Careers when you contact us, and our team will respond when there is a suitable opportunity.</p><a class="career-button" href="/company/contact/">Contact the Team</a></section>
+    <section class="career-section" aria-labelledby="career-values-heading">
+      <div class="career-shell">
+        <p class="career-label">How We Work</p>
+        <h2 id="career-values-heading">Simple principles. Meaningful work.</h2>
+        <figure class="career-team-photo">
+          <img src="/images/careers-happy-team-v1.webp" alt="Smiling technology colleagues sharing ideas around a laptop in a bright office" width="1672" height="941" loading="lazy" decoding="async" srcset="/images/careers-happy-team-v1-640.webp 640w, /images/careers-happy-team-v1-1280.webp 1280w, /images/careers-happy-team-v1.webp 1672w" sizes="(min-width:1245px) 1120px, (min-width:400px) 90vw, calc(100vw - 40px)">
+        </figure>
+        <div class="career-values">
+          <article class="career-value">
+            <span>01</span>
+            <h3>Solve real problems</h3>
+            <p>Build useful products around the everyday needs of customers and operators.</p>
+          </article>
+          <article class="career-value">
+            <span>02</span>
+            <h3>Work as one team</h3>
+            <p>Share ideas openly and collaborate across technology, operations and regions.</p>
+          </article>
+          <article class="career-value">
+            <span>03</span>
+            <h3>Keep improving</h3>
+            <p>Learn from every deployment and make the next experience clearer and better.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="career-cta" aria-labelledby="career-cta-heading">
+      <div class="career-cta-content">
+        <p class="career-label text-white-50">Join Us</p>
+        <h2 id="career-cta-heading">Interested in working with Anstel?</h2>
+        <p>Send us a short introduction and your résumé. Select Careers when you contact us, and our team will respond when there is a suitable opportunity.</p>
+        <a class="career-button" href="/company/contact/">Contact the Team</a>
+      </div>
+      <figure class="career-cta-photo">
+        <img src="/images/careers-join-team-cta-v1.webp" alt="Smiling colleagues welcoming a new team member into a bright technology office" width="1672" height="941" loading="lazy" decoding="async" srcset="/images/careers-join-team-cta-v1-640.webp 640w, /images/careers-join-team-cta-v1-1280.webp 1280w, /images/careers-join-team-cta-v1.webp 1672w" sizes="100vw">
+      </figure>
+    </section>
   </main>
   <footer class="bg-white border-top py-3 px-4 px-md-5">
     <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mx-auto" style="max-width:1280px">

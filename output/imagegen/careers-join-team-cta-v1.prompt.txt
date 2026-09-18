@@ -1,0 +1,13 @@
+Mode: built-in image_gen
+
+Use case: photorealistic-natural
+Asset type: wide editorial image for the closing Join Us CTA on a technology company's careers page.
+Primary request: a relatable image of a happy, welcoming team that makes someone want to join.
+Scene: a bright contemporary Asia-Pacific technology office with glass meeting rooms, soft window light and a few plants. Four adult colleagues, women and men of varied backgrounds including South Asian colleagues, standing together and warmly welcoming a new team member who holds a notebook. Relaxed smart-casual clothes, easy smiles, natural eye contact with one another and candid body language. A spontaneous friendly conversation rather than a posed group portrait.
+Composition: landscape 16:9, eye-level medium-wide documentary photograph. All four people clearly visible, framed from the waist up with generous room above heads and at the edges. The photograph will sit beneath CTA text, so fill the frame naturally without reserved text space. Warm, credible, approachable atmosphere, realistic faces, skin, hands and fabric texture.
+Constraints: fictional team members, no logos, no readable text, no watermark, no handshakes or exaggerated celebration, no text overlays, no collage, no CGI.
+
+Saved workspace assets (WebP conversion and proportional resizing only):
+C:\Users\VaishaliPrajapati\AnstelWebsite\images\careers-join-team-cta-v1.webp
+C:\Users\VaishaliPrajapati\AnstelWebsite\images\careers-join-team-cta-v1-640.webp
+C:\Users\VaishaliPrajapati\AnstelWebsite\images\careers-join-team-cta-v1-1280.webp

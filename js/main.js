@@ -96,7 +96,7 @@ $(function () {
   mapCarouselIcon('material-symbols:description-outline', ['Incident Documentation', 'Security Reports', 'Complete Service Records']);
   mapCarouselIcon('material-symbols:dashboard-outline', ['Decisions Backed by Intelligence.', 'Incident Analytics', 'Response Performance', 'Security Event Trends', 'Operational Insights', 'Transform Data Into Intelligence.', 'Itemized Service Costs', 'Support Business Growth.']);
   mapCarouselIcon('material-symbols:visibility-outline', ['See Every Mission Unfold.', 'See Every Operation in Real Time.']);
-  mapCarouselIcon('material-symbols:sensors', ['IoT Monitoring', 'IoT Platform', 'Manage Every Connected Device.']);
+  mapCarouselIcon('material-symbols:sensors', ['IoT Monitoring', 'Manage Every Connected Device.']);
   mapCarouselIcon('material-symbols:videocam-outline', ['Video Telematics']);
   mapCarouselIcon('material-symbols:device-thermostat', ['Cold Chain Monitoring', 'Protect Critical Conditions.']);
   mapCarouselIcon('material-symbols:bolt-outline', ['Generator Monitoring']);
@@ -104,7 +104,7 @@ $(function () {
   mapCarouselIcon('material-symbols:calendar-month-outline', ['Job Scheduling']);
   mapCarouselIcon('material-symbols:task-alt', ['Job Management', 'Create']);
   mapCarouselIcon('material-symbols:task-alt', ['Complete']);
-  mapCarouselIcon('material-symbols:storefront-outline', ['Merchant', 'List Your Services.', 'Explore Trusted Options.', 'Reach the Right Customers.', 'Discover Trusted Solutions.']);
+  mapCarouselIcon('material-symbols:storefront-outline', ['Autonautics Merchant', 'List Your Services.', 'Explore Trusted Options.', 'Reach the Right Customers.', 'Discover Trusted Solutions.']);
   mapCarouselIcon('material-symbols:handshake-outline', ['Engage Directly.', 'Support Every Stage of Ownership.']);
   mapCarouselIcon('material-symbols:recommend-outline', ['Get Matched Intelligently.', 'Recommendations That Make Sense.']);
   mapCarouselIcon('material-symbols:verified-outline', ['Built on Quality, Not Quantity.']);

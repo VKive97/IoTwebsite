@@ -1,0 +1,14 @@
+Tool: Built-in image_gen (image_gen.imagegen)
+Purpose: Homepage Video Telematics carousel image showing a realistically installed vehicle camera.
+Generated source: C:/Users/VaishaliPrajapati/.codex/generated_images/01a09f7d-7a9f-7993-8cf4-005f3f900ddf/exec-ac88972a-b239-4f43-a2cb-86d84fe8926b.png
+Final assets: images/home-video-telematics-camera-v2.webp, images/home-video-telematics-camera-v2-1280.webp, images/home-video-telematics-camera-v2-640.webp
+Preparation: WebP encoding and proportional responsive resizing only.
+
+Use case: photorealistic-natural.
+Asset type: wide homepage hero photograph for a commercial fleet video telematics solution, landscape 16:9, high resolution.
+Primary request: show a believable, real vehicle camera properly installed inside a commercial delivery vehicle, photographed on location, not a floating product render.
+Scene: view from the passenger side inside a modern commercial van at blue hour. Visible windshield frame, overhead headliner, a small portion of rear-view mirror, textured dashboard along the bottom, and a real road with a few fleet vehicles softly visible through the windshield.
+Subject: one compact matte-black professional dual-lens dash camera, realistic palm-sized hardware, firmly attached to the inner windshield using a short rigid mounting bracket and an adhesive base that is visibly in contact with the glass. Its slim power cable exits the housing and is neatly routed up into the headliner. Road-facing lens points through the windshield; a small cabin-facing lens can be visible. Include natural lens reflections, realistic material texture, attachment shadows and correct perspective. The mount and its connection to the glass must both be fully visible. The device must feel physically installed in this vehicle.
+Composition: wide commercial automotive editorial photograph. The entire camera and bracket sit within the middle-right area, roughly 60 percent across and 50 percent down, with generous space around them and no cropping of the hardware. Keep the upper central 35 percent visually calm and dark for existing white webpage headline and buttons, which will be added in HTML. The camera is the sharp focal point; road background softer but identifiable. Realistic vehicle scale.
+Lighting: natural cool evening light through the glass and soft cabin ambient fill so the mounting details remain visible; restrained navy and charcoal with natural highlights.
+Constraints: no rendered text, no logos, no watermark, no UI graphics, no added captions. No oversized camera, no dangling or floating hardware, no stacked unrelated cameras, no impossible brackets, no science-fiction design. A real photographic look rather than a 3D render.

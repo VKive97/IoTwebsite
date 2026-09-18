@@ -1,0 +1,14 @@
+Tool: Built-in image_gen (image_gen.imagegen), edit mode
+Purpose: Correct the blue cast in the homepage Video Telematics image while preserving the mounted camera and composition.
+Edit target: images/home-video-telematics-camera-v2.webp
+Generated source: C:/Users/VaishaliPrajapati/.codex/generated_images/01a09f7d-7a9f-7993-8cf4-005f3f900ddf/exec-e17884c9-b35f-4276-946f-fdc02215ffc7.png
+Final assets: images/home-video-telematics-camera-v3.webp, images/home-video-telematics-camera-v3-1280.webp, images/home-video-telematics-camera-v3-640.webp
+Preparation: WebP encoding and proportional responsive resizing only.
+
+Use case: lighting-weather.
+Asset type: colour correction of the existing homepage Video Telematics hero photograph.
+Input image: the supplied image is the edit target. Edit this exact photograph.
+Primary request: remove the dominant blue cast and restore natural, realistic colours with a neutral white balance. The scene should look like a true-to-life photograph in soft late-afternoon light, rather than a blue-hour or cinematic blue-tinted image.
+Colour treatment: the camera housing and dashboard should be neutral black and charcoal; the headliner and trim natural grey; the vans genuinely white; the road neutral grey asphalt; cloud tones neutral grey and off-white with only subtle natural pale blue in the sky. Keep red brake lights, softly warm streetlights and any naturally coloured surroundings. Lift exposure modestly to reveal authentic textures. Balanced saturation, natural contrast, no blanket colour filter. Do not make the scene monochrome, orange, yellow or sepia.
+Invariants: preserve the exact composition, viewpoint, crop, camera design and size, windshield mounting bracket, adhesive base, routed cable, mirror, dashboard, vehicle positions and road layout. Change only lighting, white balance and colour rendering. Keep the camera physically mounted and clearly visible, and keep the upper cabin area dark enough for the existing white website heading.
+Constraints: photorealistic; no added objects; no text, labels, logos, graphics or watermark. Retain the landscape aspect ratio and image dimensions.

@@ -1,0 +1,14 @@
+Mode: built-in image_gen
+
+Use case: photorealistic-natural
+Asset type: explanatory editorial photograph for the How Does Connected Fleet Work section of a fleet-management website.
+Primary request: a highly relatable real-world image that makes the workflow of connecting devices, viewing vehicles live, and acting on alerts immediately understandable.
+Scene: one coherent, believable photograph inside a small modern fleet depot operations office, with a wide clear window overlooking the actual vehicle yard. In the foreground, a fleet operations manager and a telematics technician work together at a practical desk. A clearly visible compact black GPS tracking unit with its short wiring connector and a small vehicle dash camera rest beside the keyboard, while the technician gestures toward the devices. The manager reviews a large desktop monitor displaying a realistic, clean fleet map with vehicle location pins, a short vehicle status list and one small amber maintenance-alert indicator; a smartphone beside the monitor shows a matching simple alert symbol. Outside the window, several white commercial delivery vans and a medium box truck are clearly visible, with a uniformed driver checking a handheld phone beside a stationary van.
+Composition: wide landscape 16:9, medium-wide three-quarter view from just behind and beside the operators so their natural profiles, the monitor screen, the physical devices and the fleet outside are all visible. Keep the key hardware, people and vehicles inside the central 85 percent of the frame. Natural proportions and credible physical layout; the monitor must face the seated operator. Foreground devices must be recognisable without being oversized. Clear visual storytelling in one photograph, with enough depth of field to recognise the yard.
+Style: authentic high-quality documentary workplace photography, soft daylight, ordinary smart-casual workwear, approachable and focused people, realistic skin and hands, understated blue, white and neutral colours.
+Constraints: fictional illustrative scene, no logos or brand names, no readable text or promotional slogans, no floating interface overlays, no neon connection lines, no collage, no infographic, no sci-fi room, no handshake. Any screen interface is a generic illustrative display, not a copy of a branded application. No text added over the photograph.
+
+Saved workspace assets (WebP conversion and proportional resizing only):
+C:\Users\VaishaliPrajapati\AnstelWebsite\images\connected-fleet-how-it-works-v1.webp
+C:\Users\VaishaliPrajapati\AnstelWebsite\images\connected-fleet-how-it-works-v1-640.webp
+C:\Users\VaishaliPrajapati\AnstelWebsite\images\connected-fleet-how-it-works-v1-1280.webp

@@ -1,0 +1,28 @@
+Connected Fleet — Everything on One Platform
+
+Original local motion-graphics overview using existing website photography.
+Shows Vehicles, Drivers, Assets, Devices, and Operations connected to one live
+dashboard through animated data signals, topic highlights, and map markers.
+
+Video: videos/connected-fleet-one-platform-v2.mp4
+Format: 1280 x 600, 24 fps, 15 seconds, silent H.264 MP4, seamless loop.
+Poster: images/connected-fleet-one-platform-poster-v2.webp
+Small poster: images/connected-fleet-one-platform-poster-v2-640.webp
+Renderer: scripts/generate-connected-fleet-platform-video.py
+
+Version 2 removes the repeated heading, subtitle, and branding row. The former
+heading space is trimmed from every frame and the poster. The player remains
+full width with no outer margin or padding, using the new 32:15 aspect ratio.
+
+Photography sources:
+- images/fleet-tracking-live-vehicles.webp
+- images/solution-driver-management-scene.webp
+- images/asset-management-hero-v6.webp
+- images/device-ecosystem-hardware-hero-v1.webp
+- images/connected-fleet-how-it-works-v1.webp
+
+The webpage uses a directly loaded native video player with autoplay, mute,
+looping, and visible play/pause/seek controls. The poster belongs to the video
+element; no separate image or script-controlled opacity covers playback.
+js/inline-video.js disables autoplay for reduced-motion preferences while
+keeping manual playback available. The player also works without JavaScript.

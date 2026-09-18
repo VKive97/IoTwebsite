@@ -130,7 +130,7 @@ for (const file of htmlFiles) {
     ['fleet management and connected IoT product', 'connected fleet and IoT platform'],
     ['our fleet management and IoT\n          product', 'our connected fleet and IoT platform'],
     ['a connected product designed around', 'a connected fleet and IoT platform designed around'],
-    ['Fleet Services Marketplace | Anstel Merchant', 'Fleet Services Marketplace | Merchant'],
+    ['Fleet Services Marketplace | Anstel Merchant', 'Fleet Services Marketplace | Autonautics Merchant'],
     ['and complies with AIS-140 and other regional', 'and supports compatible AIS-140 devices and workflows alongside other regional'],
     ['fatigue indicators, detected automatically from GPS and telematics data with no extra hardware beyond the standard tracker.', 'fatigue and distraction indicators when compatible camera or DMS hardware is installed; tracker-based events such as speeding, harsh braking, rapid acceleration, harsh cornering, and excessive idling do not require camera hardware.'],
     ['fatigue indicators, detected automatically from GPS and telematics data\n              with no extra hardware beyond the standard tracker.', 'fatigue and distraction indicators when compatible camera or DMS hardware is installed; tracker-based events such as speeding, harsh braking, rapid acceleration, harsh cornering, and excessive idling do not require camera hardware.'],
@@ -198,7 +198,7 @@ for (const file of htmlFiles) {
 
   if (/^industries\/(?:transportation|logistics-supply-chain|waste-management|food-services-fmcg)\/index\.html$/.test(rel)) {
     const cardTypes = new Map([
-      ['Connected Fleet', 'Product'], ['Last Mile', 'Product'], ['IoT Platform', 'Product'],
+      ['Connected Fleet', 'Product'], ['Last Mile', 'Product'], ['IoT Monitoring', 'Product'],
       ['Device Ecosystem', 'Platform'], ['Fleet Tracking', 'Solution'], ['Route Optimization', 'Solution'],
       ['Fuel Management', 'Solution'], ['Compliance', 'Solution'], ['Dispatch Management', 'Solution'],
       ['Asset Management', 'Solution'], ['Reports &amp; Analytics', 'Solution'], ['Alerts &amp; Notifications', 'Solution']

@@ -1,0 +1,180 @@
+{
+  "tool": "Built-in image_gen",
+  "purpose": "Six distinct images for the Connected Ecosystem carousel on the Merchant page.",
+  "assets": [
+    {
+      "slug": "insurance",
+      "label": "Insurance Providers",
+      "alt": "Insurance adviser and fleet operator reviewing vehicle cover beside a commercial van",
+      "scene": "An insurance adviser in smart casual business clothes and a fleet business owner standing beside a clean white commercial van in a depot forecourt, reviewing vehicle cover together on a tablet with a simple generic fleet-risk chart. The adviser gestures naturally toward the van while the owner considers the tablet. Three commercial vehicles softly visible behind them. Make the relationship between insurance advice and the actual insured fleet clear, confident and human.",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: a landscape photograph for an Autonautics Merchant website carousel card, aspect ratio 3:2, at least 1536 pixels wide.\nStyle: premium but believable editorial commercial photography, natural daylight, realistic materials and human anatomy, clean neutral colours with restrained navy and blue accents. Contemporary Asia-Pacific mobility and commercial vehicle setting.\nComposition: one clear subject and action, medium-wide eye-level view, key people and activity inside the central 70 percent so responsive cropping remains clear; picture fills the entire frame. No collage.\nConstraints: no logos, no brand names, no captions, no typography or floating UI, no watermark. Screens and documents may show subtle generic interface shapes but no prominent readable text. Avoid posing at the camera.\nPrimary request: Create a relatable image for the carousel item 'Insurance Providers'.\nScene: An insurance adviser in smart casual business clothes and a fleet business owner standing beside a clean white commercial van in a depot forecourt, reviewing vehicle cover together on a tablet with a simple generic fleet-risk chart. The adviser gestures naturally toward the van while the owner considers the tablet. Three commercial vehicles softly visible behind them. Make the relationship between insurance advice and the actual insured fleet clear, confident and human.",
+      "files": [
+        "images/merchant-ecosystem-insurance-v1.webp",
+        "images/merchant-ecosystem-insurance-v1-640.webp",
+        "images/merchant-ecosystem-insurance-v1-1280.webp"
+      ],
+      "generated_source": "C:\\Users\\VaishaliPrajapati\\.codex\\generated_images\\01a09f7d-7a9f-7993-8cf4-005f3f900ddf\\exec-75deb1b7-5b3d-4304-a45c-3d81d6586b83.png",
+      "dimensions": {
+        "original": [
+          1536,
+          1024
+        ],
+        "responsive": [
+          [
+            640,
+            427
+          ],
+          [
+            1280,
+            853
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "servicing",
+      "label": "Service Providers",
+      "alt": "Vehicle technician discussing a maintenance inspection with a customer in a workshop",
+      "scene": "Inside a bright professional vehicle service workshop, a technician in navy workwear inspects the open engine bay of a white commercial van while explaining the maintenance findings to a business customer holding a tablet checklist. A practical tool trolley at the edge, another service bay soft in the background. Show a clear vehicle servicing relationship, attentive expressions and natural hands, tidy realistic workshop.",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: a landscape photograph for an Autonautics Merchant website carousel card, aspect ratio 3:2, at least 1536 pixels wide.\nStyle: premium but believable editorial commercial photography, natural daylight, realistic materials and human anatomy, clean neutral colours with restrained navy and blue accents. Contemporary Asia-Pacific mobility and commercial vehicle setting.\nComposition: one clear subject and action, medium-wide eye-level view, key people and activity inside the central 70 percent so responsive cropping remains clear; picture fills the entire frame. No collage.\nConstraints: no logos, no brand names, no captions, no typography or floating UI, no watermark. Screens and documents may show subtle generic interface shapes but no prominent readable text. Avoid posing at the camera.\nPrimary request: Create a relatable image for the carousel item 'Service Providers'.\nScene: Inside a bright professional vehicle service workshop, a technician in navy workwear inspects the open engine bay of a white commercial van while explaining the maintenance findings to a business customer holding a tablet checklist. A practical tool trolley at the edge, another service bay soft in the background. Show a clear vehicle servicing relationship, attentive expressions and natural hands, tidy realistic workshop.",
+      "files": [
+        "images/merchant-ecosystem-servicing-v1.webp",
+        "images/merchant-ecosystem-servicing-v1-640.webp",
+        "images/merchant-ecosystem-servicing-v1-1280.webp"
+      ],
+      "generated_source": "C:\\Users\\VaishaliPrajapati\\.codex\\generated_images\\01a09f7d-7a9f-7993-8cf4-005f3f900ddf\\exec-45d27a4c-111f-4ea9-8b98-8961da3f70da.png",
+      "dimensions": {
+        "original": [
+          1536,
+          1024
+        ],
+        "responsive": [
+          [
+            640,
+            427
+          ],
+          [
+            1280,
+            853
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "finance",
+      "label": "Finance Partners",
+      "alt": "Vehicle finance adviser reviewing an expansion plan with a business owner at a van dealership",
+      "scene": "A fleet finance adviser and a small-business owner seated at a modest consultation table inside a light-filled commercial vehicle dealership. They review a vehicle expansion plan with a laptop showing a subtle generic bar chart, a calculator and vehicle keys on the table. Two new white vans clearly visible through the glass directly behind them. Frame both people and the vans to make this unmistakably about financing fleet expansion, warm productive discussion.",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: a landscape photograph for an Autonautics Merchant website carousel card, aspect ratio 3:2, at least 1536 pixels wide.\nStyle: premium but believable editorial commercial photography, natural daylight, realistic materials and human anatomy, clean neutral colours with restrained navy and blue accents. Contemporary Asia-Pacific mobility and commercial vehicle setting.\nComposition: one clear subject and action, medium-wide eye-level view, key people and activity inside the central 70 percent so responsive cropping remains clear; picture fills the entire frame. No collage.\nConstraints: no logos, no brand names, no captions, no typography or floating UI, no watermark. Screens and documents may show subtle generic interface shapes but no prominent readable text. Avoid posing at the camera.\nPrimary request: Create a relatable image for the carousel item 'Finance Partners'.\nScene: A fleet finance adviser and a small-business owner seated at a modest consultation table inside a light-filled commercial vehicle dealership. They review a vehicle expansion plan with a laptop showing a subtle generic bar chart, a calculator and vehicle keys on the table. Two new white vans clearly visible through the glass directly behind them. Frame both people and the vans to make this unmistakably about financing fleet expansion, warm productive discussion.",
+      "files": [
+        "images/merchant-ecosystem-finance-v1.webp",
+        "images/merchant-ecosystem-finance-v1-640.webp",
+        "images/merchant-ecosystem-finance-v1-1280.webp"
+      ],
+      "generated_source": "C:\\Users\\VaishaliPrajapati\\.codex\\generated_images\\01a09f7d-7a9f-7993-8cf4-005f3f900ddf\\exec-3508aa80-f0ea-4cd9-8240-f398019f51b6.png",
+      "dimensions": {
+        "original": [
+          1536,
+          1024
+        ],
+        "responsive": [
+          [
+            640,
+            427
+          ],
+          [
+            1280,
+            853
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "roadside",
+      "label": "Roadside Assistance",
+      "alt": "Roadside assistance technician helping a van driver in a safe roadside lay-by",
+      "scene": "A roadside assistance technician wearing a clean high-visibility vest helps the driver of a stopped white delivery van in a wide safe roadside lay-by. The technician uses a portable diagnostic tablet beside the open bonnet, with a compact amber-light service truck and small safety cones positioned behind the van. Driver waits alongside at a safe distance, reassured. Natural daytime, calm recovery scene, no collision, no injury, no dramatic hazard, green roadside and hills softly behind.",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: a landscape photograph for an Autonautics Merchant website carousel card, aspect ratio 3:2, at least 1536 pixels wide.\nStyle: premium but believable editorial commercial photography, natural daylight, realistic materials and human anatomy, clean neutral colours with restrained navy and blue accents. Contemporary Asia-Pacific mobility and commercial vehicle setting.\nComposition: one clear subject and action, medium-wide eye-level view, key people and activity inside the central 70 percent so responsive cropping remains clear; picture fills the entire frame. No collage.\nConstraints: no logos, no brand names, no captions, no typography or floating UI, no watermark. Screens and documents may show subtle generic interface shapes but no prominent readable text. Avoid posing at the camera.\nPrimary request: Create a relatable image for the carousel item 'Roadside Assistance'.\nScene: A roadside assistance technician wearing a clean high-visibility vest helps the driver of a stopped white delivery van in a wide safe roadside lay-by. The technician uses a portable diagnostic tablet beside the open bonnet, with a compact amber-light service truck and small safety cones positioned behind the van. Driver waits alongside at a safe distance, reassured. Natural daytime, calm recovery scene, no collision, no injury, no dramatic hazard, green roadside and hills softly behind.",
+      "files": [
+        "images/merchant-ecosystem-roadside-v1.webp",
+        "images/merchant-ecosystem-roadside-v1-640.webp",
+        "images/merchant-ecosystem-roadside-v1-1280.webp"
+      ],
+      "generated_source": "C:\\Users\\VaishaliPrajapati\\.codex\\generated_images\\01a09f7d-7a9f-7993-8cf4-005f3f900ddf\\exec-d47dbee8-bba7-4c50-8fb3-35fb9f73d307.png",
+      "dimensions": {
+        "original": [
+          1536,
+          1024
+        ],
+        "responsive": [
+          [
+            640,
+            427
+          ],
+          [
+            1280,
+            853
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "fleet-managers",
+      "label": "Fleet Managers & Businesses",
+      "alt": "Fleet managers comparing service partners on a laptop overlooking their vehicle depot",
+      "scene": "Two fleet operations managers, a woman and a man in practical business-casual clothing, collaborate at a desk overlooking a working commercial van depot through large windows. They compare external service providers on a laptop with a clean generic marketplace grid of service cards and a tablet beside it. A printed vehicle service schedule and van keys connect the digital choice to real operations. Their attention is on choosing the right partners, approachable busy business setting rather than a surveillance control room.",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: a landscape photograph for an Autonautics Merchant website carousel card, aspect ratio 3:2, at least 1536 pixels wide.\nStyle: premium but believable editorial commercial photography, natural daylight, realistic materials and human anatomy, clean neutral colours with restrained navy and blue accents. Contemporary Asia-Pacific mobility and commercial vehicle setting.\nComposition: one clear subject and action, medium-wide eye-level view, key people and activity inside the central 70 percent so responsive cropping remains clear; picture fills the entire frame. No collage.\nConstraints: no logos, no brand names, no captions, no typography or floating UI, no watermark. Screens and documents may show subtle generic interface shapes but no prominent readable text. Avoid posing at the camera.\nPrimary request: Create a relatable image for the carousel item 'Fleet Managers & Businesses'.\nScene: Two fleet operations managers, a woman and a man in practical business-casual clothing, collaborate at a desk overlooking a working commercial van depot through large windows. They compare external service providers on a laptop with a clean generic marketplace grid of service cards and a tablet beside it. A printed vehicle service schedule and van keys connect the digital choice to real operations. Their attention is on choosing the right partners, approachable busy business setting rather than a surveillance control room.",
+      "files": [
+        "images/merchant-ecosystem-fleet-managers-v1.webp",
+        "images/merchant-ecosystem-fleet-managers-v1-640.webp",
+        "images/merchant-ecosystem-fleet-managers-v1-1280.webp"
+      ],
+      "generated_source": "C:\\Users\\VaishaliPrajapati\\.codex\\generated_images\\01a09f7d-7a9f-7993-8cf4-005f3f900ddf\\exec-e78d6b2c-0129-481c-8b99-ef0b8be1bfb9.png",
+      "dimensions": {
+        "original": [
+          1536,
+          1024
+        ],
+        "responsive": [
+          [
+            640,
+            427
+          ],
+          [
+            1280,
+            853
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "vehicle-owners",
+      "label": "Personal Vehicle Owners",
+      "alt": "Vehicle owner using a phone to arrange a service beside a family car",
+      "scene": "An everyday private vehicle owner standing beside a clean unbranded silver family hatchback outside a welcoming neighbourhood automotive service centre, using a smartphone to arrange a vehicle service. A friendly service adviser stands a few steps away near the open workshop entrance, ready to greet them. Emphasise the individual owner and their personal car rather than a commercial fleet. Relaxed natural expression, warm daylight, relatable modern suburban setting.",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: a landscape photograph for an Autonautics Merchant website carousel card, aspect ratio 3:2, at least 1536 pixels wide.\nStyle: premium but believable editorial commercial photography, natural daylight, realistic materials and human anatomy, clean neutral colours with restrained navy and blue accents. Contemporary Asia-Pacific mobility and commercial vehicle setting.\nComposition: one clear subject and action, medium-wide eye-level view, key people and activity inside the central 70 percent so responsive cropping remains clear; picture fills the entire frame. No collage.\nConstraints: no logos, no brand names, no captions, no typography or floating UI, no watermark. Screens and documents may show subtle generic interface shapes but no prominent readable text. Avoid posing at the camera.\nPrimary request: Create a relatable image for the carousel item 'Personal Vehicle Owners'.\nScene: An everyday private vehicle owner standing beside a clean unbranded silver family hatchback outside a welcoming neighbourhood automotive service centre, using a smartphone to arrange a vehicle service. A friendly service adviser stands a few steps away near the open workshop entrance, ready to greet them. Emphasise the individual owner and their personal car rather than a commercial fleet. Relaxed natural expression, warm daylight, relatable modern suburban setting.",
+      "files": [
+        "images/merchant-ecosystem-vehicle-owners-v1.webp",
+        "images/merchant-ecosystem-vehicle-owners-v1-640.webp",
+        "images/merchant-ecosystem-vehicle-owners-v1-1280.webp"
+      ],
+      "generated_source": "C:\\Users\\VaishaliPrajapati\\.codex\\generated_images\\01a09f7d-7a9f-7993-8cf4-005f3f900ddf\\exec-6c918613-a9c4-48cf-ac72-1320fa17ebc5.png",
+      "dimensions": {
+        "original": [
+          1536,
+          1024
+        ],
+        "responsive": [
+          [
+            640,
+            427
+          ],
+          [
+            1280,
+            853
+          ]
+        ]
+      }
+    }
+  ]
+}

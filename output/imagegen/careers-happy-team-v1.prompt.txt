@@ -1,0 +1,14 @@
+Mode: built-in image_gen
+
+Use case: photorealistic-natural
+Asset type: wide editorial photograph for the How We Work section of a technology company's careers website.
+Primary request: a relatable, happy team enjoying working together.
+Scene: a bright, welcoming, ordinary modern office in Asia-Pacific, daylight through windows, a shared desk with a laptop and notebooks, subtle greenery.
+Subject: five adult technology and operations colleagues with varied backgrounds, including South Asian colleagues, women and men in relaxed smart-casual clothing. They are smiling and sharing a light, candid moment during collaborative work, looking at each other rather than posing for the camera. Natural expressions and body language, realistic skin and hands.
+Composition: wide landscape 16:9 photograph, eye-level medium-wide framing. Keep all five people clearly visible and the group within the central area, with breathing room above heads and at the sides. Realistic documentary photography, warm natural light, understated office colours. This photo will sit above three teamwork principles; do not add any text overlay.
+Constraints: fictional colleagues, no logos, no brand names, no watermark, no visible readable screen text, no staged handshake or exaggerated celebration, no illustration or CGI.
+
+Saved workspace assets (WebP conversion and proportional resizing only):
+C:\Users\VaishaliPrajapati\AnstelWebsite\images\careers-happy-team-v1.webp
+C:\Users\VaishaliPrajapati\AnstelWebsite\images\careers-happy-team-v1-640.webp
+C:\Users\VaishaliPrajapati\AnstelWebsite\images\careers-happy-team-v1-1280.webp

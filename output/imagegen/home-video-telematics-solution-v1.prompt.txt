@@ -1,0 +1,13 @@
+Tool: Built-in image_gen (image_gen.imagegen)
+Purpose: Homepage Our Solutions Video Telematics carousel card.
+Generated source: C:\Users\VaishaliPrajapati\.codex\generated_images\01a09f7d-7a9f-7993-8cf4-005f3f900ddf\exec-870bf010-1064-4c4f-bdca-66c3fe2350b7.png
+Final assets: images/home-video-telematics-solution-v1.webp, images/home-video-telematics-solution-v1-1280.webp, images/home-video-telematics-solution-v1-640.webp
+Preparation: WebP encoding and proportional responsive resizing only.
+
+Use case: photorealistic-natural.
+Asset type: homepage solution carousel photograph for Video Telematics, landscape 3:2.
+Primary request: a clear, realistic visual explaining vehicle video telematics through an installed dash camera and reviewable driving footage, not just a generic vehicle.
+Scene: inside a parked modern commercial fleet van, photographed from the passenger seat in natural daylight. One compact professional black vehicle camera is firmly attached to the windshield with a visible adhesive mounting base, short bracket and neatly routed power cable. Directly below it is a real fleet tablet on a dashboard mount. Its display clearly shows a recorded road-camera video of a delivery truck ahead on a marked road, a small driver-facing video thumbnail, a visible triangular playback control and a short event timeline. Screen content must look like credible camera footage inside a physical screen, with restrained simple interface elements, no floating overlays.
+Composition: camera near the upper centre, tablet in the middle centre, both sharp and fully visible inside the central 45 percent of the frame so a narrow portrait carousel crop retains both subjects. Keep the bottom quarter relatively quiet and darker for HTML caption text added later. A few commercial vehicles and a depot softly visible beyond the windshield provide context. Camera and tablet are the main subjects, at physically plausible scale with natural perspective.
+Colours and lighting: neutral daylight, authentic black and grey cabin materials, genuinely white vehicles, natural green foliage and modest warm highlights. Balanced white balance and exposure. No dominant blue cast, no teal/orange colour grading. Premium real automotive photography with convincing glass reflections and fine texture.
+Constraints: no logos, no watermark, no large text or headlines, no illustrated icons outside the tablet, no floating cameras or screens, no oversized hardware, no cartoon or CGI look. Do not include a person handling a device while driving.
