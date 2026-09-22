@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 /* ── Scroll carousels ── */
 :root{
@@ -16,7 +15,11 @@
 }
 html{scroll-behavior:smooth}
 body{overflow-x:hidden}
-img{max-width:100%}
+/* Natural proportions for content images; framed media retains its explicit fit. */
+img{max-width:100%;height:auto;object-fit:contain}
+/* Keep media fitting local instead of relying on the Bootstrap CDN. */
+img.object-fit-cover,video.object-fit-cover{object-fit:cover!important}
+img.object-fit-contain,video.object-fit-contain{object-fit:contain!important}
 
 /* Shared page rhythm: generous space on large screens, compact and readable on phones. */
 body > section.py-5,
@@ -267,11 +270,9 @@ section:has(> .scroll-carousel) > [class*="px-"]{
 #hero-content h1{font-size:clamp(2.35rem,4vw,3.5rem);font-weight:600;letter-spacing:-.035em;line-height:1.08;color:#fff!important;text-shadow:none}
 #hero-subtitle{color:#fff!important;font-size:clamp(1rem,1.35vw,1.2rem);font-weight:500;line-height:1.35;text-shadow:none}
 .hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;width:fit-content;max-width:100%}
-.hero-actions .btn{flex:0 0 auto;min-width:260px;max-width:100%;white-space:nowrap;border-radius:4px;padding:.72rem 1.5rem;font-size:.875rem;font-weight:600;line-height:1.25}
+.hero-actions .btn{flex:0 0 auto;min-height:44px;display:inline-flex;align-items:center;justify-content:center;min-width:260px;max-width:100%;white-space:nowrap;border-radius:4px;padding:.72rem 1.5rem;font-size:.875rem;font-weight:600;line-height:1.25}
 .hero-primary-btn{background:#4169dc!important;border-color:#4169dc!important;color:#fff!important}
 .hero-primary-btn:hover{background:#355bc8!important;border-color:#355bc8!important;color:#fff!important}
-.hero-secondary-btn{background:rgba(255,255,255,.96)!important;border-color:rgba(255,255,255,.96)!important;color:#171a20!important}
-.hero-secondary-btn:hover{background:#fff!important;border-color:#fff!important;color:#171a20!important}
 .hero-prev.car-btn,.hero-next.car-btn{
   width:40px;
   height:40px;
@@ -448,7 +449,7 @@ section:has(> .scroll-carousel) > [class*="px-"]{
 .mob-view-main{transform:translateX(0)}
 .mob-view-main.pushed{transform:translateX(-100%)}
 .mob-view-sub.active{transform:translateX(0)}
-.mob-panel-topbar{display:flex;justify-content:flex-end;padding:.75rem 1rem;flex-shrink:0}
+.mob-panel-topbar{display:flex;justify-content:flex-end;padding:.375rem .75rem;flex-shrink:0}
 .mob-row{
   width:100%;display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;
   border:0;border-bottom:1px solid #f3f4f6;background:#fff;font-size:.95rem;font-weight:500;color:#171a20;text-align:left
@@ -460,8 +461,8 @@ section:has(> .scroll-carousel) > [class*="px-"]{
 .mob-subheader{position:relative;display:flex;align-items:center;justify-content:center;padding:1rem;border-bottom:1px solid #f3f4f6;flex-shrink:0}
 .mob-back-btn{position:absolute;left:.5rem;background:0;border:0;padding:.5rem;color:#171a20;display:flex}
 .mob-subtitle{font-weight:600;font-size:.95rem}
-.mob-close-btn{background:0;border:0;padding:.4rem;color:#171a20;line-height:0;display:flex}
-.mob-subheader .mob-close-btn{position:absolute;right:.5rem}
+.mob-close-btn{background:0;border:0;padding:.4rem;color:#171a20;line-height:0;display:flex;align-items:center;justify-content:center;width:44px;height:44px}
+.mob-close-btn:focus-visible{outline:2px solid #4169dc;outline-offset:2px}
 .mob-sub-content{padding:1.25rem 1.25rem 2.5rem}
 .mob-product-card{display:block;text-decoration:none;text-align:center;color:inherit}
 .mob-product-card img{width:100%;height:76px;object-fit:contain}
@@ -922,6 +923,8 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
 /* ── Global presence map (Leaflet) ── */
 .presence-map-wrap{border:1px solid #e5e7eb;overflow:hidden}
 #presence-map{height:560px;border-radius:.75rem;background:#e9edf2;cursor:default}
+/* Mute only the basemap; keep country markers, labels and attribution unchanged. */
+#presence-map .leaflet-tile-pane{filter:grayscale(1) brightness(1.08) contrast(.9)}
 #presence-map .leaflet-control-zoom{display:none}
 #presence-map .leaflet-control-attribution{font-size:.65rem;background:rgba(255,255,255,.8)}
 .presence-tooltip{

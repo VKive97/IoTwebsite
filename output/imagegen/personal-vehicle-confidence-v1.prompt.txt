@@ -1,0 +1,12 @@
+Tool: Built-in image_gen (image_gen.imagegen)
+Generated source: C:\Users\VaishaliPrajapati\.codex\generated_images\01a09f7d-7a9f-7993-8cf4-005f3f900ddf\exec-52aab500-cd5e-473b-9fb6-20b35dbba768.png
+Final assets: images/personal-vehicle-confidence-v1.webp, images/personal-vehicle-confidence-v1-1280.webp, images/personal-vehicle-confidence-v1-640.webp
+Preparation: WebP encoding and proportional responsive resizing.
+
+Use case: photorealistic-natural.
+Asset type: landscape 3:2 website photograph for Autonautics personal vehicle tracking, used in a homepage audience section and a dedicated page.
+Scene: a confident adult South Asian woman in smart casual everyday clothing standing beside her parked modern personal car after completing a journey, in a pleasant contemporary suburban Asia-Pacific setting with natural greenery. She is relaxed, independent and lightly smiling while checking vehicle status on her smartphone, with car keys in her other hand. The car is clearly a personal vehicle, not a taxi or commercial fleet truck. Phone screen can show subtle generic vehicle-location map shapes, no readable text, no logo.
+Composition: editorial medium-wide photograph, woman and car together within the central two-thirds of the frame, car door closed, visible side mirror and bodywork, realistic human anatomy. Subject is away from the road in a safe parking area. Generous quiet surroundings for responsive cropping, no embedded text.
+Lighting and colours: neutral natural daylight, authentic skin tones, clean whites, gentle greens, true-to-life silver or charcoal vehicle colour. Balanced exposure and restrained natural contrast, no dominant blue cast or cinematic colour filter.
+Mood: everyday independence, confidence, agency and reassurance, not fear or distress. Woman is completing her own journey, not waiting helplessly for rescue. No emergency scene, no police, no staged danger, no family stereotypes.
+Constraints: photographic realism, no logos, no captions, no watermarks, no floating dashboard graphics, no distorted hands or phone, no oversized tracking hardware.

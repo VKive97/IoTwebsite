@@ -35,7 +35,7 @@ const navbarMarkup = navbarSource.match(/var navMarkup = `([\s\S]*?)`;\s*\n\s*\/
 if (!navbarMarkup) throw new Error('Shared navbar markup could not be read from js/navbar.js.');
 const staticNavbarMarkup = navbarMarkup.replace(
   /<img\s+src=(?!["']\/images\/anstel\.svg)/g,
-  '<img loading="lazy" decoding="async" width="512" height="341" src='
+  '<img loading="lazy" decoding="async" src='
 );
 const completeStaticNav = `<header id="site-nav" class="position-fixed top-0 start-0 end-0 bg-white" style="z-index:1050" data-static-nav>${staticNavbarMarkup}</header><div id="mega-overlay"></div>`;
 
@@ -48,6 +48,15 @@ for (const file of htmlFiles) {
   const rel = path.relative(root, file).replaceAll('\\', '/');
   if (rel.startsWith('admin/')) continue;
   let html = fs.readFileSync(file, 'utf8');
+
+  // Discover fonts directly from HTML instead of waiting for the main CSS download.
+  if (html.includes('/css/styles.css') && !html.includes('fonts.googleapis.com/css2')) {
+    const fontLinks = '<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
+      '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
+      '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap">\n';
+    html = html.replace(/<link\b[^>]*href=["']\/css\/styles\.css[^>]*>/i, match => fontLinks + match);
+  }
+
 
   html = html.replace(/(<img src="\/images\/anstel\.svg" width=")115(" height="40")/g, '$1208$2');
   html = html.replace(/href=["']\/solutions\/fleet-management\/["'](?=[^>]*>\s*Solutions\s*<\/a>)/gi, 'href="/solutions/"');

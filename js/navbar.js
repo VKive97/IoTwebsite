@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <a href="/" class="flex-shrink-0" aria-label="Anstel home"><img src="/images/anstel.svg" width="208" height="40" alt="Anstel" decoding="async"></a>
       <nav class="d-none d-lg-flex align-items-center gap-1 mx-auto" aria-label="Primary navigation">
         <button class="nav-btn" data-mega="autonautics" aria-expanded="false" aria-controls="mega-autonautics">Autonautics</button>
+        <a class="nav-btn text-dark text-decoration-none" href="/personal-vehicles/">Personal Vehicles</a>
         <button class="nav-btn" data-mega="solutions" aria-expanded="false" aria-controls="mega-solutions">Solutions</button>
         <button class="nav-btn" data-mega="industries" aria-expanded="false" aria-controls="mega-industries">Industries</button>
         <button class="nav-btn" data-mega="discover" aria-expanded="false" aria-controls="mega-discover">Discover</button>
@@ -36,12 +37,12 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="d-flex gap-4 px-4 py-4" style="max-width:1280px;margin:auto">
         <div class="flex-grow-1">
           <div class="row g-4">
-            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/connected-fleet/" class="mega-product-card d-block"><img src="/images/connected fleet.webp" alt=""><p class="fw-semibold small text-dark mt-2 card-name">Connected Fleet</p><p class="text-muted" style="font-size:.7rem">Fleet tracking &amp; operations</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/last-mile/" class="mega-product-card d-block"><img src="/images/Lastmile.webp" alt=""><p class="fw-semibold small text-dark mt-2 card-name">Last Mile</p><p class="text-muted" style="font-size:.7rem">Delivery execution platform</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/security-monitor/" class="mega-product-card d-block"><img src="/images/Security.webp" alt=""><p class="fw-semibold small text-dark mt-2 card-name">Security Monitor</p><p class="text-muted" style="font-size:.7rem">Vehicle &amp; driver security</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/merchant/" class="mega-product-card d-block"><img src="/images/Merchant.webp" alt=""><p class="fw-semibold small text-dark mt-2 card-name">Autonautics Merchant</p><p class="text-muted" style="font-size:.7rem">Fleet services marketplace</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/iot/" class="mega-product-card d-block"><img src="/images/IoTLogo.webp" alt=""><p class="fw-semibold small text-dark mt-2 card-name">IoT Monitoring</p><p class="text-muted" style="font-size:.7rem">Connected devices &amp; sensors</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/job-scheduling/" class="mega-product-card d-block"><img src="/images/job-scheduling-logo.webp" alt="Job Scheduling"><p class="fw-semibold small text-dark mt-2 card-name">Job Scheduling</p><p class="text-muted" style="font-size:.7rem">Plan, dispatch &amp; track jobs</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/connected-fleet/" class="mega-product-card d-block"><img src="/images/connected fleet.webp" alt="" width="1024" height="1024"><p class="fw-semibold small text-dark mt-2 card-name">Connected Fleet</p><p class="text-muted" style="font-size:.7rem">Fleet tracking &amp; operations</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/last-mile/" class="mega-product-card d-block"><img src="/images/Lastmile.webp" alt="" width="1024" height="1024"><p class="fw-semibold small text-dark mt-2 card-name">Last Mile</p><p class="text-muted" style="font-size:.7rem">Delivery execution platform</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/security-monitor/" class="mega-product-card d-block"><img src="/images/Security.webp" alt="" width="1024" height="1024"><p class="fw-semibold small text-dark mt-2 card-name">Security Monitor</p><p class="text-muted" style="font-size:.7rem">Vehicle &amp; driver security</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/merchant/" class="mega-product-card d-block"><img src="/images/Merchant.webp" alt="" width="1024" height="1024"><p class="fw-semibold small text-dark mt-2 card-name">Autonautics Merchant</p><p class="text-muted" style="font-size:.7rem">Fleet services marketplace</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/iot/" class="mega-product-card d-block"><img src="/images/IoTLogo.webp" alt="" width="1024" height="1024"><p class="fw-semibold small text-dark mt-2 card-name">IoT Monitoring</p><p class="text-muted" style="font-size:.7rem">Connected devices &amp; sensors</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-4 col-lg-3"><a href="/platform/job-scheduling/" class="mega-product-card d-block"><img src="/images/job-scheduling-logo.webp" alt="Job Scheduling" width="1536" height="1024"><p class="fw-semibold small text-dark mt-2 card-name">Job Scheduling</p><p class="text-muted" style="font-size:.7rem">Plan, dispatch &amp; track jobs</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
           </div>
         </div>
         <div class="border-start ps-4 flex-shrink-0" style="width:176px">
@@ -61,14 +62,14 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="d-flex gap-4 px-4 py-4" style="max-width:1280px;margin:auto">
         <div class="flex-grow-1">
           <div class="row g-4">
-            <div class="col-6 col-md-3"><a href="/solutions/fleet-management/" class="mega-product-card d-block"><img src="/images/solution-fleet-management.webp" alt="Fleet Management"><p class="fw-semibold small text-dark mt-2 card-name">Fleet Management</p><p class="text-muted" style="font-size:.7rem">Complete fleet operations.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-3"><a href="/solutions/fleet-tracking/" class="mega-product-card d-block"><img src="/images/solution-fleet-tracking.webp" alt="Fleet Tracking"><p class="fw-semibold small text-dark mt-2 card-name">Fleet Tracking</p><p class="text-muted" style="font-size:.7rem">Real-time fleet visibility.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-3"><a href="/solutions/driver-management/" class="mega-product-card d-block"><img src="/images/solution-driver-management.webp" alt="Driver Management"><p class="fw-semibold small text-dark mt-2 card-name">Driver Management</p><p class="text-muted" style="font-size:.7rem">Driver safety &amp; performance.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-3"><a href="/solutions/asset-management/" class="mega-product-card d-block"><img src="/images/solution-asset-management.webp" alt="Asset Management"><p class="fw-semibold small text-dark mt-2 card-name">Asset Management</p><p class="text-muted" style="font-size:.7rem">Fleet &amp; operational assets.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-3"><a href="/solutions/maintenance-management/" class="mega-product-card d-block"><img src="/images/solution-maintenance-management.webp" alt="Maintenance Management"><p class="fw-semibold small text-dark mt-2 card-name">Maintenance Management</p><p class="text-muted" style="font-size:.7rem">Fleet &amp; asset maintenance.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-3"><a href="/solutions/dispatch-management/" class="mega-product-card d-block"><img src="/images/solution-dispatch-management.webp" alt="Dispatch Management"><p class="fw-semibold small text-dark mt-2 card-name">Dispatch Management</p><p class="text-muted" style="font-size:.7rem">Intelligent workforce dispatch.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-3"><a href="/solutions/inventory-management/" class="mega-product-card d-block"><img src="/images/solution-inventory-management.webp" alt="Inventory Management"><p class="fw-semibold small text-dark mt-2 card-name">Inventory Management</p><p class="text-muted" style="font-size:.7rem">Field inventory &amp; assets.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-            <div class="col-6 col-md-3"><a href="/solutions/fleet-security/" class="mega-product-card d-block"><img src="/images/solution-fleet-security.webp" alt="Fleet Security"><p class="fw-semibold small text-dark mt-2 card-name">Fleet Security</p><p class="text-muted" style="font-size:.7rem">Security operations.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-3"><a href="/solutions/fleet-management/" class="mega-product-card d-block"><img src="/images/solution-fleet-management.webp" alt="Fleet Management" width="512" height="341"><p class="fw-semibold small text-dark mt-2 card-name">Fleet Management</p><p class="text-muted" style="font-size:.7rem">Complete fleet operations.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-3"><a href="/solutions/fleet-tracking/" class="mega-product-card d-block"><img src="/images/solution-fleet-tracking.webp" alt="Fleet Tracking" width="512" height="410"><p class="fw-semibold small text-dark mt-2 card-name">Fleet Tracking</p><p class="text-muted" style="font-size:.7rem">Real-time fleet visibility.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-3"><a href="/solutions/driver-management/" class="mega-product-card d-block"><img src="/images/solution-driver-management.webp" alt="Driver Management" width="512" height="410"><p class="fw-semibold small text-dark mt-2 card-name">Driver Management</p><p class="text-muted" style="font-size:.7rem">Driver safety &amp; performance.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-3"><a href="/solutions/asset-management/" class="mega-product-card d-block"><img src="/images/solution-asset-management.webp" alt="Asset Management" width="512" height="512"><p class="fw-semibold small text-dark mt-2 card-name">Asset Management</p><p class="text-muted" style="font-size:.7rem">Fleet &amp; operational assets.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-3"><a href="/solutions/maintenance-management/" class="mega-product-card d-block"><img src="/images/solution-maintenance-management.webp" alt="Maintenance Management" width="512" height="512"><p class="fw-semibold small text-dark mt-2 card-name">Maintenance Management</p><p class="text-muted" style="font-size:.7rem">Fleet &amp; asset maintenance.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-3"><a href="/solutions/dispatch-management/" class="mega-product-card d-block"><img src="/images/solution-dispatch-management.webp" alt="Dispatch Management" width="512" height="341"><p class="fw-semibold small text-dark mt-2 card-name">Dispatch Management</p><p class="text-muted" style="font-size:.7rem">Intelligent workforce dispatch.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-3"><a href="/solutions/inventory-management/" class="mega-product-card d-block"><img src="/images/solution-inventory-management.webp" alt="Inventory Management" width="512" height="512"><p class="fw-semibold small text-dark mt-2 card-name">Inventory Management</p><p class="text-muted" style="font-size:.7rem">Field inventory &amp; assets.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+            <div class="col-6 col-md-3"><a href="/solutions/fleet-security/" class="mega-product-card d-block"><img src="/images/solution-fleet-security.webp" alt="Fleet Security" width="512" height="341"><p class="fw-semibold small text-dark mt-2 card-name">Fleet Security</p><p class="text-muted" style="font-size:.7rem">Security operations.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
           </div>
         </div>
         <div class="border-start ps-4 flex-shrink-0" style="width:192px">
@@ -92,10 +93,10 @@ document.addEventListener('DOMContentLoaded', function () {
     <div id="mega-industries" class="mega-menu" role="region" aria-label="Industries menu" aria-hidden="true">
       <div class="px-4 py-4" style="max-width:1280px;margin:auto">
         <div class="row g-4">
-          <div class="col-6 col-md-3"><a href="/industries/transportation/" class="mega-product-card d-block"><img src="/images/industry-transportation.webp" alt="Transportation"><p class="fw-semibold small text-dark mt-2 card-name">Transportation</p><p class="text-muted" style="font-size:.7rem">Tracking, telematics &amp; route optimization.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-          <div class="col-6 col-md-3"><a href="/industries/waste-management/" class="mega-product-card d-block"><img src="/images/industry-waste-management.webp" alt="Waste Management"><p class="fw-semibold small text-dark mt-2 card-name">Waste Management</p><p class="text-muted" style="font-size:.7rem">Route &amp; collection optimization.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-          <div class="col-6 col-md-3"><a href="/industries/food-services-fmcg/" class="mega-product-card d-block"><img src="/images/industry-food-services-fmcg.webp" alt="Food Services &amp; FMCG"><p class="fw-semibold small text-dark mt-2 card-name">Food Services &amp; FMCG</p><p class="text-muted" style="font-size:.7rem">Cold-chain &amp; sensor monitoring.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-          <div class="col-6 col-md-3"><a href="/industries/logistics-supply-chain/" class="mega-product-card d-block"><img src="/images/industry-logistics-supply-chain.webp" alt="Logistics &amp; Supply Chain"><p class="fw-semibold small text-dark mt-2 card-name">Logistics &amp; Supply Chain</p><p class="text-muted" style="font-size:.7rem">Dispatch, tracking &amp; delivery.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+          <div class="col-6 col-md-3"><a href="/industries/transportation/" class="mega-product-card d-block"><img src="/images/industry-transportation.webp" alt="Transportation" width="512" height="341"><p class="fw-semibold small text-dark mt-2 card-name">Transportation</p><p class="text-muted" style="font-size:.7rem">Tracking, telematics &amp; route optimization.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+          <div class="col-6 col-md-3"><a href="/industries/waste-management/" class="mega-product-card d-block"><img src="/images/industry-waste-management.webp" alt="Waste Management" width="512" height="341"><p class="fw-semibold small text-dark mt-2 card-name">Waste Management</p><p class="text-muted" style="font-size:.7rem">Route &amp; collection optimization.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+          <div class="col-6 col-md-3"><a href="/industries/food-services-fmcg/" class="mega-product-card d-block"><img src="/images/industry-food-services-fmcg.webp" alt="Food Services &amp; FMCG" width="512" height="341"><p class="fw-semibold small text-dark mt-2 card-name">Food Services &amp; FMCG</p><p class="text-muted" style="font-size:.7rem">Cold-chain &amp; sensor monitoring.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+          <div class="col-6 col-md-3"><a href="/industries/logistics-supply-chain/" class="mega-product-card d-block"><img src="/images/industry-logistics-supply-chain.webp" alt="Logistics &amp; Supply Chain" width="512" height="341"><p class="fw-semibold small text-dark mt-2 card-name">Logistics &amp; Supply Chain</p><p class="text-muted" style="font-size:.7rem">Dispatch, tracking &amp; delivery.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
         </div>
         <div class="text-center mt-3">
           <a href="/industries/" class="small fw-semibold text-decoration-none" style="color:#171a20">View All Industries &rarr;</a>
@@ -133,12 +134,13 @@ document.addEventListener('DOMContentLoaded', function () {
     <!-- Mobile menu (Tesla-style full-screen slide panel) -->
     <div id="mobile-menu" class="mob-panel d-lg-none" role="dialog" aria-modal="true" aria-label="Primary navigation" aria-hidden="true">
       <div class="mob-panel-topbar">
-        <button class="mob-close-btn" data-mob-close aria-label="Close menu"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12"/></svg></button>
+        <button type="button" class="mob-close-btn" data-mob-close aria-label="Close menu"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12"/></svg></button>
       </div>
       <div class="mob-view-stack">
         <div class="mob-view mob-view-main active">
           <ul class="list-unstyled mb-0">
             <li><button class="mob-row" data-mob-open="autonautics" aria-expanded="false" aria-controls="mobile-autonautics">Autonautics <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
+            <li><a class="mob-row-link" href="/personal-vehicles/">Personal Vehicles</a></li>
             <li><button class="mob-row" data-mob-open="solutions" aria-expanded="false" aria-controls="mobile-solutions">Solutions <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
             <li><button class="mob-row" data-mob-open="industries" aria-expanded="false" aria-controls="mobile-industries">Industries <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
             <li><button class="mob-row" data-mob-open="discover" aria-expanded="false" aria-controls="mobile-discover">Discover <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button></li>
@@ -153,16 +155,16 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="mob-subheader">
             <button class="mob-back-btn" data-mob-back aria-label="Back"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg></button>
             <span class="mob-subtitle">Autonautics</span>
-            <button class="mob-close-btn" data-mob-close aria-label="Close menu"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12"/></svg></button>
+
           </div>
           <div class="mob-sub-content">
             <div class="row g-3">
-              <div class="col-6"><a href="/platform/connected-fleet/" class="mob-product-card"><img src="/images/connected fleet.webp" alt=""><p class="mob-product-name">Connected Fleet</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/platform/last-mile/" class="mob-product-card"><img src="/images/Lastmile.webp" alt=""><p class="mob-product-name">Last Mile</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/platform/security-monitor/" class="mob-product-card"><img src="/images/Security.webp" alt=""><p class="mob-product-name">Security Monitor</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/platform/merchant/" class="mob-product-card"><img src="/images/Merchant.webp" alt=""><p class="mob-product-name">Autonautics Merchant</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/platform/iot/" class="mob-product-card"><img src="/images/IoTLogo.webp" alt=""><p class="mob-product-name">IoT Monitoring</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/platform/job-scheduling/" class="mob-product-card"><img src="/images/job-scheduling-logo.webp" alt="Job Scheduling"><p class="mob-product-name">Job Scheduling</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/platform/connected-fleet/" class="mob-product-card"><img src="/images/connected fleet.webp" alt="" width="1024" height="1024"><p class="mob-product-name">Connected Fleet</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/platform/last-mile/" class="mob-product-card"><img src="/images/Lastmile.webp" alt="" width="1024" height="1024"><p class="mob-product-name">Last Mile</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/platform/security-monitor/" class="mob-product-card"><img src="/images/Security.webp" alt="" width="1024" height="1024"><p class="mob-product-name">Security Monitor</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/platform/merchant/" class="mob-product-card"><img src="/images/Merchant.webp" alt="" width="1024" height="1024"><p class="mob-product-name">Autonautics Merchant</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/platform/iot/" class="mob-product-card"><img src="/images/IoTLogo.webp" alt="" width="1024" height="1024"><p class="mob-product-name">IoT Monitoring</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/platform/job-scheduling/" class="mob-product-card"><img src="/images/job-scheduling-logo.webp" alt="Job Scheduling" width="1536" height="1024"><p class="mob-product-name">Job Scheduling</p><span class="mob-product-link">Learn More</span></a></div>
             </div>
             <div class="mob-sub-links">
               <p class="mob-sub-heading">Explore</p>
@@ -178,18 +180,18 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="mob-subheader">
             <button class="mob-back-btn" data-mob-back aria-label="Back"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg></button>
             <span class="mob-subtitle">Solutions</span>
-            <button class="mob-close-btn" data-mob-close aria-label="Close menu"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12"/></svg></button>
+
           </div>
           <div class="mob-sub-content">
             <div class="row g-3">
-              <div class="col-6"><a href="/solutions/fleet-management/" class="mob-product-card"><img src="/images/solution-fleet-management.webp" alt="Fleet Management"><p class="mob-product-name">Fleet Management</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/solutions/fleet-tracking/" class="mob-product-card"><img src="/images/solution-fleet-tracking.webp" alt="Fleet Tracking"><p class="mob-product-name">Fleet Tracking</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/solutions/driver-management/" class="mob-product-card"><img src="/images/solution-driver-management.webp" alt="Driver Management"><p class="mob-product-name">Driver Management</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/solutions/asset-management/" class="mob-product-card"><img src="/images/solution-asset-management.webp" alt="Asset Management"><p class="mob-product-name">Asset Management</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/solutions/maintenance-management/" class="mob-product-card"><img src="/images/solution-maintenance-management.webp" alt="Maintenance Management"><p class="mob-product-name">Maintenance Management</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/solutions/dispatch-management/" class="mob-product-card"><img src="/images/solution-dispatch-management.webp" alt="Dispatch Management"><p class="mob-product-name">Dispatch Management</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/solutions/inventory-management/" class="mob-product-card"><img src="/images/solution-inventory-management.webp" alt="Inventory Management"><p class="mob-product-name">Inventory Management</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/solutions/fleet-security/" class="mob-product-card"><img src="/images/solution-fleet-security.webp" alt="Fleet Security"><p class="mob-product-name">Fleet Security</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/solutions/fleet-management/" class="mob-product-card"><img src="/images/solution-fleet-management.webp" alt="Fleet Management" width="512" height="341"><p class="mob-product-name">Fleet Management</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/solutions/fleet-tracking/" class="mob-product-card"><img src="/images/solution-fleet-tracking.webp" alt="Fleet Tracking" width="512" height="410"><p class="mob-product-name">Fleet Tracking</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/solutions/driver-management/" class="mob-product-card"><img src="/images/solution-driver-management.webp" alt="Driver Management" width="512" height="410"><p class="mob-product-name">Driver Management</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/solutions/asset-management/" class="mob-product-card"><img src="/images/solution-asset-management.webp" alt="Asset Management" width="512" height="512"><p class="mob-product-name">Asset Management</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/solutions/maintenance-management/" class="mob-product-card"><img src="/images/solution-maintenance-management.webp" alt="Maintenance Management" width="512" height="512"><p class="mob-product-name">Maintenance Management</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/solutions/dispatch-management/" class="mob-product-card"><img src="/images/solution-dispatch-management.webp" alt="Dispatch Management" width="512" height="341"><p class="mob-product-name">Dispatch Management</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/solutions/inventory-management/" class="mob-product-card"><img src="/images/solution-inventory-management.webp" alt="Inventory Management" width="512" height="512"><p class="mob-product-name">Inventory Management</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/solutions/fleet-security/" class="mob-product-card"><img src="/images/solution-fleet-security.webp" alt="Fleet Security" width="512" height="341"><p class="mob-product-name">Fleet Security</p><span class="mob-product-link">Learn More</span></a></div>
             </div>
             <div class="mob-sub-links">
               <p class="mob-sub-heading">Advanced Capabilities</p>
@@ -210,14 +212,14 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="mob-subheader">
             <button class="mob-back-btn" data-mob-back aria-label="Back"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg></button>
             <span class="mob-subtitle">Industries</span>
-            <button class="mob-close-btn" data-mob-close aria-label="Close menu"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12"/></svg></button>
+
           </div>
           <div class="mob-sub-content">
             <div class="row g-3">
-              <div class="col-6"><a href="/industries/transportation/" class="mob-product-card"><img src="/images/industry-transportation.webp" alt="Transportation"><p class="mob-product-name">Transportation</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/industries/waste-management/" class="mob-product-card"><img src="/images/industry-waste-management.webp" alt="Waste Management"><p class="mob-product-name">Waste Management</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/industries/food-services-fmcg/" class="mob-product-card"><img src="/images/industry-food-services-fmcg.webp" alt="Food Services &amp; FMCG"><p class="mob-product-name">Food Services &amp; FMCG</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/industries/logistics-supply-chain/" class="mob-product-card"><img src="/images/industry-logistics-supply-chain.webp" alt="Logistics &amp; Supply Chain"><p class="mob-product-name">Logistics &amp; Supply Chain</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/industries/transportation/" class="mob-product-card"><img src="/images/industry-transportation.webp" alt="Transportation" width="512" height="341"><p class="mob-product-name">Transportation</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/industries/waste-management/" class="mob-product-card"><img src="/images/industry-waste-management.webp" alt="Waste Management" width="512" height="341"><p class="mob-product-name">Waste Management</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/industries/food-services-fmcg/" class="mob-product-card"><img src="/images/industry-food-services-fmcg.webp" alt="Food Services &amp; FMCG" width="512" height="341"><p class="mob-product-name">Food Services &amp; FMCG</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/industries/logistics-supply-chain/" class="mob-product-card"><img src="/images/industry-logistics-supply-chain.webp" alt="Logistics &amp; Supply Chain" width="512" height="341"><p class="mob-product-name">Logistics &amp; Supply Chain</p><span class="mob-product-link">Learn More</span></a></div>
             </div>
             <div class="mob-sub-links">
               <a href="/industries/">View All Industries</a>
@@ -229,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="mob-subheader">
             <button class="mob-back-btn" data-mob-back aria-label="Back"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg></button>
             <span class="mob-subtitle">Discover</span>
-            <button class="mob-close-btn" data-mob-close aria-label="Close menu"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12"/></svg></button>
+
           </div>
           <div class="mob-sub-content">
             <div class="mob-sub-links" style="margin-top:0;border-top:0;padding-top:0">
@@ -258,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!staticNav) {
     header.innerHTML = navMarkup.replace(
       /<img\s+src=(?!["']\/images\/anstel\.svg)/g,
-      '<img loading="lazy" decoding="async" width="512" height="341" src='
+      '<img loading="lazy" decoding="async" src='
     );
   }
 
