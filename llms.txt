@@ -34,7 +34,7 @@ Anstel serves organizations in transportation, logistics, construction, mining, 
 ## Solutions
 
 - [Fleet Management](https://www.anstelglobal.com/solutions/fleet-management/): Complete fleet operations — vehicles, drivers, assets, and maintenance in one platform.
-- [Fleet Tracking](https://www.anstelglobal.com/solutions/fleet-tracking/): Real-time vehicle location, video telematics, and journey history.
+- [Fleet Tracking](https://www.anstelglobal.com/solutions/fleet-tracking/): Real-time vehicle location, AI-Camera, and journey history.
 - [Driver Management](https://www.anstelglobal.com/solutions/driver-management/): Driver profiles, performance scorecards, compliance, and safety coaching.
 - [Asset Management](https://www.anstelglobal.com/solutions/asset-management/): Tracking and lifecycle management for non-vehicle fleet and operational assets.
 - [Maintenance Management](https://www.anstelglobal.com/solutions/maintenance-management/): Preventive maintenance scheduling, service history, and compliance tracking.
@@ -44,7 +44,7 @@ Anstel serves organizations in transportation, logistics, construction, mining, 
 
 ## Advanced Capabilities
 
-- [Video Telematics](https://www.anstelglobal.com/solutions/video-telematics/): Live camera monitoring, AI event detection, and incident video evidence.
+- [AI-Camera](https://www.anstelglobal.com/solutions/video-telematics/): Live camera monitoring, AI event detection, and incident video evidence.
 - [Fuel Management](https://www.anstelglobal.com/solutions/fuel-management/): OBD-based fuel monitoring and fuel reporting.
 - [Route Optimization](https://www.anstelglobal.com/solutions/route-optimization/): Intelligent route planning, live ETA, and route performance analytics.
 - [Compliance](https://www.anstelglobal.com/solutions/compliance/): Centralized compliance management, including AIS-140 and regional regulatory requirements.

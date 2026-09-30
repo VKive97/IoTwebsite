@@ -97,7 +97,7 @@ $(function () {
   mapCarouselIcon('material-symbols:dashboard-outline', ['Decisions Backed by Intelligence.', 'Incident Analytics', 'Response Performance', 'Security Event Trends', 'Operational Insights', 'Transform Data Into Intelligence.', 'Itemized Service Costs', 'Support Business Growth.']);
   mapCarouselIcon('material-symbols:visibility-outline', ['See Every Mission Unfold.', 'See Every Operation in Real Time.']);
   mapCarouselIcon('material-symbols:sensors', ['IoT Monitoring', 'Manage Every Connected Device.']);
-  mapCarouselIcon('material-symbols:videocam-outline', ['Video Telematics']);
+  mapCarouselIcon('material-symbols:videocam-outline', ['AI-Camera']);
   mapCarouselIcon('material-symbols:device-thermostat', ['Cold Chain Monitoring', 'Protect Critical Conditions.']);
   mapCarouselIcon('material-symbols:bolt-outline', ['Generator Monitoring']);
   mapCarouselIcon('material-symbols:account-tree-outline', ['How the Autonautics Platform Works', 'Become Part of the Ecosystem.', 'Connect Without Complexity.', 'Built to Connect. Ready to Scale.']);

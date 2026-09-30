@@ -22,7 +22,6 @@ Use this file when creating or auditing third-party listings. Do not add a URL t
 
 - ANSTEL Private Limited
 - Plot no. 786, 3rd Floor, Phase V, Udyog Vihar, Sector 19, Gurugram, Haryana 122016, India
-- Gurugram office: +91 124 411 8178
 - India sales: +91 96675 39207
 
 ### Suva office
