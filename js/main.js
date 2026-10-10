@@ -87,7 +87,7 @@ $(function () {
   mapCarouselIcon('material-symbols:local-gas-station-outline', ['Fuel Management', 'Find the Waste.']);
   mapCarouselIcon('material-symbols:local-shipping-outline', ['Last Mile Delivery', 'Delivery Assignment', 'Delivery Completion', 'Keep Operations Moving.']);
   mapCarouselIcon('material-symbols:route-outline', ['Dispatch Management', 'Route Navigation', 'Scheduling & Dispatch', 'Operational Coordination', 'Dispatch', 'Execute', 'Services That Fit Your Journey.']);
-  mapCarouselIcon('material-symbols:shield-outline', ['Fleet Security', 'Security Monitor', 'Stay in Command.', 'Fleet Risk Visibility', 'Insurance That Reflects Your Fleet.']);
+  mapCarouselIcon('material-symbols:shield-outline', ['Fleet Security', 'Patrol Connect', 'Stay in Command.', 'Fleet Risk Visibility', 'Insurance That Reflects Your Fleet.']);
   mapCarouselIcon('material-symbols:warning-outline', ['SOS Emergency Response', 'Take Action When It Matters.', 'Real-Time Incident Alerts', 'Be There When Needed.']);
   mapCarouselIcon('material-symbols:description-outline', ['Incident Management', 'Every Incident. One Mission.']);
   mapCarouselIcon('material-symbols:no-crash-outline', ['Vehicle Immobilization']);
@@ -96,7 +96,7 @@ $(function () {
   mapCarouselIcon('material-symbols:description-outline', ['Incident Documentation', 'Security Reports', 'Complete Service Records']);
   mapCarouselIcon('material-symbols:dashboard-outline', ['Decisions Backed by Intelligence.', 'Incident Analytics', 'Response Performance', 'Security Event Trends', 'Operational Insights', 'Transform Data Into Intelligence.', 'Itemized Service Costs', 'Support Business Growth.']);
   mapCarouselIcon('material-symbols:visibility-outline', ['See Every Mission Unfold.', 'See Every Operation in Real Time.']);
-  mapCarouselIcon('material-symbols:sensors', ['IoT Monitoring', 'Manage Every Connected Device.']);
+  mapCarouselIcon('material-symbols:sensors', ['Connected Monitor', 'Manage Every Connected Device.']);
   mapCarouselIcon('material-symbols:videocam-outline', ['AI-Camera']);
   mapCarouselIcon('material-symbols:device-thermostat', ['Cold Chain Monitoring', 'Protect Critical Conditions.']);
   mapCarouselIcon('material-symbols:bolt-outline', ['Generator Monitoring']);
@@ -514,8 +514,10 @@ $(function () {
       'email us': 'material-symbols:mail-outline',
       'one login for everything': 'material-symbols:login',
       'live data you can trust': 'material-symbols:sensors',
+      'connected monitor': 'material-symbols:sensors',
       'less manual work': 'material-symbols:automation-outline',
       'grows with you': 'material-symbols:rocket-launch-outline',
+      'scalable by design': 'material-symbols:open-in-full',
       '15+ years supporting operators': 'material-symbols:workspace-premium-outline',
       'driver id': 'material-symbols:badge-outline',
       'driver id (rfid)': 'material-symbols:badge-outline',

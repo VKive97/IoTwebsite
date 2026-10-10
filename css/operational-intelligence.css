@@ -1,0 +1,54 @@
+/* Shared intelligence stories: customer benefits, platform capabilities and expertise. */
+.intelligence-section{min-width:0}
+.intelligence-intro{max-width:900px}
+.intelligence-benefits{margin-top:clamp(4rem,8vw,7rem);padding-top:clamp(3rem,5vw,5rem);border-top:1px solid #e3e6eb}
+.intelligence-carousel{--intelligence-accent:#4169dc;margin-top:clamp(2rem,4vw,3.5rem)}
+.intelligence-phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,3vw,2.5rem);max-width:1080px;margin-inline:auto;align-items:stretch;padding:1rem .25rem 2rem}
+.intelligence-phones:focus-visible{outline:2px solid var(--intelligence-accent);outline-offset:8px;border-radius:8px}
+.intelligence-phone{position:relative;min-width:0;margin:0;padding:9px;border:1px solid #394556;border-radius:38px;background:#0d1b2a;box-shadow:0 12px 24px rgb(13 27 42 / 10%);transition:transform .3s ease,box-shadow .3s ease}
+.intelligence-carousel.is-enhanced .intelligence-phone.is-active{transform:translateY(-8px);box-shadow:0 22px 38px rgb(13 27 42 / 18%)}
+.intelligence-phone::before{content:"";position:absolute;z-index:1;top:9px;left:50%;width:72px;height:19px;border-radius:0 0 14px 14px;background:#0d1b2a;transform:translateX(-50%)}
+.intelligence-screen{height:100%;min-height:550px;display:flex;flex-direction:column;align-items:flex-start;padding:38px clamp(1.25rem,2vw,1.75rem) 29px;border-radius:29px;background:#f5f7fb;color:#171a20}
+.intelligence-screen::after{content:"";width:72px;height:4px;flex-shrink:0;margin:28px auto -15px;border-radius:10px;background:#c0c7d2}
+.intelligence-phone-topline{display:flex;justify-content:space-between;gap:1rem;width:100%;color:#596579;font-size:.625rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.intelligence-phone-number{color:var(--intelligence-accent)}
+.intelligence-graphic{display:block;width:100%;height:145px;margin:18px 0 24px;color:var(--intelligence-accent);flex-shrink:0}
+.intelligence-phone h3,.intelligence-phone h4{font-size:clamp(1.1rem,1.65vw,1.35rem);font-weight:700;letter-spacing:-.025em;line-height:1.28;margin:0 0 1rem}
+.intelligence-phone p{font-size:.9375rem;line-height:1.65;color:#4b5563;margin:0 0 auto}
+.intelligence-controls{display:none;align-items:center;justify-content:center;gap:1.5rem;margin-top:.5rem}
+.intelligence-carousel.is-enhanced .intelligence-controls{display:flex}
+.intelligence-arrow{display:grid;place-items:center;flex-shrink:0;width:44px;height:44px;border:1px solid #d9dee6;border-radius:50%;background:#fff;color:#171a20;transition:background .2s ease}
+.intelligence-arrow:hover{background:#eef1f7}
+.intelligence-arrow svg{width:18px;height:18px}
+.intelligence-autoplay svg[hidden]{display:none}
+.intelligence-dots{display:flex;align-items:center;gap:.25rem}
+.intelligence-dot{display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;background:transparent}
+.intelligence-dot::before{content:"";display:block;width:8px;height:8px;border-radius:20px;background:#adb5c3;transition:width .2s ease,background .2s ease}
+.intelligence-dot[aria-current="true"]::before{width:28px;background:var(--intelligence-accent)}
+.intelligence-controls button:focus-visible{outline:2px solid var(--intelligence-accent);outline-offset:4px}
+.intelligence-status{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.intelligence-closing{max-width:900px;margin:clamp(2.5rem,5vw,4rem) 0 0;font-size:clamp(1.1rem,1.6vw,1.3rem);font-weight:600;line-height:1.6;color:#343e4e}
+.intelligence-examples{margin-top:clamp(3rem,6vw,5rem);padding-top:2rem;border-top:1px solid #e3e6eb}
+.intelligence-examples-title{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#596579;margin:0 0 1.5rem}
+.intelligence-example-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem}
+.intelligence-example h4{font-size:1rem;font-weight:600;line-height:1.5;margin:0 0 .5rem}
+.intelligence-example h4 span{display:block;font-size:.75rem;letter-spacing:.06em;color:var(--bs-primary,#4169dc);margin-bottom:.25rem}
+.intelligence-example p{font-size:.9rem;line-height:1.7;color:#596579;margin:0}
+@media(max-width:991px){
+  .intelligence-phones{grid-template-columns:minmax(0,350px);justify-content:center;gap:2rem}
+  .intelligence-carousel.is-enhanced .intelligence-phones{touch-action:pan-y pinch-zoom}
+  .intelligence-carousel.is-enhanced .intelligence-phone{grid-area:1 / 1}
+  .intelligence-carousel.is-enhanced .intelligence-phone:not(.is-active){visibility:hidden;pointer-events:none}
+  .intelligence-screen{min-height:540px;padding-inline:1.5rem}
+  .intelligence-phone h3,.intelligence-phone h4{font-size:1.35rem}
+}
+@media(max-width:575px){
+  .intelligence-phones{max-width:340px;padding-inline:.5rem}
+  .intelligence-screen{min-height:550px;padding-inline:1.25rem}
+  .intelligence-example-grid{grid-template-columns:1fr;gap:1.5rem}
+  .intelligence-controls{gap:.5rem}
+  .intelligence-dots{gap:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .intelligence-phone,.intelligence-arrow,.intelligence-dot::before{transition:none}
+}

@@ -26,9 +26,9 @@ Anstel serves organizations in transportation, logistics, construction, mining, 
 
 - [Connected Fleet](https://www.anstelglobal.com/platform/connected-fleet/): Core fleet management product — GPS tracking, driver management, maintenance, compliance, and reporting.
 - [Last Mile](https://www.anstelglobal.com/platform/last-mile/): Delivery execution app for dispatch, route navigation, live tracking, and digital proof of delivery.
-- [Security Monitor](https://www.anstelglobal.com/platform/security-monitor/): Security operations center for vehicle and driver security, SOS response, and incident coordination.
+- [Patrol Connect](https://www.anstelglobal.com/platform/security-monitor/): Vehicle security & response. Security operations centre for vehicle and driver security, SOS response, and incident coordination.
 - [Merchant](https://www.anstelglobal.com/platform/merchant/): Marketplace connecting fleet operators with trusted mobility partners (insurance, servicing, finance, roadside assistance).
-- [IoT](https://www.anstelglobal.com/platform/iot/): Connects devices, sensors, machines, and industrial assets into one monitoring and automation platform.
+- [Connected Monitor](https://www.anstelglobal.com/platform/iot/): Real-time monitoring for IoT devices and sensors.
 - [Job Scheduling](https://www.anstelglobal.com/platform/job-scheduling/): Plans, dispatches, and tracks field jobs and workforce scheduling.
 
 ## Solutions

@@ -340,7 +340,7 @@ section:has(> .scroll-carousel) > [class*="px-"]{
 .why-card-img img{width:100%;height:100%;object-fit:cover;display:block}
 @media(max-width:767px){.why-card-img{flex:0 0 auto;width:100%;height:260px}}
 
-/* Security Monitor: Tesla-inspired editorial feature rows. */
+/* Patrol Connect: Tesla-inspired editorial feature rows. */
 .mission-security-section{background:#fff;padding-bottom:clamp(5rem,9vw,9rem)}
 .mission-security-heading{max-width:1360px;margin:0 auto;padding:clamp(5rem,8vw,8.5rem) clamp(1.5rem,4vw,4rem) clamp(3.5rem,6vw,6rem)}
 .mission-security-heading>p:last-child{max-width:650px;margin-bottom:0}
@@ -1047,7 +1047,7 @@ body>section.section-pad.pt-tight{padding-top:clamp(2rem,4vw,3rem)!important}
   border-radius:999px;padding:.4rem 1rem;font-size:.78rem;font-weight:600
 }
 
-/* Security Monitor introduction: aligned copy above an uncropped, edge-to-edge image. */
+/* Patrol Connect introduction: aligned copy above an uncropped, edge-to-edge image. */
 .security-intro-layout{display:flex;width:min(calc(100% - (var(--site-gutter) * 2)),var(--content-max));flex-direction:column;margin:auto}
 .security-intro-copy{max-width:1160px;margin-bottom:clamp(2.5rem,5vw,4.25rem);padding-inline:clamp(0rem,8vw,7rem)}
 .security-intro-copy .section-heading{margin-bottom:.75rem}

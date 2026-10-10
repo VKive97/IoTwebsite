@@ -207,7 +207,7 @@ for (const file of htmlFiles) {
 
   if (/^industries\/(?:transportation|logistics-supply-chain|waste-management|food-services-fmcg)\/index\.html$/.test(rel)) {
     const cardTypes = new Map([
-      ['Connected Fleet', 'Product'], ['Last Mile', 'Product'], ['IoT Monitoring', 'Product'],
+      ['Connected Fleet', 'Product'], ['Last Mile', 'Product'], ['Connected Monitor', 'Product'],
       ['Device Ecosystem', 'Platform'], ['Fleet Tracking', 'Solution'], ['Route Optimization', 'Solution'],
       ['Fuel Management', 'Solution'], ['Compliance', 'Solution'], ['Dispatch Management', 'Solution'],
       ['Asset Management', 'Solution'], ['Reports &amp; Analytics', 'Solution'], ['Alerts &amp; Notifications', 'Solution']
