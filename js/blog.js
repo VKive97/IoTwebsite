@@ -65,6 +65,7 @@ window.AnstelBlog = (function () {
   function normalizePost(p, categoryMap) {
     var cover = p.thumbnailUrl;
     if (!cover || cover === 'null') cover = '';
+    cover = safePublicUrl(cover, false);
     return {
       id: p.id,
       title: p.title || '',
@@ -175,8 +176,65 @@ window.AnstelBlog = (function () {
     });
   }
 
+  function safePublicUrl(value, allowContactSchemes) {
+    var candidate = String(value || '').trim();
+    if (!candidate || /[\u0000-\u001f\u007f]/.test(candidate)) return '';
+    try {
+      var parsed = new URL(candidate, window.location.origin);
+      if (parsed.protocol === 'http:' || parsed.protocol === 'https:') return candidate;
+      if (allowContactSchemes && (parsed.protocol === 'mailto:' || parsed.protocol === 'tel:')) return candidate;
+    } catch (_) { /* Invalid URLs are rejected below. */ }
+    return '';
+  }
+
+  function sanitizeRichHtml(value) {
+    var source = String(value || '');
+    if (!window.DOMPurify) return escapeHtml(source);
+    var clean = window.DOMPurify.sanitize(source, {
+      ALLOWED_TAGS: ['p', 'br', 'strong', 'b', 'em', 'i', 'u', 's', 'blockquote', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ol', 'ul', 'li', 'a', 'img', 'video', 'source', 'iframe', 'pre', 'code', 'span', 'div'],
+      ALLOWED_ATTR: ['href', 'target', 'rel', 'title', 'src', 'alt', 'width', 'height', 'loading', 'decoding', 'controls', 'playsinline', 'poster', 'preload', 'type', 'class', 'allow', 'allowfullscreen', 'referrerpolicy'],
+      FORBID_TAGS: ['script', 'style', 'object', 'embed', 'form', 'input', 'button', 'textarea', 'select', 'option', 'meta', 'link', 'base'],
+      FORBID_ATTR: ['style', 'id', 'srcdoc'],
+      ALLOW_DATA_ATTR: false
+    });
+    var template = document.createElement('template');
+    template.innerHTML = clean;
+    template.content.querySelectorAll('a').forEach(function (link) {
+      var href = safePublicUrl(link.getAttribute('href'), true);
+      if (href) link.setAttribute('href', href); else link.removeAttribute('href');
+      if (link.getAttribute('target') === '_blank') link.setAttribute('rel', 'noopener noreferrer');
+      else link.removeAttribute('target');
+    });
+    template.content.querySelectorAll('img,video,source').forEach(function (media) {
+      var src = safePublicUrl(media.getAttribute('src'), false);
+      if (!src) { media.remove(); return; }
+      media.setAttribute('src', src);
+      if (media.tagName === 'IMG') {
+        if (!media.hasAttribute('loading')) media.setAttribute('loading', 'lazy');
+        if (!media.hasAttribute('decoding')) media.setAttribute('decoding', 'async');
+      }
+    });
+    template.content.querySelectorAll('iframe').forEach(function (frame) {
+      var src = safePublicUrl(frame.getAttribute('src'), false);
+      var allowed = false;
+      if (src) {
+        try {
+          var host = new URL(src, window.location.origin).hostname.toLowerCase();
+          allowed = host === 'www.youtube.com' || host === 'youtube.com' || host === 'www.youtube-nocookie.com' || host === 'youtube-nocookie.com' || host === 'player.vimeo.com';
+        } catch (_) { allowed = false; }
+      }
+      if (!allowed) { frame.remove(); return; }
+      frame.setAttribute('src', src);
+      frame.setAttribute('loading', 'lazy');
+      frame.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      frame.setAttribute('allowfullscreen', '');
+      if (!frame.getAttribute('title')) frame.setAttribute('title', 'Embedded video');
+    });
+    return template.innerHTML;
+  }
+
   function renderPostBody(post) {
-    return post.content || '';
+    return sanitizeRichHtml(post.content || '');
   }
 
   return {
@@ -184,6 +242,7 @@ window.AnstelBlog = (function () {
     getCategories: getCategories, createCategory: createCategory,
     getPosts: getPosts, getPost: getPost, getPostsByCategory: getPostsByCategory,
     upsertPost: upsertPost, deletePost: deletePost,
-    uploadFile: uploadFile, slugify: slugify, escapeHtml: escapeHtml, renderPostBody: renderPostBody
+    uploadFile: uploadFile, slugify: slugify, escapeHtml: escapeHtml,
+    safePublicUrl: safePublicUrl, sanitizeRichHtml: sanitizeRichHtml, renderPostBody: renderPostBody
   };
 })();

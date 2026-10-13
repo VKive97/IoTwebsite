@@ -131,7 +131,9 @@
     var range = quill.getSelection(true);
     var url = prompt('Paste an image URL:');
     if (!url) return;
-    quill.insertEmbed(range.index, 'image', url.trim(), 'user');
+    url = AnstelBlog.safePublicUrl(url, false);
+    if (!url) { alert('Please enter a valid HTTP or HTTPS image URL.'); return; }
+    quill.insertEmbed(range.index, 'image', url, 'user');
     quill.setSelection(range.index + 1);
     updatePreview();
   });
@@ -140,6 +142,8 @@
     var range = quill.getSelection(true);
     var url = prompt('Paste a YouTube/Vimeo link, or a direct video file URL:');
     if (!url) return;
+    url = AnstelBlog.safePublicUrl(url, false);
+    if (!url) { alert('Please enter a valid HTTP or HTTPS video URL.'); return; }
     var embed = toEmbedUrl(url);
     if (embed) {
       quill.insertEmbed(range.index, 'video', embed, 'user');
@@ -152,7 +156,7 @@
 
   function updatePreview() {
     var title = $('#f-title').val() || 'Untitled Post';
-    var cover = $('#f-cover').val();
+    var cover = AnstelBlog.safePublicUrl($('#f-cover').val(), false);
     var categoryId = parseInt($('#f-category').val(), 10);
     var cat = categoriesList.find(function (c) { return c.id === categoryId; });
     var category = cat ? cat.name : '';
@@ -172,7 +176,7 @@
       (category ? '<p class="section-eyebrow">' + AnstelBlog.escapeHtml(category) + '</p>' : '') +
       '<h1 class="fw-bold mb-4" style="font-size:clamp(1.75rem,4vw,2.75rem);letter-spacing:-.03em">' + AnstelBlog.escapeHtml(title) + '</h1>' +
       (cover ? '<img src="' + AnstelBlog.escapeHtml(cover) + '" class="img-fluid rounded-4 w-100 mb-4" style="max-height:420px;object-fit:cover" alt="">' : '') +
-      '<div class="post-content">' + quill.root.innerHTML + '</div>' +
+      '<div class="post-content">' + AnstelBlog.sanitizeRichHtml(quill.root.innerHTML) + '</div>' +
       '</div></body></html>';
     document.getElementById('preview-frame').srcdoc = doc;
   }
@@ -257,7 +261,7 @@
     $('#f-cover').val(post.coverImage || '');
     $('#f-status').val(post.status || 'draft');
     if (post.coverImage) $('#f-cover-preview').attr('src', post.coverImage).show(); else $('#f-cover-preview').hide();
-    quill.root.innerHTML = post.content || '';
+    quill.clipboard.dangerouslyPasteHTML(AnstelBlog.sanitizeRichHtml(post.content || ''));
     $('#delete-post-btn').show();
     $('#save-msg').hide();
     showEditor();
@@ -269,9 +273,9 @@
       title: $('#f-title').val().trim(),
       slug: AnstelBlog.slugify($('#f-slug').val() || $('#f-title').val()),
       categoryId: parseInt($('#f-category').val(), 10) || null,
-      coverImage: $('#f-cover').val().trim(),
+      coverImage: AnstelBlog.safePublicUrl($('#f-cover').val(), false),
       status: $('#f-status').val(),
-      content: quill.root.innerHTML
+      content: AnstelBlog.sanitizeRichHtml(quill.root.innerHTML)
     };
     var $btn = $('#save-post-btn');
     $btn.prop('disabled', true).text('Saving…');
@@ -343,7 +347,7 @@
     });
 
     $('#f-cover').on('input', function () {
-      var v = $(this).val();
+      var v = AnstelBlog.safePublicUrl($(this).val(), false);
       if (v) $('#f-cover-preview').attr('src', v).show(); else $('#f-cover-preview').hide();
     });
 

@@ -1,5 +1,5 @@
 :root{--region-ink:#171a20;--region-muted:#5c5e62;--region-blue:#4169dc;--region-soft:#f4f5f6;--region-night:#0b1220}
-.region-page{margin:0;background:#fff;color:var(--region-ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+.region-page{margin:0;background:#fff;color:var(--region-ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
 .region-shell{width:min(1180px,calc(100% - 48px));margin-inline:auto}
 .region-hero{min-height:78vh;position:relative;display:flex;align-items:flex-end;overflow:hidden;background:var(--region-night)}
 .region-hero>img,.region-hero>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}

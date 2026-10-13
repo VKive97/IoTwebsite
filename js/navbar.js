@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><a href="/company/knowledge-center/" class="small text-secondary text-decoration-none">Knowledge Center</a></li>
               <li class="mb-2"><a href="/company/customer-stories/" class="small text-secondary text-decoration-none">Customer Stories</a></li>
-              <!-- <li><a href="/events/" class="small text-secondary text-decoration-none">Events</a></li> -->
+              <li><a href="/events/" class="small text-secondary text-decoration-none">Events</a></li>
             </ul>
           </div>
           <div class="col-6 col-md-3">
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <p class="mob-sub-heading">Resources</p>
               <a href="/company/knowledge-center/">Knowledge Center</a>
               <a href="/company/customer-stories/">Customer Stories</a>
-              <!-- <a href="/events/">Events</a> -->
+              <a href="/events/">Events</a>
             </div>
             <div class="mob-sub-links">
               <p class="mob-sub-heading">Company</p>

@@ -51,7 +51,7 @@
 }
 
 /* Borderless surfaces throughout the Waste Management page. */
-body>section,body>footer,.waste-faq .accordion-item,.waste-faq .accordion-button,.cta-band .btn{border:0!important}
+:is(body,main)>section,body>footer,.waste-faq .accordion-item,.waste-faq .accordion-button,.cta-band .btn{border:0!important}
 .waste-faq .accordion-item,.waste-faq .accordion-item:hover{box-shadow:none}
 .cta-band .cta-secondary-btn{background:rgba(255,255,255,.12)}
 .cta-band .cta-secondary-btn:hover{background:rgba(255,255,255,.2)}

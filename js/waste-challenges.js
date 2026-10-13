@@ -16,16 +16,25 @@
   var duration = 6000;
   carousel.style.setProperty('--challenge-duration', duration + 'ms');
 
+  function hydrateSlide(index) {
+    var slide = slides[index];
+    slide.querySelectorAll('[data-srcset]').forEach(function (element) {
+      element.srcset = element.dataset.srcset;
+      element.removeAttribute('data-srcset');
+    });
+    var image = slide.querySelector('img[data-src]');
+    if (image) {
+      image.src = image.dataset.src;
+      image.removeAttribute('data-src');
+    }
+  }
+
   function schedule() {
     window.clearTimeout(timer);
     carousel.dataset.running = 'false';
     carousel.dataset.paused = String(paused);
     toggle.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
     var running = !paused && !hovered && inView && !document.hidden;
-    if (inView) {
-      // Fetch the remaining photos before their first transition into view.
-      slides.forEach(function (slide) { slide.querySelector('img').loading = 'eager'; });
-    }
     if (!running) return;
     // Restart the active title's progress bar with the same interval as the slide.
     void titles[current].offsetWidth;
@@ -35,6 +44,7 @@
 
   function show(index) {
     current = (index + slides.length) % slides.length;
+    hydrateSlide(current);
     slides.forEach(function (slide, i) {
       slide.setAttribute('aria-hidden', String(i !== current));
       titles[i].setAttribute('aria-pressed', String(i === current));

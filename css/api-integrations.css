@@ -6,7 +6,7 @@
 .api-ecosystem-intro h2{margin:0;font-size:clamp(2.6rem,5vw,4.75rem);font-weight:500;letter-spacing:-.055em;line-height:1.04}
 .api-ecosystem-intro>p{max-width:480px;margin:0 0 .3rem;color:#69707a;font-size:1rem;line-height:1.8}
 .api-ecosystem-tabs{display:flex;gap:clamp(1.5rem,3vw,3rem);overflow-x:auto;margin-bottom:2rem;scrollbar-width:thin;border-bottom:1px solid #e2e4e7}
-.api-ecosystem-tab{flex:1 0 auto;min-height:56px;padding:1rem 0;border:0;border-bottom:3px solid transparent;background:none;color:#747b85;font:inherit;font-size:.875rem;font-weight:500;text-align:left;white-space:nowrap;cursor:pointer}
+.api-ecosystem-tab{flex:1 0 auto;min-height:56px;padding:1rem 0;border:0;border-bottom:3px solid transparent;background:none;color:#626974;font:inherit;font-size:.875rem;font-weight:500;text-align:left;white-space:nowrap;cursor:pointer}
 .api-ecosystem-tab:hover{color:#171a20}
 .api-ecosystem-tab[aria-selected="true"]{border-bottom-color:#171a20;color:#171a20}
 .api-ecosystem-tab:focus-visible{outline:2px solid #4169dc;outline-offset:-4px}
@@ -17,9 +17,18 @@
 .api-ecosystem-caption{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,5vw,5rem);align-items:start;padding-top:clamp(2rem,4vw,3.5rem)}
 .api-ecosystem-caption h3{margin:0;font-size:clamp(1.45rem,2.5vw,2.2rem);font-weight:500;letter-spacing:-.035em;line-height:1.2}
 .api-ecosystem-caption p{max-width:560px;margin:0;color:#69707a;font-size:.95rem;line-height:1.8}
+
+/* Full-bleed API CTA: the image is the section, with no outer spacing. */
+.api-integrations-cta{position:relative;isolation:isolate;margin:0;padding:0!important;background:#07131f;overflow:hidden}
+.api-integrations-cta .cta-band-content{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;padding:clamp(2rem,5vw,4rem)}
+.api-integrations-cta .cta-band-media{width:100%;height:clamp(560px,62vw,820px);min-height:0;margin:0!important;padding:0!important;aspect-ratio:auto}
+.api-integrations-cta .cta-band-media::before{inset:0;height:100%;background:linear-gradient(180deg,rgba(4,13,24,.56),rgba(4,13,24,.48) 46%,rgba(4,13,24,.64))}
+.api-integrations-cta .cta-band-media img{width:100%;height:100%;object-fit:cover;object-position:center;margin:0;padding:0}
 @media(max-width:767px){
   .api-ecosystem-intro,.api-ecosystem-caption{grid-template-columns:1fr;gap:1.5rem}
   .api-ecosystem-intro>p{max-width:100%;font-size:.95rem}
   .api-ecosystem-tabs{margin-bottom:1.5rem}
   .api-ecosystem-tab{font-size:.8rem}
+  .api-integrations-cta .cta-band-media{height:620px;aspect-ratio:auto}
+  .api-integrations-cta .cta-band-media img{object-position:48% center}
 }

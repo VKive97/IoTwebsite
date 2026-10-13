@@ -9,23 +9,21 @@
   <title>Fleet Management Software | Autonautics by Anstel</title>
   <meta name="description"
     content="Autonautics by Anstel is fleet management software that unifies GPS tracking, driver management, maintenance, dispatch, and IoT monitoring — see every vehicle live.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="https://www.anstelglobal.com/">
 
   <!-- FAVICON -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/images/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
   <!-- PERFORMANCE: warm up CDN connections early -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preload" as="image" href="/images/AutonauticsECO-640.webp"
+    imagesrcset="/images/AutonauticsECO-640.webp 640w, /images/AutonauticsECO-1280.webp 1280w, /images/AutonauticsECO.webp 1448w"
+    imagesizes="100vw" fetchpriority="high">
 
   <!-- STYLES -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="/css/styles.css?v=hero-single-cta-1">
   <style>
     body { padding-top: 56px; padding-bottom: 56px }
@@ -54,9 +52,11 @@
 
   <!-- SOFTWAREAPPLICATION SCHEMA (Autonautics product) -->
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","@id":"https://www.anstelglobal.com/#autonautics","name":"Autonautics","applicationCategory":"BusinessApplication","operatingSystem":"Web, iOS, Android","url":"https://www.anstelglobal.com/platform/","publisher":{"@id":"https://www.anstelglobal.com/#organization"},"description":"Autonautics is Anstel's connected fleet management and IoT platform for GPS tracking, driver management, maintenance, dispatch, last-mile delivery, fleet security, and operational reporting.","sameAs":["https://www.instagram.com/my_autonautics/","https://www.facebook.com/profile.php?id=61592764293665","https://x.com/my_autonautics","https://www.linkedin.com/showcase/autonautics/","https://youtube.com/@anstel6482","https://au.pinterest.com/autonautics/"],"hasPart":[{"@type":"SoftwareApplication","name":"Connected Fleet","url":"https://www.anstelglobal.com/platform/connected-fleet/"},{"@type":"SoftwareApplication","name":"Last Mile","url":"https://www.anstelglobal.com/platform/last-mile/"},{"@type":"SoftwareApplication","name":"Patrol Connect","url":"https://www.anstelglobal.com/platform/security-monitor/"},{"@type":"SoftwareApplication","name":"Connected Monitor","url":"https://www.anstelglobal.com/platform/iot/"},{"@type":"SoftwareApplication","name":"Job Scheduling","url":"https://www.anstelglobal.com/platform/job-scheduling/"},{"@type":"SoftwareApplication","name":"Autonautics Merchant","url":"https://www.anstelglobal.com/platform/merchant/"}]}</script>
-  <link rel="stylesheet" href="/css/personal-vehicle.css?v=full-image-3">
-  <link rel="stylesheet" href="/css/operational-intelligence.css?v=2">
-  <script src="/js/operational-intelligence.js?v=3" defer></script>
+  <link rel="stylesheet" href="/css/personal-vehicle.css?v=full-image-3" media="print" data-deferred-style>
+  <noscript><link rel="stylesheet" href="/css/personal-vehicle.css?v=full-image-3"></noscript>
+  <meta property="og:image:alt" content="One Platform. Every Operation.">
+  <meta name="twitter:image:alt" content="One Platform. Every Operation.">
+  <link rel="icon" href="/images/icon.svg" type="image/svg+xml">
 </head>
 
 <body><a class="skip-link" href="#main-content">Skip to main content</a>
@@ -65,13 +65,12 @@
   <header class="position-fixed top-0 start-0 end-0 bg-white" id="site-nav" style="z-index:1050">
     <div class="d-flex align-items-center px-4 px-md-5" style="height:56px;max-width:1536px;margin:auto">
       <a href="/" class="flex-shrink-0"><img src="/images/anstel.svg" width="208" height="40" alt="Anstel" decoding="async"></a>
-      <nav class="d-none d-lg-flex align-items-center gap-1 mx-auto">
-        <button class="nav-btn" data-mega="autonautics" aria-expanded="false" aria-controls="mega-autonautics">Autonautics</button>
+      <nav aria-label="Primary navigation" class="d-none d-lg-flex align-items-center gap-1 mx-auto">
+        <button type="button" class="nav-btn" data-mega="autonautics" aria-expanded="false" aria-controls="mega-autonautics">Autonautics</button>
         <a class="nav-btn text-dark text-decoration-none" href="/personal-vehicles/">Personal Vehicles</a>
-        <button class="nav-btn" data-mega="solutions" aria-expanded="false" aria-controls="mega-solutions">Solutions</button>
-        <button class="nav-btn" data-mega="industries" aria-expanded="false" aria-controls="mega-industries">Industries</button>
-        <button class="nav-btn" data-mega="discover" aria-expanded="false" aria-controls="mega-discover">Discover</button>
-        <a class="nav-btn text-dark text-decoration-none" href="https://shop.anstelglobal.com/" target="_blank" rel="noopener noreferrer">Shop</a>
+        <button type="button" class="nav-btn" data-mega="solutions" aria-expanded="false" aria-controls="mega-solutions">Solutions</button>
+        <button type="button" class="nav-btn" data-mega="industries" aria-expanded="false" aria-controls="mega-industries">Industries</button>
+        <button type="button" class="nav-btn" data-mega="discover" aria-expanded="false" aria-controls="mega-discover">Discover</button>
         <!--  -->
       </nav>
       <div class="d-none d-lg-flex align-items-center gap-1">
@@ -87,7 +86,7 @@
               d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
           </svg></a>
       </div>
-      <button class="icon-btn d-lg-none ms-auto" id="mobile-toggle" aria-label="Open primary navigation" aria-expanded="false" aria-controls="mobile-menu">
+      <button type="button" class="icon-btn d-lg-none ms-auto" id="mobile-toggle" aria-label="Open primary navigation" aria-expanded="false" aria-controls="mobile-menu">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -100,37 +99,37 @@
         <div class="flex-grow-1">
           <div class="row g-4">
             <div class="col-6 col-md-4 col-lg-3"><a href="/platform/connected-fleet/" class="mega-product-card d-block"><img
-                  src="/images/connected fleet.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/connected fleet-640.webp 640w, /images/connected fleet.webp 1024w" sizes="100vw" loading="lazy">
+                  src="/images/connected fleet.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/connected fleet-640.webp 640w, /images/connected fleet.webp 1024w" sizes="100vw" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Connected Fleet</p>
                 <p class="text-muted" style="font-size:.7rem">Fleet tracking &amp; operations</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
             <div class="col-6 col-md-4 col-lg-3"><a href="/platform/last-mile/" class="mega-product-card d-block"><img
-                  src="/images/Lastmile.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/Lastmile-640.webp 640w, /images/Lastmile.webp 1024w" sizes="100vw" loading="lazy">
+                  src="/images/Lastmile.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/Lastmile-640.webp 640w, /images/Lastmile.webp 1024w" sizes="100vw" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Last Mile</p>
                 <p class="text-muted" style="font-size:.7rem">Delivery execution platform</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
             <div class="col-6 col-md-4 col-lg-3"><a href="/platform/security-monitor/" class="mega-product-card d-block"><img
-                  src="/images/Security.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/Security-640.webp 640w, /images/Security.webp 1024w" sizes="100vw" loading="lazy">
+                  src="/images/Security.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/Security-640.webp 640w, /images/Security.webp 1024w" sizes="100vw" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Patrol Connect</p>
-                <p class="text-muted" style="font-size:.7rem">Vehicle security &amp; response</p><span
+                <p class="text-muted" style="font-size:.7rem">Vehicle &amp; driver security</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
             <div class="col-6 col-md-4 col-lg-3"><a href="/platform/merchant/" class="mega-product-card d-block"><img
-                  src="/images/Merchant.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/Merchant-640.webp 640w, /images/Merchant.webp 1024w" sizes="100vw" loading="lazy">
+                  src="/images/Merchant.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/Merchant-640.webp 640w, /images/Merchant.webp 1024w" sizes="100vw" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Autonautics Merchant</p>
                 <p class="text-muted" style="font-size:.7rem">Fleet services marketplace</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
             <div class="col-6 col-md-4 col-lg-3"><a href="/platform/iot/" class="mega-product-card d-block"><img
-                  src="/images/IoTLogo.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/IoTLogo-640.webp 640w, /images/IoTLogo.webp 1024w" sizes="100vw" loading="lazy">
+                  src="/images/IoTLogo.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/IoTLogo-640.webp 640w, /images/IoTLogo.webp 1024w" sizes="100vw" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Connected Monitor</p>
-                <p class="text-muted" style="font-size:.7rem">Real-time monitoring for IoT devices and sensors.</p><span
+                <p class="text-muted" style="font-size:.7rem">Connected devices &amp; sensors</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
             <div class="col-6 col-md-4 col-lg-3"><a href="/platform/job-scheduling/" class="mega-product-card d-block"><img
-                  src="/images/job-scheduling-logo.webp" alt="Job Scheduling" width="1536" height="1024" decoding="async" srcset="/images/job-scheduling-logo-640.webp 640w, /images/job-scheduling-logo-1280.webp 1280w, /images/job-scheduling-logo.webp 1536w" sizes="100vw" loading="lazy">
+                  src="/images/job-scheduling-logo.webp" alt="Job Scheduling" width="1536" height="1024" decoding="async" srcset="/images/job-scheduling-logo-640.webp 640w, /images/job-scheduling-logo-1280.webp 1280w, /images/job-scheduling-logo.webp 1536w" sizes="100vw" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Job Scheduling</p>
                 <p class="text-muted" style="font-size:.7rem">Plan, dispatch &amp; track jobs</p><span
                   class="small text-secondary">Learn More &rarr;</span>
@@ -158,49 +157,49 @@
         <div class="flex-grow-1">
           <div class="row g-4">
             <div class="col-6 col-md-3"><a href="/solutions/fleet-management/" class="mega-product-card d-block"><img
-                  src="/images/solution-fleet-management.webp" alt="Fleet Management" width="512" height="341" decoding="async" loading="lazy">
+                  src="/images/solution-fleet-management.webp" alt="Fleet Management" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Fleet Management</p>
                 <p class="text-muted" style="font-size:.7rem">Complete fleet operations.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
             <div class="col-6 col-md-3"><a href="/solutions/fleet-tracking/" class="mega-product-card d-block"><img
-                  src="/images/solution-fleet-tracking.webp" alt="Fleet Tracking" width="512" height="410" decoding="async" loading="lazy">
+                  src="/images/solution-fleet-tracking.webp" alt="Fleet Tracking" width="512" height="410" decoding="async" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Fleet Tracking</p>
                 <p class="text-muted" style="font-size:.7rem">Real-time fleet visibility.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
             <div class="col-6 col-md-3"><a href="/solutions/driver-management/" class="mega-product-card d-block"><img
-                  src="/images/solution-driver-management.webp" alt="Driver Management" width="512" height="410" decoding="async" loading="lazy">
+                  src="/images/solution-driver-management.webp" alt="Driver Management" width="512" height="410" decoding="async" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Driver Management</p>
                 <p class="text-muted" style="font-size:.7rem">Driver safety &amp; performance.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
             <div class="col-6 col-md-3"><a href="/solutions/asset-management/" class="mega-product-card d-block"><img
-                  src="/images/solution-asset-management.webp" alt="Asset Management" width="512" height="512" decoding="async" loading="lazy">
+                  src="/images/solution-asset-management.webp" alt="Asset Management" width="512" height="512" decoding="async" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Asset Management</p>
                 <p class="text-muted" style="font-size:.7rem">Fleet &amp; operational assets.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
             <div class="col-6 col-md-3"><a href="/solutions/maintenance-management/" class="mega-product-card d-block"><img
-                  src="/images/solution-maintenance-management.webp" alt="Maintenance Management" width="512" height="512" decoding="async" loading="lazy">
+                  src="/images/solution-maintenance-management.webp" alt="Maintenance Management" width="512" height="512" decoding="async" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Maintenance Management</p>
                 <p class="text-muted" style="font-size:.7rem">Fleet &amp; asset maintenance.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
             <div class="col-6 col-md-3"><a href="/solutions/dispatch-management/" class="mega-product-card d-block"><img
-                  src="/images/solution-dispatch-management.webp" alt="Dispatch Management" width="512" height="341" decoding="async" loading="lazy">
+                  src="/images/solution-dispatch-management.webp" alt="Dispatch Management" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Dispatch Management</p>
                 <p class="text-muted" style="font-size:.7rem">Intelligent workforce dispatch.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
             <div class="col-6 col-md-3"><a href="/solutions/inventory-management/" class="mega-product-card d-block"><img
-                  src="/images/solution-inventory-management.webp" alt="Inventory Management" width="512" height="512" decoding="async" loading="lazy">
+                  src="/images/solution-inventory-management.webp" alt="Inventory Management" width="512" height="512" decoding="async" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Inventory Management</p>
                 <p class="text-muted" style="font-size:.7rem">Field inventory &amp; assets.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
               </a></div>
             <div class="col-6 col-md-3"><a href="/solutions/fleet-security/" class="mega-product-card d-block"><img
-                  src="/images/solution-fleet-security.webp" alt="Fleet Security" width="512" height="341" decoding="async" loading="lazy">
+                  src="/images/solution-fleet-security.webp" alt="Fleet Security" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low">
                 <p class="fw-semibold small text-dark mt-2 card-name">Fleet Security</p>
                 <p class="text-muted" style="font-size:.7rem">Security operations.</p><span
                   class="small text-secondary">Learn More &rarr;</span>
@@ -234,10 +233,10 @@
     <div id="mega-industries" class="mega-menu">
       <div class="px-4 py-4" style="max-width:1280px;margin:auto">
         <div class="row g-4">
-          <div class="col-6 col-md-3"><a href="/industries/transportation/" class="mega-product-card d-block"><img src="/images/industry-transportation.webp" alt="Transportation" width="512" height="341" decoding="async" loading="lazy"><p class="fw-semibold small text-dark mt-2 card-name">Transportation</p><p class="text-muted" style="font-size:.7rem">Tracking, telematics &amp; route optimisation.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-          <div class="col-6 col-md-3"><a href="/industries/waste-management/" class="mega-product-card d-block"><img src="/images/industry-waste-management.webp" alt="Waste Management" width="512" height="341" decoding="async" loading="lazy"><p class="fw-semibold small text-dark mt-2 card-name">Waste Management</p><p class="text-muted" style="font-size:.7rem">Route &amp; collection optimisation.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-          <div class="col-6 col-md-3"><a href="/industries/food-services-fmcg/" class="mega-product-card d-block"><img src="/images/industry-food-services-fmcg.webp" alt="Food Services &amp; FMCG" width="512" height="341" decoding="async" loading="lazy"><p class="fw-semibold small text-dark mt-2 card-name">Food Services &amp; FMCG</p><p class="text-muted" style="font-size:.7rem">Cold-chain &amp; sensor monitoring.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
-          <div class="col-6 col-md-3"><a href="/industries/logistics-supply-chain/" class="mega-product-card d-block"><img src="/images/industry-logistics-supply-chain.webp" alt="Logistics &amp; Supply Chain" width="512" height="341" decoding="async" loading="lazy"><p class="fw-semibold small text-dark mt-2 card-name">Logistics &amp; Supply Chain</p><p class="text-muted" style="font-size:.7rem">Dispatch, tracking &amp; delivery.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+          <div class="col-6 col-md-3"><a href="/industries/transportation/" class="mega-product-card d-block"><img src="/images/industry-transportation.webp" alt="Transportation" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low"><p class="fw-semibold small text-dark mt-2 card-name">Transportation</p><p class="text-muted" style="font-size:.7rem">Tracking, telematics &amp; route optimisation.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+          <div class="col-6 col-md-3"><a href="/industries/waste-management/" class="mega-product-card d-block"><img src="/images/industry-waste-management.webp" alt="Waste Management" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low"><p class="fw-semibold small text-dark mt-2 card-name">Waste Management</p><p class="text-muted" style="font-size:.7rem">Route &amp; collection optimisation.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+          <div class="col-6 col-md-3"><a href="/industries/food-services-fmcg/" class="mega-product-card d-block"><img src="/images/industry-food-services-fmcg.webp" alt="Food Services &amp; FMCG" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low"><p class="fw-semibold small text-dark mt-2 card-name">Food Services &amp; FMCG</p><p class="text-muted" style="font-size:.7rem">Cold-chain &amp; sensor monitoring.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
+          <div class="col-6 col-md-3"><a href="/industries/logistics-supply-chain/" class="mega-product-card d-block"><img src="/images/industry-logistics-supply-chain.webp" alt="Logistics &amp; Supply Chain" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low"><p class="fw-semibold small text-dark mt-2 card-name">Logistics &amp; Supply Chain</p><p class="text-muted" style="font-size:.7rem">Dispatch, tracking &amp; delivery.</p><span class="small text-secondary">Learn More &rarr;</span></a></div>
         </div>
         <div class="text-center mt-3">
           <a href="/industries/" class="small fw-semibold text-decoration-none" style="color:#171a20">View All Industries &rarr;</a>
@@ -255,7 +254,7 @@
             <ul class="list-unstyled mb-0">
               <li class="mb-2"><a href="/company/knowledge-center/" class="small text-secondary text-decoration-none">Knowledge Center</a></li>
               <li class="mb-2"><a href="/company/customer-stories/" class="small text-secondary text-decoration-none">Customer Stories</a></li>
-              <!-- <li><a href="/events/" class="small text-secondary text-decoration-none">Events</a></li> -->
+              <li><a href="/events/" class="small text-secondary text-decoration-none">Events</a></li>
             </ul>
           </div>
           <div class="col-6 col-md-3">
@@ -287,24 +286,23 @@
         <!-- Main view -->
         <div class="mob-view mob-view-main active">
           <ul class="list-unstyled mb-0">
-            <li><button class="mob-row" data-mob-open="autonautics">Autonautics
+            <li><button type="button" class="mob-row" data-mob-open="autonautics">Autonautics
                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6" />
                 </svg></button></li>
             <li><a class="mob-row-link" href="/personal-vehicles/">Personal Vehicles</a></li>
-            <li><button class="mob-row" data-mob-open="solutions">Solutions
+            <li><button type="button" class="mob-row" data-mob-open="solutions">Solutions
                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6" />
                 </svg></button></li>
-            <li><button class="mob-row" data-mob-open="industries">Industries
+            <li><button type="button" class="mob-row" data-mob-open="industries">Industries
                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6" />
                 </svg></button></li>
-            <li><button class="mob-row" data-mob-open="discover">Discover
+            <li><button type="button" class="mob-row" data-mob-open="discover">Discover
                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6" />
                 </svg></button></li>
-            <li><a class="mob-row-link" href="https://shop.anstelglobal.com/" target="_blank" rel="noopener noreferrer">Shop</a></li>
             <!-- <li></li> -->
           </ul>
           <div class="mob-utility">
@@ -319,7 +317,7 @@
         <!-- Sub view: Autonautics -->
         <div class="mob-view mob-view-sub" data-mob-view="autonautics">
           <div class="mob-subheader">
-            <button class="mob-back-btn" data-mob-back aria-label="Back">
+            <button type="button" class="mob-back-btn" data-mob-back aria-label="Back">
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6" />
               </svg>
@@ -330,23 +328,23 @@
           <div class="mob-sub-content">
             <div class="row g-3">
               <div class="col-6"><a href="/platform/connected-fleet/" class="mob-product-card"><img
-                    src="/images/connected fleet.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/connected fleet-640.webp 640w, /images/connected fleet.webp 1024w" sizes="100vw" loading="lazy">
+                    src="/images/connected fleet.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/connected fleet-640.webp 640w, /images/connected fleet.webp 1024w" sizes="100vw" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Connected Fleet</p><span class="mob-product-link">Learn More</span>
                 </a></div>
               <div class="col-6"><a href="/platform/last-mile/" class="mob-product-card"><img src="/images/Lastmile.webp"
-                    alt="" width="1024" height="1024" decoding="async" srcset="/images/Lastmile-640.webp 640w, /images/Lastmile.webp 1024w" sizes="100vw" loading="lazy">
+                    alt="" width="1024" height="1024" decoding="async" srcset="/images/Lastmile-640.webp 640w, /images/Lastmile.webp 1024w" sizes="100vw" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Last Mile</p><span class="mob-product-link">Learn More</span></a></div>
               <div class="col-6"><a href="/platform/security-monitor/" class="mob-product-card"><img
-                    src="/images/Security.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/Security-640.webp 640w, /images/Security.webp 1024w" sizes="100vw" loading="lazy">
+                    src="/images/Security.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/Security-640.webp 640w, /images/Security.webp 1024w" sizes="100vw" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Patrol Connect</p><span class="mob-product-link">Learn
                     More</span></a></div>
               <div class="col-6"><a href="/platform/merchant/" class="mob-product-card"><img src="/images/Merchant.webp"
-                    alt="" width="1024" height="1024" decoding="async" srcset="/images/Merchant-640.webp 640w, /images/Merchant.webp 1024w" sizes="100vw" loading="lazy">
+                    alt="" width="1024" height="1024" decoding="async" srcset="/images/Merchant-640.webp 640w, /images/Merchant.webp 1024w" sizes="100vw" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Autonautics Merchant</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/platform/iot/" class="mob-product-card"><img src="/images/IoTLogo.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/IoTLogo-640.webp 640w, /images/IoTLogo.webp 1024w" sizes="100vw" loading="lazy">
+              <div class="col-6"><a href="/platform/iot/" class="mob-product-card"><img src="/images/IoTLogo.webp" alt="" width="1024" height="1024" decoding="async" srcset="/images/IoTLogo-640.webp 640w, /images/IoTLogo.webp 1024w" sizes="100vw" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Connected Monitor</p><span class="mob-product-link">Learn More</span></a></div>
               <div class="col-6"><a href="/platform/job-scheduling/" class="mob-product-card"><img
-                  src="/images/job-scheduling-logo.webp" alt="Job Scheduling" width="1536" height="1024" decoding="async" srcset="/images/job-scheduling-logo-640.webp 640w, /images/job-scheduling-logo-1280.webp 1280w, /images/job-scheduling-logo.webp 1536w" sizes="100vw" loading="lazy">
+                  src="/images/job-scheduling-logo.webp" alt="Job Scheduling" width="1536" height="1024" decoding="async" srcset="/images/job-scheduling-logo-640.webp 640w, /images/job-scheduling-logo-1280.webp 1280w, /images/job-scheduling-logo.webp 1536w" sizes="100vw" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Job Scheduling</p><span class="mob-product-link">Learn More</span></a>
               </div>
             </div>
@@ -363,7 +361,7 @@
         <!-- Sub view: Solutions -->
         <div class="mob-view mob-view-sub" data-mob-view="solutions">
           <div class="mob-subheader">
-            <button class="mob-back-btn" data-mob-back aria-label="Back">
+            <button type="button" class="mob-back-btn" data-mob-back aria-label="Back">
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6" />
               </svg>
@@ -374,35 +372,35 @@
           <div class="mob-sub-content">
             <div class="row g-3">
               <div class="col-6"><a href="/solutions/fleet-management/" class="mob-product-card"><img
-                    src="/images/solution-fleet-management.webp" alt="Fleet Management" width="512" height="341" decoding="async" loading="lazy">
+                    src="/images/solution-fleet-management.webp" alt="Fleet Management" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Fleet Management</p><span class="mob-product-link">Learn
                     More</span></a></div>
               <div class="col-6"><a href="/solutions/fleet-tracking/" class="mob-product-card"><img
-                    src="/images/solution-fleet-tracking.webp" alt="Fleet Tracking" width="512" height="410" decoding="async" loading="lazy">
+                    src="/images/solution-fleet-tracking.webp" alt="Fleet Tracking" width="512" height="410" decoding="async" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Fleet Tracking</p><span class="mob-product-link">Learn
                     More</span></a></div>
               <div class="col-6"><a href="/solutions/driver-management/" class="mob-product-card"><img
-                    src="/images/solution-driver-management.webp" alt="Driver Management" width="512" height="410" decoding="async" loading="lazy">
+                    src="/images/solution-driver-management.webp" alt="Driver Management" width="512" height="410" decoding="async" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Driver Management</p><span class="mob-product-link">Learn
                     More</span></a></div>
               <div class="col-6"><a href="/solutions/asset-management/" class="mob-product-card"><img
-                    src="/images/solution-asset-management.webp" alt="Asset Management" width="512" height="512" decoding="async" loading="lazy">
+                    src="/images/solution-asset-management.webp" alt="Asset Management" width="512" height="512" decoding="async" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Asset Management</p><span class="mob-product-link">Learn
                     More</span></a></div>
               <div class="col-6"><a href="/solutions/maintenance-management/" class="mob-product-card"><img
-                    src="/images/solution-maintenance-management.webp" alt="Maintenance Management" width="512" height="512" decoding="async" loading="lazy">
+                    src="/images/solution-maintenance-management.webp" alt="Maintenance Management" width="512" height="512" decoding="async" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Maintenance Management</p><span class="mob-product-link">Learn
                     More</span></a></div>
               <div class="col-6"><a href="/solutions/dispatch-management/" class="mob-product-card"><img
-                    src="/images/solution-dispatch-management.webp" alt="Dispatch Management" width="512" height="341" decoding="async" loading="lazy">
+                    src="/images/solution-dispatch-management.webp" alt="Dispatch Management" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Dispatch Management</p><span class="mob-product-link">Learn
                     More</span></a></div>
               <div class="col-6"><a href="/solutions/inventory-management/" class="mob-product-card"><img
-                    src="/images/solution-inventory-management.webp" alt="Inventory Management" width="512" height="512" decoding="async" loading="lazy">
+                    src="/images/solution-inventory-management.webp" alt="Inventory Management" width="512" height="512" decoding="async" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Inventory Management</p><span class="mob-product-link">Learn
                     More</span></a></div>
               <div class="col-6"><a href="/solutions/fleet-security/" class="mob-product-card"><img
-                    src="/images/solution-fleet-security.webp" alt="Fleet Security" width="512" height="341" decoding="async" loading="lazy">
+                    src="/images/solution-fleet-security.webp" alt="Fleet Security" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low">
                   <p class="mob-product-name">Fleet Security</p><span class="mob-product-link">Learn
                     More</span></a></div>
             </div>
@@ -424,16 +422,16 @@
         <!-- Sub view: Industries -->
         <div class="mob-view mob-view-sub" data-mob-view="industries">
           <div class="mob-subheader">
-            <button class="mob-back-btn" data-mob-back aria-label="Back"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg></button>
+            <button type="button" class="mob-back-btn" data-mob-back aria-label="Back"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg></button>
             <span class="mob-subtitle">Industries</span>
 
           </div>
           <div class="mob-sub-content">
             <div class="row g-3">
-              <div class="col-6"><a href="/industries/transportation/" class="mob-product-card"><img src="/images/industry-transportation.webp" alt="Transportation" width="512" height="341" decoding="async" loading="lazy"><p class="mob-product-name">Transportation</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/industries/waste-management/" class="mob-product-card"><img src="/images/industry-waste-management.webp" alt="Waste Management" width="512" height="341" decoding="async" loading="lazy"><p class="mob-product-name">Waste Management</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/industries/food-services-fmcg/" class="mob-product-card"><img src="/images/industry-food-services-fmcg.webp" alt="Food Services &amp; FMCG" width="512" height="341" decoding="async" loading="lazy"><p class="mob-product-name">Food Services &amp; FMCG</p><span class="mob-product-link">Learn More</span></a></div>
-              <div class="col-6"><a href="/industries/logistics-supply-chain/" class="mob-product-card"><img src="/images/industry-logistics-supply-chain.webp" alt="Logistics &amp; Supply Chain" width="512" height="341" decoding="async" loading="lazy"><p class="mob-product-name">Logistics &amp; Supply Chain</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/industries/transportation/" class="mob-product-card"><img src="/images/industry-transportation.webp" alt="Transportation" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low"><p class="mob-product-name">Transportation</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/industries/waste-management/" class="mob-product-card"><img src="/images/industry-waste-management.webp" alt="Waste Management" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low"><p class="mob-product-name">Waste Management</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/industries/food-services-fmcg/" class="mob-product-card"><img src="/images/industry-food-services-fmcg.webp" alt="Food Services &amp; FMCG" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low"><p class="mob-product-name">Food Services &amp; FMCG</p><span class="mob-product-link">Learn More</span></a></div>
+              <div class="col-6"><a href="/industries/logistics-supply-chain/" class="mob-product-card"><img src="/images/industry-logistics-supply-chain.webp" alt="Logistics &amp; Supply Chain" width="512" height="341" decoding="async" loading="lazy" fetchpriority="low"><p class="mob-product-name">Logistics &amp; Supply Chain</p><span class="mob-product-link">Learn More</span></a></div>
             </div>
             <div class="mob-sub-links">
               <a href="/industries/">View All Industries</a>
@@ -444,7 +442,7 @@
         <!-- Sub view: Discover -->
         <div class="mob-view mob-view-sub" data-mob-view="discover">
           <div class="mob-subheader">
-            <button class="mob-back-btn" data-mob-back aria-label="Back">
+            <button type="button" class="mob-back-btn" data-mob-back aria-label="Back">
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6" />
               </svg>
@@ -457,7 +455,7 @@
               <p class="mob-sub-heading">Resources</p>
               <a href="/company/knowledge-center/">Knowledge Center</a>
               <a href="/company/customer-stories/">Customer Stories</a>
-              <!-- <a href="/events/">Events</a> -->
+              <a href="/events/">Events</a>
             </div>
             <div class="mob-sub-links">
               <p class="mob-sub-heading">Company</p>
@@ -475,45 +473,36 @@
   </header>
 
   <!-- PAGE BLUR OVERLAY (shows when mega menu is open) -->
-  <div id="mega-overlay"></div>
+  <div id="mega-overlay"></div><main id="main-content" tabindex="-1">
 
   <!-- HERO CAROUSEL -->
-  <section id="main-content" class="position-relative overflow-hidden" style="height:90vh">
+  <section class="position-relative overflow-hidden" style="height:90vh">
     <div class="hero-slide active" style="background:linear-gradient(to bottom,#c8d4dc,#b8c8d4,#a8bcc8)">
       <img src="/images/AutonauticsECO.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
         alt="Autonautics" width="1448" height="1086" decoding="async" srcset="/images/AutonauticsECO-640.webp 640w, /images/AutonauticsECO-1280.webp 1280w, /images/AutonauticsECO.webp 1448w" sizes="100vw" loading="eager" fetchpriority="high">
     </div>
     <div class="hero-slide" style="background:#8b7560">
-      <img src="/images/home-personal-vehicle-hero-v1.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" style="object-position:70% center" alt="Confident woman at the wheel of her personal car at a scenic overlook" width="1659" height="948" decoding="async" srcset="/images/home-personal-vehicle-hero-v1-640.webp 640w, /images/home-personal-vehicle-hero-v1-1280.webp 1280w, /images/home-personal-vehicle-hero-v1.webp 1659w" sizes="100vw" loading="lazy">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/home-personal-vehicle-hero-v1.webp"
+        class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" style="object-position:70% center"
+        alt="Confident woman at the wheel of her personal car at a scenic overlook" width="1659" height="948" decoding="async"
+        data-srcset="/images/home-personal-vehicle-hero-v1-640.webp 640w, /images/home-personal-vehicle-hero-v1-1280.webp 1280w, /images/home-personal-vehicle-hero-v1.webp 1659w" sizes="100vw">
     </div>
     <div class="hero-slide" style="background:linear-gradient(to bottom,#b8a48a,#c4b09a,#a89070,#8b7560)">
-      <img src="/images/connectedECO.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-        alt="Fleet Management" width="1536" height="1024" decoding="async" srcset="/images/connectedECO-640.webp 640w, /images/connectedECO-1280.webp 1280w, /images/connectedECO.webp 1536w" sizes="100vw" loading="lazy">
-    </div>
-    <div class="hero-slide" style="background:linear-gradient(to bottom,#b8a48a,#c4b09a,#a89070,#8b7560)">
-      <img src="/images/Fleet_Tracking_Hero.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-        alt="Fleet Tracking" width="1536" height="1024" decoding="async" srcset="/images/Fleet_Tracking_Hero-640.webp 640w, /images/Fleet_Tracking_Hero-1280.webp 1280w, /images/Fleet_Tracking_Hero.webp 1536w" sizes="100vw" loading="lazy">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/connectedECO.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+        alt="Fleet Management" width="1536" height="1024" decoding="async" data-srcset="/images/connectedECO-640.webp 640w, /images/connectedECO-1280.webp 1280w, /images/connectedECO.webp 1536w" sizes="100vw">
     </div>
     <div class="hero-slide hero-slide--video-telematics" style="background:#343434">
-      <img src="/images/home-video-telematics-camera-v3.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" style="object-position:66% center"
-        alt="Compact AI-Camera secured to a van windshield with a visible mounting bracket and neatly routed power cable" width="1672" height="941" decoding="async" srcset="/images/home-video-telematics-camera-v3-640.webp 640w, /images/home-video-telematics-camera-v3-1280.webp 1280w, /images/home-video-telematics-camera-v3.webp 1672w" sizes="100vw" loading="lazy">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/home-video-telematics-camera-v3.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" style="object-position:66% center"
+        alt="Compact AI-Camera secured to a van windshield with a visible mounting bracket and neatly routed power cable" width="1672" height="941" decoding="async" data-srcset="/images/home-video-telematics-camera-v3-640.webp 640w, /images/home-video-telematics-camera-v3-1280.webp 1280w, /images/home-video-telematics-camera-v3.webp 1672w" sizes="100vw">
     </div>
     <div class="hero-slide" style="background:linear-gradient(to bottom,#b8a48a,#c4b09a,#a89070,#8b7560)">
-      <img src="/images/LastmileECO.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-        alt="Last Mile Delivery" width="1448" height="1086" decoding="async" srcset="/images/LastmileECO-640.webp 640w, /images/LastmileECO-1280.webp 1280w, /images/LastmileECO.webp 1448w" sizes="100vw" loading="lazy">
-    </div>
-    <div class="hero-slide" style="background:linear-gradient(to bottom,#a8b4c0,#8494a6,#596d80)">
-      <img src="/images/SecurityECO.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-        alt="Fleet Security" width="1448" height="1086" decoding="async" srcset="/images/SecurityECO-640.webp 640w, /images/SecurityECO-1280.webp 1280w, /images/SecurityECO.webp 1448w" sizes="100vw" loading="lazy">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/LastmileECO.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+        alt="Last Mile Delivery" width="1448" height="1086" decoding="async" data-srcset="/images/LastmileECO-640.webp 640w, /images/LastmileECO-1280.webp 1280w, /images/LastmileECO.webp 1448w" sizes="100vw">
     </div>
     <div class="hero-slide" style="background:linear-gradient(to bottom,#b8a48a,#c4b09a,#a89070,#8b7560)">
-      <img src="/images/industrial-iot-hub-sensor-network.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+      <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/images/industrial-iot-hub-sensor-network.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
         alt="Industrial IoT hub connected to sensors, vehicles, equipment and operational assets" width="1448" height="1086" decoding="async"
-        srcset="/images/industrial-iot-hub-sensor-network-640.webp 640w, /images/industrial-iot-hub-sensor-network-1280.webp 1280w, /images/industrial-iot-hub-sensor-network.webp 1448w" sizes="100vw" loading="lazy">
-    </div>
-    <div class="hero-slide" style="background:linear-gradient(to bottom,#c8d4dc,#b8c8d4,#a8bcc8)">
-      <img src="/images/MerchantECO.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-        alt="Smarter Business Decisions" width="1448" height="1086" decoding="async" srcset="/images/MerchantECO-640.webp 640w, /images/MerchantECO-1280.webp 1280w, /images/MerchantECO.webp 1448w" sizes="100vw" loading="lazy">
+        data-srcset="/images/industrial-iot-hub-sensor-network-640.webp 640w, /images/industrial-iot-hub-sensor-network-1280.webp 1280w, /images/industrial-iot-hub-sensor-network.webp 1448w" sizes="100vw">
     </div>
     <div class="position-relative d-flex flex-column align-items-center text-center px-4 fade-up" id="hero-content"
       style="padding-top:6.5vh;z-index:10">
@@ -532,15 +521,12 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
       </svg></button>
     <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 d-flex gap-2" style="z-index:20">
-      <button class="dot-btn active hero-dot" aria-label="Show Autonautics Platform slide"></button>
+      <button type="button" class="dot-btn active hero-dot" aria-label="Show Autonautics Platform slide"></button>
       <button type="button" class="dot-btn hero-dot" aria-label="Show Personal Vehicles slide"></button>
-      <button class="dot-btn hero-dot" aria-label="Show Connected Fleet slide"></button>
-      <button class="dot-btn hero-dot" aria-label="Show Fleet Tracking slide"></button>
-      <button class="dot-btn hero-dot" aria-label="Show AI-Camera slide"></button>
-      <button class="dot-btn hero-dot" aria-label="Show Last Mile slide"></button>
-      <button class="dot-btn hero-dot" aria-label="Show Patrol Connect slide"></button>
-      <button class="dot-btn hero-dot" aria-label="Show Connected Monitor slide"></button>
-      <button class="dot-btn hero-dot" aria-label="Show Autonautics Merchant slide"></button>
+      <button type="button" class="dot-btn hero-dot" aria-label="Show Connected Fleet slide"></button>
+      <button type="button" class="dot-btn hero-dot" aria-label="Show AI-Camera slide"></button>
+      <button type="button" class="dot-btn hero-dot" aria-label="Show Last Mile slide"></button>
+      <button type="button" class="dot-btn hero-dot" aria-label="Show Connected Monitor slide"></button>
     </div>
   </section>
 
@@ -556,22 +542,22 @@
         <div class="trusted-logo-marquee" role="region" aria-label="Anstel customers and partners">
           <div class="trusted-logo-track">
             <div class="trusted-logo-set">
-              <a class="trusted-logo trusted-logo--symbol" href="https://global.toyota/en/" target="_blank" rel="noopener noreferrer" aria-label="Visit Toyota official website"><img src="/images/partner-toyota.webp" alt="Toyota" width="1254" height="1254" decoding="async" srcset="/images/partner-toyota-640.webp 640w, /images/partner-toyota.webp 1254w" sizes="100vw" loading="lazy"></a>
-              <a class="trusted-logo trusted-logo--symbol" href="https://www.coca-colacompany.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit The Coca-Cola Company official website"><img src="/images/partner-coca-cola.webp" alt="Coca-Cola" width="1254" height="1254" decoding="async" srcset="/images/partner-coca-cola-640.webp 640w, /images/partner-coca-cola.webp 1254w" sizes="100vw" loading="lazy"></a>
-              <a class="trusted-logo" href="https://corporate.digicelgroup.com/en" target="_blank" rel="noopener noreferrer" aria-label="Visit Digicel official website"><img src="/images/partner-digicel.webp" alt="Digicel" width="1536" height="1024" decoding="async" srcset="/images/partner-digicel-640.webp 640w, /images/partner-digicel-1280.webp 1280w, /images/partner-digicel.webp 1536w" sizes="100vw" loading="lazy"></a>
-              <a class="trusted-logo" href="https://www.kineis.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Kineis official website"><img src="/images/partner-kineis.webp" alt="Kineis" width="1536" height="1024" decoding="async" srcset="/images/partner-kineis-640.webp 640w, /images/partner-kineis-1280.webp 1280w, /images/partner-kineis.webp 1536w" sizes="100vw" loading="lazy"></a>
-              <a class="trusted-logo trusted-logo--symbol" href="https://www.larsentoubro.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Larsen and Toubro official website"><img src="/images/partner-larsen-toubro.webp" alt="Larsen and Toubro" width="1254" height="1254" decoding="async" srcset="/images/partner-larsen-toubro-640.webp 640w, /images/partner-larsen-toubro.webp 1254w" sizes="100vw" loading="lazy"></a>
-              <a class="trusted-logo" href="https://www.icicilombard.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit ICICI Lombard official website"><img src="/images/partner-icici-lombard.webp" alt="ICICI Lombard" width="1536" height="1024" decoding="async" srcset="/images/partner-icici-lombard-640.webp 640w, /images/partner-icici-lombard-1280.webp 1280w, /images/partner-icici-lombard.webp 1536w" sizes="100vw" loading="lazy"></a>
-              <a class="trusted-logo trusted-logo--symbol" href="https://www.sail.co.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit Steel Authority of India Limited official website"><img src="/images/partner-sail.webp" alt="Steel Authority of India Limited" width="1254" height="1254" decoding="async" srcset="/images/partner-sail-640.webp 640w, /images/partner-sail.webp 1254w" sizes="100vw" loading="lazy"></a>
+              <a class="trusted-logo trusted-logo--symbol" href="https://global.toyota/en/" target="_blank" rel="noopener noreferrer" aria-label="Visit Toyota official website"><img src="/images/partner-toyota.webp" alt="Toyota" width="1254" height="1254" decoding="async" srcset="/images/partner-toyota-640.webp 640w, /images/partner-toyota.webp 1254w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
+              <a class="trusted-logo trusted-logo--symbol" href="https://www.coca-colacompany.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit The Coca-Cola Company official website"><img src="/images/partner-coca-cola.webp" alt="Coca-Cola" width="1254" height="1254" decoding="async" srcset="/images/partner-coca-cola-640.webp 640w, /images/partner-coca-cola.webp 1254w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
+              <a class="trusted-logo" href="https://corporate.digicelgroup.com/en" target="_blank" rel="noopener noreferrer" aria-label="Visit Digicel official website"><img src="/images/partner-digicel.webp" alt="Digicel" width="1536" height="1024" decoding="async" srcset="/images/partner-digicel-640.webp 640w, /images/partner-digicel-1280.webp 1280w, /images/partner-digicel.webp 1536w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
+              <a class="trusted-logo" href="https://www.kineis.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Kineis official website"><img src="/images/partner-kineis.webp" alt="Kineis" width="1536" height="1024" decoding="async" srcset="/images/partner-kineis-640.webp 640w, /images/partner-kineis-1280.webp 1280w, /images/partner-kineis.webp 1536w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
+              <a class="trusted-logo trusted-logo--symbol" href="https://www.larsentoubro.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Larsen and Toubro official website"><img src="/images/partner-larsen-toubro.webp" alt="Larsen and Toubro" width="1254" height="1254" decoding="async" srcset="/images/partner-larsen-toubro-640.webp 640w, /images/partner-larsen-toubro.webp 1254w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
+              <a class="trusted-logo" href="https://www.icicilombard.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit ICICI Lombard official website"><img src="/images/partner-icici-lombard.webp" alt="ICICI Lombard" width="1536" height="1024" decoding="async" srcset="/images/partner-icici-lombard-640.webp 640w, /images/partner-icici-lombard-1280.webp 1280w, /images/partner-icici-lombard.webp 1536w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
+              <a class="trusted-logo trusted-logo--symbol" href="https://www.sail.co.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit Steel Authority of India Limited official website"><img src="/images/partner-sail.webp" alt="Steel Authority of India Limited" width="1254" height="1254" decoding="async" srcset="/images/partner-sail-640.webp 640w, /images/partner-sail.webp 1254w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
             </div>
             <div class="trusted-logo-set" aria-hidden="true">
-              <a class="trusted-logo trusted-logo--symbol" href="https://global.toyota/en/" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-toyota.webp" alt="" width="1254" height="1254" decoding="async" srcset="/images/partner-toyota-640.webp 640w, /images/partner-toyota.webp 1254w" sizes="100vw" loading="lazy"></a>
-              <a class="trusted-logo trusted-logo--symbol" href="https://www.coca-colacompany.com/" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-coca-cola.webp" alt="" width="1254" height="1254" decoding="async" srcset="/images/partner-coca-cola-640.webp 640w, /images/partner-coca-cola.webp 1254w" sizes="100vw" loading="lazy"></a>
-              <a class="trusted-logo" href="https://corporate.digicelgroup.com/en" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-digicel.webp" alt="" width="1536" height="1024" decoding="async" srcset="/images/partner-digicel-640.webp 640w, /images/partner-digicel-1280.webp 1280w, /images/partner-digicel.webp 1536w" sizes="100vw" loading="lazy"></a>
-              <a class="trusted-logo" href="https://www.kineis.com/" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-kineis.webp" alt="" width="1536" height="1024" decoding="async" srcset="/images/partner-kineis-640.webp 640w, /images/partner-kineis-1280.webp 1280w, /images/partner-kineis.webp 1536w" sizes="100vw" loading="lazy"></a>
-              <a class="trusted-logo trusted-logo--symbol" href="https://www.larsentoubro.com/" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-larsen-toubro.webp" alt="" width="1254" height="1254" decoding="async" srcset="/images/partner-larsen-toubro-640.webp 640w, /images/partner-larsen-toubro.webp 1254w" sizes="100vw" loading="lazy"></a>
-              <a class="trusted-logo" href="https://www.icicilombard.com/" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-icici-lombard.webp" alt="" width="1536" height="1024" decoding="async" srcset="/images/partner-icici-lombard-640.webp 640w, /images/partner-icici-lombard-1280.webp 1280w, /images/partner-icici-lombard.webp 1536w" sizes="100vw" loading="lazy"></a>
-              <a class="trusted-logo trusted-logo--symbol" href="https://www.sail.co.in/" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-sail.webp" alt="" width="1254" height="1254" decoding="async" srcset="/images/partner-sail-640.webp 640w, /images/partner-sail.webp 1254w" sizes="100vw" loading="lazy"></a>
+              <a class="trusted-logo trusted-logo--symbol" href="https://global.toyota/en/" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-toyota.webp" alt="" width="1254" height="1254" decoding="async" srcset="/images/partner-toyota-640.webp 640w, /images/partner-toyota.webp 1254w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
+              <a class="trusted-logo trusted-logo--symbol" href="https://www.coca-colacompany.com/" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-coca-cola.webp" alt="" width="1254" height="1254" decoding="async" srcset="/images/partner-coca-cola-640.webp 640w, /images/partner-coca-cola.webp 1254w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
+              <a class="trusted-logo" href="https://corporate.digicelgroup.com/en" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-digicel.webp" alt="" width="1536" height="1024" decoding="async" srcset="/images/partner-digicel-640.webp 640w, /images/partner-digicel-1280.webp 1280w, /images/partner-digicel.webp 1536w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
+              <a class="trusted-logo" href="https://www.kineis.com/" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-kineis.webp" alt="" width="1536" height="1024" decoding="async" srcset="/images/partner-kineis-640.webp 640w, /images/partner-kineis-1280.webp 1280w, /images/partner-kineis.webp 1536w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
+              <a class="trusted-logo trusted-logo--symbol" href="https://www.larsentoubro.com/" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-larsen-toubro.webp" alt="" width="1254" height="1254" decoding="async" srcset="/images/partner-larsen-toubro-640.webp 640w, /images/partner-larsen-toubro.webp 1254w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
+              <a class="trusted-logo" href="https://www.icicilombard.com/" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-icici-lombard.webp" alt="" width="1536" height="1024" decoding="async" srcset="/images/partner-icici-lombard-640.webp 640w, /images/partner-icici-lombard-1280.webp 1280w, /images/partner-icici-lombard.webp 1536w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
+              <a class="trusted-logo trusted-logo--symbol" href="https://www.sail.co.in/" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="/images/partner-sail.webp" alt="" width="1254" height="1254" decoding="async" srcset="/images/partner-sail-640.webp 640w, /images/partner-sail.webp 1254w" sizes="(max-width:575px) 96px, 120px" loading="lazy" fetchpriority="low"></a>
             </div>
           </div>
         </div>
@@ -626,7 +612,7 @@
 
       <div class="about-showcase mt-5 pt-md-3">
         <div class="about-phone-stage position-relative">
-          <button id="about-play-toggle" class="about-play-toggle" aria-label="Pause auto-play">
+          <button type="button" id="about-play-toggle" class="about-play-toggle" aria-label="Pause auto-play">
             <svg class="icon-pause" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
               <rect x="6" y="4" width="4" height="16" rx="1" />
               <rect x="14" y="4" width="4" height="16" rx="1" />
@@ -721,7 +707,7 @@
 
   <!-- PERSONAL VEHICLE SAFETY -->
   <section class="personal-lifestyle" aria-labelledby="personal-vehicle-heading">
-    <img src="/images/personal-vehicle-app-confidence-v5.webp" srcset="/images/personal-vehicle-app-confidence-v5-640.webp 640w, /images/personal-vehicle-app-confidence-v5-1280.webp 1280w, /images/personal-vehicle-app-confidence-v5.webp 1536w" sizes="(min-width:992px) 65vw, 100vw" width="1536" height="1024" alt="Confident East Asian woman showing the vehicle-tracking app map and vehicle details beside her white car" decoding="async" loading="lazy">
+    <img src="/images/personal-vehicle-app-confidence-v5.webp" srcset="/images/personal-vehicle-app-confidence-v5-640.webp 640w, /images/personal-vehicle-app-confidence-v5-1280.webp 1280w, /images/personal-vehicle-app-confidence-v5.webp 1536w" sizes="(min-width:992px) 65vw, 100vw" width="1536" height="1024" alt="Confident East Asian woman showing the vehicle-tracking app map and vehicle details beside her white car" decoding="async" loading="lazy" fetchpriority="low">
     <div class="personal-lifestyle-copy">
       <p class="personal-eyebrow">Autonautics for Personal Vehicles</p>
       <h2 id="personal-vehicle-heading">Your Car.<br>Connected to You.</h2>
@@ -747,12 +733,12 @@
       <div class="scroll-track d-flex gap-3 h-100 overflow-x-auto">
         <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px);margin-left:var(--site-gutter)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#12111e;cursor:pointer"
-            onclick="location='/solutions/video-telematics/'"><img src="/images/home-video-telematics-solution-v1.webp"
-              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Windshield-mounted fleet camera with a tablet displaying recorded road footage, a driver view and playback controls" width="1536" height="1024" decoding="async" srcset="/images/home-video-telematics-solution-v1-640.webp 640w, /images/home-video-telematics-solution-v1-1280.webp 1280w, /images/home-video-telematics-solution-v1.webp 1536w" sizes="(max-width:575px) 84vw, (min-width:1103px) 860px, 78vw" loading="lazy">
+            data-card-href="/solutions/video-telematics/" role="link" tabindex="0"><img src="/images/home-video-telematics-solution-v1.webp"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Windshield-mounted fleet camera with a tablet displaying recorded road footage, a driver view and playback controls" width="1536" height="1024" decoding="async" srcset="/images/home-video-telematics-solution-v1-640.webp 640w, /images/home-video-telematics-solution-v1-1280.webp 1280w, /images/home-video-telematics-solution-v1.webp 1536w" sizes="(max-width:575px) 84vw, (min-width:1103px) 860px, 78vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute bottom-0 start-0 end-0 p-3"
               style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
               <p class="fw-semibold text-white mb-1">AI-Camera</p>
-              <p class="text-white small mb-2">See exactly what happened with AI dash-cam footage.</p><button
+              <p class="text-white small mb-2">See exactly what happened with AI dash-cam footage.</p><button type="button"
                 class="btn btn-sm border border-white border-opacity-50 text-white px-3"
                 style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
             </div>
@@ -761,12 +747,12 @@
         <div data-card class="flex-shrink-0 h-100"
           style="width:78vw;max-width:calc(25vw - 20px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0d1b2a;cursor:pointer"
-            onclick="location='/solutions/fleet-management/'"><img src="/images/solution-fleet-management-scene.webp"
-              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Fleet manager coordinating vehicles at a logistics depot" width="1586" height="992" decoding="async" srcset="/images/solution-fleet-management-scene-640.webp 640w, /images/solution-fleet-management-scene-1280.webp 1280w, /images/solution-fleet-management-scene.webp 1586w" sizes="100vw" loading="lazy">
+            data-card-href="/solutions/fleet-management/" role="link" tabindex="0"><img src="/images/solution-fleet-management-scene.webp"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Fleet manager coordinating vehicles at a logistics depot" width="1586" height="992" decoding="async" srcset="/images/solution-fleet-management-scene-640.webp 640w, /images/solution-fleet-management-scene-1280.webp 1280w, /images/solution-fleet-management-scene.webp 1586w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute bottom-0 start-0 end-0 p-3"
               style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
               <p class="fw-semibold text-white mb-1">Fleet Management</p>
-              <p class="text-white small mb-2">Run every vehicle, driver, and job from one dashboard.</p><button
+              <p class="text-white small mb-2">Run every vehicle, driver, and job from one dashboard.</p><button type="button"
                 class="btn btn-sm border border-white border-opacity-50 text-white px-3"
                 style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
             </div>
@@ -774,12 +760,12 @@
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#102030;cursor:pointer"
-            onclick="location='/solutions/fleet-tracking/'"><img src="/images/solution-fleet-tracking-scene.webp"
-              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Fleet vehicle travelling on a monitored route" width="1586" height="992" decoding="async" srcset="/images/solution-fleet-tracking-scene-640.webp 640w, /images/solution-fleet-tracking-scene-1280.webp 1280w, /images/solution-fleet-tracking-scene.webp 1586w" sizes="100vw" loading="lazy">
+            data-card-href="/solutions/fleet-tracking/" role="link" tabindex="0"><img src="/images/solution-fleet-tracking-scene.webp"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Fleet vehicle travelling on a monitored route" width="1586" height="992" decoding="async" srcset="/images/solution-fleet-tracking-scene-640.webp 640w, /images/solution-fleet-tracking-scene-1280.webp 1280w, /images/solution-fleet-tracking-scene.webp 1586w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute bottom-0 start-0 end-0 p-3"
               style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
               <p class="fw-semibold text-white mb-1">Fleet Tracking</p>
-              <p class="text-white small mb-2">Watch every vehicle move in real time on a live map.</p><button
+              <p class="text-white small mb-2">Watch every vehicle move in real time on a live map.</p><button type="button"
                 class="btn btn-sm border border-white border-opacity-50 text-white px-3"
                 style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
             </div>
@@ -787,12 +773,12 @@
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0f1e2e;cursor:pointer"
-            onclick="location='/solutions/driver-management/'"><img src="/images/solution-driver-management-scene.webp"
-              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Driver and fleet supervisor reviewing safety performance" width="1586" height="992" decoding="async" srcset="/images/solution-driver-management-scene-640.webp 640w, /images/solution-driver-management-scene-1280.webp 1280w, /images/solution-driver-management-scene.webp 1586w" sizes="100vw" loading="lazy">
+            data-card-href="/solutions/driver-management/" role="link" tabindex="0"><img src="/images/solution-driver-management-scene.webp"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Driver and fleet supervisor reviewing safety performance" width="1586" height="992" decoding="async" srcset="/images/solution-driver-management-scene-640.webp 640w, /images/solution-driver-management-scene-1280.webp 1280w, /images/solution-driver-management-scene.webp 1586w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute bottom-0 start-0 end-0 p-3"
               style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
               <p class="fw-semibold text-white mb-1">Driver Management</p>
-              <p class="text-white small mb-2">Score driving behaviour and cut risky habits.</p><button
+              <p class="text-white small mb-2">Score driving behaviour and cut risky habits.</p><button type="button"
                 class="btn btn-sm border border-white border-opacity-50 text-white px-3"
                 style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
             </div>
@@ -800,12 +786,12 @@
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#111c28;cursor:pointer"
-            onclick="location='/solutions/asset-management/'"><img src="/images/solution-asset-tracking-scene.webp"
-              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Manager locating logistics assets at an operations yard" width="1586" height="992" decoding="async" srcset="/images/solution-asset-tracking-scene-640.webp 640w, /images/solution-asset-tracking-scene-1280.webp 1280w, /images/solution-asset-tracking-scene.webp 1586w" sizes="100vw" loading="lazy">
+            data-card-href="/solutions/asset-management/" role="link" tabindex="0"><img src="/images/solution-asset-tracking-scene.webp"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Manager locating logistics assets at an operations yard" width="1586" height="992" decoding="async" srcset="/images/solution-asset-tracking-scene-640.webp 640w, /images/solution-asset-tracking-scene-1280.webp 1280w, /images/solution-asset-tracking-scene.webp 1586w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute bottom-0 start-0 end-0 p-3"
               style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
               <p class="fw-semibold text-white mb-1">Asset Tracking</p>
-              <p class="text-white small mb-2">Locate powered and non-powered assets anytime.</p><button
+              <p class="text-white small mb-2">Locate powered and non-powered assets anytime.</p><button type="button"
                 class="btn btn-sm border border-white border-opacity-50 text-white px-3"
                 style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
             </div>
@@ -813,12 +799,12 @@
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0e1a26;cursor:pointer"
-            onclick="location='/solutions/fuel-management/'"><img src="/images/solution-fuel-management-scene.webp"
-              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Fleet vehicle refuelling at a commercial depot" width="1586" height="992" decoding="async" srcset="/images/solution-fuel-management-scene-640.webp 640w, /images/solution-fuel-management-scene-1280.webp 1280w, /images/solution-fuel-management-scene.webp 1586w" sizes="100vw" loading="lazy">
+            data-card-href="/solutions/fuel-management/" role="link" tabindex="0"><img src="/images/solution-fuel-management-scene.webp"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Fleet vehicle refuelling at a commercial depot" width="1586" height="992" decoding="async" srcset="/images/solution-fuel-management-scene-640.webp 640w, /images/solution-fuel-management-scene-1280.webp 1280w, /images/solution-fuel-management-scene.webp 1586w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute bottom-0 start-0 end-0 p-3"
               style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
               <p class="fw-semibold text-white mb-1">Fuel Management</p>
-              <p class="text-white small mb-2">Catch fuel theft and waste before it adds up.</p><button
+              <p class="text-white small mb-2">Catch fuel theft and waste before it adds up.</p><button type="button"
                 class="btn btn-sm border border-white border-opacity-50 text-white px-3"
                 style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
             </div>
@@ -826,12 +812,12 @@
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0d1f30;cursor:pointer"
-            onclick="location='/platform/last-mile/'"><img src="/images/solution-last-mile-delivery-scene.webp"
-              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Courier completing a last mile delivery" width="1586" height="992" decoding="async" srcset="/images/solution-last-mile-delivery-scene-640.webp 640w, /images/solution-last-mile-delivery-scene-1280.webp 1280w, /images/solution-last-mile-delivery-scene.webp 1586w" sizes="100vw" loading="lazy">
+            data-card-href="/platform/last-mile/" role="link" tabindex="0"><img src="/images/solution-last-mile-delivery-scene.webp"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Courier completing a last mile delivery" width="1586" height="992" decoding="async" srcset="/images/solution-last-mile-delivery-scene-640.webp 640w, /images/solution-last-mile-delivery-scene-1280.webp 1280w, /images/solution-last-mile-delivery-scene.webp 1586w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute bottom-0 start-0 end-0 p-3"
               style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
               <p class="fw-semibold text-white mb-1">Last Mile Delivery</p>
-              <p class="text-white small mb-2">Give drivers routes and customers live ETAs.</p><button
+              <p class="text-white small mb-2">Give drivers routes and customers live ETAs.</p><button type="button"
                 class="btn btn-sm border border-white border-opacity-50 text-white px-3"
                 style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
             </div>
@@ -839,12 +825,12 @@
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#14121e;cursor:pointer"
-            onclick="location='/solutions/fleet-security/'"><img src="/images/solution-fleet-security-scene.webp"
-              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Secure fleet parking compound at dusk" width="1586" height="992" decoding="async" srcset="/images/solution-fleet-security-scene-640.webp 640w, /images/solution-fleet-security-scene-1280.webp 1280w, /images/solution-fleet-security-scene.webp 1586w" sizes="100vw" loading="lazy">
+            data-card-href="/solutions/fleet-security/" role="link" tabindex="0"><img src="/images/solution-fleet-security-scene.webp"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Secure fleet parking compound at dusk" width="1586" height="992" decoding="async" srcset="/images/solution-fleet-security-scene-640.webp 640w, /images/solution-fleet-security-scene-1280.webp 1280w, /images/solution-fleet-security-scene.webp 1586w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute bottom-0 start-0 end-0 p-3"
               style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
               <p class="fw-semibold text-white mb-1">Fleet Security</p>
-              <p class="text-white small mb-2">Immobilise, recover, and protect vehicles remotely.</p><button
+              <p class="text-white small mb-2">Immobilise, recover, and protect vehicles remotely.</p><button type="button"
                 class="btn btn-sm border border-white border-opacity-50 text-white px-3"
                 style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
             </div>
@@ -852,12 +838,12 @@
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#101828;cursor:pointer"
-            onclick="location='/solutions/dispatch-management/'"><img src="/images/solution-dispatch-management-scene.webp"
-              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Dispatcher coordinating a field service vehicle" width="1586" height="992" decoding="async" srcset="/images/solution-dispatch-management-scene-640.webp 640w, /images/solution-dispatch-management-scene-1280.webp 1280w, /images/solution-dispatch-management-scene.webp 1586w" sizes="100vw" loading="lazy">
+            data-card-href="/solutions/dispatch-management/" role="link" tabindex="0"><img src="/images/solution-dispatch-management-scene.webp"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Dispatcher coordinating a field service vehicle" width="1586" height="992" decoding="async" srcset="/images/solution-dispatch-management-scene-640.webp 640w, /images/solution-dispatch-management-scene-1280.webp 1280w, /images/solution-dispatch-management-scene.webp 1586w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute bottom-0 start-0 end-0 p-3"
               style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
               <p class="fw-semibold text-white mb-1">Dispatch Management</p>
-              <p class="text-white small mb-2">Assign the nearest driver to the next job in seconds.</p><button
+              <p class="text-white small mb-2">Assign the nearest driver to the next job in seconds.</p><button type="button"
                 class="btn btn-sm border border-white border-opacity-50 text-white px-3"
                 style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
             </div>
@@ -865,12 +851,12 @@
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0a1e2c;cursor:pointer"
-            onclick="location='/platform/iot/'"><img src="/images/solution-iot-monitoring-scene.webp"
-              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Engineer monitoring industrial IoT equipment" width="1586" height="992" decoding="async" srcset="/images/solution-iot-monitoring-scene-640.webp 640w, /images/solution-iot-monitoring-scene-1280.webp 1280w, /images/solution-iot-monitoring-scene.webp 1586w" sizes="100vw" loading="lazy">
+            data-card-href="/platform/iot/" role="link" tabindex="0"><img src="/images/solution-iot-monitoring-scene.webp"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Engineer monitoring industrial IoT equipment" width="1586" height="992" decoding="async" srcset="/images/solution-iot-monitoring-scene-640.webp 640w, /images/solution-iot-monitoring-scene-1280.webp 1280w, /images/solution-iot-monitoring-scene.webp 1586w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute bottom-0 start-0 end-0 p-3"
               style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
               <p class="fw-semibold text-white mb-1">Connected Monitor</p>
-              <p class="text-white small mb-2">Watch sensors and equipment from anywhere.</p><button
+              <p class="text-white small mb-2">Watch sensors and equipment from anywhere.</p><button type="button"
                 class="btn btn-sm border border-white border-opacity-50 text-white px-3"
                 style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
             </div>
@@ -878,12 +864,12 @@
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0c1c2a;cursor:pointer"
-            onclick="location='/platform/iot/'"><img src="/images/solution-cold-chain-monitoring-scene.webp"
-              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Refrigerated truck with cold-chain sensor monitoring" width="1586" height="992" decoding="async" srcset="/images/solution-cold-chain-monitoring-scene-640.webp 640w, /images/solution-cold-chain-monitoring-scene-1280.webp 1280w, /images/solution-cold-chain-monitoring-scene.webp 1586w" sizes="100vw" loading="lazy">
+            data-card-href="/platform/iot/" role="link" tabindex="0"><img src="/images/solution-cold-chain-monitoring-scene.webp"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Refrigerated truck with cold-chain sensor monitoring" width="1586" height="992" decoding="async" srcset="/images/solution-cold-chain-monitoring-scene-640.webp 640w, /images/solution-cold-chain-monitoring-scene-1280.webp 1280w, /images/solution-cold-chain-monitoring-scene.webp 1586w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute bottom-0 start-0 end-0 p-3"
               style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
               <p class="fw-semibold text-white mb-1">Cold Chain Monitoring</p>
-              <p class="text-white small mb-2">Keep temperature-sensitive loads in range in transit.</p><button
+              <p class="text-white small mb-2">Keep temperature-sensitive loads in range in transit.</p><button type="button"
                 class="btn btn-sm border border-white border-opacity-50 text-white px-3"
                 style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
             </div>
@@ -891,12 +877,12 @@
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:78vw;max-width:calc(25vw - 20px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#0f1c28;cursor:pointer"
-            onclick="location='/platform/iot/'"><img src="/images/solution-generator-monitoring-scene.webp"
-              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Engineer monitoring a remote standby generator" width="1568" height="1003" decoding="async" srcset="/images/solution-generator-monitoring-scene-640.webp 640w, /images/solution-generator-monitoring-scene-1280.webp 1280w, /images/solution-generator-monitoring-scene.webp 1568w" sizes="100vw" loading="lazy">
+            data-card-href="/platform/iot/" role="link" tabindex="0"><img src="/images/solution-generator-monitoring-scene.webp"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50" alt="Engineer monitoring a remote standby generator" width="1568" height="1003" decoding="async" srcset="/images/solution-generator-monitoring-scene-640.webp 640w, /images/solution-generator-monitoring-scene-1280.webp 1280w, /images/solution-generator-monitoring-scene.webp 1568w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute bottom-0 start-0 end-0 p-3"
               style="background:linear-gradient(to top,rgba(0,0,0,.75),transparent);z-index:2">
               <p class="fw-semibold text-white mb-1">Generator Monitoring</p>
-              <p class="text-white small mb-2">Track runtime, fuel, and faults on remote generators.</p><button
+              <p class="text-white small mb-2">Track runtime, fuel, and faults on remote generators.</p><button type="button"
                 class="btn btn-sm border border-white border-opacity-50 text-white px-3"
                 style="background:rgba(255,255,255,.1);font-size:.75rem">Explore &rarr;</button>
             </div>
@@ -913,11 +899,11 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
         </svg></button>
       <div class="position-absolute bottom-0 start-50 translate-middle-x mb-3 d-flex gap-2" style="z-index:20">
-        <button class="dot-btn active"></button><button class="dot-btn"></button><button
-          class="dot-btn"></button><button class="dot-btn"></button><button class="dot-btn"></button><button
-          class="dot-btn"></button><button class="dot-btn"></button><button class="dot-btn"></button><button
-          class="dot-btn"></button><button class="dot-btn"></button><button class="dot-btn"></button><button
-          class="dot-btn"></button>
+        <button type="button" class="dot-btn active" aria-label="Show carousel item 10"></button><button type="button" class="dot-btn" aria-label="Show carousel item 11"></button><button type="button"
+          class="dot-btn" aria-label="Show carousel item 12"></button><button type="button" class="dot-btn" aria-label="Show carousel item 13"></button><button type="button" class="dot-btn" aria-label="Show carousel item 14"></button><button type="button"
+          class="dot-btn" aria-label="Show carousel item 15"></button><button type="button" class="dot-btn" aria-label="Show carousel item 16"></button><button type="button" class="dot-btn" aria-label="Show carousel item 17"></button><button type="button"
+          class="dot-btn" aria-label="Show carousel item 18"></button><button type="button" class="dot-btn" aria-label="Show carousel item 19"></button><button type="button" class="dot-btn" aria-label="Show carousel item 20"></button><button type="button"
+          class="dot-btn" aria-label="Show carousel item 21"></button>
       </div>
     </div>
   </section>
@@ -936,7 +922,7 @@
 
       <div class="mt-5 pt-md-3">
         <div class="process-photo-stage position-relative">
-          <button class="about-play-toggle" aria-label="Pause auto-play">
+          <button type="button" class="about-play-toggle" aria-label="Pause auto-play">
             <svg class="icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
               <rect x="6" y="4" width="4" height="16" rx="1" />
               <rect x="14" y="4" width="4" height="16" rx="1" />
@@ -946,13 +932,13 @@
             </svg>
           </button>
           <div class="about-phone-frame process-photo-frame active" data-phone="0">
-            <img src="/images/platform-connected-operations-editorial.webp" alt="One Connected Platform" width="1536" height="1024" decoding="async" srcset="/images/platform-connected-operations-editorial-640.webp 640w, /images/platform-connected-operations-editorial-1280.webp 1280w, /images/platform-connected-operations-editorial.webp 1536w" sizes="100vw" loading="lazy">
+            <img src="/images/platform-connected-operations-editorial.webp" alt="One Connected Platform" width="1536" height="1024" decoding="async" srcset="/images/platform-connected-operations-editorial-640.webp 640w, /images/platform-connected-operations-editorial-1280.webp 1280w, /images/platform-connected-operations-editorial.webp 1536w" sizes="100vw" loading="lazy" fetchpriority="low">
           </div>
           <div class="about-phone-frame process-photo-frame" data-phone="1">
-            <img src="/images/platform-automated-workflows-driver-seat.webp" alt="Professional fleet driver seated and belted behind the steering wheel with both hands driving safely" width="1536" height="1024" decoding="async" srcset="/images/platform-automated-workflows-driver-seat-640.webp 640w, /images/platform-automated-workflows-driver-seat-1280.webp 1280w, /images/platform-automated-workflows-driver-seat.webp 1536w" sizes="100vw" loading="lazy">
+            <img src="/images/platform-automated-workflows-driver-seat.webp" alt="Professional fleet driver seated and belted behind the steering wheel with both hands driving safely" width="1536" height="1024" decoding="async" srcset="/images/platform-automated-workflows-driver-seat-640.webp 640w, /images/platform-automated-workflows-driver-seat-1280.webp 1280w, /images/platform-automated-workflows-driver-seat.webp 1536w" sizes="100vw" loading="lazy" fetchpriority="low">
           </div>
           <div class="about-phone-frame process-photo-frame" data-phone="2">
-            <img src="/images/platform-actionable-reports-cabin.webp" alt="Reports You Can Act On" width="1536" height="1024" decoding="async" srcset="/images/platform-actionable-reports-cabin-640.webp 640w, /images/platform-actionable-reports-cabin-1280.webp 1280w, /images/platform-actionable-reports-cabin.webp 1536w" sizes="100vw" loading="lazy">
+            <img src="/images/platform-actionable-reports-cabin.webp" alt="Reports You Can Act On" width="1536" height="1024" decoding="async" srcset="/images/platform-actionable-reports-cabin-640.webp 640w, /images/platform-actionable-reports-cabin-1280.webp 1280w, /images/platform-actionable-reports-cabin.webp 1536w" sizes="100vw" loading="lazy" fetchpriority="low">
           </div>
         </div>
 
@@ -978,45 +964,8 @@
         </div>
       </div>
 
-      <div class="intelligence-benefits intelligence-section" aria-labelledby="home-intelligence-heading">
-        <div class="intelligence-intro">
-          <p class="section-eyebrow">What You Get</p>
-          <h3 class="section-heading" id="home-intelligence-heading">Predict. Prevent. Make Better Decisions.</h3>
-          <p class="section-lede">Anstel’s Autonautics platform turns vehicle, asset and IoT data into practical insights. AI-assisted analysis, alerts and connected workflows help you anticipate issues, act early and make informed operational decisions.</p>
-        </div>
-        <div class="intelligence-carousel" data-intelligence-carousel role="region" aria-roledescription="carousel" aria-labelledby="home-intelligence-heading">
-    <div class="intelligence-phones" aria-label="Autonautics intelligence stories. Use the left and right arrow keys to change slides, or Space to pause and resume automatic navigation.">
-      <article class="intelligence-phone is-active" data-intelligence-slide role="group" aria-roledescription="slide" aria-label="1 of 3" id="home-intelligence-slide-1">
-        <div class="intelligence-screen">
-          <div class="intelligence-phone-topline"><span>Autonautics</span><span class="intelligence-phone-number">01 / 03</span></div>
-          <svg class="intelligence-graphic" viewBox="0 0 240 165" fill="none" aria-hidden="true" focusable="false"><rect x="15" y="15" width="210" height="135" rx="14" fill="#fff"/><path d="M38 45h165M38 78h165M38 111h165" stroke="#e4e9f1"/><path d="M38 122l28-23 27 8 30-39 30 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M153 78l25-29 25-14" stroke="currentColor" stroke-width="3" stroke-dasharray="5 7" stroke-linecap="round"/><path d="M153 78l25-29 25-14v51l-25 8z" fill="#4169dc" opacity=".09"/><circle cx="153" cy="78" r="6" fill="currentColor" stroke="#fff" stroke-width="3"/></svg>
-          <h4>Predictive Insights</h4>
-          <p>Identify patterns in vehicle and sensor data to anticipate potential risks, maintenance needs and changes in performance.</p>
-        </div>
-      </article>
-      <article class="intelligence-phone" data-intelligence-slide role="group" aria-roledescription="slide" aria-label="2 of 3" id="home-intelligence-slide-2">
-        <div class="intelligence-screen">
-          <div class="intelligence-phone-topline"><span>Autonautics</span><span class="intelligence-phone-number">02 / 03</span></div>
-          <svg class="intelligence-graphic" viewBox="0 0 240 165" fill="none" aria-hidden="true" focusable="false"><rect x="15" y="15" width="210" height="135" rx="14" fill="#fff"/><rect x="33" y="35" width="119" height="30" rx="7" fill="#eef2fa"/><circle cx="48" cy="50" r="7" fill="#4169dc"/><path d="M45 50l2 2 4-4" stroke="#fff" stroke-width="1.7" fill="none"/><path d="M67 47h63M67 54h42M67 84h49M67 91h33M67 119h62M67 126h41" stroke="#a8b5ca" stroke-width="3" stroke-linecap="round"/><circle cx="48" cy="88" r="7" fill="#e4eaf4"/><circle cx="48" cy="123" r="7" fill="#e4eaf4"/><path d="M175 63l28 11v23c0 22-28 35-28 35s-28-13-28-35V74z" fill="#e7edfc" stroke="currentColor" stroke-width="2"/><path d="M162 97l9 9 18-21" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <h4>Preventive Action</h4>
-          <p>Act early with configurable alerts, maintenance reminders and workflows that help reduce avoidable disruption.</p>
-        </div>
-      </article>
-      <article class="intelligence-phone" data-intelligence-slide role="group" aria-roledescription="slide" aria-label="3 of 3" id="home-intelligence-slide-3">
-        <div class="intelligence-screen">
-          <div class="intelligence-phone-topline"><span>Autonautics</span><span class="intelligence-phone-number">03 / 03</span></div>
-          <svg class="intelligence-graphic" viewBox="0 0 240 165" fill="none" aria-hidden="true" focusable="false"><rect x="15" y="15" width="210" height="135" rx="14" fill="#fff"/><path d="M71 82h31M102 82V47h43M102 82v37h43" stroke="#b7c5df" stroke-width="2" fill="none"/><path d="M71 82h31V47h43" stroke="currentColor" stroke-width="2.5" fill="none"/><rect x="32" y="60" width="41" height="44" rx="10" fill="#e7edfc"/><path d="M44 87V76M52 87V69M60 87V79" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><rect x="144" y="30" width="60" height="35" rx="8" fill="#4169dc"/><path d="M163 47l7 7 12-14" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><rect x="144" y="101" width="60" height="35" rx="8" fill="#eef2fa"/><path d="M158 119h31" stroke="#a8b5ca" stroke-width="3" stroke-linecap="round"/></svg>
-          <h4>Prescriptive Guidance</h4>
-          <p>Use analytical insights and decision support to evaluate next steps across maintenance, resource use and operational planning.</p>
-        </div>
-      </article>
-    </div>
-    <p class="intelligence-status" aria-live="polite" aria-atomic="true"></p>
-  </div>
-      </div>
-
       <div class="mt-5">
-        <a href="/platform/" class="btn btn-dark about-anstel-cta px-4 py-2">Explore Autonautics <span
+        <a href="/platform/" class="btn btn-dark about-anstel-cta px-4 py-2">Discover Autonautics <span
             aria-hidden="true">&rarr;</span></a>
       </div>
     </div>
@@ -1039,7 +988,7 @@
           style="width:82vw;max-width:calc(50vw - 24px);margin-left:var(--site-gutter)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#c0b8a8"><img
               src="/images/platform-connected-fleet.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-              alt="Connected Fleet" width="1536" height="1024" decoding="async" srcset="/images/platform-connected-fleet-640.webp 640w, /images/platform-connected-fleet-1280.webp 1280w, /images/platform-connected-fleet.webp 1536w" sizes="100vw" loading="lazy">
+              alt="Connected Fleet" width="1536" height="1024" decoding="async" srcset="/images/platform-connected-fleet-640.webp 640w, /images/platform-connected-fleet-1280.webp 1280w, /images/platform-connected-fleet.webp 1536w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute inset-0 top-0 start-0 end-0 bottom-0"
               style="background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,.15) 40%,transparent 70%)"></div><span
               class="position-absolute top-0 start-0 mt-3 ms-3 text-white small">Product</span>
@@ -1047,16 +996,16 @@
               <h3 class="text-white fw-bold fs-4">Connected Fleet</h3>
               <p class="text-white small">Track, manage, and maintain your whole fleet from one place.</p>
               <div class="d-flex gap-2 mt-2"><a href="/platform/connected-fleet/" class="btn btn-sm text-white px-3 py-1"
-                  style="background:#3457D5;font-size:.8rem">Explore Product &rarr;</a><a href="/platform/connected-fleet/"
+                style="background:#3457D5;font-size:.8rem">Explore Product &rarr;</a><a href="/platform/connected-fleet/" aria-label="Learn more about Connected Fleet"
                   class="btn btn-sm text-dark px-3 py-1" style="background:rgba(255,255,255,.8);font-size:.8rem">Learn
-                  More</a></div>
+                  More<span class="visually-hidden"> about Connected Fleet</span></a></div>
             </div>
           </div>
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:82vw;max-width:calc(50vw - 24px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#a8b4c0"><img
               src="/images/platform-job-scheduling.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-              alt="Job Scheduling" width="1536" height="1024" decoding="async" srcset="/images/platform-job-scheduling-640.webp 640w, /images/platform-job-scheduling-1280.webp 1280w, /images/platform-job-scheduling.webp 1536w" sizes="100vw" loading="lazy">
+              alt="Job Scheduling" width="1536" height="1024" decoding="async" srcset="/images/platform-job-scheduling-640.webp 640w, /images/platform-job-scheduling-1280.webp 1280w, /images/platform-job-scheduling.webp 1536w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute top-0 start-0 end-0 bottom-0"
               style="background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,.15) 40%,transparent 70%)"></div><span
               class="position-absolute top-0 start-0 mt-3 ms-3 text-white small">Product</span>
@@ -1064,16 +1013,16 @@
               <h3 class="text-white fw-bold fs-4">Job Scheduling</h3>
               <p class="text-white small">Plan, assign, and track every job to completion.</p>
               <div class="d-flex gap-2 mt-2"><a href="/platform/job-scheduling/" class="btn btn-sm text-white px-3 py-1"
-                  style="background:#3457D5;font-size:.8rem">Explore Product &rarr;</a><a href="/platform/job-scheduling/"
+                style="background:#3457D5;font-size:.8rem">Explore Product &rarr;</a><a href="/platform/job-scheduling/" aria-label="Learn more about Job Scheduling"
                   class="btn btn-sm text-dark px-3 py-1" style="background:rgba(255,255,255,.8);font-size:.8rem">Learn
-                  More</a></div>
+                  More<span class="visually-hidden"> about Job Scheduling</span></a></div>
             </div>
           </div>
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:82vw;max-width:calc(50vw - 24px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#a8b4c0"><img
               src="/images/platform-last-mile.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-              alt="Last Mile Delivery" width="1536" height="1024" decoding="async" srcset="/images/platform-last-mile-640.webp 640w, /images/platform-last-mile-1280.webp 1280w, /images/platform-last-mile.webp 1536w" sizes="100vw" loading="lazy">
+              alt="Last Mile Delivery" width="1536" height="1024" decoding="async" srcset="/images/platform-last-mile-640.webp 640w, /images/platform-last-mile-1280.webp 1280w, /images/platform-last-mile.webp 1536w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute top-0 start-0 end-0 bottom-0"
               style="background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,.15) 40%,transparent 70%)"></div><span
               class="position-absolute top-0 start-0 mt-3 ms-3 text-white small">Product</span>
@@ -1081,50 +1030,50 @@
               <h3 class="text-white fw-bold fs-4">Last Mile Delivery</h3>
               <p class="text-white small">Connect dispatchers, drivers, and customers on every drop.</p>
               <div class="d-flex gap-2 mt-2"><a href="/platform/last-mile/" class="btn btn-sm text-white px-3 py-1"
-                  style="background:#3457D5;font-size:.8rem">Explore Product &rarr;</a><a href="/platform/last-mile/"
+                style="background:#3457D5;font-size:.8rem">Explore Product &rarr;</a><a href="/platform/last-mile/" aria-label="Learn more about Last Mile Delivery"
                   class="btn btn-sm text-dark px-3 py-1" style="background:rgba(255,255,255,.8);font-size:.8rem">Learn
-                  More</a></div>
+                  More<span class="visually-hidden"> about Last Mile Delivery</span></a></div>
             </div>
           </div>
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:82vw;max-width:calc(50vw - 24px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#a8b4c0"><img
               src="/images/platform-security-monitor.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-              alt="Patrol Connect" width="1536" height="1024" decoding="async" srcset="/images/platform-security-monitor-640.webp 640w, /images/platform-security-monitor-1280.webp 1280w, /images/platform-security-monitor.webp 1536w" sizes="100vw" loading="lazy">
+              alt="Patrol Connect" width="1536" height="1024" decoding="async" srcset="/images/platform-security-monitor-640.webp 640w, /images/platform-security-monitor-1280.webp 1280w, /images/platform-security-monitor.webp 1536w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute top-0 start-0 end-0 bottom-0"
               style="background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,.15) 40%,transparent 70%)"></div><span
               class="position-absolute top-0 start-0 mt-3 ms-3 text-white small">Product</span>
             <div class="position-absolute bottom-0 start-0 mb-3 ms-3">
               <h3 class="text-white fw-bold fs-4">Patrol Connect</h3>
-              <p class="text-white small">Vehicle security &amp; response</p>
+              <p class="text-white small">Protect vehicles and drivers with live security and recovery.</p>
               <div class="d-flex gap-2 mt-2"><a href="/platform/security-monitor/" class="btn btn-sm text-white px-3 py-1"
-                  style="background:#3457D5;font-size:.8rem">Explore Product &rarr;</a><a href="/platform/security-monitor/"
+                style="background:#3457D5;font-size:.8rem">Explore Product &rarr;</a><a href="/platform/security-monitor/" aria-label="Learn more about Patrol Connect"
                   class="btn btn-sm text-dark px-3 py-1" style="background:rgba(255,255,255,.8);font-size:.8rem">Learn
-                  More</a></div>
+                  More<span class="visually-hidden"> about Patrol Connect</span></a></div>
             </div>
           </div>
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:82vw;max-width:calc(50vw - 24px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#a8b4c0"><img
               src="/images/platform-iot.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-              alt="Connected Monitor" width="1536" height="1024" decoding="async" srcset="/images/platform-iot-640.webp 640w, /images/platform-iot-1280.webp 1280w, /images/platform-iot.webp 1536w" sizes="100vw" loading="lazy">
+              alt="Connected Monitor" width="1536" height="1024" decoding="async" srcset="/images/platform-iot-640.webp 640w, /images/platform-iot-1280.webp 1280w, /images/platform-iot.webp 1536w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute top-0 start-0 end-0 bottom-0"
               style="background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,.15) 40%,transparent 70%)"></div><span
               class="position-absolute top-0 start-0 mt-3 ms-3 text-white small">Product</span>
             <div class="position-absolute bottom-0 start-0 mb-3 ms-3">
               <h3 class="text-white fw-bold fs-4">Connected Monitor</h3>
-              <p class="text-white small">Real-time monitoring for IoT devices and sensors.</p>
+              <p class="text-white small">Connect and monitor sensors, trackers, and industrial equipment.</p>
               <div class="d-flex gap-2 mt-2"><a href="/platform/iot/" class="btn btn-sm text-white px-3 py-1"
-                  style="background:#3457D5;font-size:.8rem">Explore Product &rarr;</a><a href="/platform/iot/"
+                style="background:#3457D5;font-size:.8rem">Explore Product &rarr;</a><a href="/platform/iot/" aria-label="Learn more about Connected Monitor"
                   class="btn btn-sm text-dark px-3 py-1" style="background:rgba(255,255,255,.8);font-size:.8rem">Learn
-                  More</a></div>
+                  More<span class="visually-hidden"> about Connected Monitor</span></a></div>
             </div>
           </div>
         </div>
         <div data-card class="flex-shrink-0 h-100" style="width:82vw;max-width:calc(50vw - 24px)">
           <div class="position-relative h-100 rounded-4 overflow-hidden" style="background:#c0b8a8"><img
               src="/images/platform-merchant.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-              alt="Autonautics Merchant" width="1536" height="1024" decoding="async" srcset="/images/platform-merchant-640.webp 640w, /images/platform-merchant-1280.webp 1280w, /images/platform-merchant.webp 1536w" sizes="100vw" loading="lazy">
+              alt="Autonautics Merchant" width="1536" height="1024" decoding="async" srcset="/images/platform-merchant-640.webp 640w, /images/platform-merchant-1280.webp 1280w, /images/platform-merchant.webp 1536w" sizes="100vw" loading="lazy" fetchpriority="low">
             <div class="position-absolute top-0 start-0 end-0 bottom-0"
               style="background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,.15) 40%,transparent 70%)"></div><span
               class="position-absolute top-0 start-0 mt-3 ms-3 text-white small">Product</span>
@@ -1132,9 +1081,9 @@
               <h3 class="text-white fw-bold fs-4">Autonautics Merchant</h3>
               <p class="text-white small">Bring fleet services and business operations into one system.</p>
               <div class="d-flex gap-2 mt-2"><a href="/platform/merchant/" class="btn btn-sm text-white px-3 py-1"
-                  style="background:#3457D5;font-size:.8rem">Explore Product &rarr;</a><a href="/platform/merchant/"
+                style="background:#3457D5;font-size:.8rem">Explore Product &rarr;</a><a href="/platform/merchant/" aria-label="Learn more about Autonautics Merchant"
                   class="btn btn-sm text-dark px-3 py-1" style="background:rgba(255,255,255,.8);font-size:.8rem">Learn
-                  More</a></div>
+                  More<span class="visually-hidden"> about Autonautics Merchant</span></a></div>
             </div>
           </div>
         </div>
@@ -1149,9 +1098,9 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
         </svg></button>
       <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 d-flex gap-2" style="z-index:20">
-        <button class="dot-btn active"></button><button class="dot-btn"></button><button
-          class="dot-btn"></button><button class="dot-btn"></button><button class="dot-btn"></button><button
-          class="dot-btn"></button>
+        <button type="button" class="dot-btn active" aria-label="Show carousel item 22"></button><button type="button" class="dot-btn" aria-label="Show carousel item 23"></button><button type="button"
+          class="dot-btn" aria-label="Show carousel item 24"></button><button type="button" class="dot-btn" aria-label="Show carousel item 25"></button><button type="button" class="dot-btn" aria-label="Show carousel item 26"></button><button type="button"
+          class="dot-btn" aria-label="Show carousel item 27"></button>
       </div>
     </div>
   </section>
@@ -1493,7 +1442,7 @@
       <p class="section-lede mb-5" style="max-width:820px">Anstel supports connected fleet, asset, and IoT operations across Australia, New Zealand, India, Papua New Guinea, and Fiji. Operations across the five markets are coordinated by Anstel&rsquo;s teams in Sydney, Gurugram and Suva.</p>
 
       <div class="presence-map-wrap tesla-card rounded-4 bg-white p-3 p-md-4">
-        <div id="presence-map" aria-label="Map highlighting Anstel's operating countries: India, Australia, New Zealand, Fiji, and Papua New Guinea"></div>
+        <div id="presence-map" role="img" aria-label="Map highlighting Anstel's operating countries: India, Australia, New Zealand, Fiji, and Papua New Guinea"></div>
       </div>
       <nav class="presence-region-nav mt-4" aria-label="Explore Autonautics regions">
         <a href="/regions/australia/">Australia</a><a href="/regions/india/">India</a><a href="/regions/fiji/">Fiji</a><a href="/regions/papua-new-guinea/">Papua New Guinea</a><a href="/regions/new-zealand/">New Zealand</a>
@@ -1574,7 +1523,7 @@
       </div>
     </div>
   </section>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Anstel do?","acceptedAnswer":{"@type":"Answer","text":"Anstel builds Autonautics, a fleet management and IoT platform that helps organisations track vehicles, manage drivers, monitor assets, run deliveries, and secure operations from one system."}},{"@type":"Question","name":"What is Autonautics?","acceptedAnswer":{"@type":"Answer","text":"Autonautics is Anstel's cloud platform. It connects your GPS trackers, cameras, and sensors, collects their data in real time, and turns it into live tracking, alerts, reports, and automated workflows."}},{"@type":"Question","name":"What hardware does Autonautics support?","acceptedAnswer":{"@type":"Answer","text":"GPS trackers and telematics devices from Teltonika, Queclink, and Jimi, AI dash cameras, fuel and temperature sensors, and industrial IoT hardware, with support for existing devices."}},{"@type":"Question","name":"Which industries does Anstel serve?","acceptedAnswer":{"@type":"Answer","text":"Logistics and transport, cold chain, construction, mining, waste, and field services, and any operation that runs vehicles, assets, or connected equipment."}},{"@type":"Question","name":"How do I get started?","acceptedAnswer":{"@type":"Answer","text":"Request a demo and the Anstel team will show you the platform on your own use case, then help you connect devices and roll out to your fleet."}},{"@type":"Question","name":"Can Autonautics be used for a single personal vehicle?","acceptedAnswer":{"@type":"Answer","text":"Yes. Autonautics can support one vehicle as well as larger fleets. Individual owners can use compatible GPS and telematics devices for live location, trip history, safety alerts and vehicle-security monitoring. Available capabilities depend on the selected device and service configuration."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Anstel do?","acceptedAnswer":{"@type":"Answer","text":"Anstel builds Autonautics, a fleet management and IoT platform that helps organisations track vehicles, manage drivers, monitor assets, run deliveries, and secure operations from one system."}},{"@type":"Question","name":"What is Autonautics?","acceptedAnswer":{"@type":"Answer","text":"Autonautics is Anstel’s cloud platform. It connects your GPS trackers, cameras, and sensors, collects their data in real time, and turns it into live tracking, alerts, reports, and automated workflows."}},{"@type":"Question","name":"What hardware does Autonautics support?","acceptedAnswer":{"@type":"Answer","text":"GPS trackers and telematics devices from Teltonika, Queclink, and Jimi, AI dash cameras, fuel and temperature sensors, and industrial IoT hardware—with support for existing devices, so there’s no need to replace what you have."}},{"@type":"Question","name":"Which industries does Anstel serve?","acceptedAnswer":{"@type":"Answer","text":"Logistics and transport, cold chain, construction, mining, waste, and field services—any operation that runs vehicles, assets, or connected equipment."}},{"@type":"Question","name":"How do I get started?","acceptedAnswer":{"@type":"Answer","text":"Request a demo and the Anstel team will show you the platform on your own use case, then help you connect devices and roll out to your fleet."}},{"@type":"Question","name":"Can Autonautics be used for a single personal vehicle?","acceptedAnswer":{"@type":"Answer","text":"Yes. Autonautics can support one vehicle as well as larger fleets. Individual owners can use compatible GPS and telematics devices for live location, trip history, safety alerts and vehicle-security monitoring. Available capabilities depend on the selected device and service configuration."}}]}</script>
 
   <!-- FINAL CTA -->
   <section class="section-pad text-center cta-band" style="background:#0d1b2a">
@@ -1592,7 +1541,7 @@
     </div>
     </div>
     <figure class="cta-band-media mb-0">
-      <img src="/images/cta-connected-operations.webp" alt="Connected vehicles, assets and operations at a modern enterprise campus" width="1832" height="859" decoding="async" srcset="/images/cta-connected-operations-640.webp 640w, /images/cta-connected-operations-1280.webp 1280w, /images/cta-connected-operations.webp 1832w" sizes="100vw" loading="lazy">
+      <img src="/images/cta-connected-operations.webp" alt="Connected vehicles, assets and operations at a modern enterprise campus" width="1832" height="859" decoding="async" srcset="/images/cta-connected-operations-640.webp 640w, /images/cta-connected-operations-1280.webp 1280w, /images/cta-connected-operations.webp 1832w" sizes="100vw" loading="lazy" fetchpriority="low">
     </figure>
 </section>
 
@@ -1604,7 +1553,7 @@
   </div> -->
 
   <!-- FOOTER -->
-  <footer class="bg-white border-top py-3 px-4 px-md-5">
+  </main><footer class="bg-white border-top py-3 px-4 px-md-5">
     <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mx-auto" style="max-width:1280px">
       <span class="text-muted" style="font-size:.75rem">Anstel &copy; 2026</span>
       <a href="/privacy-policy/" class="footer-legal-link">Privacy Policy</a><a href="/legal/terms/" class="text-secondary text-decoration-none" style="font-size:.75rem">Terms</a>
@@ -1613,8 +1562,9 @@
 
       <a href="/company/locations/" class="text-secondary text-decoration-none" style="font-size:.75rem">Locations</a>
       <a href="/regions/" class="text-secondary text-decoration-none" style="font-size:.75rem">Regions</a>
+      <a href="/events/" class="text-secondary text-decoration-none" style="font-size:.75rem">Events</a>
 
-      <span class="d-flex align-items-center gap-3"><a href="https://www.instagram.com/my_autonautics/" target="_blank" rel="noopener" aria-label="Instagram" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/profile.php?id=61592764293665" target="_blank" rel="noopener" aria-label="Facebook" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg></a><a href="https://x.com/my_autonautics" target="_blank" rel="noopener" aria-label="X (Twitter)" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-6.9l-5.4-6.9L4.8 22H1.7l8.1-9.3L1 2h7.1l4.9 6.3L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg></a><a href="https://www.linkedin.com/showcase/autonautics/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4V21H3V8.98zM9 8.98h3.83v1.64h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9V8.98z"/></svg></a><a href="https://youtube.com/@anstel6482" target="_blank" rel="noopener" aria-label="YouTube" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.94-1.9-.94-2.36-1C17 2.5 12 2.5 12 2.5h-.01s-5 0-8.2.34c-.46.06-1.46.06-2.36 1-.71.72-.94 2.36-.94 2.36S.2 8.1.2 10v1.9c0 1.9.25 3.8.25 3.8s.23 1.64.94 2.36c.9.94 2.08.9 2.6 1C5.85 19.5 12 19.6 12 19.6s5 0 8.2-.34c.46-.06 1.46-.06 2.36-1 .71-.72.94-2.36.94-2.36s.25-1.9.25-3.8V10c0-1.9-.25-3.8-.25-3.8zM9.7 14.1V7.9l6.2 3.1-6.2 3.1z"/></svg></a><a href="https://au.pinterest.com/autonautics/" target="_blank" rel="noopener" aria-label="Pinterest" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.63 7.86 6.35 9.32-.09-.79-.17-2.01.03-2.88.19-.79 1.23-5.02 1.23-5.02s-.31-.63-.31-1.55c0-1.45.84-2.54 1.89-2.54.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.49-.25 1.05.52 1.9 1.55 1.9 1.86 0 3.29-1.96 3.29-4.79 0-2.5-1.8-4.25-4.37-4.25-2.98 0-4.72 2.23-4.72 4.54 0 .9.34 1.86.78 2.39.09.1.1.2.07.3-.08.32-.25 1.02-.28 1.16-.04.19-.15.23-.34.14-1.26-.59-2.05-2.43-2.05-3.91 0-3.19 2.32-6.12 6.68-6.12 3.51 0 6.24 2.5 6.24 5.84 0 3.49-2.2 6.29-5.25 6.29-1.03 0-1.99-.53-2.32-1.16l-.63 2.4c-.23.88-.85 1.98-1.26 2.65.95.29 1.96.45 3.01.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></a></span>
+      <span class="d-flex align-items-center gap-3"><a href="https://www.instagram.com/my_autonautics/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/profile.php?id=61592764293665" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg></a><a href="https://x.com/my_autonautics" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-6.9l-5.4-6.9L4.8 22H1.7l8.1-9.3L1 2h7.1l4.9 6.3L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg></a><a href="https://www.linkedin.com/showcase/autonautics/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4V21H3V8.98zM9 8.98h3.83v1.64h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9V8.98z"/></svg></a><a href="https://youtube.com/@anstel6482" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.94-1.9-.94-2.36-1C17 2.5 12 2.5 12 2.5h-.01s-5 0-8.2.34c-.46.06-1.46.06-2.36 1-.71.72-.94 2.36-.94 2.36S.2 8.1.2 10v1.9c0 1.9.25 3.8.25 3.8s.23 1.64.94 2.36c.9.94 2.08.9 2.6 1C5.85 19.5 12 19.6 12 19.6s5 0 8.2-.34c.46-.06 1.46-.06 2.36-1 .71-.72.94-2.36.94-2.36s.25-1.9.25-3.8V10c0-1.9-.25-3.8-.25-3.8zM9.7 14.1V7.9l6.2 3.1-6.2 3.1z"/></svg></a><a href="https://au.pinterest.com/autonautics/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="social-footer-link" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.63 7.86 6.35 9.32-.09-.79-.17-2.01.03-2.88.19-.79 1.23-5.02 1.23-5.02s-.31-.63-.31-1.55c0-1.45.84-2.54 1.89-2.54.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.49-.25 1.05.52 1.9 1.55 1.9 1.86 0 3.29-1.96 3.29-4.79 0-2.5-1.8-4.25-4.37-4.25-2.98 0-4.72 2.23-4.72 4.54 0 .9.34 1.86.78 2.39.09.1.1.2.07.3-.08.32-.25 1.02-.28 1.16-.04.19-.15.23-.34.14-1.26-.59-2.05-2.43-2.05-3.91 0-3.19 2.32-6.12 6.68-6.12 3.51 0 6.24 2.5 6.24 5.84 0 3.49-2.2 6.29-5.25 6.29-1.03 0-1.99-.53-2.32-1.16l-.63 2.4c-.23.88-.85 1.98-1.26 2.65.95.29 1.96.45 3.01.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></a></span>
     </div>
   </footer>
 
@@ -1630,10 +1580,10 @@
       <span class="small fw-medium text-secondary d-none d-sm-inline">Ask a Question</span>
       <div class="flex-fill d-flex align-items-center rounded-pill px-3 py-1" style="background:#f3f4f6">
         <input type="text" placeholder="&ldquo;What&rsquo;s Pet Mode?&rdquo;"
-          class="flex-fill border-0 bg-transparent small text-secondary" style="outline:none">
+          class="flex-fill border-0 bg-transparent small text-secondary">
       </div>
     </div>
-    <button class="d-flex align-items-center gap-2 px-4 border-0 bg-white" style="cursor:pointer">
+    <button type="button" class="d-flex align-items-center gap-2 px-4 border-0 bg-white" style="cursor:pointer">
       <svg width="20" height="20" fill="none" stroke="#4b5563" stroke-width="1.8" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10" />
         <circle cx="12" cy="12" r="3" />
@@ -1644,8 +1594,8 @@
   </div>
   -->
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="/js/main.js?v=map-tiles-2"></script>
   <script>
     (function ($) {
@@ -1653,16 +1603,24 @@
         { title: "One Platform. Every Operation.", subtitle: "Fleet, delivery, security & IoT. All connected.", btnText: "Explore Platform", btnHref: "/platform/" },
         { title: "Your Journey. Your Peace of Mind.", subtitle: "Personal vehicle tracking and safety alerts.", btnText: "Explore Personal Vehicles", btnHref: "/personal-vehicles/" },
         { title: "Your Whole Fleet, One Dashboard.", subtitle: "Track, manage, maintain.", btnText: "Explore Fleet", btnHref: "/platform/connected-fleet/" },
-        { title: "See Every Vehicle, Live.", subtitle: "Real-time GPS tracking.", btnText: "Explore Tracking", btnHref: "/solutions/fleet-tracking/" },
         { title: "See the Road. Drive Safer.", subtitle: "AI-Camera with live video & AI alerts.", btnText: "Explore AI-Camera", btnHref: "/solutions/video-telematics/" },
         { title: "Every Delivery, On Time.", subtitle: "Optimised routes, live ETAs.", btnText: "Explore Last Mile", btnHref: "/platform/last-mile/" },
-        { title: "Protect Every Vehicle.", subtitle: "Vehicle security & response", btnText: "Explore Patrol Connect", btnHref: "/platform/security-monitor/" },
-        { title: "Connect Every Device.", subtitle: "Real-time monitoring for IoT devices and sensors.", btnText: "Explore Connected Monitor", btnHref: "/platform/iot/" },
-        { title: "One Platform for Fleet Services.", subtitle: "Services & operations, connected.", btnText: "Explore Autonautics Merchant", btnHref: "/platform/merchant/" }
+        { title: "Connect Every Device.", subtitle: "Sensors & assets, real time.", btnText: "Explore Connected Monitor", btnHref: "/platform/iot/" }
       ];
-      var cur = 0, timer;
+      var cur = 0;
+      function hydrateSlide(index) {
+        var $image = $('.hero-slide').eq(index).find('img[data-src]');
+        if (!$image.length) return;
+        $image.attr({
+          src: $image.attr('data-src'),
+          srcset: $image.attr('data-srcset'),
+          loading: 'eager',
+          fetchpriority: 'high'
+        }).removeAttr('data-src data-srcset');
+      }
       function go(i) {
         cur = (i + slides.length) % slides.length;
+        hydrateSlide(cur);
         $('.hero-slide').removeClass('active').eq(cur).addClass('active');
         var s = slides[cur];
         $('#hero-title').text(s.title);
@@ -1674,10 +1632,9 @@
         $c.addClass('fade-up');
         $('.hero-dot').removeClass('active').eq(cur).addClass('active');
       }
-      timer = setInterval(function () { go(cur + 1); }, 7000);
-      $('.hero-prev').on('click', function () { clearInterval(timer); go(cur - 1); timer = setInterval(function () { go(cur + 1); }, 7000); });
-      $('.hero-next').on('click', function () { clearInterval(timer); go(cur + 1); timer = setInterval(function () { go(cur + 1); }, 7000); });
-      $('.hero-dot').on('click', function () { clearInterval(timer); go($(this).index()); timer = setInterval(function () { go(cur + 1); }, 7000); });
+      $('.hero-prev').on('click', function () { go(cur - 1); });
+      $('.hero-next').on('click', function () { go(cur + 1); });
+      $('.hero-dot').on('click', function () { go($(this).index()); });
     }(jQuery));
   </script>
 </body>

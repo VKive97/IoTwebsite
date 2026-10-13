@@ -52,6 +52,21 @@
   line-height: 1.7;
 }
 
+.cs-disclosure {
+  max-width: 760px;
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid #8a8d91;
+  color: #4d5157;
+  background: #f4f4f4;
+  font-size: .84rem;
+  line-height: 1.65;
+}
+
+.cs-disclosure strong {
+  color: #171a20;
+}
+
 .cs-hero {
   overflow: hidden;
   aspect-ratio: 16 / 9;

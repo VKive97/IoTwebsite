@@ -2,6 +2,17 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build-site.mjs",
-    "audit": "node scripts/build-site.mjs && node scripts/audit-site.mjs"
+    "audit": "node scripts/build-site.mjs && node scripts/audit-site.mjs && node scripts/audit-performance.mjs",
+    "audit:performance": "node scripts/audit-performance.mjs",
+    "serve": "node scripts/serve-static.mjs",
+    "sync-events": "node scripts/sync-events.mjs",
+    "publish-events": "node scripts/sync-events.mjs && npm run audit",
+    "build-stories": "node scripts/build-scenario-stories.mjs && npm run audit"
+  },
+  "devDependencies": {
+    "dompurify": "3.4.16",
+    "iconify-icon": "3.0.0",
+    "leaflet": "1.9.4",
+    "sanitize-html": "2.18.0"
   }
 }
