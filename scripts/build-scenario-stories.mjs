@@ -30,29 +30,6 @@ const stories = [
     helps: 'Urban delivery teams coordinating changing routes, drivers and proof of delivery'
   },
   {
-    slug: 'australia-waste-route-visibility',
-    region: 'Australia',
-    focus: 'Waste Fleet Operations',
-    title: 'Australia: Making Every Collection Route Visible',
-    description: 'An illustrative Australian waste-fleet workflow connecting scheduled collections, vehicle movement and route exceptions.',
-    image: 'customer-story-australia-waste-route-v1.jpg',
-    alt: 'Australian waste collection truck and route supervisor working on a suburban street',
-    challenge: [
-      'Recurring collection routes look predictable on paper, but vehicle issues, blocked access, missed services and changing priorities create exceptions throughout the day.',
-      'Without a shared operational view, a supervisor may know that a route is behind but not which stop, vehicle or event needs attention first.'
-    ],
-    approach: [
-      'In this scenario, scheduled work is viewed alongside live vehicle location, route history and configured alerts. Supervisors can compare planned activity with actual movement and investigate a missed or delayed service from one place.',
-      'Maintenance information and driver-safety signals can be connected to the same operating picture when compatible devices and modules are configured.'
-    ],
-    outcome: [
-      'The team can work from exceptions instead of manually checking every route. A service question can be traced through the schedule, vehicle history and available event data before another crew is dispatched.',
-      'The result is a clearer, more accountable collection workflow without claiming a result that has not yet been measured for a named customer.'
-    ],
-    products: 'Connected Fleet, Job Scheduling and compatible vehicle hardware',
-    helps: 'Municipal, contractor and private waste fleets managing repeat service routes'
-  },
-  {
     slug: 'fiji-connected-field-operations',
     region: 'Fiji',
     focus: 'Connected Field Operations',
