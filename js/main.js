@@ -414,8 +414,16 @@ $(function () {
       timer = setInterval(function () { selectStep(current + 1, false); }, 5000);
     }
 
+    // Hover/focus pausing is for mouse and keyboard only. On touch screens there is
+    // no hover-out or blur to resume it, so a tap must never leave autoplay stopped.
+    var lastTouch = false;
+    $engine.on('pointerdown', function (event) {
+      lastTouch = event.originalEvent.pointerType !== 'mouse';
+    });
+
     $steps.on('click mouseenter', function (event) {
-      selectStep(Number($(this).data('index')), event.type === 'click');
+      if (event.type === 'mouseenter' && lastTouch) return;
+      selectStep(Number($(this).data('index')), event.type === 'click' && !lastTouch);
       startEngine();
     }).on('keydown', function (event) {
       if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
@@ -425,7 +433,8 @@ $(function () {
       }
     });
 
-    $engine.on('mouseenter focusin', function () { clearInterval(timer); });
+    $engine.on('keydown', function () { lastTouch = false; });
+    $engine.on('mouseenter focusin', function () { if (!lastTouch) clearInterval(timer); });
     $engine.on('mouseleave focusout', startEngine);
     selectStep(0, false);
     startEngine();
@@ -562,19 +571,32 @@ $(function () {
     }
     $steps.on('click', function () { go($(this).data('step')); schedule(); });
     $phones.on('click', function () { go($(this).data('phone')); schedule(); });
-    $toggle.on('click', function () {
-      paused = !paused;
+    // These showcases simply advance on their own, so the play/pause button is
+    // removed. Autoplay still holds still when it should: while a mouse is over
+    // the showcase, while it is off screen or the tab is hidden, and never
+    // starts for visitors who ask their device to reduce motion.
+    $toggle.remove();
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var hasObserver = 'IntersectionObserver' in window;
+    var hovered = false, inView = !hasObserver;
+    function sync() {
+      paused = reduceMotion || hovered || !inView || document.hidden;
       $steps.eq(cur).toggleClass('paused', paused);
-      $toggle.find('.icon-pause').toggle(!paused);
-      $toggle.find('.icon-play').toggle(paused);
-      $toggle.attr('aria-label', paused ? 'Resume auto-play' : 'Pause auto-play');
-      if (paused) { clearTimeout(timer); } else { schedule(); }
-    });
-    $steps.eq(cur).addClass('paused');
-    $toggle.find('.icon-pause').hide();
-    $toggle.find('.icon-play').show();
-    $toggle.attr('aria-label', 'Start auto-play');
-    schedule();
+      schedule();
+    }
+    // Mouse only: a tap on a phone also fires "enter" but never "leave",
+    // which would stop autoplay for good on touch screens.
+    $scope.on('pointerenter', function (e) { if (e.originalEvent.pointerType === 'mouse') { hovered = true; sync(); } });
+    $scope.on('pointerleave', function (e) { if (e.originalEvent.pointerType === 'mouse') { hovered = false; sync(); } });
+    document.addEventListener('visibilitychange', sync);
+    if (hasObserver) {
+      new IntersectionObserver(function (entries) {
+        // Several updates can arrive in one batch; the last one is current.
+        inView = entries[entries.length - 1].isIntersecting;
+        sync();
+      }, { threshold: 0.2 }).observe($stage[0]);
+    }
+    sync();
   });
 
   /* Iconify symbols for the remaining informational cards. Matching is based

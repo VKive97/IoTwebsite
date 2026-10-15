@@ -61,7 +61,7 @@
 
     if ('IntersectionObserver' in window) {
       var observer = new IntersectionObserver(function (entries) {
-        inView = entries[0].isIntersecting;
+        inView = entries[entries.length - 1].isIntersecting;
         syncPlayback();
       }, { threshold: 0.1 });
       observer.observe(container);

@@ -1,8 +1,7 @@
 /* Shared blog data helpers — backed by the AutonauticsBlog.API service.
    Used by /admin/blog/ (author, Quill-based rich-text editor) and /company/knowledge-center/
    (public listing + post pages). Post content is stored as HTML from the Quill editor.
-   NOTE: the API currently only has a LAN address (no public host yet), so this only
-   works from machines on the same network as the API server. */
+   The local development server proxies same-origin /api requests to the LAN API. */
 window.AnstelBlog = (function () {
   var API_BASE = 'http://192.168.4.9:9814';
   var TOKEN_KEY = 'anstel_admin_token';

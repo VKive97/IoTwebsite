@@ -661,6 +661,8 @@ section:has(> .scroll-carousel) > [class*="px-"]{
   transition:background .15s
 }
 .about-play-toggle:hover{background:#d1d5db}
+/* Showcases auto-advance (js/main.js removes the button); hide it before JS runs. */
+.about-phone-stage .about-play-toggle,.process-photo-stage .about-play-toggle{display:none!important}
 
 .about-step{cursor:pointer}
 /* Shared text treatment for image carousels with a title-and-description rail. */

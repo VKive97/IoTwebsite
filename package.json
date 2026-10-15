@@ -5,6 +5,7 @@
     "audit": "node scripts/build-site.mjs && node scripts/audit-site.mjs && node scripts/audit-performance.mjs",
     "audit:performance": "node scripts/audit-performance.mjs",
     "serve": "node scripts/serve-static.mjs",
+    "serve:5500": "node scripts/serve-static.mjs 5500",
     "sync-events": "node scripts/sync-events.mjs",
     "publish-events": "node scripts/sync-events.mjs && npm run audit",
     "build-stories": "node scripts/build-scenario-stories.mjs && npm run audit"

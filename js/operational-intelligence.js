@@ -95,12 +95,16 @@
     stage.addEventListener('pointerleave', function (event) {
       if (!continuous && event.pointerType === 'mouse') { hovered = false; schedule(); }
     });
-    // Pointer interaction should not strand continuous autoplay on a focused tab.
-    carousel.addEventListener('pointerdown', function () {
-      if (continuous) { focusPaused = false; schedule(); }
+    // Pointer interaction should not strand autoplay on a focused tab. On touch
+    // devices there is no hover-out or blur to resume it, so a tap never pauses.
+    var lastTouch = false;
+    carousel.addEventListener('pointerdown', function (event) {
+      lastTouch = event.pointerType !== 'mouse';
+      if (continuous || lastTouch) { focusPaused = false; schedule(); }
     });
+    carousel.addEventListener('keydown', function () { lastTouch = false; }, true);
     carousel.addEventListener('focusin', function (event) {
-      focusPaused = !continuous || event.target.matches(':focus-visible');
+      focusPaused = !lastTouch && (!continuous || event.target.matches(':focus-visible'));
       schedule();
     });
     carousel.addEventListener('focusout', function (event) {
@@ -120,7 +124,7 @@
     });
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (entries) {
-        inView = entries[0].isIntersecting;
+        inView = entries[entries.length - 1].isIntersecting;
         schedule();
       }, { threshold: 0 }).observe(stage);
     }
