@@ -40,7 +40,7 @@ window.AnstelBlog = (function () {
     if (categoriesCache) return categoriesCache;
     var res = await fetch(API_BASE + '/api/Category/GetAllCategories');
     if (!res.ok) return [];
-    categoriesCache = await res.json();
+    categoriesCache = itemsOf(await res.json());
     return categoriesCache;
   }
 
@@ -75,6 +75,9 @@ window.AnstelBlog = (function () {
       author: p.author || '',
       coverImage: cover,
       status: p.isPublished ? 'published' : 'draft',
+      // Visitors see and sort by when a post was published (created); editing
+      // an old post must not make it look new. The admin uses updatedAt.
+      publishedAt: new Date(p.createdAt || p.updatedAt || Date.now()).getTime(),
       updatedAt: new Date(p.updatedAt || p.createdAt || Date.now()).getTime()
     };
   }
@@ -86,12 +89,32 @@ window.AnstelBlog = (function () {
     return map;
   }
 
+  /* GetAll is paginated ({ items, totalCount, page, pageSize, totalPages }) and
+     defaults to 10 posts per page. Older API versions returned a plain array, so
+     accept either shape and read every page so no post is silently left out. */
+  function itemsOf(data) {
+    if (Array.isArray(data)) return data;
+    if (data && Array.isArray(data.items)) return data.items;
+    return [];
+  }
+
   async function getPosts() {
-    var res = await fetch(API_BASE + '/api/Blog/GetAll');
-    if (!res.ok) return [];
-    var posts = await res.json();
+    var PAGE_SIZE = 100;
+    var MAX_PAGES = 50; // safety stop: 5,000 posts
+    var all = [];
+    for (var page = 1; page <= MAX_PAGES; page++) {
+      var res = await fetch(API_BASE + '/api/Blog/GetAll?page=' + page + '&pageSize=' + PAGE_SIZE);
+      if (!res.ok) {
+        if (page === 1) throw new Error('Blog API returned HTTP ' + res.status);
+        break;
+      }
+      var data = await res.json();
+      all = all.concat(itemsOf(data));
+      var totalPages = data && typeof data.totalPages === 'number' ? data.totalPages : 1;
+      if (Array.isArray(data) || page >= totalPages) break;
+    }
     var map = await categoryMap();
-    return posts.map(function (p) { return normalizePost(p, map); });
+    return all.map(function (p) { return normalizePost(p, map); });
   }
 
   async function getPost(slug) {
@@ -108,7 +131,7 @@ window.AnstelBlog = (function () {
     if (!categoryId) return [];
     var res = await fetch(API_BASE + '/api/Blog/GetByCategory?categoryId=' + categoryId);
     if (!res.ok) return [];
-    var posts = await res.json();
+    var posts = itemsOf(await res.json());
     var map = await categoryMap();
     return posts.map(function (p) { return normalizePost(p, map); });
   }
@@ -144,7 +167,16 @@ window.AnstelBlog = (function () {
       headers: authHeaders()
     });
     if (res.status === 401) throw new Error('UNAUTHORIZED');
-    if (!res.ok) throw new Error('DELETE_FAILED');
+    // 404 means the post is already gone, which is the outcome we wanted.
+    if (res.status === 404) return;
+    if (!res.ok) {
+      var detail = '';
+      try { detail = (await res.text()).slice(0, 300); } catch (_) { /* no body */ }
+      console.error('Blog API delete returned HTTP ' + res.status + ':', detail);
+      var err = new Error('DELETE_FAILED');
+      err.status = res.status;
+      throw err;
+    }
   }
 
   /* Uploads a File/Blob and returns its public URL. */

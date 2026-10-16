@@ -190,11 +190,28 @@
     categoriesList.sort(function (a, b) { return a.name.localeCompare(b.name); });
   }
 
+  /* Posts in these categories are shown on their own pages instead of the
+     Knowledge Center (see company/customer-stories/). They are always offered
+     in the dropdown; if one doesn't exist in the API yet, choosing it creates
+     it — so nobody has to type the exact name by hand. */
+  var SECTION_CATEGORIES = ['Customer Stories'];
+  var CREATE_SECTION_PREFIX = '__create_section__:';
+
+  function findCategoryByName(name) {
+    var wanted = String(name || '').trim().toLowerCase();
+    return categoriesList.find(function (c) { return String(c.name || '').trim().toLowerCase() === wanted; });
+  }
+
   function populateCategoryDropdown(selectedId) {
     var html = '<option value=""' + (selectedId ? '' : ' selected') + ' disabled>Select a category…</option>';
     html += categoriesList.map(function (c) {
       return '<option value="' + c.id + '"' + (c.id === selectedId ? ' selected' : '') + '>' + AnstelBlog.escapeHtml(c.name) + '</option>';
     }).join('');
+    SECTION_CATEGORIES.forEach(function (name) {
+      if (!findCategoryByName(name)) {
+        html += '<option value="' + CREATE_SECTION_PREFIX + AnstelBlog.escapeHtml(name) + '">' + AnstelBlog.escapeHtml(name) + '</option>';
+      }
+    });
     html += '<option value="' + ADD_CATEGORY_VALUE + '">+ Add new category…</option>';
     $('#f-category').html(html);
   }
@@ -204,7 +221,14 @@
     try {
       postsCache = (await AnstelBlog.getPosts()).sort(function (a, b) { return (b.updatedAt || 0) - (a.updatedAt || 0); });
     } catch (err) {
-      $('#posts-tbody').html('<tr><td colspan="5" class="text-center text-danger py-4">Could not reach the API. Make sure you\'re on the same network as the server.</td></tr>');
+      // Log the real cause: this message used to hide data-format errors too.
+      console.error('Could not load posts:', err);
+      var networkError = err instanceof TypeError && /fetch/i.test(err.message || '');
+      $('#posts-tbody').html('<tr><td colspan="5" class="text-center text-danger py-4">' +
+        (networkError
+          ? 'Could not reach the API. Make sure you\'re on the same network as the server.'
+          : 'Posts could not be loaded. Open the browser console (F12) for details.') +
+        '</td></tr>');
       return;
     }
     $('#posts-empty').toggle(postsCache.length === 0);
@@ -302,29 +326,45 @@
     $('#back-to-list').on('click', showList);
     $('#save-post-btn').on('click', savePost);
 
+    /* Deletes a post and reports the real outcome. The API can answer a
+       delete with an error status even though the post was removed, so on any
+       error the post list is re-read: if the post is gone, it was deleted. */
+    var deleting = false;
+    async function deletePostById(id, $button) {
+      if (deleting) return false; // ignore double-clicks
+      if (!confirm('Delete this post? This can\'t be undone.')) return false;
+      deleting = true;
+      if ($button) $button.prop('disabled', true).text('Deleting…');
+      try {
+        await AnstelBlog.deletePost(id);
+        return true;
+      } catch (err) {
+        if (err.message === 'UNAUTHORIZED') { requireReauth(); return false; }
+        var stillThere = true;
+        try {
+          var posts = await AnstelBlog.getPosts();
+          stillThere = posts.some(function (p) { return String(p.id) === String(id); });
+        } catch (_) { /* can't confirm — treat as not deleted */ }
+        if (!stillThere) return true;
+        alert('Could not delete this post' + (err.status ? ' (server answered HTTP ' + err.status + ')' : '') +
+          '. Make sure you\'re on the same network as the API server.');
+        return false;
+      } finally {
+        deleting = false;
+        if ($button) $button.prop('disabled', false).text('Delete');
+      }
+    }
+
     $('#delete-post-btn').on('click', async function () {
       if (!currentId) return;
-      if (!confirm('Delete this post? This can\'t be undone.')) return;
-      try {
-        await AnstelBlog.deletePost(currentId);
-        showList();
-      } catch (err) {
-        if (err.message === 'UNAUTHORIZED') { requireReauth(); }
-        else { alert('Could not delete. Make sure you\'re on the same network as the API server.'); }
-      }
+      if (await deletePostById(currentId, $(this))) showList();
     });
 
     $('#posts-tbody').on('click', '[data-edit]', function () { editPost($(this).data('edit')); });
     $('#posts-tbody').on('click', '[data-del]', async function () {
-      var id = $(this).data('del');
-      if (!confirm('Delete this post? This can\'t be undone.')) return;
-      try {
-        await AnstelBlog.deletePost(id);
-        renderPostsTable();
-      } catch (err) {
-        if (err.message === 'UNAUTHORIZED') { requireReauth(); }
-        else { alert('Could not delete. Make sure you\'re on the same network as the API server.'); }
-      }
+      // Always refresh, so the list shows the server's real state either way.
+      await deletePostById($(this).data('del'), $(this));
+      renderPostsTable();
     });
 
     $('#f-cover-upload').on('change', async function () {
@@ -357,11 +397,29 @@
     });
     $('#f-slug').on('input', function () { slugTouched = true; });
 
-    $('#f-category').on('change', function () {
-      if ($(this).val() === ADD_CATEGORY_VALUE) {
+    $('#f-category').on('change', async function () {
+      var value = $(this).val() || '';
+      if (value === ADD_CATEGORY_VALUE) {
         $('#f-category').hide();
         $('#new-category-row').show();
         $('#new-category-input').val('').focus();
+      } else if (value.indexOf(CREATE_SECTION_PREFIX) === 0) {
+        // First use of a section category (e.g. Customer Stories): create it.
+        var name = value.slice(CREATE_SECTION_PREFIX.length);
+        var $select = $('#f-category').prop('disabled', true);
+        try {
+          var existing = findCategoryByName(name);
+          var created = existing || await AnstelBlog.createCategory(name);
+          await loadCategories();
+          var match = findCategoryByName(name) || created;
+          populateCategoryDropdown(match.id);
+        } catch (err) {
+          populateCategoryDropdown(null);
+          if (err.message === 'UNAUTHORIZED') { requireReauth(); }
+          else { alert('Could not create the "' + name + '" category. Make sure you\'re on the same network as the API server.'); }
+        } finally {
+          $select.prop('disabled', false);
+        }
       }
       updatePreview();
     });

@@ -8,7 +8,8 @@
     "serve:5500": "node scripts/serve-static.mjs 5500",
     "sync-events": "node scripts/sync-events.mjs",
     "publish-events": "node scripts/sync-events.mjs && npm run audit",
-    "build-stories": "node scripts/build-scenario-stories.mjs && npm run audit"
+    "build-stories": "node scripts/build-scenario-stories.mjs && npm run audit",
+    "build-blog": "node scripts/build-blog-pages.mjs && node scripts/build-site.mjs"
   },
   "devDependencies": {
     "dompurify": "3.4.16",
